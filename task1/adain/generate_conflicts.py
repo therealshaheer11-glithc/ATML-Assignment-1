@@ -311,7 +311,7 @@ def prepare_schedule(
     expected_text = csv_text(schedule, SCHEDULE_FIELDS)
 
     if schedule_path.exists():
-        if schedule_path.read_text(encoding="utf-8") != expected_text:
+        if schedule_path.read_bytes() != expected_text.encode("utf-8"):
             raise RuntimeError(
                 "Existing candidate schedule differs from the approved rule."
             )
