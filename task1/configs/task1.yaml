@@ -1,0 +1,259 @@
+
+project:
+  assignment: "ATML Programming Assignment 1"
+  task: 1
+  task_name: "Inductive Biases and Feature Representations"
+  configuration_status: "preregistered_before_model_evaluation"
+  report_text_must_be_user_authored: true
+
+reproducibility:
+  seed: 6304
+  deterministic_split: true
+  save_image_identifiers: true
+  save_all_hyperparameters: true
+
+data:
+  dataset: "STL10"
+  unlabeled_partition_used: false
+  training_partition: "official_train"
+  evaluation_partition: "official_test"
+  split:
+    train_fraction: 0.80
+    validation_fraction: 0.20
+    stratified: true
+    seed: 6304
+  evaluation_subset:
+    requested_size: 500
+    class_balanced: true
+    requested_per_class: 50
+    seed: 6304
+    identifiers_file: "task1/results/splits/evaluation_subset.csv"
+
+common_image:
+  color_mode: "RGB"
+  width: 224
+  height: 224
+  resize_interpolation: "bicubic"
+  preserve_full_frame: true
+  stochastic_augmentation: false
+  apply_model_normalization_after_intervention: true
+
+models:
+  resnet50:
+    library: "torchvision"
+    weights: "ResNet50_Weights.IMAGENET1K_V2"
+    frozen: true
+    representation: "global_average_pooled_feature"
+    normalize_mean: [0.485, 0.456, 0.406]
+    normalize_std: [0.229, 0.224, 0.225]
+
+  vit_b_16:
+    library: "torchvision"
+    weights: "ViT_B_16_Weights.IMAGENET1K_V1"
+    frozen: true
+    representation: "final_class_token"
+    normalize_mean: [0.485, 0.456, 0.406]
+    normalize_std: [0.229, 0.224, 0.225]
+
+  clip_vit_b_32:
+    library: "open_clip"
+    model_name: "ViT-B-32"
+    pretrained: "openai"
+    frozen: true
+    representation: "l2_normalized_image_embedding"
+    normalize_mean: [0.48145466, 0.45782750, 0.40821073]
+    normalize_std: [0.26862954, 0.26130258, 0.27577711]
+    zero_shot_prompt: "a photo of a {class}."
+    prompt_search: false
+
+feature_extraction:
+  batch_size: 64
+  shuffle: false
+  gradients_enabled: false
+  cache_features: true
+
+linear_head:
+  seed: 6304
+  loss: "cross_entropy"
+  optimizer: "AdamW"
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  batch_size: 256
+  maximum_epochs: 50
+  scheduler: null
+  early_stopping:
+    metric: "validation_accuracy"
+    patience: 5
+    mode: "max"
+  checkpoint:
+    rule: "highest_validation_accuracy"
+  shuffle_training_features: true
+
+experiments:
+  order:
+    - "clean_baseline"
+    - "color_bias"
+    - "shape_vs_texture"
+    - "translation"
+    - "patch_structure"
+    - "representation_analysis"
+
+  clean_baseline:
+    predictors:
+      - "resnet50_linear_head"
+      - "vit_b_16_linear_head"
+      - "clip_vit_b_32_linear_head"
+      - "clip_vit_b_32_zero_shot"
+    metrics:
+      - "top1_accuracy"
+      - "macro_f1"
+      - "mean_maximum_confidence"
+    zero_shot_confidence: "softmax_over_scaled_class_similarities"
+
+  color_bias:
+    interventions:
+      grayscale:
+        enabled: true
+      hue_rotation:
+        enabled: true
+        color_space: "HSV"
+        angle_degrees: 90
+    metrics:
+      - "absolute_accuracy"
+      - "accuracy_change_from_own_clean_baseline"
+      - "prediction_consistency_with_clean"
+
+  shape_vs_texture:
+    method: "AdaIN"
+    implementation_source: null
+    implementation_source_must_be_recorded_before_generation: true
+    alpha: 0.8
+    both_directions: true
+    accepted_target_per_direction: 20
+    accepted_target_total: 200
+    generate_additional_candidates_until_target_met: true
+    pairs:
+      - ["airplane", "cat"]
+      - ["car", "deer"]
+      - ["ship", "dog"]
+      - ["truck", "horse"]
+      - ["bird", "monkey"]
+    visual_rejection:
+      performed_before_model_evaluation: true
+      model_predictions_may_not_be_used: true
+      reasons:
+        - "content object is no longer visually recognizable"
+        - "object is severely obscured or structurally corrupted"
+        - "output contains blank regions or major rendering artifacts"
+        - "no perceptible style or texture transfer occurred"
+      save_acceptance_and_rejection_manifest: true
+    metrics:
+      - "shape_decision_count"
+      - "texture_decision_count"
+      - "other_decision_count"
+      - "shape_bias_percent"
+      - "coverage_percent"
+
+  translation:
+    displacements_pixels: [0, 8, 16, 32]
+    directions: ["up", "down", "left", "right"]
+    padding: "reflection"
+    operation: "shifted_crop"
+    aggregate_across_directions: "mean"
+    metrics:
+      - "accuracy"
+      - "prediction_consistency_with_clean"
+
+  patch_structure:
+    grid_rows: 4
+    grid_columns: 4
+    pixel_patch_size: [56, 56]
+    permutations_per_image: 1
+    require_non_identity_permutation: true
+    seed: 6304
+    reuse_identical_images_across_models: true
+    metrics:
+      - "accuracy"
+      - "accuracy_change_from_clean"
+      - "prediction_consistency_with_clean"
+
+  representation_analysis:
+    quantitative_interventions:
+      - "grayscale"
+      - "cue_conflict"
+      - "translation"
+      - "patch_shuffle"
+    metric: "paired_cosine_stability"
+    translation:
+      evaluate_displacements_pixels: [8, 16, 32]
+      evaluate_all_four_directions: true
+      aggregate_across_directions: "mean"
+    visualization:
+      method: "UMAP"
+      fixed_subset_size: 200
+      balanced_examples_per_class: 20
+      reuse_same_subset_across_backbones: true
+      fit_one_combined_projection_per_backbone: true
+      conditions:
+        - "clean"
+        - "grayscale"
+        - "cue_conflict"
+        - "translation_32px"
+        - "patch_shuffle"
+      translation_visualization:
+        displacement_pixels: 32
+        one_direction_per_image: true
+        balance_across_four_directions: true
+        seed: 6304
+      parameters:
+        n_components: 2
+        n_neighbors: 15
+        min_dist: 0.1
+        metric: "cosine"
+        random_state: 6304
+      class_encoding: "color"
+      condition_encoding: "marker_style"
+      compare_absolute_coordinates_across_backbones: false
+
+hypotheses:
+  source: "user_authored_before_model_evaluation"
+
+  clean_baseline: |
+    The trained CLIP linear classifier head is expected to achieve the highest
+    accuracy, outperforming both its own zero-shot baseline and the trained
+    linear heads of ResNet and ViT. Overall, the ViT and CLIP representations
+    will likely edge out ResNet-50, though all models should demonstrate strong,
+    comparable baseline accuracy on the clean dataset without severe divergence.
+
+  color_sensitivity: |
+    ResNet is hypothesized to be the most robust to color interventions
+    (grayscale and +90 degree hue rotation). CLIP will likely show moderate
+    sensitivity, while ViT is expected to experience the most significant
+    performance degradation when chromatic information is altered.
+
+  shape_vs_texture: |
+    Under AdaIN-generated cue-conflict conditions, ResNet is predicted to
+    exhibit a strong texture bias. Conversely, ViT is expected to demonstrate
+    a dominant shape bias, while CLIP will likely rely on a more balanced
+    integration of both shape and texture cues.
+
+  translation_sensitivity: |
+    ResNet is anticipated to be the most sensitive to spatial translation.
+    CLIP will exhibit moderate sensitivity, with ViT demonstrating the greatest
+    positional invariance (least affected by displacement).
+
+  patch_shuffle_sensitivity: |
+    Disruption of global spatial organization via patch shuffling will likely
+    impact ViT the most severely. CLIP is expected to follow in sensitivity,
+    whereas ResNet is predicted to be the most resilient to the loss of global
+    coherence.
+
+  prediction_vs_representation: |
+    Prediction stability is expected to strongly correlate with representation
+    stability. Interventions that alter a model's final prediction will
+    systematically align with measurable drops in cosine similarity and
+    observable displacement in UMAP or t-SNE projections.
+
+  overall_clip_comparison: |
+    In all instances, I hypothesize, CLIP with the trained linear head will
+    outperform zero shot.
