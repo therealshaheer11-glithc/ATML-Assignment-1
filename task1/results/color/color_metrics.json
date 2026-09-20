@@ -1,0 +1,101 @@
+{
+  "dataset": "STL-10",
+  "official_partition": "test",
+  "evaluation_subset_size": 500,
+  "examples_per_class": 50,
+  "selection_seed": 6304,
+  "manifest": "/content/ATML-Assignment-1/task1/results/splits/evaluation_subset.csv",
+  "manifest_sha256": "52223818ee8d9505dcc813661e845eb4f123108d46d98ae788420748d1e3c724",
+  "conditions": {
+    "grayscale": {
+      "description": "three-channel grayscale"
+    },
+    "hue_rotation_90": {
+      "description": "HSV hue rotation of +90 degrees"
+    }
+  },
+  "intervention_before_model_normalization": true,
+  "model_selection_using_test_results": false,
+  "results": {
+    "resnet50_linear_head": {
+      "grayscale": {
+        "number_of_examples": 500,
+        "correct_count": 477,
+        "absolute_accuracy": 0.9539999961853027,
+        "own_clean_accuracy": 0.9760000109672546,
+        "accuracy_change_from_own_clean_baseline": -0.022000014781951904,
+        "prediction_consistency_with_clean": 0.9620000123977661,
+        "prediction_match_count": 481
+      },
+      "hue_rotation_90": {
+        "number_of_examples": 500,
+        "correct_count": 462,
+        "absolute_accuracy": 0.9240000247955322,
+        "own_clean_accuracy": 0.9760000109672546,
+        "accuracy_change_from_own_clean_baseline": -0.05199998617172241,
+        "prediction_consistency_with_clean": 0.9359999895095825,
+        "prediction_match_count": 468
+      }
+    },
+    "vit_b_16_linear_head": {
+      "grayscale": {
+        "number_of_examples": 500,
+        "correct_count": 478,
+        "absolute_accuracy": 0.9559999704360962,
+        "own_clean_accuracy": 0.972000002861023,
+        "accuracy_change_from_own_clean_baseline": -0.016000032424926758,
+        "prediction_consistency_with_clean": 0.9559999704360962,
+        "prediction_match_count": 478
+      },
+      "hue_rotation_90": {
+        "number_of_examples": 500,
+        "correct_count": 472,
+        "absolute_accuracy": 0.9440000057220459,
+        "own_clean_accuracy": 0.972000002861023,
+        "accuracy_change_from_own_clean_baseline": -0.02799999713897705,
+        "prediction_consistency_with_clean": 0.9480000138282776,
+        "prediction_match_count": 474
+      }
+    },
+    "clip_vit_b_32_linear_head": {
+      "grayscale": {
+        "number_of_examples": 500,
+        "correct_count": 482,
+        "absolute_accuracy": 0.9639999866485596,
+        "own_clean_accuracy": 0.984000027179718,
+        "accuracy_change_from_own_clean_baseline": -0.020000040531158447,
+        "prediction_consistency_with_clean": 0.9660000205039978,
+        "prediction_match_count": 483
+      },
+      "hue_rotation_90": {
+        "number_of_examples": 500,
+        "correct_count": 480,
+        "absolute_accuracy": 0.9599999785423279,
+        "own_clean_accuracy": 0.984000027179718,
+        "accuracy_change_from_own_clean_baseline": -0.024000048637390137,
+        "prediction_consistency_with_clean": 0.9660000205039978,
+        "prediction_match_count": 483
+      }
+    },
+    "clip_vit_b_32_zero_shot": {
+      "grayscale": {
+        "number_of_examples": 500,
+        "correct_count": 485,
+        "absolute_accuracy": 0.9700000286102295,
+        "own_clean_accuracy": 0.9800000190734863,
+        "accuracy_change_from_own_clean_baseline": -0.009999990463256836,
+        "prediction_consistency_with_clean": 0.972000002861023,
+        "prediction_match_count": 486
+      },
+      "hue_rotation_90": {
+        "number_of_examples": 500,
+        "correct_count": 476,
+        "absolute_accuracy": 0.9520000219345093,
+        "own_clean_accuracy": 0.9800000190734863,
+        "accuracy_change_from_own_clean_baseline": -0.02799999713897705,
+        "prediction_consistency_with_clean": 0.9620000123977661,
+        "prediction_match_count": 481
+      }
+    }
+  }
+}
