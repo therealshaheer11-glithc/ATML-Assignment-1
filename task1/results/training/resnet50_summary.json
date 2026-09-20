@@ -1,0 +1,66 @@
+{
+  "backbone": "resnet50",
+  "backbone_metadata": {
+    "key": "resnet50",
+    "display_name": "ResNet-50",
+    "weights_identifier": "ResNet50_Weights.IMAGENET1K_V2",
+    "representation": "global_average_pooled_feature",
+    "feature_dim": 2048,
+    "normalization_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "normalization_std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "class_names": [
+    "airplane",
+    "bird",
+    "car",
+    "cat",
+    "deer",
+    "dog",
+    "horse",
+    "monkey",
+    "ship",
+    "truck"
+  ],
+  "pytorch_version": "2.11.0+cu128",
+  "device": "cuda",
+  "gpu_name": "Tesla T4",
+  "training_configuration": {
+    "seed": 6304,
+    "head": "Linear",
+    "loss": "cross_entropy",
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 256,
+    "maximum_epochs": 50,
+    "scheduler": null,
+    "early_stopping_metric": "validation_accuracy",
+    "early_stopping_patience": 5,
+    "checkpoint_rule": "highest validation accuracy; earliest tie",
+    "training_shuffle": true
+  },
+  "data": {
+    "training_examples": 4000,
+    "validation_examples": 1000,
+    "official_test_examples_used": 0,
+    "unlabeled_examples_used": 0
+  },
+  "result": {
+    "epochs_completed": 13,
+    "best_epoch": 8,
+    "best_validation_accuracy": 0.971,
+    "best_validation_loss": 0.19791784596443177
+  },
+  "files": {
+    "checkpoint": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/checkpoints/linear_heads/resnet50.pt",
+    "history": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/metrics/training/resnet50_history.csv"
+  }
+}

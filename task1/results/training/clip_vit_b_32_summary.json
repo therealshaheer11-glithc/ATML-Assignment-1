@@ -1,0 +1,66 @@
+{
+  "backbone": "clip_vit_b_32",
+  "backbone_metadata": {
+    "key": "clip_vit_b_32",
+    "display_name": "OpenCLIP ViT-B/32",
+    "weights_identifier": "ViT-B-32 pretrained=openai",
+    "representation": "l2_normalized_image_embedding",
+    "feature_dim": 512,
+    "normalization_mean": [
+      0.48145466,
+      0.4578275,
+      0.40821073
+    ],
+    "normalization_std": [
+      0.26862954,
+      0.26130258,
+      0.27577711
+    ]
+  },
+  "class_names": [
+    "airplane",
+    "bird",
+    "car",
+    "cat",
+    "deer",
+    "dog",
+    "horse",
+    "monkey",
+    "ship",
+    "truck"
+  ],
+  "pytorch_version": "2.11.0+cu128",
+  "device": "cuda",
+  "gpu_name": "Tesla T4",
+  "training_configuration": {
+    "seed": 6304,
+    "head": "Linear",
+    "loss": "cross_entropy",
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 256,
+    "maximum_epochs": 50,
+    "scheduler": null,
+    "early_stopping_metric": "validation_accuracy",
+    "early_stopping_patience": 5,
+    "checkpoint_rule": "highest validation accuracy; earliest tie",
+    "training_shuffle": true
+  },
+  "data": {
+    "training_examples": 4000,
+    "validation_examples": 1000,
+    "official_test_examples_used": 0,
+    "unlabeled_examples_used": 0
+  },
+  "result": {
+    "epochs_completed": 15,
+    "best_epoch": 10,
+    "best_validation_accuracy": 0.984,
+    "best_validation_loss": 1.5112089147567749
+  },
+  "files": {
+    "checkpoint": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/checkpoints/linear_heads/clip_vit_b_32.pt",
+    "history": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/metrics/training/clip_vit_b_32_history.csv"
+  }
+}
