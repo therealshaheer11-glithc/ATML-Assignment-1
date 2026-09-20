@@ -1,0 +1,133 @@
+{
+  "dataset": "STL-10",
+  "official_partition": "test",
+  "evaluation_subset_size": 500,
+  "examples_per_class": 50,
+  "selection_seed": 6304,
+  "manifest": "/content/ATML-Assignment-1/task1/results/splits/evaluation_subset.csv",
+  "manifest_sha256": "52223818ee8d9505dcc813661e845eb4f123108d46d98ae788420748d1e3c724",
+  "common_image_construction": "RGB, direct bicubic resize to 224x224, no augmentation",
+  "model_selection_using_test_results": false,
+  "results": {
+    "resnet50_linear_head": {
+      "backbone_metadata": {
+        "key": "resnet50",
+        "display_name": "ResNet-50",
+        "weights_identifier": "ResNet50_Weights.IMAGENET1K_V2",
+        "representation": "global_average_pooled_feature",
+        "feature_dim": 2048,
+        "normalization_mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "normalization_std": [
+          0.229,
+          0.224,
+          0.225
+        ]
+      },
+      "head_checkpoint": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/checkpoints/linear_heads/resnet50.pt",
+      "head_best_validation_epoch": 8,
+      "head_best_validation_accuracy": 0.971,
+      "top1_accuracy": 0.9760000109672546,
+      "macro_f1": 0.9760555313263286,
+      "mean_maximum_confidence": 0.8605639934539795,
+      "correct_count": 488,
+      "number_of_examples": 500
+    },
+    "vit_b_16_linear_head": {
+      "backbone_metadata": {
+        "key": "vit_b_16",
+        "display_name": "ViT-B/16",
+        "weights_identifier": "ViT_B_16_Weights.IMAGENET1K_V1",
+        "representation": "final_class_token",
+        "feature_dim": 768,
+        "normalization_mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "normalization_std": [
+          0.229,
+          0.224,
+          0.225
+        ]
+      },
+      "head_checkpoint": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/checkpoints/linear_heads/vit_b_16.pt",
+      "head_best_validation_epoch": 6,
+      "head_best_validation_accuracy": 0.977,
+      "top1_accuracy": 0.972000002861023,
+      "macro_f1": 0.9719373932591339,
+      "mean_maximum_confidence": 0.9174633622169495,
+      "correct_count": 486,
+      "number_of_examples": 500
+    },
+    "clip_vit_b_32_linear_head": {
+      "backbone_metadata": {
+        "key": "clip_vit_b_32",
+        "display_name": "OpenCLIP ViT-B/32",
+        "weights_identifier": "ViT-B-32 pretrained=openai",
+        "representation": "l2_normalized_image_embedding",
+        "feature_dim": 512,
+        "normalization_mean": [
+          0.48145466,
+          0.4578275,
+          0.40821073
+        ],
+        "normalization_std": [
+          0.26862954,
+          0.26130258,
+          0.27577711
+        ]
+      },
+      "head_checkpoint": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/checkpoints/linear_heads/clip_vit_b_32.pt",
+      "head_best_validation_epoch": 10,
+      "head_best_validation_accuracy": 0.984,
+      "top1_accuracy": 0.984000027179718,
+      "macro_f1": 0.9840160592639411,
+      "mean_maximum_confidence": 0.2240477353334427,
+      "correct_count": 492,
+      "number_of_examples": 500
+    },
+    "clip_vit_b_32_zero_shot": {
+      "backbone_metadata": {
+        "key": "clip_vit_b_32",
+        "display_name": "OpenCLIP ViT-B/32",
+        "weights_identifier": "ViT-B-32 pretrained=openai",
+        "representation": "l2_normalized_image_embedding",
+        "feature_dim": 512,
+        "normalization_mean": [
+          0.48145466,
+          0.4578275,
+          0.40821073
+        ],
+        "normalization_std": [
+          0.26862954,
+          0.26130258,
+          0.27577711
+        ]
+      },
+      "prompt_template": "a photo of a {class}.",
+      "prompts": [
+        "a photo of a airplane.",
+        "a photo of a bird.",
+        "a photo of a car.",
+        "a photo of a cat.",
+        "a photo of a deer.",
+        "a photo of a dog.",
+        "a photo of a horse.",
+        "a photo of a monkey.",
+        "a photo of a ship.",
+        "a photo of a truck."
+      ],
+      "prompt_search_performed": false,
+      "similarity_scale": "learned OpenCLIP logit_scale.exp()",
+      "top1_accuracy": 0.9800000190734863,
+      "macro_f1": 0.9798839921143818,
+      "mean_maximum_confidence": 0.9547560214996338,
+      "correct_count": 490,
+      "number_of_examples": 500
+    }
+  }
+}
