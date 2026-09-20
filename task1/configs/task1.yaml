@@ -59,6 +59,7 @@ models:
     library: "open_clip"
     model_name: "ViT-B-32"
     pretrained: "openai"
+    force_quick_gelu: true
     frozen: true
     representation: "l2_normalized_image_embedding"
     normalize_mean: [0.48145466, 0.45782750, 0.40821073]

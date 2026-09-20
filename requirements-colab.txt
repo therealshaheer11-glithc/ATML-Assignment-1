@@ -1,0 +1,3 @@
+# Packages installed in addition to the standard Colab runtime
+open_clip_torch==3.3.0
+umap-learn==0.5.12
