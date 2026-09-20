@@ -126,7 +126,16 @@ experiments:
 
   shape_vs_texture:
     method: "AdaIN"
-    implementation_source: null
+    implementation_source:
+      method_paper: "https://openaccess.thecvf.com/content_iccv_2017/html/Huang_Arbitrary_Style_Transfer_ICCV_2017_paper.html"
+      original_authors_repository: "https://github.com/xunhuang1995/AdaIN-style"
+      executable_repository: "https://github.com/naoto0804/pytorch-AdaIN"
+      executable_implementation_status: "unofficial PyTorch reproduction"
+      release: "v0.0.0"
+      commit: "324eede"
+      license: "MIT"
+      weights_manifest: "task1/results/cue_conflict/adain_source.json"
+      approved_by_user_before_generation: true
     implementation_source_must_be_recorded_before_generation: true
     alpha: 0.8
     both_directions: true

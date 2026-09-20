@@ -1,0 +1,53 @@
+{
+  "method": "Adaptive Instance Normalization (AdaIN)",
+  "method_paper": "https://openaccess.thecvf.com/content_iccv_2017/html/Huang_Arbitrary_Style_Transfer_ICCV_2017_paper.html",
+  "original_authors_repository": {
+    "url": "https://github.com/xunhuang1995/AdaIN-style",
+    "framework": "Torch7",
+    "role": "primary conceptual and original-code reference"
+  },
+  "executable_implementation": {
+    "url": "https://github.com/naoto0804/pytorch-AdaIN",
+    "status": "unofficial PyTorch reproduction",
+    "release_url": "https://github.com/naoto0804/pytorch-AdaIN/releases/tag/v0.0.0",
+    "release_tag": "v0.0.0",
+    "commit": "324eedefee5e11aa23a8f90cf1d7d87cdcc00860",
+    "license": "MIT",
+    "license_url": "https://github.com/naoto0804/pytorch-AdaIN/blob/v0.0.0/LICENSE",
+    "local_checkout": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/external/pytorch-AdaIN-v0.0.0"
+  },
+  "approved_by_user_before_generation": true,
+  "candidate_images_generated_at_record_time": 0,
+  "configured_alpha": 0.8,
+  "source_files": {
+    "function.py": {
+      "path": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/external/pytorch-AdaIN-v0.0.0/function.py",
+      "size_bytes": 2405,
+      "sha256": "aa8bf84efb80ba43724d075a2d237387ed8e8baed342b95b55a7a0d5f8aa09ea"
+    },
+    "net.py": {
+      "path": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/external/pytorch-AdaIN-v0.0.0/net.py",
+      "size_bytes": 5274,
+      "sha256": "2932117288166139afd648a4db790d717c211a10328c8dc9df3380b958a41c17"
+    },
+    "LICENSE": {
+      "path": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/external/pytorch-AdaIN-v0.0.0/LICENSE",
+      "size_bytes": 1068,
+      "sha256": "cac60b351360e641823e739fa9701bc22dc0547d300d1c54c4a0c040fc6e6e2b"
+    }
+  },
+  "pretrained_weights": {
+    "decoder.pth": {
+      "path": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/external/pytorch-AdaIN-v0.0.0/models/decoder.pth",
+      "size_bytes": 14023458,
+      "sha256": "379ca41d59f3a37eed3599bbbc2560c19da5c458870a5ffd3a9dd41aa88f9472",
+      "source_url": "https://github.com/naoto0804/pytorch-AdaIN/releases/download/v0.0.0/decoder.pth"
+    },
+    "vgg_normalised.pth": {
+      "path": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/external/pytorch-AdaIN-v0.0.0/models/vgg_normalised.pth",
+      "size_bytes": 80102481,
+      "sha256": "804ca2835ecf7539f0cd2a7ac3c18ce81e6f8468969ae7117ac0c148d286bb4a",
+      "source_url": "https://github.com/naoto0804/pytorch-AdaIN/releases/download/v0.0.0/vgg_normalised.pth"
+    }
+  }
+}
