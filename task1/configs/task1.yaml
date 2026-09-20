@@ -142,6 +142,17 @@ experiments:
     accepted_target_per_direction: 20
     accepted_target_total: 200
     generate_additional_candidates_until_target_met: true
+    pairing_protocol:
+      source: "fixed balanced 500-image official-test evaluation subset"
+      schedule_seed: 6304
+      schedule_construction: "deterministic one-to-one class-pair matching"
+      available_matched_pairs_per_class_pair: 50
+      bidirectional_from_same_matched_pair: true
+      initial_schedule_ranks_per_direction: [1, 20]
+      replacement_rule: "next unused ascending schedule rank in deficient direction"
+      candidate_selection_may_not_use_model_predictions: true
+      approved_by_user_before_generation: true
+      schedule_file: "task1/results/cue_conflict/candidate_schedule.csv"
     pairs:
       - ["airplane", "cat"]
       - ["car", "deer"]

@@ -1,0 +1,46 @@
+{
+  "dataset": "STL-10",
+  "source_subset": "fixed balanced 500-image official-test evaluation subset",
+  "selection_seed": 6304,
+  "class_pairs": [
+    [
+      "airplane",
+      "cat"
+    ],
+    [
+      "car",
+      "deer"
+    ],
+    [
+      "ship",
+      "dog"
+    ],
+    [
+      "truck",
+      "horse"
+    ],
+    [
+      "bird",
+      "monkey"
+    ]
+  ],
+  "directions_per_pair": 2,
+  "available_matched_pairs_per_class_pair": 50,
+  "total_scheduled_candidates": 500,
+  "initial_ranks_per_direction": [
+    1,
+    20
+  ],
+  "initial_candidate_count": 200,
+  "replacement_rule": "next unused ascending schedule rank in deficient direction",
+  "bidirectional_from_same_matched_pair": true,
+  "model_predictions_used_for_schedule": false,
+  "approved_by_user_before_generation": true,
+  "candidate_images_present_at_schedule_creation": 0,
+  "evaluation_manifest": "/content/ATML-Assignment-1/task1/results/splits/evaluation_subset.csv",
+  "evaluation_manifest_sha256": "52223818ee8d9505dcc813661e845eb4f123108d46d98ae788420748d1e3c724",
+  "adain_source_record": "/content/ATML-Assignment-1/task1/results/cue_conflict/adain_source.json",
+  "adain_source_record_sha256": "547c65f019018c7c4699f5f85b33f9d56e842ac8d5abf5700ef647cef568a0c2",
+  "schedule_file": "/content/ATML-Assignment-1/task1/results/cue_conflict/candidate_schedule.csv",
+  "schedule_sha256": "3dbe48e106df3f599169cf9c457bb19199181b50406f1346017d72e23858d702"
+}
