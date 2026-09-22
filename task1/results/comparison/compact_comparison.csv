@@ -1,0 +1,17 @@
+predictor,condition,number_of_examples,correct_count,accuracy_percent,accuracy_change_pp,prediction_match_count,prediction_consistency_percent,macro_f1_percent,mean_maximum_confidence_percent
+resnet50_linear_head,clean,500,488,97.6,0.0,500,100.0,97.60555313263286,86.05639934539795
+resnet50_linear_head,grayscale,500,477,95.4,-2.2,481,96.2,,
+resnet50_linear_head,hue_rotation_90,500,462,92.4,-5.2,468,93.6,,
+resnet50_linear_head,patch_shuffle,500,449,89.8,-7.8,458,91.6,,
+vit_b_16_linear_head,clean,500,486,97.2,0.0,500,100.0,97.19373932591338,91.74633622169495
+vit_b_16_linear_head,grayscale,500,478,95.6,-1.6,478,95.6,,
+vit_b_16_linear_head,hue_rotation_90,500,472,94.4,-2.8,474,94.8,,
+vit_b_16_linear_head,patch_shuffle,500,442,88.4,-8.8,449,89.8,,
+clip_vit_b_32_linear_head,clean,500,492,98.4,0.0,500,100.0,98.40160592639411,22.40477353334427
+clip_vit_b_32_linear_head,grayscale,500,482,96.4,-2.0,483,96.6,,
+clip_vit_b_32_linear_head,hue_rotation_90,500,480,96.0,-2.4,483,96.6,,
+clip_vit_b_32_linear_head,patch_shuffle,500,421,84.2,-14.2,422,84.4,,
+clip_vit_b_32_zero_shot,clean,500,490,98.0,0.0,500,100.0,97.98839921143818,95.47560214996338
+clip_vit_b_32_zero_shot,grayscale,500,485,97.0,-1.0,486,97.2,,
+clip_vit_b_32_zero_shot,hue_rotation_90,500,476,95.2,-2.8,481,96.2,,
+clip_vit_b_32_zero_shot,patch_shuffle,500,417,83.4,-14.6,419,83.8,,

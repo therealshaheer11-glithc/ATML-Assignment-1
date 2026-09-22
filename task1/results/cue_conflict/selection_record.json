@@ -1,0 +1,29 @@
+{
+  "accepted_conflicts_sha256": "58c95fa8dfaa353cd09f08f1aa0c27b8b52ac8ae29c063a6aa63d7d1cc228a5a",
+  "accepted_count": 200,
+  "accepted_per_direction": {
+    "airplane_shape__cat_texture": 20,
+    "bird_shape__monkey_texture": 20,
+    "car_shape__deer_texture": 20,
+    "cat_shape__airplane_texture": 20,
+    "deer_shape__car_texture": 20,
+    "dog_shape__ship_texture": 20,
+    "horse_shape__truck_texture": 20,
+    "monkey_shape__bird_texture": 20,
+    "ship_shape__dog_texture": 20,
+    "truck_shape__horse_texture": 20
+  },
+  "accepted_per_pair": {
+    "1": 40,
+    "2": 40,
+    "3": 40,
+    "4": 40,
+    "5": 40
+  },
+  "candidate_count": 265,
+  "final_review_manifest_sha256": "a68b23226f57f058b1358bd6a6f8f1a04ec5f4631fe7bc9d36a5ae8d6cd8284b",
+  "model_evaluation_started_at_freeze": false,
+  "model_predictions_used_for_selection": false,
+  "rejected_count": 65,
+  "replacement_generation_device_rounds_1_and_2": "cpu"
+}

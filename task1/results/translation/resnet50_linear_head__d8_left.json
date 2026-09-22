@@ -1,0 +1,53 @@
+{
+  "absolute_accuracy": 0.968,
+  "accuracy_change_from_own_clean_baseline": -0.008000010967254667,
+  "backbone_metadata": {
+    "display_name": "ResNet-50",
+    "feature_dim": 2048,
+    "key": "resnet50",
+    "normalization_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "normalization_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "representation": "global_average_pooled_feature",
+    "weights_identifier": "ResNet50_Weights.IMAGENET1K_V2"
+  },
+  "checkpoint": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/checkpoints/linear_heads/resnet50.pt",
+  "checkpoint_sha256": "cb71efa3e95d6d492321e396b3139e7baf4c255dbd69e3f9050924d7b93f2b5b",
+  "condition": "d8_left",
+  "correct_count": 484,
+  "direction": "left",
+  "displacement_pixels": 8,
+  "evaluation_manifest_sha256": "52223818ee8d9505dcc813661e845eb4f123108d46d98ae788420748d1e3c724",
+  "feature_cache_metadata": {
+    "backbone": "resnet50",
+    "condition": "d8_left",
+    "dataset": "STL-10",
+    "evaluation_manifest_sha256": "52223818ee8d9505dcc813661e845eb4f123108d46d98ae788420748d1e3c724",
+    "feature_dim": 2048,
+    "gradients": false,
+    "official_partition": "test",
+    "representation": "global_average_pooled_feature",
+    "selection_seed": 6304,
+    "shuffle": false,
+    "source_fingerprint": "0a0f5896a200fd407da78d6db7221cbcf27ecc5fbec0e96f1b017f28d6b8c87c",
+    "transformation": "reflection padding followed by shifted crop",
+    "weights": "ResNet50_Weights.IMAGENET1K_V2"
+  },
+  "inference_device": "cpu",
+  "input_manifest_sha256": "fbabfceb36397c509da893c0033722c0d482e001e333ce7974e0ed257be1b7df",
+  "mean_maximum_confidence": 0.8607674837112427,
+  "number_of_examples": 500,
+  "own_clean_accuracy": 0.9760000109672546,
+  "prediction_consistency_with_clean": 0.988,
+  "prediction_match_count": 494,
+  "predictor": "resnet50_linear_head",
+  "source_fingerprint": "0a0f5896a200fd407da78d6db7221cbcf27ecc5fbec0e96f1b017f28d6b8c87c",
+  "zero_shot_prompts": null
+}

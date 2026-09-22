@@ -1,0 +1,46 @@
+{
+  "analysis_source_sha256": "45598424c28010676e83495be53e5bb127951067ef7be04c3908f91d7d4644fe",
+  "backbone": "clip_vit_b_32",
+  "conditions_in_fit_order": [
+    "clean",
+    "grayscale",
+    "cue_conflict",
+    "translation_32px",
+    "patch_shuffle"
+  ],
+  "coordinate_csv_sha256": "64d9698b62d0933fc495ed0496375c502924d6eed9e37eff0940386b156ee923",
+  "feature_cache_sha256": {
+    "features/clip_vit_b_32/evaluation_clean.pt": "85155ef94eaf77ee44e05353466469cd14e81e52cae5e295db3e093d29f61351",
+    "features/clip_vit_b_32/evaluation_cue_conflict.pt": "7bce6dfb824013c9310d94d170f98a6d7025eca8c37704ea6167117668282009",
+    "features/clip_vit_b_32/evaluation_grayscale.pt": "5c6d6238dd74fd97aa876cf7f62029b56419dabdbfbb5037f1ee35faddc4cf3f",
+    "features/clip_vit_b_32/patch_shuffle.pt": "fdfb5bc0224726a269d5f86c64a189bbaa4141147d022816bc83a9e6a9e0d01c",
+    "features/clip_vit_b_32/translation_d32_down.pt": "56822f8a461776394eda532c0b3f3a8a36c37cba09db9fd4798bbeb29ed654c4",
+    "features/clip_vit_b_32/translation_d32_left.pt": "5f1df7a4cdb7028fb7045b32cc91ae31a0310729a992d3a60a8c30cca3f57e97",
+    "features/clip_vit_b_32/translation_d32_right.pt": "36b4654acf298cb0a84191a1a8ebf80b694e0583749fec1e98084eef7a08cad5",
+    "features/clip_vit_b_32/translation_d32_up.pt": "335fb95653c7cd54a4fdd62c2a7b20fd627bfd5a8708cd20cdd815ed62cf6fea"
+  },
+  "figure_png_sha256": "c6937e05d72abb33b99ce0405f56e0184fc661f1935f402ddbadac874f0f905f",
+  "frozen_weights": "ViT-B-32 pretrained=openai",
+  "interpretation_rule": "Compare clean and transformed conditions within a backbone; do not compare absolute coordinates across separately fitted backbones.",
+  "number_of_fit_points": 1000,
+  "one_combined_fit_per_backbone": true,
+  "points_per_condition": 200,
+  "representation": "l2_normalized_image_embedding",
+  "selection_manifest_sha256": "13a3751fe33c78854732bd5f4ce4862c08f9bcf8d7b451ead71e5e3c75b0239e",
+  "shared_axes_across_condition_panels": true,
+  "software_versions": {
+    "matplotlib": "3.10.0",
+    "numpy": "2.1.3",
+    "python": "3.13.15",
+    "torch": "2.11.0+cpu",
+    "umap_learn": "0.5.12"
+  },
+  "umap_parameters": {
+    "metric": "cosine",
+    "min_dist": 0.1,
+    "n_components": 2,
+    "n_neighbors": 15,
+    "random_state": 6304,
+    "transform_seed": 6304
+  }
+}

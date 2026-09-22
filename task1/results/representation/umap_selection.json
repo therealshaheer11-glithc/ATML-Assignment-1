@@ -1,0 +1,20 @@
+{
+  "accepted_manifest_sha256": "58c95fa8dfaa353cd09f08f1aa0c27b8b52ac8ae29c063a6aa63d7d1cc228a5a",
+  "classes": 10,
+  "direction_assignment_rule": "Within each class, sort official test indices, permute positions with NumPy SeedSequence([6304, class_id]), and assign five successive images to each direction in up/down/left/right order.",
+  "directions": [
+    "up",
+    "down",
+    "left",
+    "right"
+  ],
+  "evaluation_manifest_sha256": "52223818ee8d9505dcc813661e845eb4f123108d46d98ae788420748d1e3c724",
+  "images_per_class": 20,
+  "images_per_class_per_direction": 5,
+  "model_predictions_used_for_selection": false,
+  "number_of_images": 200,
+  "seed": 6304,
+  "selection_source": "The 200 unique clean content images in the visually accepted cue-conflict manifest, in accepted-manifest order.",
+  "translation_displacement_pixels": 32,
+  "umap_selection_sha256": "13a3751fe33c78854732bd5f4ce4862c08f9bcf8d7b451ead71e5e3c75b0239e"
+}

@@ -1,0 +1,230 @@
+{
+  "aggregation": "unweighted mean of four directions",
+  "direction_results": {
+    "down": {
+      "absolute_accuracy": 0.974,
+      "accuracy_change_from_own_clean_baseline": -0.01000002717971804,
+      "backbone_metadata": {
+        "display_name": "OpenCLIP ViT-B/32",
+        "feature_dim": 512,
+        "key": "clip_vit_b_32",
+        "normalization_mean": [
+          0.48145466,
+          0.4578275,
+          0.40821073
+        ],
+        "normalization_std": [
+          0.26862954,
+          0.26130258,
+          0.27577711
+        ],
+        "representation": "l2_normalized_image_embedding",
+        "weights_identifier": "ViT-B-32 pretrained=openai"
+      },
+      "checkpoint": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/checkpoints/linear_heads/clip_vit_b_32.pt",
+      "checkpoint_sha256": "a0dd1572f780f9d4d24240d1b55c72839d8e1a0cafa9299f3926313349b927be",
+      "condition": "d32_down",
+      "correct_count": 487,
+      "direction": "down",
+      "displacement_pixels": 32,
+      "evaluation_manifest_sha256": "52223818ee8d9505dcc813661e845eb4f123108d46d98ae788420748d1e3c724",
+      "feature_cache_metadata": {
+        "backbone": "clip_vit_b_32",
+        "condition": "d32_down",
+        "dataset": "STL-10",
+        "evaluation_manifest_sha256": "52223818ee8d9505dcc813661e845eb4f123108d46d98ae788420748d1e3c724",
+        "feature_dim": 512,
+        "gradients": false,
+        "official_partition": "test",
+        "representation": "l2_normalized_image_embedding",
+        "selection_seed": 6304,
+        "shuffle": false,
+        "source_fingerprint": "0a0f5896a200fd407da78d6db7221cbcf27ecc5fbec0e96f1b017f28d6b8c87c",
+        "transformation": "reflection padding followed by shifted crop",
+        "weights": "ViT-B-32 pretrained=openai"
+      },
+      "inference_device": "cpu",
+      "input_manifest_sha256": "dbcadf86fb008883bff7632364263c9334081dbfa9d2ea3c5cf6fabff03ed797",
+      "mean_maximum_confidence": 0.21712175011634827,
+      "number_of_examples": 500,
+      "own_clean_accuracy": 0.984000027179718,
+      "prediction_consistency_with_clean": 0.99,
+      "prediction_match_count": 495,
+      "predictor": "clip_vit_b_32_linear_head",
+      "source_fingerprint": "0a0f5896a200fd407da78d6db7221cbcf27ecc5fbec0e96f1b017f28d6b8c87c",
+      "zero_shot_prompts": null
+    },
+    "left": {
+      "absolute_accuracy": 0.974,
+      "accuracy_change_from_own_clean_baseline": -0.01000002717971804,
+      "backbone_metadata": {
+        "display_name": "OpenCLIP ViT-B/32",
+        "feature_dim": 512,
+        "key": "clip_vit_b_32",
+        "normalization_mean": [
+          0.48145466,
+          0.4578275,
+          0.40821073
+        ],
+        "normalization_std": [
+          0.26862954,
+          0.26130258,
+          0.27577711
+        ],
+        "representation": "l2_normalized_image_embedding",
+        "weights_identifier": "ViT-B-32 pretrained=openai"
+      },
+      "checkpoint": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/checkpoints/linear_heads/clip_vit_b_32.pt",
+      "checkpoint_sha256": "a0dd1572f780f9d4d24240d1b55c72839d8e1a0cafa9299f3926313349b927be",
+      "condition": "d32_left",
+      "correct_count": 487,
+      "direction": "left",
+      "displacement_pixels": 32,
+      "evaluation_manifest_sha256": "52223818ee8d9505dcc813661e845eb4f123108d46d98ae788420748d1e3c724",
+      "feature_cache_metadata": {
+        "backbone": "clip_vit_b_32",
+        "condition": "d32_left",
+        "dataset": "STL-10",
+        "evaluation_manifest_sha256": "52223818ee8d9505dcc813661e845eb4f123108d46d98ae788420748d1e3c724",
+        "feature_dim": 512,
+        "gradients": false,
+        "official_partition": "test",
+        "representation": "l2_normalized_image_embedding",
+        "selection_seed": 6304,
+        "shuffle": false,
+        "source_fingerprint": "0a0f5896a200fd407da78d6db7221cbcf27ecc5fbec0e96f1b017f28d6b8c87c",
+        "transformation": "reflection padding followed by shifted crop",
+        "weights": "ViT-B-32 pretrained=openai"
+      },
+      "inference_device": "cpu",
+      "input_manifest_sha256": "79bc39dbd5a8e56c1e89f5cc69d2d0cb12237a82e7830c3515a99bd3e9013056",
+      "mean_maximum_confidence": 0.21730534732341766,
+      "number_of_examples": 500,
+      "own_clean_accuracy": 0.984000027179718,
+      "prediction_consistency_with_clean": 0.982,
+      "prediction_match_count": 491,
+      "predictor": "clip_vit_b_32_linear_head",
+      "source_fingerprint": "0a0f5896a200fd407da78d6db7221cbcf27ecc5fbec0e96f1b017f28d6b8c87c",
+      "zero_shot_prompts": null
+    },
+    "right": {
+      "absolute_accuracy": 0.974,
+      "accuracy_change_from_own_clean_baseline": -0.01000002717971804,
+      "backbone_metadata": {
+        "display_name": "OpenCLIP ViT-B/32",
+        "feature_dim": 512,
+        "key": "clip_vit_b_32",
+        "normalization_mean": [
+          0.48145466,
+          0.4578275,
+          0.40821073
+        ],
+        "normalization_std": [
+          0.26862954,
+          0.26130258,
+          0.27577711
+        ],
+        "representation": "l2_normalized_image_embedding",
+        "weights_identifier": "ViT-B-32 pretrained=openai"
+      },
+      "checkpoint": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/checkpoints/linear_heads/clip_vit_b_32.pt",
+      "checkpoint_sha256": "a0dd1572f780f9d4d24240d1b55c72839d8e1a0cafa9299f3926313349b927be",
+      "condition": "d32_right",
+      "correct_count": 487,
+      "direction": "right",
+      "displacement_pixels": 32,
+      "evaluation_manifest_sha256": "52223818ee8d9505dcc813661e845eb4f123108d46d98ae788420748d1e3c724",
+      "feature_cache_metadata": {
+        "backbone": "clip_vit_b_32",
+        "condition": "d32_right",
+        "dataset": "STL-10",
+        "evaluation_manifest_sha256": "52223818ee8d9505dcc813661e845eb4f123108d46d98ae788420748d1e3c724",
+        "feature_dim": 512,
+        "gradients": false,
+        "official_partition": "test",
+        "representation": "l2_normalized_image_embedding",
+        "selection_seed": 6304,
+        "shuffle": false,
+        "source_fingerprint": "0a0f5896a200fd407da78d6db7221cbcf27ecc5fbec0e96f1b017f28d6b8c87c",
+        "transformation": "reflection padding followed by shifted crop",
+        "weights": "ViT-B-32 pretrained=openai"
+      },
+      "inference_device": "cpu",
+      "input_manifest_sha256": "afac1333bf03e959e2a0aaa02cb5c6661e42e733a59aa08a51fd5ccd3735ef37",
+      "mean_maximum_confidence": 0.21726052463054657,
+      "number_of_examples": 500,
+      "own_clean_accuracy": 0.984000027179718,
+      "prediction_consistency_with_clean": 0.982,
+      "prediction_match_count": 491,
+      "predictor": "clip_vit_b_32_linear_head",
+      "source_fingerprint": "0a0f5896a200fd407da78d6db7221cbcf27ecc5fbec0e96f1b017f28d6b8c87c",
+      "zero_shot_prompts": null
+    },
+    "up": {
+      "absolute_accuracy": 0.97,
+      "accuracy_change_from_own_clean_baseline": -0.014000027179718044,
+      "backbone_metadata": {
+        "display_name": "OpenCLIP ViT-B/32",
+        "feature_dim": 512,
+        "key": "clip_vit_b_32",
+        "normalization_mean": [
+          0.48145466,
+          0.4578275,
+          0.40821073
+        ],
+        "normalization_std": [
+          0.26862954,
+          0.26130258,
+          0.27577711
+        ],
+        "representation": "l2_normalized_image_embedding",
+        "weights_identifier": "ViT-B-32 pretrained=openai"
+      },
+      "checkpoint": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/checkpoints/linear_heads/clip_vit_b_32.pt",
+      "checkpoint_sha256": "a0dd1572f780f9d4d24240d1b55c72839d8e1a0cafa9299f3926313349b927be",
+      "condition": "d32_up",
+      "correct_count": 485,
+      "direction": "up",
+      "displacement_pixels": 32,
+      "evaluation_manifest_sha256": "52223818ee8d9505dcc813661e845eb4f123108d46d98ae788420748d1e3c724",
+      "feature_cache_metadata": {
+        "backbone": "clip_vit_b_32",
+        "condition": "d32_up",
+        "dataset": "STL-10",
+        "evaluation_manifest_sha256": "52223818ee8d9505dcc813661e845eb4f123108d46d98ae788420748d1e3c724",
+        "feature_dim": 512,
+        "gradients": false,
+        "official_partition": "test",
+        "representation": "l2_normalized_image_embedding",
+        "selection_seed": 6304,
+        "shuffle": false,
+        "source_fingerprint": "0a0f5896a200fd407da78d6db7221cbcf27ecc5fbec0e96f1b017f28d6b8c87c",
+        "transformation": "reflection padding followed by shifted crop",
+        "weights": "ViT-B-32 pretrained=openai"
+      },
+      "inference_device": "cpu",
+      "input_manifest_sha256": "5ce29f981ba85407581e6ddafc0a4696ee716b75f25207dc32e21c3a3a5ece40",
+      "mean_maximum_confidence": 0.217329740524292,
+      "number_of_examples": 500,
+      "own_clean_accuracy": 0.984000027179718,
+      "prediction_consistency_with_clean": 0.982,
+      "prediction_match_count": 491,
+      "predictor": "clip_vit_b_32_linear_head",
+      "source_fingerprint": "0a0f5896a200fd407da78d6db7221cbcf27ecc5fbec0e96f1b017f28d6b8c87c",
+      "zero_shot_prompts": null
+    }
+  },
+  "directions": [
+    "up",
+    "down",
+    "left",
+    "right"
+  ],
+  "displacement_pixels": 32,
+  "examples_per_direction": 500,
+  "mean_accuracy": 0.973,
+  "mean_accuracy_change_from_own_clean_baseline": -0.011000027179718042,
+  "mean_prediction_consistency_with_clean": 0.984,
+  "own_clean_accuracy": 0.984000027179718,
+  "predictor": "clip_vit_b_32_linear_head"
+}

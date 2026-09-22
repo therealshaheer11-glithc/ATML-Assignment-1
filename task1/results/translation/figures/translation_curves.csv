@@ -1,0 +1,17 @@
+predictor,displacement_pixels,absolute_accuracy,accuracy_change_from_own_clean_baseline,prediction_consistency_with_clean,aggregation,examples_per_direction,number_of_directions
+resnet50_linear_head,0,0.9760000109672546,0.0,1.0,clean identity baseline,500,1
+resnet50_linear_head,8,0.9695,-0.00650001096725461,0.9915,unweighted mean of four directions,500,4
+resnet50_linear_head,16,0.9664999999999999,-0.009500010967254724,0.989,unweighted mean of four directions,500,4
+resnet50_linear_head,32,0.964,-0.01200001096725467,0.9855,unweighted mean of four directions,500,4
+vit_b_16_linear_head,0,0.972000002861023,0.0,1.0,clean identity baseline,500,1
+vit_b_16_linear_head,8,0.973,0.0009999971389770268,0.985,unweighted mean of four directions,500,4
+vit_b_16_linear_head,16,0.971,-0.001000002861022975,0.9915,unweighted mean of four directions,500,4
+vit_b_16_linear_head,32,0.9584999999999999,-0.013500002861023042,0.978,unweighted mean of four directions,500,4
+clip_vit_b_32_linear_head,0,0.984000027179718,0.0,1.0,clean identity baseline,500,1
+clip_vit_b_32_linear_head,8,0.9824999999999999,-0.0015000271797180886,0.9915,unweighted mean of four directions,500,4
+clip_vit_b_32_linear_head,16,0.9784999999999999,-0.005500027179718092,0.9855,unweighted mean of four directions,500,4
+clip_vit_b_32_linear_head,32,0.973,-0.011000027179718042,0.984,unweighted mean of four directions,500,4
+clip_vit_b_32_zero_shot,0,0.9800000190734863,0.0,1.0,clean identity baseline,500,1
+clip_vit_b_32_zero_shot,8,0.978,-0.0020000190734863477,0.9864999999999999,unweighted mean of four directions,500,4
+clip_vit_b_32_zero_shot,16,0.977,-0.0030000190734863486,0.983,unweighted mean of four directions,500,4
+clip_vit_b_32_zero_shot,32,0.9664999999999999,-0.013500019073486413,0.9824999999999999,unweighted mean of four directions,500,4

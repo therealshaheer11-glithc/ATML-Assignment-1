@@ -1,0 +1,29 @@
+{
+  "accuracy_change_definition": "transformed accuracy minus own clean accuracy, in percentage points",
+  "accuracy_definition": "100 * correct_count / number_of_examples",
+  "analysis_source_sha256": "9715a810bbbeb56ff0efaff71017f6224c03ca15a5c71fd11caab90c482950b1",
+  "clean_f1_and_confidence": "Saved clean macro-F1 and mean maximum confidence, multiplied by 100",
+  "consistency_definition": "100 * prediction_match_count / number_of_examples",
+  "csv_sha256": "dcd97a99ef79ed39c10e8694029136dc0d0a8ac67d5c169d3895dececebae56e",
+  "evaluation_manifest_sha256": "52223818ee8d9505dcc813661e845eb4f123108d46d98ae788420748d1e3c724",
+  "figure_decimal_places": 1,
+  "figure_sha256": "8a10f0985b3cfcfd7cf1b9f92a8540a1cd433134850c0221eadf3538c2c058ec",
+  "matplotlib_version": "3.10.8",
+  "missing_csv_values": "Clean-only F1 and confidence fields are blank for transformed conditions",
+  "models_executed": false,
+  "report_interpretation_generated": false,
+  "source_file_sha256": {
+    "metrics/clean/clean_metrics.json": "4200005f176549c0708ea99f91af0dc873434900d38180b78cae415510267c97",
+    "metrics/clean/clean_predictions.csv": "1310d9c195ecd897d26a5b07d276b78bfaf1e73ae8fcf4cff3180592e07b88d7",
+    "metrics/color/color_metrics.json": "2f7b861545a93e5bc9f10c4fe8de340ed95eeea9c1167bbf88907531c0a2f732",
+    "metrics/color/color_predictions.csv": "cfc0b0c9a77a765adc3dbe82a3f0200fe02a4263d9b9e90cfd79e191d9970304",
+    "metrics/patch_shuffle/clip_vit_b_32_linear_head.json": "1086bf86a10648243388f21d4bc1f6916d673abefedafcc5184ed77eb24e2578",
+    "metrics/patch_shuffle/clip_vit_b_32_linear_head_predictions.csv": "7726d1c3fcf1b6dc01584b507be80a914916eaea2aa5f20998b3d6fd9ecaf2a1",
+    "metrics/patch_shuffle/clip_vit_b_32_zero_shot.json": "e68de08f4944b297a9d15e332455dff08a5cf17bbdda961b92b8330b2b11a928",
+    "metrics/patch_shuffle/clip_vit_b_32_zero_shot_predictions.csv": "61f7379a13f629af38210675b90d808385f199a50076447d771ad3bc80a8c075",
+    "metrics/patch_shuffle/resnet50_linear_head.json": "2646586f36aaec58cc3810a7e73d4c503a3dea0d93dab7af5ffd3577cf682f81",
+    "metrics/patch_shuffle/resnet50_linear_head_predictions.csv": "176e590975fef23611a2d30e0164826e99855aff85815a16c0063b259915add5",
+    "metrics/patch_shuffle/vit_b_16_linear_head.json": "7bbd9b14cd87f3fc9d755a6961488fcf54d6c4906e394691805e59807ab1a9d6",
+    "metrics/patch_shuffle/vit_b_16_linear_head_predictions.csv": "f76f7e944ec222fc02ae1b5dc908e5c8d36c6acc47d7d4e6a0f1685430c0f748"
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "round": 1,
+  "purpose": "preregistered replacements for manually rejected AdaIN conflicts",
+  "generation_device": "cpu",
+  "alpha": 0.8,
+  "schedule_file": "/content/ATML-Assignment-1/task1/results/cue_conflict/candidate_schedule.csv",
+  "schedule_sha256": "3dbe48e106df3f599169cf9c457bb19199181b50406f1346017d72e23858d702",
+  "review_manifest_before_generation": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/cue_conflict/manifests/review_manifest.csv",
+  "review_manifest_sha256_before_generation": "4622398034fb2d822211db4c8a962c09f108e02755fa5484b2f0f11c071b1a11",
+  "review_snapshot_before_generation": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/cue_conflict/manifests/review_snapshot_round_01.csv",
+  "review_snapshot_sha256": "4622398034fb2d822211db4c8a962c09f108e02755fa5484b2f0f11c071b1a11",
+  "review_rows_canonical_sha256_before_generation": "4622398034fb2d822211db4c8a962c09f108e02755fa5484b2f0f11c071b1a11",
+  "reviewed_candidates_before_generation": 200,
+  "accepted_before_generation": 144,
+  "rejected_before_generation": 56,
+  "target_accepted_per_direction": 20,
+  "counts_by_direction": {
+    "airplane_shape__cat_texture": {
+      "accepted": 13,
+      "rejected": 7,
+      "current_candidates": 20,
+      "new_candidates_needed": 7
+    },
+    "bird_shape__monkey_texture": {
+      "accepted": 18,
+      "rejected": 2,
+      "current_candidates": 20,
+      "new_candidates_needed": 2
+    },
+    "car_shape__deer_texture": {
+      "accepted": 18,
+      "rejected": 2,
+      "current_candidates": 20,
+      "new_candidates_needed": 2
+    },
+    "cat_shape__airplane_texture": {
+      "accepted": 9,
+      "rejected": 11,
+      "current_candidates": 20,
+      "new_candidates_needed": 11
+    },
+    "deer_shape__car_texture": {
+      "accepted": 14,
+      "rejected": 6,
+      "current_candidates": 20,
+      "new_candidates_needed": 6
+    },
+    "dog_shape__ship_texture": {
+      "accepted": 16,
+      "rejected": 4,
+      "current_candidates": 20,
+      "new_candidates_needed": 4
+    },
+    "horse_shape__truck_texture": {
+      "accepted": 12,
+      "rejected": 8,
+      "current_candidates": 20,
+      "new_candidates_needed": 8
+    },
+    "monkey_shape__bird_texture": {
+      "accepted": 9,
+      "rejected": 11,
+      "current_candidates": 20,
+      "new_candidates_needed": 11
+    },
+    "ship_shape__dog_texture": {
+      "accepted": 17,
+      "rejected": 3,
+      "current_candidates": 20,
+      "new_candidates_needed": 3
+    },
+    "truck_shape__horse_texture": {
+      "accepted": 18,
+      "rejected": 2,
+      "current_candidates": 20,
+      "new_candidates_needed": 2
+    }
+  },
+  "planned_candidate_count": 56,
+  "planned_candidates": [
+    {
+      "candidate_id": "p01_r21_a_to_b",
+      "direction": "airplane_shape__cat_texture",
+      "schedule_rank": 21
+    },
+    {
+      "candidate_id": "p01_r22_a_to_b",
+      "direction": "airplane_shape__cat_texture",
+      "schedule_rank": 22
+    },
+    {
+      "candidate_id": "p01_r23_a_to_b",
+      "direction": "airplane_shape__cat_texture",
+      "schedule_rank": 23
+    },
+    {
+      "candidate_id": "p01_r24_a_to_b",
+      "direction": "airplane_shape__cat_texture",
+      "schedule_rank": 24
+    },
+    {
+      "candidate_id": "p01_r25_a_to_b",
+      "direction": "airplane_shape__cat_texture",
+      "schedule_rank": 25
+    },
+    {
+      "candidate_id": "p01_r26_a_to_b",
+      "direction": "airplane_shape__cat_texture",
+      "schedule_rank": 26
+    },
+    {
+      "candidate_id": "p01_r27_a_to_b",
+      "direction": "airplane_shape__cat_texture",
+      "schedule_rank": 27
+    },
+    {
+      "candidate_id": "p05_r21_a_to_b",
+      "direction": "bird_shape__monkey_texture",
+      "schedule_rank": 21
+    },
+    {
+      "candidate_id": "p05_r22_a_to_b",
+      "direction": "bird_shape__monkey_texture",
+      "schedule_rank": 22
+    },
+    {
+      "candidate_id": "p02_r21_a_to_b",
+      "direction": "car_shape__deer_texture",
+      "schedule_rank": 21
+    },
+    {
+      "candidate_id": "p02_r22_a_to_b",
+      "direction": "car_shape__deer_texture",
+      "schedule_rank": 22
+    },
+    {
+      "candidate_id": "p01_r21_b_to_a",
+      "direction": "cat_shape__airplane_texture",
+      "schedule_rank": 21
+    },
+    {
+      "candidate_id": "p01_r22_b_to_a",
+      "direction": "cat_shape__airplane_texture",
+      "schedule_rank": 22
+    },
+    {
+      "candidate_id": "p01_r23_b_to_a",
+      "direction": "cat_shape__airplane_texture",
+      "schedule_rank": 23
+    },
+    {
+      "candidate_id": "p01_r24_b_to_a",
+      "direction": "cat_shape__airplane_texture",
+      "schedule_rank": 24
+    },
+    {
+      "candidate_id": "p01_r25_b_to_a",
+      "direction": "cat_shape__airplane_texture",
+      "schedule_rank": 25
+    },
+    {
+      "candidate_id": "p01_r26_b_to_a",
+      "direction": "cat_shape__airplane_texture",
+      "schedule_rank": 26
+    },
+    {
+      "candidate_id": "p01_r27_b_to_a",
+      "direction": "cat_shape__airplane_texture",
+      "schedule_rank": 27
+    },
+    {
+      "candidate_id": "p01_r28_b_to_a",
+      "direction": "cat_shape__airplane_texture",
+      "schedule_rank": 28
+    },
+    {
+      "candidate_id": "p01_r29_b_to_a",
+      "direction": "cat_shape__airplane_texture",
+      "schedule_rank": 29
+    },
+    {
+      "candidate_id": "p01_r30_b_to_a",
+      "direction": "cat_shape__airplane_texture",
+      "schedule_rank": 30
+    },
+    {
+      "candidate_id": "p01_r31_b_to_a",
+      "direction": "cat_shape__airplane_texture",
+      "schedule_rank": 31
+    },
+    {
+      "candidate_id": "p02_r21_b_to_a",
+      "direction": "deer_shape__car_texture",
+      "schedule_rank": 21
+    },
+    {
+      "candidate_id": "p02_r22_b_to_a",
+      "direction": "deer_shape__car_texture",
+      "schedule_rank": 22
+    },
+    {
+      "candidate_id": "p02_r23_b_to_a",
+      "direction": "deer_shape__car_texture",
+      "schedule_rank": 23
+    },
+    {
+      "candidate_id": "p02_r24_b_to_a",
+      "direction": "deer_shape__car_texture",
+      "schedule_rank": 24
+    },
+    {
+      "candidate_id": "p02_r25_b_to_a",
+      "direction": "deer_shape__car_texture",
+      "schedule_rank": 25
+    },
+    {
+      "candidate_id": "p02_r26_b_to_a",
+      "direction": "deer_shape__car_texture",
+      "schedule_rank": 26
+    },
+    {
+      "candidate_id": "p03_r21_b_to_a",
+      "direction": "dog_shape__ship_texture",
+      "schedule_rank": 21
+    },
+    {
+      "candidate_id": "p03_r22_b_to_a",
+      "direction": "dog_shape__ship_texture",
+      "schedule_rank": 22
+    },
+    {
+      "candidate_id": "p03_r23_b_to_a",
+      "direction": "dog_shape__ship_texture",
+      "schedule_rank": 23
+    },
+    {
+      "candidate_id": "p03_r24_b_to_a",
+      "direction": "dog_shape__ship_texture",
+      "schedule_rank": 24
+    },
+    {
+      "candidate_id": "p04_r21_b_to_a",
+      "direction": "horse_shape__truck_texture",
+      "schedule_rank": 21
+    },
+    {
+      "candidate_id": "p04_r22_b_to_a",
+      "direction": "horse_shape__truck_texture",
+      "schedule_rank": 22
+    },
+    {
+      "candidate_id": "p04_r23_b_to_a",
+      "direction": "horse_shape__truck_texture",
+      "schedule_rank": 23
+    },
+    {
+      "candidate_id": "p04_r24_b_to_a",
+      "direction": "horse_shape__truck_texture",
+      "schedule_rank": 24
+    },
+    {
+      "candidate_id": "p04_r25_b_to_a",
+      "direction": "horse_shape__truck_texture",
+      "schedule_rank": 25
+    },
+    {
+      "candidate_id": "p04_r26_b_to_a",
+      "direction": "horse_shape__truck_texture",
+      "schedule_rank": 26
+    },
+    {
+      "candidate_id": "p04_r27_b_to_a",
+      "direction": "horse_shape__truck_texture",
+      "schedule_rank": 27
+    },
+    {
+      "candidate_id": "p04_r28_b_to_a",
+      "direction": "horse_shape__truck_texture",
+      "schedule_rank": 28
+    },
+    {
+      "candidate_id": "p05_r21_b_to_a",
+      "direction": "monkey_shape__bird_texture",
+      "schedule_rank": 21
+    },
+    {
+      "candidate_id": "p05_r22_b_to_a",
+      "direction": "monkey_shape__bird_texture",
+      "schedule_rank": 22
+    },
+    {
+      "candidate_id": "p05_r23_b_to_a",
+      "direction": "monkey_shape__bird_texture",
+      "schedule_rank": 23
+    },
+    {
+      "candidate_id": "p05_r24_b_to_a",
+      "direction": "monkey_shape__bird_texture",
+      "schedule_rank": 24
+    },
+    {
+      "candidate_id": "p05_r25_b_to_a",
+      "direction": "monkey_shape__bird_texture",
+      "schedule_rank": 25
+    },
+    {
+      "candidate_id": "p05_r26_b_to_a",
+      "direction": "monkey_shape__bird_texture",
+      "schedule_rank": 26
+    },
+    {
+      "candidate_id": "p05_r27_b_to_a",
+      "direction": "monkey_shape__bird_texture",
+      "schedule_rank": 27
+    },
+    {
+      "candidate_id": "p05_r28_b_to_a",
+      "direction": "monkey_shape__bird_texture",
+      "schedule_rank": 28
+    },
+    {
+      "candidate_id": "p05_r29_b_to_a",
+      "direction": "monkey_shape__bird_texture",
+      "schedule_rank": 29
+    },
+    {
+      "candidate_id": "p05_r30_b_to_a",
+      "direction": "monkey_shape__bird_texture",
+      "schedule_rank": 30
+    },
+    {
+      "candidate_id": "p05_r31_b_to_a",
+      "direction": "monkey_shape__bird_texture",
+      "schedule_rank": 31
+    },
+    {
+      "candidate_id": "p03_r21_a_to_b",
+      "direction": "ship_shape__dog_texture",
+      "schedule_rank": 21
+    },
+    {
+      "candidate_id": "p03_r22_a_to_b",
+      "direction": "ship_shape__dog_texture",
+      "schedule_rank": 22
+    },
+    {
+      "candidate_id": "p03_r23_a_to_b",
+      "direction": "ship_shape__dog_texture",
+      "schedule_rank": 23
+    },
+    {
+      "candidate_id": "p04_r21_a_to_b",
+      "direction": "truck_shape__horse_texture",
+      "schedule_rank": 21
+    },
+    {
+      "candidate_id": "p04_r22_a_to_b",
+      "direction": "truck_shape__horse_texture",
+      "schedule_rank": 22
+    }
+  ],
+  "planned_candidate_images_present_at_planning": 0,
+  "selection_rule": "next unused ascending rank per deficient direction",
+  "model_predictions_used_for_selection": false,
+  "model_predictions_permitted_before_final_manual_review": false
+}

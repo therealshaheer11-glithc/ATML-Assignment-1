@@ -1,0 +1,162 @@
+{
+  "accepted_manifest_sha256": "58c95fa8dfaa353cd09f08f1aa0c27b8b52ac8ae29c063a6aa63d7d1cc228a5a",
+  "backbone_metadata": {
+    "display_name": "ResNet-50",
+    "feature_dim": 2048,
+    "key": "resnet50",
+    "normalization_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "normalization_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "representation": "global_average_pooled_feature",
+    "weights_identifier": "ResNet50_Weights.IMAGENET1K_V2"
+  },
+  "by_direction": {
+    "airplane_shape__cat_texture": {
+      "coverage_percent": 10.0,
+      "number_of_examples": 20,
+      "other_decision_count": 18,
+      "shape_bias_percent": 50.0,
+      "shape_decision_count": 1,
+      "texture_decision_count": 1
+    },
+    "bird_shape__monkey_texture": {
+      "coverage_percent": 90.0,
+      "number_of_examples": 20,
+      "other_decision_count": 2,
+      "shape_bias_percent": 100.0,
+      "shape_decision_count": 18,
+      "texture_decision_count": 0
+    },
+    "car_shape__deer_texture": {
+      "coverage_percent": 70.0,
+      "number_of_examples": 20,
+      "other_decision_count": 6,
+      "shape_bias_percent": 100.0,
+      "shape_decision_count": 14,
+      "texture_decision_count": 0
+    },
+    "cat_shape__airplane_texture": {
+      "coverage_percent": 40.0,
+      "number_of_examples": 20,
+      "other_decision_count": 12,
+      "shape_bias_percent": 87.5,
+      "shape_decision_count": 7,
+      "texture_decision_count": 1
+    },
+    "deer_shape__car_texture": {
+      "coverage_percent": 50.0,
+      "number_of_examples": 20,
+      "other_decision_count": 10,
+      "shape_bias_percent": 100.0,
+      "shape_decision_count": 10,
+      "texture_decision_count": 0
+    },
+    "dog_shape__ship_texture": {
+      "coverage_percent": 45.0,
+      "number_of_examples": 20,
+      "other_decision_count": 11,
+      "shape_bias_percent": 44.44444444444444,
+      "shape_decision_count": 4,
+      "texture_decision_count": 5
+    },
+    "horse_shape__truck_texture": {
+      "coverage_percent": 75.0,
+      "number_of_examples": 20,
+      "other_decision_count": 5,
+      "shape_bias_percent": 80.0,
+      "shape_decision_count": 12,
+      "texture_decision_count": 3
+    },
+    "monkey_shape__bird_texture": {
+      "coverage_percent": 90.0,
+      "number_of_examples": 20,
+      "other_decision_count": 2,
+      "shape_bias_percent": 61.111111111111114,
+      "shape_decision_count": 11,
+      "texture_decision_count": 7
+    },
+    "ship_shape__dog_texture": {
+      "coverage_percent": 45.0,
+      "number_of_examples": 20,
+      "other_decision_count": 11,
+      "shape_bias_percent": 100.0,
+      "shape_decision_count": 9,
+      "texture_decision_count": 0
+    },
+    "truck_shape__horse_texture": {
+      "coverage_percent": 75.0,
+      "number_of_examples": 20,
+      "other_decision_count": 5,
+      "shape_bias_percent": 100.0,
+      "shape_decision_count": 15,
+      "texture_decision_count": 0
+    }
+  },
+  "by_pair": {
+    "airplane__cat": {
+      "coverage_percent": 25.0,
+      "number_of_examples": 40,
+      "other_decision_count": 30,
+      "shape_bias_percent": 80.0,
+      "shape_decision_count": 8,
+      "texture_decision_count": 2
+    },
+    "bird__monkey": {
+      "coverage_percent": 90.0,
+      "number_of_examples": 40,
+      "other_decision_count": 4,
+      "shape_bias_percent": 80.55555555555556,
+      "shape_decision_count": 29,
+      "texture_decision_count": 7
+    },
+    "car__deer": {
+      "coverage_percent": 60.0,
+      "number_of_examples": 40,
+      "other_decision_count": 16,
+      "shape_bias_percent": 100.0,
+      "shape_decision_count": 24,
+      "texture_decision_count": 0
+    },
+    "ship__dog": {
+      "coverage_percent": 45.0,
+      "number_of_examples": 40,
+      "other_decision_count": 22,
+      "shape_bias_percent": 72.22222222222223,
+      "shape_decision_count": 13,
+      "texture_decision_count": 5
+    },
+    "truck__horse": {
+      "coverage_percent": 75.0,
+      "number_of_examples": 40,
+      "other_decision_count": 10,
+      "shape_bias_percent": 90.0,
+      "shape_decision_count": 27,
+      "texture_decision_count": 3
+    }
+  },
+  "checkpoint": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/checkpoints/linear_heads/resnet50.pt",
+  "checkpoint_sha256": "cb71efa3e95d6d492321e396b3139e7baf4c255dbd69e3f9050924d7b93f2b5b",
+  "coverage_definition": "100 * (Nshape + Ntexture) / Ntotal",
+  "coverage_percent": 59.0,
+  "final_review_manifest_sha256": "a68b23226f57f058b1358bd6a6f8f1a04ec5f4631fe7bc9d36a5ae8d6cd8284b",
+  "head_best_validation_accuracy": 0.971,
+  "head_best_validation_epoch": 8,
+  "inference_device": "cpu",
+  "number_of_examples": 200,
+  "other_decision_count": 82,
+  "predictor": "resnet50_linear_head",
+  "seed": 6304,
+  "shape_bias_definition": "100 * Nshape / (Nshape + Ntexture)",
+  "shape_bias_percent": 85.59322033898304,
+  "shape_decision_count": 101,
+  "source_fingerprint": "68a3e665f1f41b53b5b1705f588ca0c249a47909e192a0deb7b0dfdae99d6901",
+  "texture_decision_count": 17,
+  "zero_shot_prompts": null
+}

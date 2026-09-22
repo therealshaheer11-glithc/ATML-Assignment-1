@@ -1,0 +1,39 @@
+{
+  "dataset": "STL-10",
+  "source_partition": "official test",
+  "source_subset": "fixed balanced 500-image evaluation subset",
+  "selection_seed": 6304,
+  "alpha": 0.8,
+  "generation_batch_size": 8,
+  "image_shape": [
+    3,
+    224,
+    224
+  ],
+  "initial_candidate_count": 200,
+  "initial_candidates_per_direction": 20,
+  "direction_count": 10,
+  "model_predictions_used_for_generation": false,
+  "model_predictions_run_before_manual_review": false,
+  "schedule_file": "/content/ATML-Assignment-1/task1/results/cue_conflict/candidate_schedule.csv",
+  "schedule_sha256": "3dbe48e106df3f599169cf9c457bb19199181b50406f1346017d72e23858d702",
+  "schedule_record": "/content/ATML-Assignment-1/task1/results/cue_conflict/candidate_schedule.json",
+  "schedule_record_sha256": "2b20fad011a51bf2ef00eb25a22469ba52d92960d62db130da35bf046ac9063e",
+  "adain_source_record": "/content/ATML-Assignment-1/task1/results/cue_conflict/adain_source.json",
+  "adain_source_record_sha256": "547c65f019018c7c4699f5f85b33f9d56e842ac8d5abf5700ef647cef568a0c2",
+  "adain_commit": "324eedefee5e11aa23a8f90cf1d7d87cdcc00860",
+  "weight_sha256": {
+    "decoder.pth": "379ca41d59f3a37eed3599bbbc2560c19da5c458870a5ffd3a9dd41aa88f9472",
+    "vgg_normalised.pth": "804ca2835ecf7539f0cd2a7ac3c18ce81e6f8468969ae7117ac0c148d286bb4a"
+  },
+  "generation_manifest": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/cue_conflict/manifests/initial_generation_manifest.csv",
+  "generation_manifest_sha256": "b1859bbb866fccadc48c785340eefd616c2a28ee703d8b998f7d00530f298957",
+  "review_manifest": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/cue_conflict/manifests/review_manifest.csv",
+  "review_status_at_generation": "all pending",
+  "rejection_reasons": [
+    "content object is no longer visually recognizable",
+    "object is severely obscured or structurally corrupted",
+    "output contains blank regions or major rendering artifacts",
+    "no perceptible style or texture transfer occurred"
+  ]
+}

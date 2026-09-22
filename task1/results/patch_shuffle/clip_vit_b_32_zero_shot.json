@@ -1,0 +1,74 @@
+{
+  "absolute_accuracy": 0.834,
+  "accuracy_change_from_own_clean_baseline": -0.14600001907348636,
+  "backbone_metadata": {
+    "display_name": "OpenCLIP ViT-B/32",
+    "feature_dim": 512,
+    "key": "clip_vit_b_32",
+    "normalization_mean": [
+      0.48145466,
+      0.4578275,
+      0.40821073
+    ],
+    "normalization_std": [
+      0.26862954,
+      0.26130258,
+      0.27577711
+    ],
+    "representation": "l2_normalized_image_embedding",
+    "weights_identifier": "ViT-B-32 pretrained=openai"
+  },
+  "checkpoint": null,
+  "checkpoint_sha256": null,
+  "condition": "patch_shuffle",
+  "correct_count": 417,
+  "evaluation_manifest_sha256": "52223818ee8d9505dcc813661e845eb4f123108d46d98ae788420748d1e3c724",
+  "feature_cache_metadata": {
+    "backbone": "clip_vit_b_32",
+    "condition": "patch_shuffle",
+    "dataset": "STL-10",
+    "evaluation_manifest_sha256": "52223818ee8d9505dcc813661e845eb4f123108d46d98ae788420748d1e3c724",
+    "feature_dim": 512,
+    "gradients": false,
+    "grid": [
+      4,
+      4
+    ],
+    "inference_device": "cpu",
+    "input_manifest_sha256": "e33db17ee0f3989ba4bce72cd82013841a59be293a8ee87b0f39ccc6e0d3cb33",
+    "non_identity": true,
+    "official_partition": "test",
+    "patch_size_pixels": [
+      56,
+      56
+    ],
+    "permutation_seed": 6304,
+    "permutations_per_image": 1,
+    "representation": "l2_normalized_image_embedding",
+    "selection_seed": 6304,
+    "shuffle": false,
+    "source_fingerprint": "f49f103a85444c88c1feef0f26104fdd4916c81e00cc4bd88a5dcbf3f991c831",
+    "weights": "ViT-B-32 pretrained=openai"
+  },
+  "inference_device": "cpu",
+  "input_manifest_sha256": "e33db17ee0f3989ba4bce72cd82013841a59be293a8ee87b0f39ccc6e0d3cb33",
+  "mean_maximum_confidence": 0.8218423128128052,
+  "number_of_examples": 500,
+  "own_clean_accuracy": 0.9800000190734863,
+  "prediction_consistency_with_clean": 0.838,
+  "prediction_match_count": 419,
+  "predictor": "clip_vit_b_32_zero_shot",
+  "source_fingerprint": "f49f103a85444c88c1feef0f26104fdd4916c81e00cc4bd88a5dcbf3f991c831",
+  "zero_shot_prompts": [
+    "a photo of a airplane.",
+    "a photo of a bird.",
+    "a photo of a car.",
+    "a photo of a cat.",
+    "a photo of a deer.",
+    "a photo of a dog.",
+    "a photo of a horse.",
+    "a photo of a monkey.",
+    "a photo of a ship.",
+    "a photo of a truck."
+  ]
+}

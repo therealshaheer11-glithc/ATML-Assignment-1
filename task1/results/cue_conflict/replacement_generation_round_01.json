@@ -1,0 +1,19 @@
+{
+  "round": 1,
+  "generation_device": "cpu",
+  "torch_version": "2.11.0+cpu",
+  "batch_size": 4,
+  "alpha": 0.8,
+  "generated_candidates": 56,
+  "source_partition": "official STL-10 test",
+  "preregistered_schedule_sha256": "3dbe48e106df3f599169cf9c457bb19199181b50406f1346017d72e23858d702",
+  "pre_generation_plan": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/cue_conflict/manifests/replacement_plan_round_01.json",
+  "pre_generation_plan_sha256": "38fb3d682c892fcbd3ded15d1d80dc1a4d7e2ee833e76c71f8586be7910ae405",
+  "adain_source_record": "/content/ATML-Assignment-1/task1/results/cue_conflict/adain_source.json",
+  "adain_source_record_sha256": "547c65f019018c7c4699f5f85b33f9d56e842ac8d5abf5700ef647cef568a0c2",
+  "generation_manifest": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/cue_conflict/manifests/replacement_generation_round_01.csv",
+  "generation_manifest_sha256": "08d6ad6965b293b3c69382e8deae13fdd322bc5978c035e3ac0250f2f2378034",
+  "review_status_at_generation": "all pending",
+  "model_predictions_used_for_generation_or_selection": false,
+  "model_predictions_run_before_manual_review": false
+}

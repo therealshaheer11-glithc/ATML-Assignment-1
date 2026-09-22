@@ -1,0 +1,41 @@
+{
+  "analysis_source_sha256": "63364f00c1f7e6b74ea0f2418ae136948a9f1de1ce9001c1d84ca081ce197d39",
+  "axis_limits_percent": {
+    "absolute_accuracy": [
+      93.85,
+      100
+    ],
+    "prediction_consistency_with_clean": [
+      95.8,
+      100
+    ]
+  },
+  "axis_limits_rule_changed": false,
+  "change": "Increase figure height and separate axis labels, legend, and footer",
+  "curve_values_changed": false,
+  "final_figure_sha256": "60758f19e75dcdf34935845cd4548c66b1a79a36c4d3a34befbd11a433777670",
+  "legend_and_footer_overlap": false,
+  "matplotlib_version": "3.10.8",
+  "model_inference_performed": false,
+  "number_of_curve_points": 16,
+  "original_figure_sha256": "f29a81a6d90b70876e10e40a201eb2adc621b62ab7279fcf922aa7a60deda8a8",
+  "original_plotting_source_sha256": "d674a4d087069f92b050df30db1c2d33e9c89fac891e373cecf70ffc76166e6d",
+  "original_record_sha256": "0ec170103f0ccdc655596ea8898a44981306a65a54659ae8e4b8c5644ad99f29",
+  "source_csv": "figures/translation/translation_curves.csv",
+  "source_csv_sha256": "842c0be2006899c9b28c1824bb432ea92db02ab0901b7863606ec578588aedd0",
+  "source_result_sha256": {
+    "metrics/clean/clean_metrics.json": "4200005f176549c0708ea99f91af0dc873434900d38180b78cae415510267c97",
+    "metrics/translation/clip_vit_b_32_linear_head__d16_summary.json": "6a3bc4f67721481727ae35581551be61d80d29f9c8267df209e6f244008bc3d8",
+    "metrics/translation/clip_vit_b_32_linear_head__d32_summary.json": "d6a5a1bbae6326282d814ccf1b242905ba2b6478379bd8e3a5682b8331fcb854",
+    "metrics/translation/clip_vit_b_32_linear_head__d8_summary.json": "d9dbb1019c678cd78037642bdfd5db945f9ee2546ac0dd7eeb1e861621579cf0",
+    "metrics/translation/clip_vit_b_32_zero_shot__d16_summary.json": "3f4b5cca6d5f377f0b19e622bc6d7c9b28efad6fa720541a6ff912a28374a2f2",
+    "metrics/translation/clip_vit_b_32_zero_shot__d32_summary.json": "e9102b3b864336a15f7c60c4dd6f84d3ff8cb68062ddd825310b0d5f9997ee72",
+    "metrics/translation/clip_vit_b_32_zero_shot__d8_summary.json": "68f44ea2f28d2f58f5f670ba0c9ec53bc3124194269cc9c9662bf6ad7eeea5d9",
+    "metrics/translation/resnet50_linear_head__d16_summary.json": "a0140d97af2383d57c021565d685073ac3db5dca4681ac24b25fbd89f9298c4b",
+    "metrics/translation/resnet50_linear_head__d32_summary.json": "59c0805febbd95c42a0c091b02e15a8a236e99f0f2e4f363bff11355f9067cea",
+    "metrics/translation/resnet50_linear_head__d8_summary.json": "d6e2c96a83b3a4696d328fc7c22a35fcf18ff7dd56b9ccd1bd24a6a11d9ab5b3",
+    "metrics/translation/vit_b_16_linear_head__d16_summary.json": "9b63e132fc7fdddb25db89e330f4287c3759c72182af26773c3c77c6fded3411",
+    "metrics/translation/vit_b_16_linear_head__d32_summary.json": "2e6ac868b95e1afa91276b52175a085baca6128463835a5f3d3c50ef06ea27b8",
+    "metrics/translation/vit_b_16_linear_head__d8_summary.json": "dd58a66ce16ade401ea755a09b76c91ac85239ae24c03c970d9c0ca84fa6f633"
+  }
+}

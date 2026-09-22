@@ -1,0 +1,131 @@
+{
+  "round": 2,
+  "purpose": "preregistered replacements for manually rejected AdaIN conflicts",
+  "generation_device": "cpu",
+  "alpha": 0.8,
+  "schedule_file": "/content/ATML-Assignment-1/task1/results/cue_conflict/candidate_schedule.csv",
+  "schedule_sha256": "3dbe48e106df3f599169cf9c457bb19199181b50406f1346017d72e23858d702",
+  "review_manifest_before_generation": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/cue_conflict/manifests/review_manifest.csv",
+  "review_manifest_sha256_before_generation": "6794eaf25ea420b9814af6772d1bb01a5130582b56658f344b5e581e12dc325b",
+  "review_snapshot_before_generation": "/content/drive/MyDrive/ATML-Assignment-1/artifacts/task1/cue_conflict/manifests/review_snapshot_round_02.csv",
+  "review_snapshot_sha256": "6794eaf25ea420b9814af6772d1bb01a5130582b56658f344b5e581e12dc325b",
+  "review_rows_canonical_sha256_before_generation": "6794eaf25ea420b9814af6772d1bb01a5130582b56658f344b5e581e12dc325b",
+  "reviewed_candidates_before_generation": 256,
+  "accepted_before_generation": 191,
+  "rejected_before_generation": 65,
+  "target_accepted_per_direction": 20,
+  "counts_by_direction": {
+    "airplane_shape__cat_texture": {
+      "accepted": 20,
+      "rejected": 7,
+      "current_candidates": 27,
+      "new_candidates_needed": 0
+    },
+    "bird_shape__monkey_texture": {
+      "accepted": 20,
+      "rejected": 2,
+      "current_candidates": 22,
+      "new_candidates_needed": 0
+    },
+    "car_shape__deer_texture": {
+      "accepted": 20,
+      "rejected": 2,
+      "current_candidates": 22,
+      "new_candidates_needed": 0
+    },
+    "cat_shape__airplane_texture": {
+      "accepted": 16,
+      "rejected": 15,
+      "current_candidates": 31,
+      "new_candidates_needed": 4
+    },
+    "deer_shape__car_texture": {
+      "accepted": 19,
+      "rejected": 7,
+      "current_candidates": 26,
+      "new_candidates_needed": 1
+    },
+    "dog_shape__ship_texture": {
+      "accepted": 20,
+      "rejected": 4,
+      "current_candidates": 24,
+      "new_candidates_needed": 0
+    },
+    "horse_shape__truck_texture": {
+      "accepted": 19,
+      "rejected": 9,
+      "current_candidates": 28,
+      "new_candidates_needed": 1
+    },
+    "monkey_shape__bird_texture": {
+      "accepted": 19,
+      "rejected": 12,
+      "current_candidates": 31,
+      "new_candidates_needed": 1
+    },
+    "ship_shape__dog_texture": {
+      "accepted": 18,
+      "rejected": 5,
+      "current_candidates": 23,
+      "new_candidates_needed": 2
+    },
+    "truck_shape__horse_texture": {
+      "accepted": 20,
+      "rejected": 2,
+      "current_candidates": 22,
+      "new_candidates_needed": 0
+    }
+  },
+  "planned_candidate_count": 9,
+  "planned_candidates": [
+    {
+      "candidate_id": "p01_r32_b_to_a",
+      "direction": "cat_shape__airplane_texture",
+      "schedule_rank": 32
+    },
+    {
+      "candidate_id": "p01_r33_b_to_a",
+      "direction": "cat_shape__airplane_texture",
+      "schedule_rank": 33
+    },
+    {
+      "candidate_id": "p01_r34_b_to_a",
+      "direction": "cat_shape__airplane_texture",
+      "schedule_rank": 34
+    },
+    {
+      "candidate_id": "p01_r35_b_to_a",
+      "direction": "cat_shape__airplane_texture",
+      "schedule_rank": 35
+    },
+    {
+      "candidate_id": "p02_r27_b_to_a",
+      "direction": "deer_shape__car_texture",
+      "schedule_rank": 27
+    },
+    {
+      "candidate_id": "p04_r29_b_to_a",
+      "direction": "horse_shape__truck_texture",
+      "schedule_rank": 29
+    },
+    {
+      "candidate_id": "p05_r32_b_to_a",
+      "direction": "monkey_shape__bird_texture",
+      "schedule_rank": 32
+    },
+    {
+      "candidate_id": "p03_r24_a_to_b",
+      "direction": "ship_shape__dog_texture",
+      "schedule_rank": 24
+    },
+    {
+      "candidate_id": "p03_r25_a_to_b",
+      "direction": "ship_shape__dog_texture",
+      "schedule_rank": 25
+    }
+  ],
+  "planned_candidate_images_present_at_planning": 0,
+  "selection_rule": "next unused ascending rank per deficient direction",
+  "model_predictions_used_for_selection": false,
+  "model_predictions_permitted_before_final_manual_review": false
+}

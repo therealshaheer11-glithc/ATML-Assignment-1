@@ -1,0 +1,27 @@
+{
+  "accepted_manifest_sha256": "58c95fa8dfaa353cd09f08f1aa0c27b8b52ac8ae29c063a6aa63d7d1cc228a5a",
+  "analysis_source_sha256": "e503b4539c72aada0c426614ff432af5d0f1ff9068b41f902b16095f7c7f1f37",
+  "candidate_png_sha256": {
+    "p01_r19_a_to_b": "047f0516711221f88a4dfd7cfad0f32c3f13189b7c89fdd300f7d94f9e6bf88f",
+    "p02_r01_a_to_b": "1dfec0b58bc767dec53d605feb6fbddc351585787f614d820348e9127d3f9309",
+    "p02_r09_a_to_b": "d3c775f09c415ee29cf893ee3c5fd542cda796be572b6bfeb6003c899b400b13"
+  },
+  "example_figure_png_sha256": "3ea2ec96460f68061b2373752e454ee6701951a4227195c9084814dcd13464eb",
+  "matplotlib_version": "3.10.0",
+  "model_inference_rerun": false,
+  "prediction_csv_sha256": {
+    "clip_vit_b_32_linear_head": "070f73d67612939de6791803f5fd78f9fb34dcb756e565b413191b465e25ec05",
+    "clip_vit_b_32_zero_shot": "b8e37f047fef17c5bea55d9671588ceebfc068e69a8fb1e9c4cd518ec0dba51f",
+    "resnet50_linear_head": "ae89a2f5fa2b3bc0a4d956919db14ce34404c335a175642f627cf397d2087e54",
+    "vit_b_16_linear_head": "a75bc6ea51d7401a69ecf2f0ebac7f73e09008577d8a79ae06c24abb65188b9b"
+  },
+  "report_interpretation_or_caption_generated": false,
+  "selected_candidate_ids_in_figure_order": [
+    "p02_r01_a_to_b",
+    "p01_r19_a_to_b",
+    "p02_r09_a_to_b"
+  ],
+  "selected_predictions_csv_sha256": "612414a981f2caa0e88e3b8f4e899f8fee2a3f2bc90d5aeb01643e2bb342b5e0",
+  "selection_confirmed_by_user": true,
+  "selection_record_sha256": "8f971aa0af0776ed189c740b6e131c798389f144ece34bc2144a424a600ee232"
+}
