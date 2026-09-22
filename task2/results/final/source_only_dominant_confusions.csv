@@ -1,0 +1,8 @@
+run_id,true_class,most_confused_with,count,total_errors
+source_only,dog,elephant,92,242
+source_only,elephant,dog,174,214
+source_only,giraffe,horse,187,446
+source_only,guitar,dog,24,58
+source_only,horse,dog,141,226
+source_only,house,person,4,7
+source_only,person,elephant,13,26

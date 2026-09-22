@@ -1,0 +1,152 @@
+{
+  "cdan": {
+    "selected_epoch": 2,
+    "checkpoint_sha256": "ac21e02b789eddf0725f9190233276e14d464e1fbebcf009885a581032aa6bfa",
+    "bn_matches_official_pretrained": true,
+    "target_predictions_identical": true,
+    "metric_differences": {},
+    "probe_convergence_warning": false,
+    "probe_iterations": [
+      79
+    ],
+    "metrics": {
+      "photo_accuracy": 0.9610778443113772,
+      "photo_macro_f1": 0.9533275760631066,
+      "art_painting_accuracy": 0.8317073170731707,
+      "art_painting_macro_f1": 0.837527311061603,
+      "cartoon_accuracy": 0.9189765458422174,
+      "cartoon_macro_f1": 0.9285938566549854,
+      "mean_source_accuracy": 0.9039205690755884,
+      "mean_source_macro_f1": 0.9064829145932317,
+      "target_accuracy": 0.6864342071773988,
+      "target_macro_f1": 0.7124209689681292,
+      "domain_separability": 0.9983388704318937
+    },
+    "passed": true
+  },
+  "dan_0p1": {
+    "selected_epoch": 15,
+    "checkpoint_sha256": "fdcb453c14f963e955a32a93f2f7daf799fe7ac8e674df5460a64a18e98b2bdd",
+    "bn_matches_official_pretrained": true,
+    "target_predictions_identical": true,
+    "metric_differences": {},
+    "probe_convergence_warning": false,
+    "probe_iterations": [
+      529
+    ],
+    "metrics": {
+      "photo_accuracy": 0.9790419161676647,
+      "photo_macro_f1": 0.975020408358935,
+      "art_painting_accuracy": 0.9365853658536586,
+      "art_painting_macro_f1": 0.9379945003516469,
+      "cartoon_accuracy": 0.9658848614072495,
+      "cartoon_macro_f1": 0.9693801616512887,
+      "mean_source_accuracy": 0.9605040478095243,
+      "mean_source_macro_f1": 0.9607983567872903,
+      "target_accuracy": 0.7047594807839145,
+      "target_macro_f1": 0.6546291280461862,
+      "domain_separability": 0.8289036544850499
+    },
+    "passed": true
+  },
+  "dan_1": {
+    "selected_epoch": 6,
+    "checkpoint_sha256": "feb34f2664d69718315dabda67d9529562c7fee4c7f3b9d69493fc5f05af3ac4",
+    "bn_matches_official_pretrained": true,
+    "target_predictions_identical": true,
+    "metric_differences": {},
+    "probe_convergence_warning": false,
+    "probe_iterations": [
+      308
+    ],
+    "metrics": {
+      "photo_accuracy": 0.9670658682634731,
+      "photo_macro_f1": 0.9613432102473852,
+      "art_painting_accuracy": 0.9146341463414634,
+      "art_painting_macro_f1": 0.9139472722022591,
+      "cartoon_accuracy": 0.9488272921108742,
+      "cartoon_macro_f1": 0.9539898026950617,
+      "mean_source_accuracy": 0.9435091022386036,
+      "mean_source_macro_f1": 0.9430934283815686,
+      "target_accuracy": 0.6925426317129041,
+      "target_macro_f1": 0.6399983671324251,
+      "domain_separability": 0.8106312292358804
+    },
+    "passed": true
+  },
+  "dan_10": {
+    "selected_epoch": 1,
+    "checkpoint_sha256": "deb707f4e0eb0a8d5e3bb099b8fd21cca518a2330d281936fe854942174d67de",
+    "bn_matches_official_pretrained": true,
+    "target_predictions_identical": true,
+    "metric_differences": {},
+    "probe_convergence_warning": false,
+    "probe_iterations": [
+      15
+    ],
+    "metrics": {
+      "photo_accuracy": 0.25748502994011974,
+      "photo_macro_f1": 0.058503401360544216,
+      "art_painting_accuracy": 0.21951219512195122,
+      "art_painting_macro_f1": 0.05142857142857143,
+      "cartoon_accuracy": 0.17270788912579957,
+      "cartoon_macro_f1": 0.04207792207792208,
+      "mean_source_accuracy": 0.21656837139595686,
+      "mean_source_macro_f1": 0.05066996495567924,
+      "target_accuracy": 0.04072283023670145,
+      "target_macro_f1": 0.011179820424134438,
+      "domain_separability": 0.5299003322259136
+    },
+    "passed": true
+  },
+  "dann": {
+    "selected_epoch": 11,
+    "checkpoint_sha256": "012b8c422e6b7674e0bc5481df403f30304d5501fa1330bf50b7bc9905838d5a",
+    "bn_matches_official_pretrained": true,
+    "target_predictions_identical": true,
+    "metric_differences": {},
+    "probe_convergence_warning": false,
+    "probe_iterations": [
+      221
+    ],
+    "metrics": {
+      "photo_accuracy": 0.4341317365269461,
+      "photo_macro_f1": 0.2658715280053107,
+      "art_painting_accuracy": 0.348780487804878,
+      "art_painting_macro_f1": 0.25541837297405723,
+      "cartoon_accuracy": 0.4861407249466951,
+      "cartoon_macro_f1": 0.463711561980249,
+      "mean_source_accuracy": 0.4230176497595064,
+      "mean_source_macro_f1": 0.32833382098653896,
+      "target_accuracy": 0.20514125731738356,
+      "target_macro_f1": 0.1100706328359945,
+      "domain_separability": 0.9950166112956811
+    },
+    "passed": true
+  },
+  "source_only": {
+    "selected_epoch": 7,
+    "checkpoint_sha256": "4bd364ca0bdc6917617d56bb3972415f2bb4fb511b00e40c1e1d2e36e4e12af5",
+    "bn_matches_official_pretrained": true,
+    "target_predictions_identical": true,
+    "metric_differences": {},
+    "probe_convergence_warning": false,
+    "probe_iterations": [
+      52
+    ],
+    "metrics": {
+      "photo_accuracy": 0.9550898203592815,
+      "photo_macro_f1": 0.9489766628974277,
+      "art_painting_accuracy": 0.9243902439024391,
+      "art_painting_macro_f1": 0.9213207620062532,
+      "cartoon_accuracy": 0.9509594882729211,
+      "cartoon_macro_f1": 0.9571671755963816,
+      "mean_source_accuracy": 0.9434798508448804,
+      "mean_source_macro_f1": 0.9424882001666876,
+      "target_accuracy": 0.6897429371341308,
+      "target_macro_f1": 0.7124984290308822,
+      "domain_separability": 0.9966777408637874
+    },
+    "passed": true
+  }
+}

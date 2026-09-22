@@ -1,0 +1,188 @@
+{
+  "cdan": {
+    "accuracy": 0.9983388704318937,
+    "iterations": [
+      79
+    ],
+    "convergence_warning": false,
+    "warnings": [
+      "scipy.optimize: The `disp` and `iprint` options of the L-BFGS-B solver are deprecated and will be removed in SciPy 1.18.0."
+    ],
+    "parameters": {
+      "C": 1,
+      "class_weight": "balanced",
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": null,
+      "max_iter": 2000,
+      "multi_class": "deprecated",
+      "n_jobs": null,
+      "penalty": "l2",
+      "random_state": 6304,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "source_count": 1002,
+    "target_count": 1002,
+    "train_count": 1402,
+    "test_count": 602
+  },
+  "dan_0p1": {
+    "accuracy": 0.8289036544850499,
+    "iterations": [
+      529
+    ],
+    "convergence_warning": false,
+    "warnings": [
+      "scipy.optimize: The `disp` and `iprint` options of the L-BFGS-B solver are deprecated and will be removed in SciPy 1.18.0."
+    ],
+    "parameters": {
+      "C": 1,
+      "class_weight": "balanced",
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": null,
+      "max_iter": 2000,
+      "multi_class": "deprecated",
+      "n_jobs": null,
+      "penalty": "l2",
+      "random_state": 6304,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "source_count": 1002,
+    "target_count": 1002,
+    "train_count": 1402,
+    "test_count": 602
+  },
+  "dan_1": {
+    "accuracy": 0.8106312292358804,
+    "iterations": [
+      308
+    ],
+    "convergence_warning": false,
+    "warnings": [
+      "scipy.optimize: The `disp` and `iprint` options of the L-BFGS-B solver are deprecated and will be removed in SciPy 1.18.0."
+    ],
+    "parameters": {
+      "C": 1,
+      "class_weight": "balanced",
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": null,
+      "max_iter": 2000,
+      "multi_class": "deprecated",
+      "n_jobs": null,
+      "penalty": "l2",
+      "random_state": 6304,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "source_count": 1002,
+    "target_count": 1002,
+    "train_count": 1402,
+    "test_count": 602
+  },
+  "dan_10": {
+    "accuracy": 0.5299003322259136,
+    "iterations": [
+      15
+    ],
+    "convergence_warning": false,
+    "warnings": [
+      "scipy.optimize: The `disp` and `iprint` options of the L-BFGS-B solver are deprecated and will be removed in SciPy 1.18.0."
+    ],
+    "parameters": {
+      "C": 1,
+      "class_weight": "balanced",
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": null,
+      "max_iter": 2000,
+      "multi_class": "deprecated",
+      "n_jobs": null,
+      "penalty": "l2",
+      "random_state": 6304,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "source_count": 1002,
+    "target_count": 1002,
+    "train_count": 1402,
+    "test_count": 602
+  },
+  "dann": {
+    "accuracy": 0.9950166112956811,
+    "iterations": [
+      221
+    ],
+    "convergence_warning": false,
+    "warnings": [
+      "scipy.optimize: The `disp` and `iprint` options of the L-BFGS-B solver are deprecated and will be removed in SciPy 1.18.0."
+    ],
+    "parameters": {
+      "C": 1,
+      "class_weight": "balanced",
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": null,
+      "max_iter": 2000,
+      "multi_class": "deprecated",
+      "n_jobs": null,
+      "penalty": "l2",
+      "random_state": 6304,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "source_count": 1002,
+    "target_count": 1002,
+    "train_count": 1402,
+    "test_count": 602
+  },
+  "source_only": {
+    "accuracy": 0.9966777408637874,
+    "iterations": [
+      52
+    ],
+    "convergence_warning": false,
+    "warnings": [
+      "scipy.optimize: The `disp` and `iprint` options of the L-BFGS-B solver are deprecated and will be removed in SciPy 1.18.0."
+    ],
+    "parameters": {
+      "C": 1,
+      "class_weight": "balanced",
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": null,
+      "max_iter": 2000,
+      "multi_class": "deprecated",
+      "n_jobs": null,
+      "penalty": "l2",
+      "random_state": 6304,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "source_count": 1002,
+    "target_count": 1002,
+    "train_count": 1402,
+    "test_count": 602
+  }
+}

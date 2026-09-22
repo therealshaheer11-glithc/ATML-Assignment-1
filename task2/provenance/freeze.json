@@ -1,0 +1,195 @@
+{
+  "locked_at_utc": "2026-09-22T16:43:30.938825+00:00",
+  "purpose": "Task 2 final Sketch evaluation; no target-label metric was used for model selection",
+  "initial_model_sha256": "b01c25cb3aa7d1682244bc92fd7c8a9f8bcbb16e0c82cd1cf6a27fd6dda82cb8",
+  "protocol_file_list_sha256": "559ac63b8df8e07330b97112e5ec4c414b3957585b28d21b4cfecd2181f538e0",
+  "dataset_source": "Dassl PACS ZIP SHA256:0dc9d0176fa27c9b4504e7c2e962aebe6a79ed0c1819b84148786e590f87e102",
+  "git_commit": null,
+  "code_archive_sha256": "d0ec51f969d16e72a318a811550f193fd91498a2cad26e1735c4de9e7a4aa02c",
+  "source_code_sha256": "c9ddc86876d67b3ee965753ee027fbe261a08741bb9e60f3349a31e57bcbf2a7",
+  "runs": {
+    "cdan": {
+      "directory": "/content/drive/MyDrive/ATML-PA1/task2_runs/cdan",
+      "checkpoint_sha256": "ac21e02b789eddf0725f9190233276e14d464e1fbebcf009885a581032aa6bfa",
+      "best_epoch": 2,
+      "best_mean_source_macro_f1": 0.9064829145932317,
+      "config": {
+        "seed": 6304,
+        "weights": "ResNet18_Weights.IMAGENET1K_V1",
+        "epochs": 30,
+        "patience": 5,
+        "source_batch_per_domain": 8,
+        "target_batch": 24,
+        "optimizer": "AdamW",
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "selection_metric": "mean_source_validation_macro_f1",
+        "domain_loss_weight": 1.0,
+        "grl_schedule": "2/(1+exp(-10p))-1",
+        "grl_maximum": 1.0,
+        "mmd_kernel_factors": [
+          0.5,
+          1.0,
+          2.0
+        ],
+        "mmd_estimator": "biased_squared_mmd_with_diagonals",
+        "mmd_bandwidth_convention": "exp(-squared_distance/(factor*median_positive_off_diagonal_squared_distance))",
+        "run_id": "cdan",
+        "method": "cdan"
+      }
+    },
+    "dan_0p1": {
+      "directory": "/content/drive/MyDrive/ATML-PA1/task2_runs/t4_restart/dan_0p1",
+      "checkpoint_sha256": "fdcb453c14f963e955a32a93f2f7daf799fe7ac8e674df5460a64a18e98b2bdd",
+      "best_epoch": 15,
+      "best_mean_source_macro_f1": 0.9607983567872903,
+      "config": {
+        "seed": 6304,
+        "weights": "ResNet18_Weights.IMAGENET1K_V1",
+        "epochs": 30,
+        "patience": 5,
+        "source_batch_per_domain": 8,
+        "target_batch": 24,
+        "optimizer": "AdamW",
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "selection_metric": "mean_source_validation_macro_f1",
+        "domain_loss_weight": 1.0,
+        "grl_schedule": "2/(1+exp(-10p))-1",
+        "grl_maximum": 1.0,
+        "mmd_kernel_factors": [
+          0.5,
+          1.0,
+          2.0
+        ],
+        "mmd_estimator": "biased_squared_mmd_with_diagonals",
+        "mmd_bandwidth_convention": "exp(-squared_distance/(factor*median_positive_off_diagonal_squared_distance))",
+        "run_id": "dan_0p1",
+        "method": "dan",
+        "mmd_lambda": 0.1
+      }
+    },
+    "dan_1": {
+      "directory": "/content/drive/MyDrive/ATML-PA1/task2_runs/dan_1",
+      "checkpoint_sha256": "feb34f2664d69718315dabda67d9529562c7fee4c7f3b9d69493fc5f05af3ac4",
+      "best_epoch": 6,
+      "best_mean_source_macro_f1": 0.9430934283815686,
+      "config": {
+        "seed": 6304,
+        "weights": "ResNet18_Weights.IMAGENET1K_V1",
+        "epochs": 30,
+        "patience": 5,
+        "source_batch_per_domain": 8,
+        "target_batch": 24,
+        "optimizer": "AdamW",
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "selection_metric": "mean_source_validation_macro_f1",
+        "domain_loss_weight": 1.0,
+        "grl_schedule": "2/(1+exp(-10p))-1",
+        "grl_maximum": 1.0,
+        "mmd_kernel_factors": [
+          0.5,
+          1.0,
+          2.0
+        ],
+        "mmd_estimator": "biased_squared_mmd_with_diagonals",
+        "mmd_bandwidth_convention": "exp(-squared_distance/(factor*median_positive_off_diagonal_squared_distance))",
+        "run_id": "dan_1",
+        "method": "dan",
+        "mmd_lambda": 1.0
+      }
+    },
+    "dan_10": {
+      "directory": "/content/drive/MyDrive/ATML-PA1/task2_runs/t4_restart/dan_10",
+      "checkpoint_sha256": "deb707f4e0eb0a8d5e3bb099b8fd21cca518a2330d281936fe854942174d67de",
+      "best_epoch": 1,
+      "best_mean_source_macro_f1": 0.05066996495567924,
+      "config": {
+        "seed": 6304,
+        "weights": "ResNet18_Weights.IMAGENET1K_V1",
+        "epochs": 30,
+        "patience": 5,
+        "source_batch_per_domain": 8,
+        "target_batch": 24,
+        "optimizer": "AdamW",
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "selection_metric": "mean_source_validation_macro_f1",
+        "domain_loss_weight": 1.0,
+        "grl_schedule": "2/(1+exp(-10p))-1",
+        "grl_maximum": 1.0,
+        "mmd_kernel_factors": [
+          0.5,
+          1.0,
+          2.0
+        ],
+        "mmd_estimator": "biased_squared_mmd_with_diagonals",
+        "mmd_bandwidth_convention": "exp(-squared_distance/(factor*median_positive_off_diagonal_squared_distance))",
+        "run_id": "dan_10",
+        "method": "dan",
+        "mmd_lambda": 10.0
+      }
+    },
+    "dann": {
+      "directory": "/content/drive/MyDrive/ATML-PA1/task2_runs/dann",
+      "checkpoint_sha256": "012b8c422e6b7674e0bc5481df403f30304d5501fa1330bf50b7bc9905838d5a",
+      "best_epoch": 11,
+      "best_mean_source_macro_f1": 0.32833382098653896,
+      "config": {
+        "seed": 6304,
+        "weights": "ResNet18_Weights.IMAGENET1K_V1",
+        "epochs": 30,
+        "patience": 5,
+        "source_batch_per_domain": 8,
+        "target_batch": 24,
+        "optimizer": "AdamW",
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "selection_metric": "mean_source_validation_macro_f1",
+        "domain_loss_weight": 1.0,
+        "grl_schedule": "2/(1+exp(-10p))-1",
+        "grl_maximum": 1.0,
+        "mmd_kernel_factors": [
+          0.5,
+          1.0,
+          2.0
+        ],
+        "mmd_estimator": "biased_squared_mmd_with_diagonals",
+        "mmd_bandwidth_convention": "exp(-squared_distance/(factor*median_positive_off_diagonal_squared_distance))",
+        "run_id": "dann",
+        "method": "dann"
+      }
+    },
+    "source_only": {
+      "directory": "/content/drive/MyDrive/ATML-PA1/task2_runs/source_only",
+      "checkpoint_sha256": "4bd364ca0bdc6917617d56bb3972415f2bb4fb511b00e40c1e1d2e36e4e12af5",
+      "best_epoch": 7,
+      "best_mean_source_macro_f1": 0.9424882001666876,
+      "config": {
+        "seed": 6304,
+        "weights": "ResNet18_Weights.IMAGENET1K_V1",
+        "epochs": 30,
+        "patience": 5,
+        "source_batch_per_domain": 8,
+        "target_batch": 24,
+        "optimizer": "AdamW",
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "selection_metric": "mean_source_validation_macro_f1",
+        "domain_loss_weight": 1.0,
+        "grl_schedule": "2/(1+exp(-10p))-1",
+        "grl_maximum": 1.0,
+        "mmd_kernel_factors": [
+          0.5,
+          1.0,
+          2.0
+        ],
+        "mmd_estimator": "biased_squared_mmd_with_diagonals",
+        "mmd_bandwidth_convention": "exp(-squared_distance/(factor*median_positive_off_diagonal_squared_distance))",
+        "run_id": "source_only",
+        "method": "source_only"
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "seed": 6304,
+  "weights": "ResNet18_Weights.IMAGENET1K_V1",
+  "epochs": 30,
+  "patience": 5,
+  "source_batch_per_domain": 8,
+  "target_batch": 24,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0001,
+  "weight_decay": 0.0001,
+  "selection_metric": "mean_source_validation_macro_f1",
+  "domain_loss_weight": 1.0,
+  "grl_schedule": "2/(1+exp(-10p))-1",
+  "grl_maximum": 1.0,
+  "mmd_kernel_factors": [0.5, 1.0, 2.0],
+  "mmd_estimator": "biased_squared_mmd_with_diagonals",
+  "mmd_bandwidth_convention": "exp(-squared_distance/(factor*median_positive_off_diagonal_squared_distance))"
+}

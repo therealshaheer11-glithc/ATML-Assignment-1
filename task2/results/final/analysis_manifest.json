@@ -1,0 +1,13 @@
+{
+  "freeze_manifest": "/content/drive/MyDrive/ATML-PA1/task2_runs/task2_freeze_t4.json",
+  "protocol_file_list_sha256": "559ac63b8df8e07330b97112e5ec4c414b3957585b28d21b4cfecd2181f538e0",
+  "runs_evaluated": [
+    "source_only",
+    "dan_0p1",
+    "dan_1",
+    "dan_10",
+    "dann",
+    "cdan"
+  ],
+  "target_labels_used_only_in_final_analysis": true
+}

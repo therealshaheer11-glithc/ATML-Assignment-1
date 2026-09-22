@@ -1,3 +1,11 @@
+# Task 2: PACS domain adaptation
+
+Task 2 code, exact source splits, environment records, and verified machine-readable results are now included. Start with [Task 2 reproduction and evidence instructions](task2/README.md). The shared split is [pacs_sketch_seed6304.json](shared/splits/pacs_sketch_seed6304.json). The original study expectations and their separately dated technical correction are retained in [Task 2 provenance](task2/provenance/PREREGISTRATION-CORRECTION.md).
+
+The Task 1 documentation below is retained unchanged.
+
+---
+
 # ATML Programming Assignment 1
 
 Technical documentation for Task 1: inductive biases and feature representations on STL-10. This README covers the saved experiment, its code, dependencies, result files, and reproduction procedure. Report analysis and interpretation are written separately by the student.

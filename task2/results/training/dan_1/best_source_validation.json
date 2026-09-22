@@ -1,0 +1,11 @@
+{
+  "epoch": 6,
+  "photo_accuracy": 0.9670658682634731,
+  "photo_macro_f1": 0.9613432102473852,
+  "art_painting_accuracy": 0.9146341463414634,
+  "art_painting_macro_f1": 0.9139472722022591,
+  "cartoon_accuracy": 0.9488272921108742,
+  "cartoon_macro_f1": 0.9539898026950617,
+  "mean_source_accuracy": 0.9435091022386036,
+  "mean_source_macro_f1": 0.9430934283815686
+}

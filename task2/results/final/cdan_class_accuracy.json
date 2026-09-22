@@ -1,0 +1,37 @@
+[
+  {
+    "class": "dog",
+    "support": 772,
+    "accuracy": 0.1489637305699482
+  },
+  {
+    "class": "elephant",
+    "support": 740,
+    "accuracy": 0.9797297297297297
+  },
+  {
+    "class": "giraffe",
+    "support": 753,
+    "accuracy": 0.8857901726427623
+  },
+  {
+    "class": "guitar",
+    "support": 608,
+    "accuracy": 0.868421052631579
+  },
+  {
+    "class": "horse",
+    "support": 816,
+    "accuracy": 0.5649509803921569
+  },
+  {
+    "class": "house",
+    "support": 80,
+    "accuracy": 1.0
+  },
+  {
+    "class": "person",
+    "support": 160,
+    "accuracy": 0.75625
+  }
+]

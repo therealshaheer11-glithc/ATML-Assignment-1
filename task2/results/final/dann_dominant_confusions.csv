@@ -1,0 +1,8 @@
+run_id,true_class,most_confused_with,count,total_errors
+dann,dog,elephant,591,772
+dann,elephant,person,84,120
+dann,giraffe,elephant,394,659
+dann,guitar,person,240,596
+dann,horse,elephant,632,779
+dann,house,elephant,78,79
+dann,person,elephant,115,118
