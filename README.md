@@ -172,6 +172,14 @@ python task1/adain/generate_conflicts.py --mode generate-initial \
 
 Review candidates visually before running classifiers. Reject if the content object is no longer recognizable, is severely obscured or structurally corrupted, has blank regions or major rendering artifacts, or has no perceptible style/texture transfer. Model predictions must not determine retention.
 
+In Colab, launch each review stage in the notebook kernel with `%run` so the widget callbacks remain active. Use the same command after each corresponding generation stage, changing `--scope` to `round-1` and then `round-2`:
+
+```python
+%run /content/ATML-Assignment-1/task1/adain/review_candidates.py \
+  --artifacts-root /content/drive/MyDrive/ATML-Assignment-1/artifacts/task1 \
+  --scope initial --reviewer "REVIEWER NAME"
+```
+
 The manual review input is `cue_conflict/manifests/review_manifest.csv` in the artifact root. Keep generation fields and hashes intact. Record `review_status` as `accepted` or `rejected`, an applicable `rejection_reason` for rejected rows, `reviewed_by`, and the actual pre-evaluation review status in `review_completed_before_model_evaluation`. Human review is an explicit input to this workflow; the completed run used interactive Colab cells to record these decisions.
 
 After a complete review, plan and generate replacements. Execute one round, review its new candidates, and only then plan the next round:
@@ -193,6 +201,13 @@ Before cue evaluation, the artifact manifest directory must contain the frozen `
 2. Verify 200 accepted rows, 20 per direction, and 40 per pair; preserve the complete review CSV byte-for-byte as `final_review_manifest.csv`.
 3. Filter accepted rows, retain the original columns, and sort by numeric `pair_number`, then `direction_code`, then numeric `schedule_rank`. Write `accepted_conflicts.csv` using Python CSV conventions with `newline=""`.
 4. Record candidate/accepted/rejected totals, per-direction/per-pair counts, and SHA-256 hashes of both frozen CSVs in `selection_record.json`. Record the actual generation devices and that model predictions were not used for selection. Preserve the existing frozen files for the completed experiment.
+
+The standalone freezer implements those checks and refuses to freeze after cue-classifier outputs exist. For a fresh reproduction, run `--mode freeze` before evaluation. To verify the completed run without modifying it:
+
+```bash
+python task1/adain/freeze_selection.py --mode verify \
+  --repo-root "$ATML_REPO" --artifacts-root "$ATML_ARTIFACTS"
+```
 
 With the frozen selection and candidate images available:
 
