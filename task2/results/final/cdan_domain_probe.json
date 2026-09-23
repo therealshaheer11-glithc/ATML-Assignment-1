@@ -1,8 +1,0 @@
-{
-  "accuracy": 0.9983388704318937,
-  "source_count": 1002,
-  "target_count": 1002,
-  "train_count": 1402,
-  "test_count": 602,
-  "per_source_domain": 334
-}

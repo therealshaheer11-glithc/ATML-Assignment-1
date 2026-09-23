@@ -1,8 +1,0 @@
-run_id,true_class,most_confused_with,count,total_errors
-dan_1,dog,person,269,427
-dan_1,elephant,person,64,137
-dan_1,giraffe,house,64,257
-dan_1,guitar,person,43,72
-dan_1,horse,dog,103,278
-dan_1,house,dog,0,0
-dan_1,person,house,37,37

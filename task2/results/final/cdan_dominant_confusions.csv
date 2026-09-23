@@ -1,8 +1,0 @@
-run_id,true_class,most_confused_with,count,total_errors
-cdan,dog,elephant,369,657
-cdan,elephant,giraffe,8,15
-cdan,giraffe,elephant,49,86
-cdan,guitar,giraffe,54,80
-cdan,horse,elephant,179,355
-cdan,house,dog,0,0
-cdan,person,elephant,15,39
