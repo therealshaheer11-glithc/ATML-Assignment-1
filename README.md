@@ -1,6 +1,8 @@
 # Task 2: PACS domain adaptation
 
-Task 2 code, exact source splits, environment records, and verified machine-readable results are now included. Start with [Task 2 reproduction and evidence instructions](task2/README.md). The shared split is [pacs_sketch_seed6304.json](shared/splits/pacs_sketch_seed6304.json). The original study expectations and their separately dated technical correction are retained in [Task 2 provenance](task2/provenance/PREREGISTRATION-CORRECTION.md).
+# Task 2 status
+
+A corrected Task 2 experiment is being prepared under a newly documented protocol. The previous implementation and evidence are preserved on the `archive/task2-attempt-1-20260923` branch. No previous Task 2 result is treated as part of the corrected run.
 
 The Task 1 documentation below is retained unchanged.
 
