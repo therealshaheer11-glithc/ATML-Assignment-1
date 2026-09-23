@@ -179,3 +179,25 @@ epoch-specific sampler/worker seeds. Disable TF32 and cuDNN benchmarking; enable
 deterministic algorithms. Reset the global seed after method-specific module creation so
 DANN and CDAN begin their dropout streams from the same seed. These execution constants,
 the code hash, and the environment are included in the cross-run experiment lock.
+
+## D16 - DAN MMD feature normalization (v3 revision)
+
+For DAN only, L2-normalize every 512-dimensional source and target feature vector
+immediately before the MMD calculation. The classifier continues to receive the original
+unnormalized feature. Compute the norm without an epsilon or clamp; a zero or non-finite
+norm stops the run. The approved MMD empirical expression, current-combined-batch median,
+off-diagonal-zero rule, three bandwidth factors, kernel convention, and detached median
+remain unchanged.
+
+Reason for revision: the clipped v2 DAN lambda 1 source-only stability gate still
+collapsed. Its epoch-average median squared feature distance fell from 6.8731 in epoch 1
+to 0.0002 in epoch 2 and rounded to 0.0000 thereafter. Source macro-F1 peaked at 0.1161,
+and 93-98% of updates were clipped after epoch 1. The selected checkpoint predicted only
+class IDs 5 and 6 across all 1,213 source-validation images. No target labels were
+accessed. The student approved per-example L2 normalization after reviewing this source
+diagnostic. This removes feature magnitude as a shortcut for MMD while leaving the
+classification representation and every assignment-fixed hyperparameter unchanged.
+
+Apply the same MMD-input rule to all three DAN strengths. Task 3 DAN-DG must later reuse
+this same MMD feature treatment, as required by the assignment's shared-MMD rule. Global
+L2 gradient clipping at 20 remains active for all six Task 2 configurations.

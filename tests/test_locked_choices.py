@@ -7,7 +7,7 @@ import math
 import torch
 from torch import nn
 
-from shared.mmd import three_kernel_mmd
+from shared.mmd import l2_normalize_mmd_features, three_kernel_mmd
 from task2.methods import conditional_features, grl_strength
 from task2.model import assert_batchnorm_unchanged, batchnorm_buffers, freeze_batchnorm_statistics
 from task2.train import clip_gradients
@@ -54,6 +54,22 @@ def test_zero_median_stops_instead_of_filtering_zeros() -> None:
         assert "median" in str(error)
     else:
         raise AssertionError("A zero bandwidth median must stop the run")
+
+
+def test_dan_mmd_features_are_l2_normalized_without_an_epsilon() -> None:
+    features = torch.tensor([[3.0, 4.0], [0.0, 2.0]], requires_grad=True)
+    normalized = l2_normalize_mmd_features(features)
+    assert torch.allclose(torch.linalg.vector_norm(normalized, dim=1), torch.ones(2))
+    assert torch.allclose(normalized[0], torch.tensor([0.6, 0.8]))
+    normalized.sum().backward()
+    assert features.grad is not None
+
+    try:
+        l2_normalize_mmd_features(torch.zeros(2, 3))
+    except FloatingPointError as error:
+        assert "non-positive norm" in str(error)
+    else:
+        raise AssertionError("A zero feature norm must stop the run")
 
 
 def test_batchnorm_running_buffers_are_frozen_but_affine_is_trainable() -> None:

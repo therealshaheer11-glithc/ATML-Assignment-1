@@ -22,7 +22,7 @@ import torchvision
 from sklearn.metrics import accuracy_score, f1_score
 from torch import nn
 
-from shared.mmd import three_kernel_mmd
+from shared.mmd import l2_normalize_mmd_features, three_kernel_mmd
 from shared.pacs import (
     SEED,
     SOURCES,
@@ -314,7 +314,13 @@ def train_epoch(
 
         if config["method"] == "dan":
             assert features is not None
-            mmd_loss, diagnostics = three_kernel_mmd(features[:24], features[24:])
+            if config["mmd_feature_normalization"] != "l2_per_sample":
+                raise RuntimeError("Unexpected DAN MMD feature-normalization policy")
+            source_mmd_features = l2_normalize_mmd_features(features[:24])
+            target_mmd_features = l2_normalize_mmd_features(features[24:])
+            mmd_loss, diagnostics = three_kernel_mmd(
+                source_mmd_features, target_mmd_features
+            )
             total_loss = total_loss + config["mmd_lambda"] * mmd_loss
             mmd_median = diagnostics.median_squared_distance
             mmd_zeros = diagnostics.off_diagonal_zero_count

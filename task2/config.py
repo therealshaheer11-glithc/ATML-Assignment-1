@@ -53,6 +53,7 @@ LOCKED_BASE = {
     "mmd_kernel": "exp(-squared_distance/(2*bandwidth))",
     "mmd_bandwidth_gradient": "detached",
     "mmd_invalid_bandwidth": "stop",
+    "mmd_feature_normalization": "l2_per_sample",
     "validation_batch_size": 64,
     "num_workers": 2,
 }

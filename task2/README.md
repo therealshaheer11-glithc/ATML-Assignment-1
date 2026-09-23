@@ -1,20 +1,22 @@
-# Task 2 corrected rerun v2 - clipped training phase
+# Task 2 corrected rerun v3 - normalized-MMD training phase
 
 This package implements the locked source-only, DAN, DANN, and CDAN training protocol
 for the corrected Task 2 rerun. It deliberately contains no target-label evaluation
 command. Target evaluation is a separate phase after all six checkpoints are complete
 and frozen.
 
-The official v2 protocol applies global L2 gradient-norm clipping at 20 to every method.
-The unclipped Source-only, DAN 0.1, and DAN 1 runs are diagnostic pilots only and must
-not be included in the official comparison. The revision and TA-authorized rationale
-are recorded in `docs/DECISIONS.md` and
-`docs/PROTOCOL-REVISION-20260923.md`.
+The v3 protocol retains global L2 gradient-norm clipping at 20 for every method. For DAN,
+it additionally L2-normalizes each 512-dimensional feature only inside the MMD loss;
+classification still uses the original feature. The unclipped v1 and clipped v2 runs are
+diagnostic pilots only and must not be included in the official comparison. The
+TA-authorized rationale and source-only evidence are recorded in `docs/DECISIONS.md`,
+`docs/PROTOCOL-REVISION-20260923.md`, and
+`docs/PROTOCOL-REVISION-20260923-V3.md`.
 
 Read these files before execution:
 
 1. `docs/ASSIGNMENT-PROTOCOL.md` - requirements taken from `ATML-PA1.pdf`.
-2. `docs/DECISIONS.md` - D1-D15 choices approved before training.
+2. `docs/DECISIONS.md` - D1-D16 approved choices and revisions.
 3. `task2/preregistration/DAN_STRENGTH_EXPECTATION.txt` - the student's locked
    expectation and disclosure, written before the official clipped runs. The training
    command refuses to run if a `PENDING` placeholder is present.

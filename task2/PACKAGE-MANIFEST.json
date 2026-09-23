@@ -1,21 +1,28 @@
 {
-  "package": "ATML-PA1 Task 2 corrected clipped training phase",
-  "version": "2",
+  "package": "ATML-PA1 Task 2 corrected normalized-MMD training phase",
+  "version": "3",
   "date": "2026-09-23",
   "training_started": false,
   "target_evaluation_included": false,
+  "manifest_scope": "repository overlay files; excludes transport-only .gitignore and this self-referential manifest",
   "official_gradient_clipping": {
     "norm_type": 2.0,
     "max_norm": 20.0,
     "applies_to": "all_six_task2_configurations"
   },
+  "official_mmd_feature_normalization": {
+    "method": "l2_per_sample",
+    "applies_to": [
+      "dan_0p1",
+      "dan_1",
+      "dan_10"
+    ],
+    "classification_uses_unnormalized_features": true,
+    "epsilon_or_clamp": null,
+    "invalid_norm": "stop"
+  },
   "preregistration_sha256": "7cb1a3988b92c5986d850e65d3dc1a928af9d673d19b53b97dd1d90b78a31fb7",
   "files": [
-    {
-      "path": ".gitignore",
-      "sha256": "21069aeb2de1ae076b6ef60871927335acbf38a0d9bbcc8f5dc316259352d453",
-      "bytes": 75
-    },
     {
       "path": "shared/__init__.py",
       "sha256": "d6a4d53fbb7d3459e3d034e0a70547d5cff8eb2b93d45e6eecb4cfc7d7080756",
@@ -23,8 +30,8 @@
     },
     {
       "path": "shared/mmd.py",
-      "sha256": "0fbe6b0b57d52f2b9ae179f10b95be5f48d4a80629a83196042dae3eef7a00fc",
-      "bytes": 3644
+      "sha256": "57f0e5dfc446d7d57eb585100e5fc12836cf5402c4e324db1315859ddbfdb0f0",
+      "bytes": 4625
     },
     {
       "path": "shared/pacs.py",
@@ -38,8 +45,8 @@
     },
     {
       "path": "task2/README.md",
-      "sha256": "00f9e46d46cfa3ce61f8037d19cf9e904a3302eacbaf45b74a7d736dea3aebbf",
-      "bytes": 3031
+      "sha256": "690b161fdb553734ebbb73e293b43fdcb1ed996ac9feb6dd7bdc5232e1f1e8ed",
+      "bytes": 3210
     },
     {
       "path": "task2/__init__.py",
@@ -48,13 +55,13 @@
     },
     {
       "path": "task2/config.py",
-      "sha256": "d050c25c9903587c13467a91ba2749df2ac1b0fed458c95b94b3c60f79f93849",
-      "bytes": 2522
+      "sha256": "c5f00d3fa7a22a6727a6b08e373e8ff41759356228a8c836df55af67a8304e66",
+      "bytes": 2572
     },
     {
       "path": "task2/configs/base.json",
-      "sha256": "c05108ed7ff23d484e76f9b8d464307ff7383d651444e74ded4f9568873d67c9",
-      "bytes": 1244
+      "sha256": "1e0378f9da0131484121912723b0e406717184b19ea277409f93e099d9fbc456",
+      "bytes": 1292
     },
     {
       "path": "task2/configs/cdan.json",
@@ -93,13 +100,18 @@
     },
     {
       "path": "task2/docs/AUDIT-MATRIX.md",
-      "sha256": "01f5a3603d961a90d37a3dfde7376075689d16561127cb39d024a5078ff042db",
-      "bytes": 1595
+      "sha256": "378a93cc55c591afb5553f7aeb4366b4873bbf50b851801158d288dccf18f0d1",
+      "bytes": 1739
     },
     {
       "path": "task2/docs/DECISIONS.md",
-      "sha256": "05d6c34f5a2dcc39c345f61bf54e756eb16a11a51797e1f494f060350619a75b",
-      "bytes": 8897
+      "sha256": "ce1aa17330e89541ac2c5e24d6af1a3ee8a49ccc6dd5a189179650f1d44a5f2d",
+      "bytes": 10351
+    },
+    {
+      "path": "task2/docs/PROTOCOL-REVISION-20260923-V3.md",
+      "sha256": "7b5f87f84176b0d9b8cccfd59e6bce277ff5c0cbd844c461dc49cf9e51274d3a",
+      "bytes": 2295
     },
     {
       "path": "task2/docs/PROTOCOL-REVISION-20260923.md",
@@ -133,13 +145,13 @@
     },
     {
       "path": "task2/train.py",
-      "sha256": "8f059d85cd918247d00a1ca992dc5957631e8b7c746057f5967c95eada67629a",
-      "bytes": 22784
+      "sha256": "874eb2926a48861fda4ecbcdac0638fd8914f724554ea51d7f1e7062ca3c7b20",
+      "bytes": 23160
     },
     {
       "path": "tests/test_locked_choices.py",
-      "sha256": "ffbe41bb15af504d6e46ca2fd8b62e9f35f6b6334ca5a7a23e951bae5cd5089c",
-      "bytes": 3428
+      "sha256": "2b435fa3515f05dabbe850a33546723b59b1758812d9f6340050249bf857476d",
+      "bytes": 4112
     }
   ]
 }
