@@ -1,0 +1,55 @@
+{
+  "package": "ATML-PA1 Task 2 frozen-checkpoint final evaluation supplement",
+  "version": "5",
+  "date": "2026-09-23",
+  "training_code_changed": false,
+  "training_started": false,
+  "target_labels_accessed_during_packaging": false,
+  "expected_freeze_sha256": "baacc896c12285216eee120b785475b69c1e3bfcee911c33a759a72c897f15b5",
+  "evaluation_rules": {
+    "main_runs": [
+      "source_only",
+      "dan_1",
+      "dann",
+      "cdan"
+    ],
+    "controlled_study": [
+      "source_only",
+      "dan_0p1",
+      "dan_1",
+      "dan_10"
+    ],
+    "target_count": 3929,
+    "macro_f1_labels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "domain_probe_source_count": 1213,
+    "domain_probe_target_count": 1213,
+    "domain_probe_split": "stratified_70_30_seed6304",
+    "domain_probe_features": "raw_512_dimensional_backbone_features",
+    "domain_probe_chance": 0.5
+  },
+  "files": [
+    {
+      "path": "task2/docs/FINAL-EVALUATION-PROTOCOL.md",
+      "sha256": "c33dc30a0e854d8115ad8e5eeb37638e316f84cff9b5de4e06f7f6c04185fd51",
+      "bytes": 3207
+    },
+    {
+      "path": "task2/evaluate_frozen.py",
+      "sha256": "c625f06037a6b8d395058be1ecd374a178f3fbd86d2197d55a855780204eecd9",
+      "bytes": 34076
+    },
+    {
+      "path": "tests/test_final_evaluation.py",
+      "sha256": "73372c0b7a5fce3025fdd21c12e50465364310ff1b0682726c59ccc3ab325f78",
+      "bytes": 2180
+    }
+  ]
+}
