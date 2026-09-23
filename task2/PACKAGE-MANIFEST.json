@@ -1,0 +1,145 @@
+{
+  "package": "ATML-PA1 Task 2 corrected clipped training phase",
+  "version": "2",
+  "date": "2026-09-23",
+  "training_started": false,
+  "target_evaluation_included": false,
+  "official_gradient_clipping": {
+    "norm_type": 2.0,
+    "max_norm": 20.0,
+    "applies_to": "all_six_task2_configurations"
+  },
+  "preregistration_sha256": "7cb1a3988b92c5986d850e65d3dc1a928af9d673d19b53b97dd1d90b78a31fb7",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "21069aeb2de1ae076b6ef60871927335acbf38a0d9bbcc8f5dc316259352d453",
+      "bytes": 75
+    },
+    {
+      "path": "shared/__init__.py",
+      "sha256": "d6a4d53fbb7d3459e3d034e0a70547d5cff8eb2b93d45e6eecb4cfc7d7080756",
+      "bytes": 70
+    },
+    {
+      "path": "shared/mmd.py",
+      "sha256": "0fbe6b0b57d52f2b9ae179f10b95be5f48d4a80629a83196042dae3eef7a00fc",
+      "bytes": 3644
+    },
+    {
+      "path": "shared/pacs.py",
+      "sha256": "41ed5edf3fbb45dc58dedc6f6e19148a9e6bf14457634fc7d6f1cf58bfffb24c",
+      "bytes": 10816
+    },
+    {
+      "path": "shared/splits/pacs_sketch_seed6304.json",
+      "sha256": "e0f075e1e4f2c43c7db2423bb9b31f901d4e1157e72c2097b3e156501ce2dc74",
+      "bytes": 943121
+    },
+    {
+      "path": "task2/README.md",
+      "sha256": "00f9e46d46cfa3ce61f8037d19cf9e904a3302eacbaf45b74a7d736dea3aebbf",
+      "bytes": 3031
+    },
+    {
+      "path": "task2/__init__.py",
+      "sha256": "a317324a5845c514c9068d087e12de0a26a9765710549f35aa04aa2146e0c0ef",
+      "bytes": 71
+    },
+    {
+      "path": "task2/config.py",
+      "sha256": "d050c25c9903587c13467a91ba2749df2ac1b0fed458c95b94b3c60f79f93849",
+      "bytes": 2522
+    },
+    {
+      "path": "task2/configs/base.json",
+      "sha256": "c05108ed7ff23d484e76f9b8d464307ff7383d651444e74ded4f9568873d67c9",
+      "bytes": 1244
+    },
+    {
+      "path": "task2/configs/cdan.json",
+      "sha256": "d7af5b5b09b858f93c6242ba23249387e74ed467cb2b62985aadb1dd6be3b3ea",
+      "bytes": 57
+    },
+    {
+      "path": "task2/configs/dan_0p1.json",
+      "sha256": "cada3a8d3afe7e5c23f7d1d0b21537752ae41c5a80ed948bb5860ade00507aff",
+      "bytes": 58
+    },
+    {
+      "path": "task2/configs/dan_1.json",
+      "sha256": "99d548122f5cbcaca6f1d4b7cefaede7298df5bc591d27069da84c6aff16c336",
+      "bytes": 56
+    },
+    {
+      "path": "task2/configs/dan_10.json",
+      "sha256": "befa58a99db1a5d6056aa6c47b8c2f82d496d2a3b2f5eebb0e81b52d0269ee93",
+      "bytes": 58
+    },
+    {
+      "path": "task2/configs/dann.json",
+      "sha256": "eb313f6af2ea7f133807f7bc57befd0840c1cb5c7c7266651024054ade244698",
+      "bytes": 57
+    },
+    {
+      "path": "task2/configs/source_only.json",
+      "sha256": "d56b60114c7ba9856dc37f62b9966625dc824206ce04de70583c067dcd1d8e34",
+      "bytes": 71
+    },
+    {
+      "path": "task2/docs/ASSIGNMENT-PROTOCOL.md",
+      "sha256": "82f8145663b46a0a1a0092c816372df1b1002e4edbf315d6ac457c5ecc2e859f",
+      "bytes": 4396
+    },
+    {
+      "path": "task2/docs/AUDIT-MATRIX.md",
+      "sha256": "01f5a3603d961a90d37a3dfde7376075689d16561127cb39d024a5078ff042db",
+      "bytes": 1595
+    },
+    {
+      "path": "task2/docs/DECISIONS.md",
+      "sha256": "05d6c34f5a2dcc39c345f61bf54e756eb16a11a51797e1f494f060350619a75b",
+      "bytes": 8897
+    },
+    {
+      "path": "task2/docs/PROTOCOL-REVISION-20260923.md",
+      "sha256": "69ce8366687b1dd443f7fecfcc8497ebefb539bd897b9688d7954b0a247f38dd",
+      "bytes": 1971
+    },
+    {
+      "path": "task2/methods.py",
+      "sha256": "3812ddd2846d6255adb182257e29be301a33e827f0296a7972b1bc7a0ef95379",
+      "bytes": 1444
+    },
+    {
+      "path": "task2/model.py",
+      "sha256": "8bb071894e2b2486c5f76bf9f45eef3890294dc9092194e0d492b880dc69c837",
+      "bytes": 2269
+    },
+    {
+      "path": "task2/preflight.py",
+      "sha256": "1c2b80b8ab22b3f92c46869f9d383df94cd4dc3a1fdc517c85072663503265fd",
+      "bytes": 2188
+    },
+    {
+      "path": "task2/prepare_initialization.py",
+      "sha256": "94ba63b6609c6cba883929c42792e8b18d6e5b3dd6cf979ad8030df8563d1667",
+      "bytes": 2018
+    },
+    {
+      "path": "task2/preregistration/DAN_STRENGTH_EXPECTATION.txt",
+      "sha256": "7cb1a3988b92c5986d850e65d3dc1a928af9d673d19b53b97dd1d90b78a31fb7",
+      "bytes": 2145
+    },
+    {
+      "path": "task2/train.py",
+      "sha256": "8f059d85cd918247d00a1ca992dc5957631e8b7c746057f5967c95eada67629a",
+      "bytes": 22784
+    },
+    {
+      "path": "tests/test_locked_choices.py",
+      "sha256": "ffbe41bb15af504d6e46ca2fd8b62e9f35f6b6334ca5a7a23e951bae5cd5089c",
+      "bytes": 3428
+    }
+  ]
+}
