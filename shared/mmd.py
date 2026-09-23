@@ -19,22 +19,26 @@ class MMDDiagnostics:
     off_diagonal_zero_count: int
 
 
-def l2_normalize_mmd_features(features: Tensor) -> Tensor:
-    """Remove per-example feature scale before the DAN MMD calculation.
+def l2_normalize_alignment_features(features: Tensor) -> Tensor:
+    """Remove per-example scale from features used by an alignment loss.
 
     Classification continues to use the original features. A zero or non-finite norm
     stops the run instead of introducing an unregistered epsilon or silent clamp.
     """
     if features.ndim != 2:
-        raise ValueError("MMD feature normalization requires a rank-2 matrix")
+        raise ValueError("Alignment feature normalization requires a rank-2 matrix")
     if not torch.isfinite(features).all():
-        raise FloatingPointError("MMD feature normalization received a non-finite value")
+        raise FloatingPointError(
+            "Alignment feature normalization received a non-finite value"
+        )
     norms = torch.linalg.vector_norm(features.float(), ord=2, dim=1, keepdim=True)
     if not torch.isfinite(norms).all() or bool((norms <= 0).any().item()):
-        raise FloatingPointError("MMD feature normalization received a non-positive norm")
+        raise FloatingPointError(
+            "Alignment feature normalization received a non-positive norm"
+        )
     normalized = features.float() / norms
     if not torch.isfinite(normalized).all():
-        raise FloatingPointError("Normalized MMD features are non-finite")
+        raise FloatingPointError("Normalized alignment features are non-finite")
     return normalized
 
 

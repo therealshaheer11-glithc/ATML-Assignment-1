@@ -1,23 +1,27 @@
-# Task 2 corrected rerun v3 - normalized-MMD training phase
+# Task 2 v4 adversarial-normalization pilot
 
-This package implements the locked source-only, DAN, DANN, and CDAN training protocol
-for the corrected Task 2 rerun. It deliberately contains no target-label evaluation
-command. Target evaluation is a separate phase after all six checkpoints are complete
-and frozen.
+This package implements a contained stability pilot for DANN and, only if separately
+approved after the DANN source-only diagnostic, CDAN. It deliberately contains no
+target-label evaluation command.
 
-The v3 protocol retains global L2 gradient-norm clipping at 20 for every method. For DAN,
-it additionally L2-normalizes each 512-dimensional feature only inside the MMD loss;
-classification still uses the original feature. The unclipped v1 and clipped v2 runs are
-diagnostic pilots only and must not be included in the official comparison. The
-TA-authorized rationale and source-only evidence are recorded in `docs/DECISIONS.md`,
-`docs/PROTOCOL-REVISION-20260923.md`, and
-`docs/PROTOCOL-REVISION-20260923-V3.md`.
+V4 retains every v3 setting. Its only training change is to L2-normalize each
+512-dimensional feature at the DANN/CDAN discriminator input. Classification still uses
+the original feature. CDAN uses normalized features with probabilities from the original
+logits and does not detach either term. The rationale, authorization, source-only
+evidence, and adoption rule are recorded in `docs/DECISIONS.md` and
+`docs/PROTOCOL-REVISION-20260923-V4.md`.
+
+Existing v3 Source-only and DAN runs stay fixed. V3 DANN also remains untouched while the
+v4 DANN pilot is written to a new output root. The student will choose between v3 and v4
+using source information only. If v4 is rejected, CDAN must be run with the unchanged v3
+package. If v4 is adopted, CDAN must use this same v4 adversarial-input rule.
 
 Read these files before execution:
 
 1. `docs/ASSIGNMENT-PROTOCOL.md` - requirements taken from `ATML-PA1.pdf`.
-2. `docs/DECISIONS.md` - D1-D16 approved choices and revisions.
-3. `task2/preregistration/DAN_STRENGTH_EXPECTATION.txt` - the student's locked
+2. `docs/DECISIONS.md` - D1-D17 approved choices and revisions.
+3. `docs/PROTOCOL-REVISION-20260923-V4.md` - exact pilot rule and source-only rationale.
+4. `task2/preregistration/DAN_STRENGTH_EXPECTATION.txt` - the student's locked
    expectation and disclosure, written before the official clipped runs. The training
    command refuses to run if a `PENDING` placeholder is present.
 
@@ -39,11 +43,11 @@ Read these files before execution:
 5. Run `task2.preflight`; this checks data, split, configurations, and environment but
    does not train and does not access target labels.
 6. Create the one common ImageNet-V1 plus seven-class-head initialization.
-7. Train the six runs sequentially in the same runtime/output root:
-   `source_only`, `dan_0p1`, `dan_1`, `dan_10`, `dann`, `cdan`.
-8. Freeze and audit the six selected checkpoints before adding target-label evaluation.
+7. Run only `dann` in the new v4 pilot output root.
+8. Compare v3 and v4 DANN using source information only and record the student's choice.
+9. Run `cdan` under the approved version. Do not evaluate target labels yet.
 
-The first run creates `experiment_lock.json`. Every later run must match its code,
+The v4 DANN run creates `experiment_lock.json`. Every later v4 run must match its code,
 split, initialization, preregistration, dataset snapshot, runtime, GPU, and worker
 count. A completed run stores `best.pt`, `last.pt`, `history.csv`,
 `best_source_validation.json`, and `run.json`.

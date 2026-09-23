@@ -1,15 +1,18 @@
 # Task 2 corrected rerun: locked decision record
 
-Status: revised and re-locked before official training. The earlier Task 2 attempt is
-preserved on the GitHub branch `archive/task2-attempt-1-20260923`. The first unclipped
-corrected runs of Source-only, DAN 0.1, and DAN 1 are retained as diagnostic pilots and
-excluded from the official comparison. Earlier target results are known, but they must
-not be used to revise this protocol or select corrected checkpoints.
+Status: revised through the approved v4 adversarial-normalization pilot. The earlier
+Task 2 attempt is preserved on the GitHub branch
+`archive/task2-attempt-1-20260923`. The first unclipped corrected runs and clipped v2
+runs are diagnostic pilots and excluded from the official comparison. Existing v3
+outputs remain unchanged while v4 DANN is tested in a new output root. Earlier target
+results are known, but they must not be used to choose between v3 and v4 or select
+corrected checkpoints.
 
 The assignment-mandated settings are summarized separately in `ASSIGNMENT-PROTOCOL.md`.
-This file records the implementation choices that the assignment leaves open. D1 and
-D2-D15 were approved by the student in conversation. D4 follows a TA response that
-either listed RBF convention is acceptable.
+This file records the implementation choices that the assignment leaves open. D1-D15
+were approved before the corrected runs; D16 and D17 were separately approved after
+source-only stability diagnostics. D4 follows a TA response that either listed RBF
+convention is acceptable.
 
 ## D1 - Controlled study
 
@@ -201,3 +204,34 @@ classification representation and every assignment-fixed hyperparameter unchange
 Apply the same MMD-input rule to all three DAN strengths. Task 3 DAN-DG must later reuse
 this same MMD feature treatment, as required by the assignment's shared-MMD rule. Global
 L2 gradient clipping at 20 remains active for all six Task 2 configurations.
+
+## D17 - Adversarial-discriminator feature normalization (v4 pilot)
+
+For DANN and CDAN, L2-normalize every 512-dimensional source and target feature vector
+immediately before constructing the domain-discriminator input. DANN sends that
+normalized feature directly to its discriminator. CDAN forms the outer product of the
+normalized feature and the softmax probabilities computed from the original classifier
+logits. Do not detach either term. The seven-class classifier continues to receive the
+original unnormalized feature. Compute the norm without an epsilon or clamp; a zero or
+non-finite norm stops the run.
+
+Reason for the pilot: the v3 DANN run completed six epochs, selected epoch 1 from source
+validation, and achieved mean source-validation macro-F1 0.6049088768. Its maximum
+pre-clipping gradient norm was 40,455,498.9988, and 93.4043% of its updates required
+clipping. The selected-epoch training domain accuracy was 0.5203014316 at an average GRL
+strength of 0.0826106062. Its selected checkpoint SHA256 was
+`321e3389a246ad179d8219584d04f9b089c8a13d7ef5512d34bceab4f0f676e4`.
+These are source-training diagnostics; target labels were not accessed.
+
+The course TA permitted documented normalization to stabilize non-convergent training,
+and the student approved this exact pilot after reviewing the v3 DANN source evidence.
+Every earlier choice remains fixed, including the standard GRL schedule, unit domain-loss
+weight, discriminator architecture, optimizer, learning rate, clipping threshold,
+initialization, split, augmentation, stopping rule, and checkpoint-selection rule.
+
+Run v4 DANN in a new output root and compare it with v3 using source information only:
+source-validation macro-F1, complete training history, gradient norms, clipping fraction,
+domain accuracy, and source prediction distribution. Adopting v4 is not automatic and
+must be explicitly approved by the student. If approved, apply the same discriminator
+input rule to CDAN. Otherwise preserve v4 as a diagnostic pilot and run CDAN under v3.
+Do not inspect target labels during this decision.

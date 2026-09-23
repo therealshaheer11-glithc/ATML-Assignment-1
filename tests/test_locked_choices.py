@@ -7,7 +7,7 @@ import math
 import torch
 from torch import nn
 
-from shared.mmd import l2_normalize_mmd_features, three_kernel_mmd
+from shared.mmd import l2_normalize_alignment_features, three_kernel_mmd
 from task2.methods import conditional_features, grl_strength
 from task2.model import assert_batchnorm_unchanged, batchnorm_buffers, freeze_batchnorm_statistics
 from task2.train import clip_gradients
@@ -58,14 +58,14 @@ def test_zero_median_stops_instead_of_filtering_zeros() -> None:
 
 def test_dan_mmd_features_are_l2_normalized_without_an_epsilon() -> None:
     features = torch.tensor([[3.0, 4.0], [0.0, 2.0]], requires_grad=True)
-    normalized = l2_normalize_mmd_features(features)
+    normalized = l2_normalize_alignment_features(features)
     assert torch.allclose(torch.linalg.vector_norm(normalized, dim=1), torch.ones(2))
     assert torch.allclose(normalized[0], torch.tensor([0.6, 0.8]))
     normalized.sum().backward()
     assert features.grad is not None
 
     try:
-        l2_normalize_mmd_features(torch.zeros(2, 3))
+        l2_normalize_alignment_features(torch.zeros(2, 3))
     except FloatingPointError as error:
         assert "non-positive norm" in str(error)
     else:
@@ -87,11 +87,24 @@ def test_batchnorm_running_buffers_are_frozen_but_affine_is_trainable() -> None:
 def test_cdan_width_and_no_detachment() -> None:
     features = torch.randn(5, 512, requires_grad=True)
     logits = torch.randn(5, 7, requires_grad=True)
-    conditioned = conditional_features(features, logits)
+    normalized = l2_normalize_alignment_features(features)
+    conditioned = conditional_features(normalized, logits)
     assert conditioned.shape == (5, 3584)
     conditioned.sum().backward()
     assert features.grad is not None
     assert logits.grad is not None
+
+
+def test_adversarial_features_are_l2_normalized_without_detachment() -> None:
+    features = torch.randn(5, 512, requires_grad=True)
+    normalized = l2_normalize_alignment_features(features)
+    assert torch.allclose(
+        torch.linalg.vector_norm(normalized, ord=2, dim=1),
+        torch.ones(5),
+        atol=1e-6,
+    )
+    normalized.square().sum().backward()
+    assert features.grad is not None
 
 
 def test_required_grl_schedule() -> None:

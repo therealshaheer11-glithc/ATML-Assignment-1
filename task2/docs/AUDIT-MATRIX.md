@@ -21,7 +21,8 @@ until the fresh Colab runtime runs the preflight.
 | D13 | `task2/train.py::validate_sources` | Code audit |
 | D14 | `shared/pacs.py::image_transform` | Code audit; COLAB GATE |
 | D15 | `task2/train.py` epoch checkpoint and identity locks | Code audit; COLAB GATE |
-| D16 | `shared/mmd.py::l2_normalize_mmd_features`, DAN branch in `task2/train.py` | Norm/gradient/zero-norm tests PASS (local); COLAB GATE |
+| D16 | `shared/mmd.py::l2_normalize_alignment_features`, DAN branch in `task2/train.py` | Norm/gradient/zero-norm tests PASS (local); COLAB GATE |
+| D17 | `shared/mmd.py::l2_normalize_alignment_features`, DANN/CDAN branch in `task2/train.py` | Norm/no-detach tests PASS (local); COLAB GATE |
 
-The local syntax check and all eight high-value unit checks passed. No training or target
+The local syntax check and all nine high-value unit checks passed. No training or target
 evaluation was performed during packaging.

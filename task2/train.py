@@ -22,7 +22,7 @@ import torchvision
 from sklearn.metrics import accuracy_score, f1_score
 from torch import nn
 
-from shared.mmd import l2_normalize_mmd_features, three_kernel_mmd
+from shared.mmd import l2_normalize_alignment_features, three_kernel_mmd
 from shared.pacs import (
     SEED,
     SOURCES,
@@ -266,6 +266,8 @@ def train_epoch(
         "domain_loss": 0.0,
         "domain_accuracy": 0.0,
         "grl_strength": 0.0,
+        "adversarial_feature_norm_before": 0.0,
+        "adversarial_feature_norm_after": 0.0,
         "gradient_norm": 0.0,
         "gradient_norm_after_clipping": 0.0,
         "gradient_clipped_fraction": 0.0,
@@ -311,13 +313,15 @@ def train_epoch(
         current_grl = 0.0
         mmd_median = 0.0
         mmd_zeros = 0
+        adversarial_norm_before = 0.0
+        adversarial_norm_after = 0.0
 
         if config["method"] == "dan":
             assert features is not None
             if config["mmd_feature_normalization"] != "l2_per_sample":
                 raise RuntimeError("Unexpected DAN MMD feature-normalization policy")
-            source_mmd_features = l2_normalize_mmd_features(features[:24])
-            target_mmd_features = l2_normalize_mmd_features(features[24:])
+            source_mmd_features = l2_normalize_alignment_features(features[:24])
+            target_mmd_features = l2_normalize_alignment_features(features[24:])
             mmd_loss, diagnostics = three_kernel_mmd(
                 source_mmd_features, target_mmd_features
             )
@@ -326,13 +330,28 @@ def train_epoch(
             mmd_zeros = diagnostics.off_diagonal_zero_count
         elif config["method"] in {"dann", "cdan"}:
             assert features is not None and logits is not None and discriminator is not None
+            if config["adversarial_feature_normalization"] != "l2_per_sample":
+                raise RuntimeError(
+                    "Unexpected DANN/CDAN adversarial feature-normalization policy"
+                )
             global_update = epoch_index * steps + step_index
             progress = global_update / max(1, planned_updates - 1)
             current_grl = grl_strength(progress)
+            adversarial_features = l2_normalize_alignment_features(features)
+            adversarial_norm_before = float(
+                torch.linalg.vector_norm(
+                    features.detach().float(), ord=2, dim=1
+                ).mean().item()
+            )
+            adversarial_norm_after = float(
+                torch.linalg.vector_norm(
+                    adversarial_features.detach(), ord=2, dim=1
+                ).mean().item()
+            )
             domain_input = (
-                conditional_features(features, logits)
+                conditional_features(adversarial_features, logits)
                 if config["method"] == "cdan"
-                else features
+                else adversarial_features
             )
             domain_logits = discriminator(reverse_gradient(domain_input, current_grl))
             domain_labels = torch.cat(
@@ -352,7 +371,6 @@ def train_epoch(
             domain_accuracy = float(
                 (domain_logits.argmax(dim=1) == domain_labels).float().mean().item()
             )
-
         if not torch.isfinite(total_loss):
             raise FloatingPointError(
                 f"Non-finite loss at epoch {epoch_index + 1}, step {step_index + 1}"
@@ -373,6 +391,8 @@ def train_epoch(
         totals["domain_loss"] += float(domain_loss.detach().item())
         totals["domain_accuracy"] += domain_accuracy
         totals["grl_strength"] += current_grl
+        totals["adversarial_feature_norm_before"] += adversarial_norm_before
+        totals["adversarial_feature_norm_after"] += adversarial_norm_after
         totals["gradient_norm"] += gradient_norm
         totals["gradient_norm_after_clipping"] += gradient_norm_after_clipping
         totals["gradient_clipped_fraction"] += float(was_clipped)
