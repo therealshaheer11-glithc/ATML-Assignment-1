@@ -4,10 +4,10 @@ Photo, Art Painting, and Cartoon are labeled sources; Sketch is the unlabeled ad
 target. Checkpoints are selected using source validation and frozen before Sketch-label
 evaluation.
 
-**Status:** the student has reported completion of all six official runs and the final
-Colab evaluation. The final prediction tables, plots, histories, freeze, and adoption
-record still need to be exported from Drive and published. This repository currently
-contains the implementation and protocols, not those final result files.
+**Status:** all six official runs and the frozen-checkpoint evaluation are complete.
+The repository includes the official histories, prediction tables, metrics, plots,
+freeze, adoption record, and corrected execution notebook. Checkpoints and PACS images
+remain outside Git.
 
 ## Start here
 
@@ -18,12 +18,13 @@ contains the implementation and protocols, not those final result files.
 | What changed, and why? | [Chronological run history and clarifications](docs/RUN-HISTORY.md) |
 | Which code produced the experiments? | [Pinned reproduction instructions](docs/REPRODUCTION.md) |
 | How were target labels and the domain probe handled? | [Final evaluation protocol](docs/FINAL-EVALUATION-PROTOCOL.md) |
-| What is verified and still missing? | [Repository audit and handoff](docs/REPOSITORY-AUDIT.md) |
+| Where are the published result files? | [Saved-results index](results/README.md) |
+| What has been verified? | [Repository audit and handoff](docs/REPOSITORY-AUDIT.md) |
 
 ## Official run set
 
-The following values are transcribed from the student's Colab completion messages.
-They are a navigation summary; the pending export will supply the authoritative files.
+The following values summarize the published machine-readable results in
+[`results/final`](results/final/).
 Source F1 is the unweighted mean of seven-class macro-F1 across the three source domains.
 
 | Run | Training version | Selected epoch | Source F1 | Sketch accuracy | Sketch F1 |
@@ -69,9 +70,10 @@ Persistent directories under `/content/drive/MyDrive/ATML-PA1/`:
 | `task2_final_evaluation_20260923` | Final tables, predictions, probe evidence, and plots |
 
 Keep these directories and the common initialization. The exporter in
-[tools/export_task2_evidence.py](../tools/export_task2_evidence.py) copies small evidence
-without modifying runs or exporting checkpoints. Upload its ZIP for review before importing
-it into `task2/results/` and `task2/provenance/`.
+[`tools/export_task2_evidence.py`](../tools/export_task2_evidence.py) produced the
+published small-file evidence without modifying runs or exporting checkpoints.
+The export record and source paths are preserved in
+[`FINAL-EVIDENCE-EXPORT.json`](provenance/FINAL-EVIDENCE-EXPORT.json).
 
 ## Reproduction and attribution
 

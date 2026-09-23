@@ -74,10 +74,11 @@ and all identity/runtime checks match. Completed runs must not be retrained by a
 
 ## Source audit, freeze, and final evaluation
 
-The actual source-audit/freeze and V4 adoption were recorded by Colab cells. Their exact
-saved JSON and the latest notebook are pending export. Until supplied, this repository
-is not a fully self-contained replay of those orchestration steps. Do not substitute
-handwritten records for them.
+The actual source audit, freeze, V4 adoption decision, final results, official histories,
+and corrected notebook are published under `task2/provenance/` and `task2/results/`.
+The notebook preserves the Colab orchestration and recovery cells. Checkpoints remain in
+Drive because they are large; do not substitute handwritten records for the published
+files.
 
 With the original frozen checkpoints still at the paths recorded in the freeze, the
 existing evaluator can be invoked from V5 without training:

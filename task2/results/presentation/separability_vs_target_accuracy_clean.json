@@ -1,0 +1,11 @@
+{
+  "status": "presentation_only",
+  "models_executed": false,
+  "metrics_changed": false,
+  "source": "task2/results/final/all_six_comparison.csv",
+  "source_sha256": "569a31b08d337cae67d4862bd5e866f8b6b0ec00e920f741e550abd69aa9e183",
+  "output": "task2/results/presentation/separability_vs_target_accuracy_clean.png",
+  "output_sha256": "4b3f30c4d5f1ea1b64757588f285d3c76eac769df6afd4cd60935a8466ed0021",
+  "change": "Replace overlapping point labels with an external legend.",
+  "matplotlib_version": "3.10.9"
+}

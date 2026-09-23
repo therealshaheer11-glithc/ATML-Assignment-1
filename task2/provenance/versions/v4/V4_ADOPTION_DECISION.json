@@ -1,0 +1,36 @@
+{
+  "decision": "adopt_v4_adversarial_feature_normalization_for_dann_and_cdan",
+  "decision_time_utc": "2026-09-23T15:58:44.638700+00:00",
+  "basis": "source_information_only",
+  "student_authorization": "The student approved trying the documented approach and instructed fallback to v3 only if it produced no meaningful improvement.",
+  "v3_dann": {
+    "best_mean_source_macro_f1": 0.6049088767773435,
+    "maximum_pre_clipping_gradient_norm": 40455498.998820186,
+    "mean_clipped_step_fraction": 0.9340425531914893,
+    "checkpoint_sha256": "321e3389a246ad179d8219584d04f9b089c8a13d7ef5512d34bceab4f0f676e4"
+  },
+  "v4_dann": {
+    "best_mean_source_macro_f1": 0.9408741433215398,
+    "maximum_pre_clipping_gradient_norm": 11.731414086208188,
+    "mean_clipped_step_fraction": 0.015501519756838911,
+    "checkpoint_sha256": "1154ba6ef175f7ba728f16697f199db65a574c7a4e4e7e3613db22e4880443ee",
+    "all_seven_source_classes_predicted": true
+  },
+  "source_f1_change": 0.33596526654419634,
+  "unchanged_settings": [
+    "GRL schedule",
+    "domain-loss weight",
+    "discriminator architecture",
+    "AdamW settings",
+    "global L2 clipping at 20",
+    "common initialization",
+    "source split",
+    "sampling",
+    "augmentation",
+    "early stopping",
+    "source-only checkpoint selection"
+  ],
+  "github_training_commit": "d26997b22d3b7722e2ecc828dde1445244afc04b",
+  "manifest_sha256": "3cec075fea3295ece5ff42ca518424723497b95995bd58e8840a0bc13584c01c",
+  "target_labels_accessed": false
+}

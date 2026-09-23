@@ -1,0 +1,15 @@
+{
+  "v3_initialization_path": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/initialization/resnet18_v1_seed6304_common.pt",
+  "v4_initialization_path": "/content/drive/MyDrive/ATML-PA1/task2_adversarial_normalized_v4_20260923/initialization/resnet18_v1_seed6304_common.pt",
+  "initialization_state_sha256": "4d53e76c2d8f557b050a1913257c980846bebf6d5b4a28ff4d7cfa12c1d2eef3",
+  "initialization_file_sha256": "567ae5fee162cb523261192c469b24e0c65fd793cb0484e0c0fc14367d85f622",
+  "completed_v3_run_references": {
+    "source_only": "4d53e76c2d8f557b050a1913257c980846bebf6d5b4a28ff4d7cfa12c1d2eef3",
+    "dan_0p1": "4d53e76c2d8f557b050a1913257c980846bebf6d5b4a28ff4d7cfa12c1d2eef3",
+    "dan_1": "4d53e76c2d8f557b050a1913257c980846bebf6d5b4a28ff4d7cfa12c1d2eef3",
+    "dan_10": "4d53e76c2d8f557b050a1913257c980846bebf6d5b4a28ff4d7cfa12c1d2eef3",
+    "dann": "4d53e76c2d8f557b050a1913257c980846bebf6d5b4a28ff4d7cfa12c1d2eef3"
+  },
+  "all_references_match": true,
+  "target_labels_accessed": false
+}

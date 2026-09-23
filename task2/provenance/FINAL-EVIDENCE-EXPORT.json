@@ -1,0 +1,483 @@
+{
+  "created_utc": "2026-09-23T18:34:27.557708+00:00",
+  "training_performed": false,
+  "checkpoint_files_modified": false,
+  "freeze_sha256": "baacc896c12285216eee120b785475b69c1e3bfcee911c33a759a72c897f15b5",
+  "copied_files": [
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/EVALUATION-MANIFEST.json",
+      "path": "task2/results/final/EVALUATION-MANIFEST.json",
+      "bytes": 4128,
+      "sha256": "000c8cec8ba53457b0f4b0b44e7b69bca4653aa785098ff045e782f492ebba67"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/all_six_comparison.csv",
+      "path": "task2/results/final/all_six_comparison.csv",
+      "bytes": 1825,
+      "sha256": "569a31b08d337cae67d4862bd5e866f8b6b0ec00e920f741e550abd69aa9e183"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/class_change_summary.json",
+      "path": "task2/results/final/class_change_summary.json",
+      "bytes": 1622,
+      "sha256": "36b0648133f0390ab1c050d3d053ae216ce7eaf3b906d11c5498ea67670796a7"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/confusion_matrices.json",
+      "path": "task2/results/final/confusion_matrices.json",
+      "bytes": 3437,
+      "sha256": "118500dc2f10519fd370a81ff2f0529a0efe56a969e0912dd98481552e51e2ec"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/dan_strength_study.csv",
+      "path": "task2/results/final/dan_strength_study.csv",
+      "bytes": 1337,
+      "sha256": "0f3faff2f5201d8b5e6961db961081528ac81c32009d20cbac2158109ef47d7a"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/domain_probe_partition.json",
+      "path": "task2/results/final/domain_probe_partition.json",
+      "bytes": 129885,
+      "sha256": "fdec03894c18cda077b12560619cdacdf218da5e864fb20ebac67d8376a7b4fe"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/domain_probe_test_predictions.csv",
+      "path": "task2/results/final/domain_probe_test_predictions.csv",
+      "bytes": 400722,
+      "sha256": "231698c2b3ee40d96f79b8e5e7d189aaa820f426106dbb5ed48d291fbcec2498"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/dominant_confusions.csv",
+      "path": "task2/results/final/dominant_confusions.csv",
+      "bytes": 1865,
+      "sha256": "fd7124e9c118eee3339ffe9038e4c80432b9d37ff5a2e094dcc4001dd1aa8fee"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/evaluation_code_commit.json",
+      "path": "task2/results/final/evaluation_code_commit.json",
+      "bytes": 569,
+      "sha256": "de7c0f81e20820ad069e3cf8f36bba73617ea2329df66f2d159be1f62da649b6"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/evaluation_complete.json",
+      "path": "task2/results/final/evaluation_complete.json",
+      "bytes": 1258,
+      "sha256": "00d51d0d790babd45c2b29d50bdf39d46c936d03ceaa6939fb65031b80a653ce"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/final_results.json",
+      "path": "task2/results/final/final_results.json",
+      "bytes": 22605,
+      "sha256": "aa3685b1d5370e20d76798fb2ebbc7cb2286e7466c2dfdd8a4414799aad65883"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/main_four_comparison.csv",
+      "path": "task2/results/final/main_four_comparison.csv",
+      "bytes": 1314,
+      "sha256": "c8711bc00378df9166611c0bf4e25c2f04faf1153f2403213d677e8a7e19e45b"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/per_class_changes_vs_source_only.csv",
+      "path": "task2/results/final/per_class_changes_vs_source_only.csv",
+      "bytes": 3221,
+      "sha256": "486527d15c70ff7e21f688e79153398cc85fe8cfed69250f65dac4a0034a9d10"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/per_class_target_accuracy.csv",
+      "path": "task2/results/final/per_class_target_accuracy.csv",
+      "bytes": 1855,
+      "sha256": "b408b498d36f2c530441284a1c65cbfaa0ee972250ddf01360928368e0d2e5bf"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/plots/cdan_training.png",
+      "path": "task2/results/final/plots/cdan_training.png",
+      "bytes": 246600,
+      "sha256": "6e843ac3aaafc11e3002be79147cfc1f5e86ae9aa998c348c8ea6f407b6515e1"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/plots/dan_0p1_training.png",
+      "path": "task2/results/final/plots/dan_0p1_training.png",
+      "bytes": 217108,
+      "sha256": "f0a8e49535d04e85ec88b406e7748af62c131be4f995c7347296e4367746d386"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/plots/dan_10_training.png",
+      "path": "task2/results/final/plots/dan_10_training.png",
+      "bytes": 219612,
+      "sha256": "fd2b50c47a0ba66871c394e66069f0819db4ed1f07c3c852391765ef73151a7c"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/plots/dan_1_training.png",
+      "path": "task2/results/final/plots/dan_1_training.png",
+      "bytes": 262573,
+      "sha256": "e8cd91c57a8457c4cddd8c358b35026a57cdf38b7cfcc27573108cd09c84e9e4"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/plots/dan_strength_study.png",
+      "path": "task2/results/final/plots/dan_strength_study.png",
+      "bytes": 102727,
+      "sha256": "ff3b22fee7527980054bc7002d223e18e9480d505dedb7fc9b50f6c16601315d"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/plots/dann_training.png",
+      "path": "task2/results/final/plots/dann_training.png",
+      "bytes": 249821,
+      "sha256": "2bc8ca0d5e917b2613c50b673d9a1a5be16bacc91e603254c42af98b7ae1acf4"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/plots/main_comparison.png",
+      "path": "task2/results/final/plots/main_comparison.png",
+      "bytes": 59115,
+      "sha256": "2ef662fb8a5875525aaeeea89819e609e8f42a78f1f5f575918da403d6adbf1b"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/plots/per_class_changes_main_methods.png",
+      "path": "task2/results/final/plots/per_class_changes_main_methods.png",
+      "bytes": 64588,
+      "sha256": "ebf9d7bc8821fb06eaf56aa8aa488f89a2efc63f5d502dcb3f08bdbac90ffe7b"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/plots/separability_vs_target_accuracy.png",
+      "path": "task2/results/final/plots/separability_vs_target_accuracy.png",
+      "bytes": 59781,
+      "sha256": "0497386137a80b03760795f1dcbf20d6c01939576cba884196174d5a6ea0c4ad"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/plots/source_only_training.png",
+      "path": "task2/results/final/plots/source_only_training.png",
+      "bytes": 195693,
+      "sha256": "0a38be3a3914ddc2fcf9956aaea67c68612ca099df0722ce67d474e75dfa4bf7"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/plots/target_confusions_main_methods.png",
+      "path": "task2/results/final/plots/target_confusions_main_methods.png",
+      "bytes": 154499,
+      "sha256": "aee0c0f4fc2cfa099771ad96fb9c277faf0e9cd0d8c391dd3e325b07f4d758df"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/selected_failure_examples.csv",
+      "path": "task2/results/final/selected_failure_examples.csv",
+      "bytes": 10122,
+      "sha256": "645c88857dadd6e384fe5fcc7e304dcdabdfb5956e250172e6f82a7eb9cfcf0b"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/target_predictions.csv",
+      "path": "task2/results/final/target_predictions.csv",
+      "bytes": 871456,
+      "sha256": "35c6fb24a9f7fb2b576bfd9dbae84eb2c0ab2bbbf4e71e370f8d512a9c913bb3"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_official_freeze_20260923/evaluation_code_lock.json",
+      "path": "task2/provenance/freeze/evaluation_code_lock.json",
+      "bytes": 522,
+      "sha256": "db637132b7dc2a58f745cbd67003b7d1ecbbfc2b273a14ed0dc4b35d0ce90add"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_official_freeze_20260923/source_checkpoint_audit.json",
+      "path": "task2/provenance/freeze/source_checkpoint_audit.json",
+      "bytes": 33453,
+      "sha256": "4567df8de5d2b86d662c8c38017df1d0004b626b461c793d767207422033c1ca"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_official_freeze_20260923/task2_checkpoint_freeze.json",
+      "path": "task2/provenance/freeze/task2_checkpoint_freeze.json",
+      "bytes": 5577,
+      "sha256": "baacc896c12285216eee120b785475b69c1e3bfcee911c33a759a72c897f15b5"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/source_only/history.csv",
+      "path": "task2/results/training/source_only/history.csv",
+      "bytes": 2642,
+      "sha256": "5cbf55671e2ad6e095ed2e42953233a87581e2091c338cf2e38412b7f361658a"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/source_only/run.json",
+      "path": "task2/results/training/source_only/run.json",
+      "bytes": 2802,
+      "sha256": "5850c0052682a52434b7120939011f345ea6f98e8fd58133608ffb2344c5bdf9"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/source_only/best_source_validation.json",
+      "path": "task2/results/training/source_only/best_source_validation.json",
+      "bytes": 366,
+      "sha256": "15f60f50632548677c68713532eefc3cbfed767bb9ea46473ab061264ae6912f"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/dan_0p1/history.csv",
+      "path": "task2/results/training/dan_0p1/history.csv",
+      "bytes": 2328,
+      "sha256": "04ea7e0d94ede752815572793f9480720886d4262111e92b350dc4e5acca13cb"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/dan_0p1/run.json",
+      "path": "task2/results/training/dan_0p1/run.json",
+      "bytes": 2785,
+      "sha256": "785e2a4dd6355a7e57b4b372aca71c8c637dc224fdf9096245ec6188490487ec"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/dan_0p1/best_source_validation.json",
+      "path": "task2/results/training/dan_0p1/best_source_validation.json",
+      "bytes": 350,
+      "sha256": "1b65f91cfea88b4c5fdbf4b5b1e35320d7741ce09e68cc24fcbac83418e293b2"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/dan_1/history.csv",
+      "path": "task2/results/training/dan_1/history.csv",
+      "bytes": 4657,
+      "sha256": "fad0ab5cd0457d258a511a81059d4e98c5026b5546fa6e6787423903528da73c"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/dan_1/run.json",
+      "path": "task2/results/training/dan_1/run.json",
+      "bytes": 2783,
+      "sha256": "2c598f823ab8ceb000e8f35356d212fd157f62a029c33e23119d024f9b3d56d0"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/dan_1/best_source_validation.json",
+      "path": "task2/results/training/dan_1/best_source_validation.json",
+      "bytes": 368,
+      "sha256": "e383b2c89c405d366776f2c8c98fc1947053656d92e71867be5a74c0f9f1fb63"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/dan_10/history.csv",
+      "path": "task2/results/training/dan_10/history.csv",
+      "bytes": 2045,
+      "sha256": "1b4d71b8e86407c6bd227a4b9e477abd0522ec2ed4f14ea9d94a4d835afa8bbc"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/dan_10/run.json",
+      "path": "task2/results/training/dan_10/run.json",
+      "bytes": 2785,
+      "sha256": "69eeb93fcfe05ed0a9be02abce9f810fe5178e7a6fbe804c70b3635aa93100e5"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/dan_10/best_source_validation.json",
+      "path": "task2/results/training/dan_10/best_source_validation.json",
+      "bytes": 376,
+      "sha256": "e006dd8b11c9be63cfc3fa528f66374071add1d776ae09e71602447154f8b32c"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_adversarial_normalized_v4_20260923/dann/history.csv",
+      "path": "task2/results/training/dann/history.csv",
+      "bytes": 4919,
+      "sha256": "99f2dde764f5869d52a110de1cd944249586ecc121db36c2943f5084986c43c1"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_adversarial_normalized_v4_20260923/dann/run.json",
+      "path": "task2/results/training/dann/run.json",
+      "bytes": 2836,
+      "sha256": "2ec9fd4a1c3e1849eee0f734fa60eb0c40701b548c08c6e9663aad3792927edd"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_adversarial_normalized_v4_20260923/dann/best_source_validation.json",
+      "path": "task2/results/training/dann/best_source_validation.json",
+      "bytes": 366,
+      "sha256": "8b93141fde7873be2efe74f2afbe0d9a251296f6efb2c629fc5f7f28cf244111"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_adversarial_normalized_v4_20260923/cdan/history.csv",
+      "path": "task2/results/training/cdan/history.csv",
+      "bytes": 3924,
+      "sha256": "41d15f11a69f2ecc5dd89b8e6d9534d22e5c4cb9487617b3abb367d1862c04c3"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_adversarial_normalized_v4_20260923/cdan/run.json",
+      "path": "task2/results/training/cdan/run.json",
+      "bytes": 2836,
+      "sha256": "11cf38bab020b3514ce65b9be00bc2375a5c72e575d8f4b50ef9d3e1db50b8d5"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_adversarial_normalized_v4_20260923/cdan/best_source_validation.json",
+      "path": "task2/results/training/cdan/best_source_validation.json",
+      "bytes": 367,
+      "sha256": "3a2196d98ed83466b942d82adb9399ed9ea1509e638245f326e61f1ea579beae"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_20260923/environment_preflight.json",
+      "path": "task2/provenance/versions/v1/environment_preflight.json",
+      "bytes": 291,
+      "sha256": "a1b0ff78a0cb8dadff1f1eef88c77d029de4e6b03c93267ed6dd6869c83829df"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_20260923/preregistration/DAN_STRENGTH_EXPECTATION.txt",
+      "path": "task2/provenance/versions/v1/preregistration/DAN_STRENGTH_EXPECTATION.txt",
+      "bytes": 2145,
+      "sha256": "7cb1a3988b92c5986d850e65d3dc1a928af9d673d19b53b97dd1d90b78a31fb7"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_20260923/runs/source_only/history.csv",
+      "path": "task2/provenance/pilots/v1/source_only/history.csv",
+      "bytes": 2673,
+      "sha256": "37b2718c2ba1c47607fbcfa387b4a4d0873e318023ce07671787bf362a81f11a"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_20260923/runs/source_only/run.json",
+      "path": "task2/provenance/pilots/v1/source_only/run.json",
+      "bytes": 2691,
+      "sha256": "da1e2fb779965dba0133d272468f54789a3707845dc2838ec81e96540bf2985f"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_20260923/runs/source_only/best_source_validation.json",
+      "path": "task2/provenance/pilots/v1/source_only/best_source_validation.json",
+      "bytes": 366,
+      "sha256": "f6bdb5132300e40e76d5ced032a41a331d6ed43bfff404716e0122909e5a964d"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_20260923/runs/dan_0p1/history.csv",
+      "path": "task2/provenance/pilots/v1/dan_0p1/history.csv",
+      "bytes": 2758,
+      "sha256": "ed768f66988f0a3e258f0bd002f3d4898740d699191533bd50372f60d104701f"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_20260923/runs/dan_0p1/run.json",
+      "path": "task2/provenance/pilots/v1/dan_0p1/run.json",
+      "bytes": 2674,
+      "sha256": "04990e8d4a1e4ebe63659af0dc70bf4e7a777ad42a4c9daca8a6bd3282ad7b7f"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_20260923/runs/dan_0p1/best_source_validation.json",
+      "path": "task2/provenance/pilots/v1/dan_0p1/best_source_validation.json",
+      "bytes": 366,
+      "sha256": "ef9c5029ddac21d01071577cb250cd07afe627ae15ef8f9a47df8a227c2442f9"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_20260923/runs/dan_1/history.csv",
+      "path": "task2/provenance/pilots/v1/dan_1/history.csv",
+      "bytes": 2105,
+      "sha256": "a25bc58043c19ca9bc251858475a5904312a1772ae35969e582aa7718dc30bd3"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_20260923/runs/dan_1/run.json",
+      "path": "task2/provenance/pilots/v1/dan_1/run.json",
+      "bytes": 2670,
+      "sha256": "a9483f4e95aa998ac987395fa0bc6d48064ed5ced3e7d87cdf19850d5df3bec8"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_20260923/runs/dan_1/best_source_validation.json",
+      "path": "task2/provenance/pilots/v1/dan_1/best_source_validation.json",
+      "bytes": 376,
+      "sha256": "ab658a0e4af7c91623f0b3edbb917f6cfa8f2e22cd103e98e02f197f5d9df93a"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_clipped_v2_20260923/environment_preflight.json",
+      "path": "task2/provenance/versions/v2/environment_preflight.json",
+      "bytes": 329,
+      "sha256": "381b943ec4c06b27429b15f65f2b1da29396509524368fe3ae12ef2951d1852d"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_clipped_v2_20260923/experiment_lock.json",
+      "path": "task2/provenance/versions/v2/experiment_lock.json",
+      "bytes": 734,
+      "sha256": "edbb380930327048c19a3ada7dfe092fc9df5b8b21b931c9c875b72aa8528ad3"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_clipped_v2_20260923/preregistration/DAN_STRENGTH_EXPECTATION.txt",
+      "path": "task2/provenance/versions/v2/preregistration/DAN_STRENGTH_EXPECTATION.txt",
+      "bytes": 2145,
+      "sha256": "7cb1a3988b92c5986d850e65d3dc1a928af9d673d19b53b97dd1d90b78a31fb7"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_clipped_v2_20260923/dan_1/history.csv",
+      "path": "task2/provenance/pilots/v2/dan_1/history.csv",
+      "bytes": 2114,
+      "sha256": "467cfa5f61e665cc52fe511f460802522e168c39f5cfd2fa7070ca63e4fb0157"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_clipped_v2_20260923/dan_1/run.json",
+      "path": "task2/provenance/pilots/v2/dan_1/run.json",
+      "bytes": 2729,
+      "sha256": "990127956dbfc75d2e35efce16c52cf352621b08be084a28d69b2edf93b94dbb"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_clipped_v2_20260923/dan_1/best_source_validation.json",
+      "path": "task2/provenance/pilots/v2/dan_1/best_source_validation.json",
+      "bytes": 371,
+      "sha256": "e4af49f589e6b7ef42ecbee59dfe1b123d4f0b3f32ca1e5f87460a214ac36806"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/experiment_lock.json",
+      "path": "task2/provenance/versions/v3/experiment_lock.json",
+      "bytes": 734,
+      "sha256": "060e1dbe41fcb38574c1edc0c976d7ef223f53175be60fa1e54a58bd9b7c00d1"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/github_commit.json",
+      "path": "task2/provenance/versions/v3/github_commit.json",
+      "bytes": 176,
+      "sha256": "cc0a8460452ec8b56e45657780b93ef7579b5caa488d115c46e6c0d901019b22"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/preflight.json",
+      "path": "task2/provenance/versions/v3/preflight.json",
+      "bytes": 1002,
+      "sha256": "b4e2b28033538ca5f805a3bdab987f4e51315f777038428c84a34d5d262b4be2"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/dann/history.csv",
+      "path": "task2/provenance/pilots/v3/dann/history.csv",
+      "bytes": 2080,
+      "sha256": "e3299960eb14fc3c6e558a38a4e73bc1e741b3c47d2ff31d70146b6a78c8f7f2"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/dann/run.json",
+      "path": "task2/provenance/pilots/v3/dann/run.json",
+      "bytes": 2781,
+      "sha256": "727418362374f69690fdce9b512f8ed33fb7bd8a9330139606fc0084e5b8e54f"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/dann/best_source_validation.json",
+      "path": "task2/provenance/pilots/v3/dann/best_source_validation.json",
+      "bytes": 364,
+      "sha256": "3692d76d977cabd16ff05998f0f50fcb40ec3abc2284cac9f192aff570f88194"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_adversarial_normalized_v4_20260923/V4_ADOPTION_DECISION.json",
+      "path": "task2/provenance/versions/v4/V4_ADOPTION_DECISION.json",
+      "bytes": 1499,
+      "sha256": "06e6887e17b74bc87ab2fdb0d217f7c053c7dff27c061e45d8c368a1ed0a92c6"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_adversarial_normalized_v4_20260923/V4_ADOPTION_DECISION.md",
+      "path": "task2/provenance/versions/v4/V4_ADOPTION_DECISION.md",
+      "bytes": 769,
+      "sha256": "6109fde286db0094e4335afad9428496637dbbe7d53146abdf14a7305c6effe9"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_adversarial_normalized_v4_20260923/dann_source_checkpoint_diagnostic.json",
+      "path": "task2/provenance/versions/v4/dann_source_checkpoint_diagnostic.json",
+      "bytes": 1802,
+      "sha256": "d9387ae408a7f151dfa7f7006efe4841c3ee2f0d9de2699881d069bf1e211c6d"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_adversarial_normalized_v4_20260923/experiment_lock.json",
+      "path": "task2/provenance/versions/v4/experiment_lock.json",
+      "bytes": 734,
+      "sha256": "5ba0e2e8e1e00da70b7f391719bfa0e36645202c2e3519d148d6f783c2b9da33"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_adversarial_normalized_v4_20260923/github_commit.json",
+      "path": "task2/provenance/versions/v4/github_commit.json",
+      "bytes": 292,
+      "sha256": "914b2d55d8fa5011e3dbe8f313be3d2e6561e5585150a718d2ff32a5e73edfa1"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_adversarial_normalized_v4_20260923/initialization_verification.json",
+      "path": "task2/provenance/versions/v4/initialization_verification.json",
+      "bytes": 1021,
+      "sha256": "0c9312240928ff9dbab6b6aba7b837b75121098bc68fcfbecb15f1ffea3adeb2"
+    },
+    {
+      "source": "/content/drive/MyDrive/ATML-PA1/task2_adversarial_normalized_v4_20260923/preflight.json",
+      "path": "task2/provenance/versions/v4/preflight.json",
+      "bytes": 1002,
+      "sha256": "b4e2b28033538ca5f805a3bdab987f4e51315f777038428c84a34d5d262b4be2"
+    },
+    {
+      "source": "/content/ATML_PA1_TASK2_1 (2).ipynb",
+      "path": "task2/provenance/notebooks/corrected-task2-execution.ipynb",
+      "bytes": 362259,
+      "sha256": "34a1dd6975ef0d91b43ce2e308fd5ff008b8cdbdc0b0e651f6b2ff3d7ad4cf46"
+    }
+  ],
+  "missing_optional_evidence": []
+}

@@ -1,0 +1,98 @@
+{
+  "source_only": {
+    "largest_improvement": {
+      "classes": [
+        "dog",
+        "elephant",
+        "giraffe",
+        "guitar",
+        "horse",
+        "house",
+        "person"
+      ],
+      "change": 0.0
+    },
+    "largest_degradation": {
+      "classes": [
+        "dog",
+        "elephant",
+        "giraffe",
+        "guitar",
+        "horse",
+        "house",
+        "person"
+      ],
+      "change": 0.0
+    }
+  },
+  "dan_0p1": {
+    "largest_improvement": {
+      "classes": [
+        "person"
+      ],
+      "change": 0.56875
+    },
+    "largest_degradation": {
+      "classes": [
+        "dog"
+      ],
+      "change": -0.35751295336787564
+    }
+  },
+  "dan_1": {
+    "largest_improvement": {
+      "classes": [
+        "elephant"
+      ],
+      "change": 0.5324324324324323
+    },
+    "largest_degradation": {
+      "classes": [
+        "horse"
+      ],
+      "change": -0.1875
+    }
+  },
+  "dan_10": {
+    "largest_improvement": {
+      "classes": [
+        "person"
+      ],
+      "change": 0.56875
+    },
+    "largest_degradation": {
+      "classes": [
+        "house"
+      ],
+      "change": -0.9
+    }
+  },
+  "dann": {
+    "largest_improvement": {
+      "classes": [
+        "person"
+      ],
+      "change": 0.5
+    },
+    "largest_degradation": {
+      "classes": [
+        "dog"
+      ],
+      "change": -0.12564766839378239
+    }
+  },
+  "cdan": {
+    "largest_improvement": {
+      "classes": [
+        "giraffe"
+      ],
+      "change": 0.6108897742363877
+    },
+    "largest_degradation": {
+      "classes": [
+        "dog"
+      ],
+      "change": -0.30181347150259064
+    }
+  }
+}

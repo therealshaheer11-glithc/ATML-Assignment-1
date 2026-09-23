@@ -1,0 +1,13 @@
+I expect the following:
+
+Increasing lambda_MMD and source performance:
+As lambda_MMD increases from 0.1 to 1 to 10, the MMD penalty places stronger pressure on the 512-dimensional feature to make source and target marginal distributions similar. Because only source examples contribute to the classification loss, this alignment pressure should compete with class-discriminative source training. I expect mean source-validation accuracy and macro-F1 to decrease monotonically with lambda_MMD: the smallest drop at 0.1, a modest drop at 1, and the largest drop at 10. At lambda_MMD=10, excessive marginal alignment may noticeably weaken source classification.
+
+Domain separability:
+I expect the source-vs-target logistic-regression separability score to decrease as lambda_MMD increases. At lambda_MMD=0.1, source and target features should remain fairly distinguishable, so separability should be well above 50%. At lambda_MMD=1, separability should drop meaningfully. At lambda_MMD=10, it should approach chance or become very low, indicating strong marginal alignment. However, lower separability alone would not prove that class information is preserved.
+
+Target recognition:
+I expect a non-monotonic pattern. Weak alignment at lambda_MMD=0.1 should behave close to Source-only ERM because the penalty is too small to close the domain gap. Moderate alignment at lambda_MMD=1 should give the best target accuracy and macro-F1, reducing domain shift without destroying class structure. Strong alignment at lambda_MMD=10 should over-align the marginals, mix class-discriminative information, and cause negative transfer, so target recognition should fall below the lambda_MMD=1 result and possibly below ERM. Overall, I expect the best target performance at lambda_MMD=1, with an inverted-U relationship between alignment strength and target recognition.
+
+Disclosure:
+Before locking this corrected rerun, I had already seen the target-domain results from the archived first attempt. Those results were not used to change the approved methods, hyperparameters, source split, checkpoint-selection rule, or evaluation protocol used for this rerun.

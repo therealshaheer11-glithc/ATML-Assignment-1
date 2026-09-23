@@ -1,0 +1,130 @@
+{
+  "status": "COMPLETE",
+  "files": [
+    {
+      "path": "all_six_comparison.csv",
+      "sha256": "569a31b08d337cae67d4862bd5e866f8b6b0ec00e920f741e550abd69aa9e183",
+      "bytes": 1825
+    },
+    {
+      "path": "class_change_summary.json",
+      "sha256": "36b0648133f0390ab1c050d3d053ae216ce7eaf3b906d11c5498ea67670796a7",
+      "bytes": 1622
+    },
+    {
+      "path": "confusion_matrices.json",
+      "sha256": "118500dc2f10519fd370a81ff2f0529a0efe56a969e0912dd98481552e51e2ec",
+      "bytes": 3437
+    },
+    {
+      "path": "dan_strength_study.csv",
+      "sha256": "0f3faff2f5201d8b5e6961db961081528ac81c32009d20cbac2158109ef47d7a",
+      "bytes": 1337
+    },
+    {
+      "path": "domain_probe_partition.json",
+      "sha256": "fdec03894c18cda077b12560619cdacdf218da5e864fb20ebac67d8376a7b4fe",
+      "bytes": 129885
+    },
+    {
+      "path": "domain_probe_test_predictions.csv",
+      "sha256": "231698c2b3ee40d96f79b8e5e7d189aaa820f426106dbb5ed48d291fbcec2498",
+      "bytes": 400722
+    },
+    {
+      "path": "dominant_confusions.csv",
+      "sha256": "fd7124e9c118eee3339ffe9038e4c80432b9d37ff5a2e094dcc4001dd1aa8fee",
+      "bytes": 1865
+    },
+    {
+      "path": "evaluation_complete.json",
+      "sha256": "00d51d0d790babd45c2b29d50bdf39d46c936d03ceaa6939fb65031b80a653ce",
+      "bytes": 1258
+    },
+    {
+      "path": "final_results.json",
+      "sha256": "aa3685b1d5370e20d76798fb2ebbc7cb2286e7466c2dfdd8a4414799aad65883",
+      "bytes": 22605
+    },
+    {
+      "path": "main_four_comparison.csv",
+      "sha256": "c8711bc00378df9166611c0bf4e25c2f04faf1153f2403213d677e8a7e19e45b",
+      "bytes": 1314
+    },
+    {
+      "path": "per_class_changes_vs_source_only.csv",
+      "sha256": "486527d15c70ff7e21f688e79153398cc85fe8cfed69250f65dac4a0034a9d10",
+      "bytes": 3221
+    },
+    {
+      "path": "per_class_target_accuracy.csv",
+      "sha256": "b408b498d36f2c530441284a1c65cbfaa0ee972250ddf01360928368e0d2e5bf",
+      "bytes": 1855
+    },
+    {
+      "path": "plots/cdan_training.png",
+      "sha256": "6e843ac3aaafc11e3002be79147cfc1f5e86ae9aa998c348c8ea6f407b6515e1",
+      "bytes": 246600
+    },
+    {
+      "path": "plots/dan_0p1_training.png",
+      "sha256": "f0a8e49535d04e85ec88b406e7748af62c131be4f995c7347296e4367746d386",
+      "bytes": 217108
+    },
+    {
+      "path": "plots/dan_10_training.png",
+      "sha256": "fd2b50c47a0ba66871c394e66069f0819db4ed1f07c3c852391765ef73151a7c",
+      "bytes": 219612
+    },
+    {
+      "path": "plots/dan_1_training.png",
+      "sha256": "e8cd91c57a8457c4cddd8c358b35026a57cdf38b7cfcc27573108cd09c84e9e4",
+      "bytes": 262573
+    },
+    {
+      "path": "plots/dan_strength_study.png",
+      "sha256": "ff3b22fee7527980054bc7002d223e18e9480d505dedb7fc9b50f6c16601315d",
+      "bytes": 102727
+    },
+    {
+      "path": "plots/dann_training.png",
+      "sha256": "2bc8ca0d5e917b2613c50b673d9a1a5be16bacc91e603254c42af98b7ae1acf4",
+      "bytes": 249821
+    },
+    {
+      "path": "plots/main_comparison.png",
+      "sha256": "2ef662fb8a5875525aaeeea89819e609e8f42a78f1f5f575918da403d6adbf1b",
+      "bytes": 59115
+    },
+    {
+      "path": "plots/per_class_changes_main_methods.png",
+      "sha256": "ebf9d7bc8821fb06eaf56aa8aa488f89a2efc63f5d502dcb3f08bdbac90ffe7b",
+      "bytes": 64588
+    },
+    {
+      "path": "plots/separability_vs_target_accuracy.png",
+      "sha256": "0497386137a80b03760795f1dcbf20d6c01939576cba884196174d5a6ea0c4ad",
+      "bytes": 59781
+    },
+    {
+      "path": "plots/source_only_training.png",
+      "sha256": "0a38be3a3914ddc2fcf9956aaea67c68612ca099df0722ce67d474e75dfa4bf7",
+      "bytes": 195693
+    },
+    {
+      "path": "plots/target_confusions_main_methods.png",
+      "sha256": "aee0c0f4fc2cfa099771ad96fb9c277faf0e9cd0d8c391dd3e325b07f4d758df",
+      "bytes": 154499
+    },
+    {
+      "path": "selected_failure_examples.csv",
+      "sha256": "645c88857dadd6e384fe5fcc7e304dcdabdfb5956e250172e6f82a7eb9cfcf0b",
+      "bytes": 10122
+    },
+    {
+      "path": "target_predictions.csv",
+      "sha256": "35c6fb24a9f7fb2b576bfd9dbae84eb2c0ab2bbbf4e71e370f8d512a9c913bb3",
+      "bytes": 871456
+    }
+  ]
+}

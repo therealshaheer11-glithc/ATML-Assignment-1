@@ -2,9 +2,11 @@
 
 ## Scope
 
-Reviewed GitHub `main` at `edecd5b9429799cc51c9e96625191beaf45562af` and the preserved
-archive branch. This is a source-code and saved-evidence audit. It does not claim fresh
-GPU reproduction or inspection of checkpoints that are only in the student's Drive.
+Reviewed GitHub `main` at `edecd5b9429799cc51c9e96625191beaf45562af`, the preserved
+archive branch, and the final evidence export with SHA-256
+`ac4b4db8f4e60f3dcb710be4a483eb0b763518c8a0785d7996382f33c690164e`.
+This is a source-code and saved-evidence audit. It does not claim fresh GPU reproduction
+or local loading of checkpoints that remain in the student's Drive.
 
 ## Verified locally
 
@@ -15,6 +17,10 @@ GPU reproduction or inspection of checkpoints that are only in the student's Dri
   checked; cosine means/medians and three UMAP coordinate/figure hashes verified.
 - Task 2: V4's 27 manifested files and V5's three manifested files match their pinned
   commits; fixed split digest matches the recorded source split.
+- Task 2: the 25 final evaluation artifacts match their manifest; the freeze and source
+  audit hashes agree; the six official histories independently select the frozen epochs;
+  3,929 unique target prediction rows reproduce every target accuracy and seven-class
+  macro-F1; the export reports no missing evidence.
 - All 14 existing Task 2 locked-choice/evaluation tests pass locally. These are focused
   functional checks, not proof that every notebook execution was correct.
 - No tracked checkpoints, datasets, caches, `.DS_Store`, or obvious duplicate upload
@@ -28,7 +34,7 @@ Run the saved-evidence checks without GPU or model weights:
 python tools/verify_saved_evidence.py
 ```
 
-They explicitly report Task 2's final evidence as pending. See
+They verify the published Task 2 evidence without loading neural checkpoints. See
 [run-history clarifications](RUN-HISTORY.md) for the precise meanings of gradient logs,
 CDAN norm logs, and the presentation-only failure-example tie-order limitation.
 
@@ -40,23 +46,10 @@ pinned reproduction commands, and clear separation between historical packaging 
 and subsequent reported execution. No branch or experiment history is deleted or rewritten.
 Original manifests remain intact and are interpreted against their pinned commits.
 
-## Remaining before Task 2 publication is complete
+## Remaining submission work
 
-1. Run `tools/export_task2_evidence.py` in Colab. It reads existing outputs, checks the
-   freeze/source-audit hashes, six checkpoint hashes and source selections, and recomputes
-   target accuracy/F1 from saved predictions. It copies small evidence only.
-2. Download the **latest corrected notebook** as `.ipynb` from Colab. The old first-attempt
-   notebook does not cover the corrected recovery, adoption, and freeze cells. Supply it
-   via the exporter's `--notebook` option or send it separately for inspection.
-3. Review the export, including any missing optional pilot evidence. Import its final
-   results, training histories and provenance without changing original bytes. Check
-   complete per-class/confusion/probe tables and figures against the assignment.
-4. Update the Task 2/root status to “published” only after those files reach GitHub and
-   their paths/hashes are checked. Add exact orchestration instructions from the notebook.
-5. The student writes the report using the evidence map and documents TA permissions,
-   source-based revisions, prior target exposure, and unsuccessful runs. Verify its
-   figures, required analyses, format and page limit separately.
-
-Until steps 1–4 are complete, Task 1's published evidence is ready for report use; Task 2
-has completed-run console evidence but is not yet a fully published, self-contained
-experiment record. No new training or target-driven tuning is needed for this handoff.
+The code and small evidence for Tasks 1 and 2 are ready for report use. The student must
+write the report, document TA permissions, source-based revisions, prior target exposure,
+and unsuccessful runs, then verify the report's figures, required analyses, format, and
+page limit. Large checkpoints and datasets remain external by design. No new Task 2
+training or target-driven tuning is needed.

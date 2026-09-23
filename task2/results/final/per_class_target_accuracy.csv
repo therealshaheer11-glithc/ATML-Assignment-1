@@ -1,0 +1,43 @@
+run_id,method,class,support,target_class_accuracy
+source_only,Source-only,dog,772,0.7448186528497409
+source_only,Source-only,elephant,740,0.38513513513513514
+source_only,Source-only,giraffe,753,0.3200531208499336
+source_only,Source-only,guitar,608,0.8865131578947368
+source_only,Source-only,horse,816,0.8026960784313726
+source_only,Source-only,house,80,0.9
+source_only,Source-only,person,160,0.43125
+dan_0p1,DAN lambda=0.1,dog,772,0.3873056994818653
+dan_0p1,DAN lambda=0.1,elephant,740,0.5472972972972973
+dan_0p1,DAN lambda=0.1,giraffe,753,0.4648074369189907
+dan_0p1,DAN lambda=0.1,guitar,608,0.8881578947368421
+dan_0p1,DAN lambda=0.1,horse,816,0.7132352941176471
+dan_0p1,DAN lambda=0.1,house,80,0.9875
+dan_0p1,DAN lambda=0.1,person,160,1.0
+dan_1,DAN lambda=1,dog,772,0.5867875647668394
+dan_1,DAN lambda=1,elephant,740,0.9175675675675675
+dan_1,DAN lambda=1,giraffe,753,0.7397078353253652
+dan_1,DAN lambda=1,guitar,608,0.9358552631578947
+dan_1,DAN lambda=1,horse,816,0.6151960784313726
+dan_1,DAN lambda=1,house,80,1.0
+dan_1,DAN lambda=1,person,160,0.86875
+dan_10,DAN lambda=10,dog,772,0.0
+dan_10,DAN lambda=10,elephant,740,0.0
+dan_10,DAN lambda=10,giraffe,753,0.0
+dan_10,DAN lambda=10,guitar,608,0.0
+dan_10,DAN lambda=10,horse,816,0.0
+dan_10,DAN lambda=10,house,80,0.0
+dan_10,DAN lambda=10,person,160,1.0
+dann,DANN,dog,772,0.6191709844559585
+dann,DANN,elephant,740,0.7662162162162162
+dann,DANN,giraffe,753,0.3612217795484728
+dann,DANN,guitar,608,0.9161184210526315
+dann,DANN,horse,816,0.7622549019607843
+dann,DANN,house,80,0.8625
+dann,DANN,person,160,0.93125
+cdan,CDAN,dog,772,0.4430051813471503
+cdan,CDAN,elephant,740,0.9027027027027027
+cdan,CDAN,giraffe,753,0.9309428950863213
+cdan,CDAN,guitar,608,0.8075657894736842
+cdan,CDAN,horse,816,0.5784313725490197
+cdan,CDAN,house,80,0.9875
+cdan,CDAN,person,160,0.48125

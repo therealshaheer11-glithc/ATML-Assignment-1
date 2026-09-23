@@ -14,5 +14,7 @@ or evaluation source, configuration, split, or existing result was changed by th
 Documentation is included in the trainer's code-tree hash, so even documentation-only
 changes require using the original snapshot for exact reproduction or resumption.
 
-Actual run records, freeze, source checkpoint audit, and adoption decision are pending
-export from Colab. Do not reconstruct these as if they were original files from chat logs.
+Actual run records, freeze, source checkpoint audit, adoption decision, and corrected
+notebook are published below this directory. Their hashes are recorded in
+[`FINAL-EVIDENCE-EXPORT.json`](FINAL-EVIDENCE-EXPORT.json); do not reconstruct or edit
+them from chat logs.

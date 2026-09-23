@@ -1,0 +1,48 @@
+{
+  "status": "PREFLIGHT_PASS",
+  "training_started": false,
+  "target_labels_accessed": false,
+  "dataset": {
+    "root": "/content/atml_pacs/pacs/images",
+    "file_list_sha256": "559ac63b8df8e07330b97112e5ec4c414b3957585b28d21b4cfecd2181f538e0",
+    "photo": 1670,
+    "art_painting": 2048,
+    "cartoon": 2344,
+    "sketch": 3929
+  },
+  "source_counts": {
+    "photo": {
+      "train": 1336,
+      "validation": 334
+    },
+    "art_painting": {
+      "train": 1638,
+      "validation": 410
+    },
+    "cartoon": {
+      "train": 1875,
+      "validation": 469
+    }
+  },
+  "target_unlabeled_count": 3929,
+  "steps_per_source_epoch": 235,
+  "planned_updates": 7050,
+  "registered_runs": [
+    "source_only",
+    "dan_0p1",
+    "dan_1",
+    "dan_10",
+    "dann",
+    "cdan"
+  ],
+  "environment": {
+    "python": "3.13.15",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "numpy": "2.1.3",
+    "sklearn": "1.6.1",
+    "cuda": "12.8",
+    "cudnn": 91900,
+    "gpu": "Tesla T4"
+  }
+}

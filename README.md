@@ -5,7 +5,7 @@ Code, experiment protocols, and saved evidence. Start with the task guides below
 | Task | Guide | Current status |
 | --- | --- | --- |
 | 1 — STL-10 inductive biases | [Task 1](task1/README.md) | Code, split manifests, predictions, metrics, and figures published |
-| 2 — PACS domain adaptation | [Task 2](task2/README.md) | Training and final evaluation reported complete in Colab; final evidence export still pending |
+| 2 — PACS domain adaptation | [Task 2](task2/README.md) | Code, official histories, frozen results, plots, and provenance published |
 | 3 — PACS domain generalization | Not started | Reuse the approved PACS split and required shared settings; agree on remaining choices before implementation |
 
 ## Repository layout

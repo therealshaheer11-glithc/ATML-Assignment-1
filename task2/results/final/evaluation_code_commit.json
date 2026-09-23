@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/therealshaheer11-glithc/ATML-Assignment-1.git",
+  "commit": "edecd5b9429799cc51c9e96625191beaf45562af",
+  "training_manifest_sha256": "3cec075fea3295ece5ff42ca518424723497b95995bd58e8840a0bc13584c01c",
+  "evaluation_manifest_sha256": "39e703f62c6adb7d5e83a4bfbccefab8adc7530e2f145c3548ab515f208d53d7",
+  "freeze_sha256": "baacc896c12285216eee120b785475b69c1e3bfcee911c33a759a72c897f15b5",
+  "evaluation_complete": true,
+  "target_labels_first_accessed_after_freeze": true,
+  "target_labels_used_for_training_or_selection": false
+}

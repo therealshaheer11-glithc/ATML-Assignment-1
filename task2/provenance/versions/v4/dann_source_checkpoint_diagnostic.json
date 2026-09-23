@@ -1,0 +1,79 @@
+{
+  "photo": {
+    "accuracy": 0.9670658682634731,
+    "macro_f1": 0.9645332198912147,
+    "prediction_counts": {
+      "dog": 41,
+      "elephant": 38,
+      "giraffe": 35,
+      "guitar": 36,
+      "horse": 36,
+      "house": 58,
+      "person": 90
+    },
+    "per_class_accuracy": {
+      "dog": 0.9736842105263158,
+      "elephant": 0.926829268292683,
+      "giraffe": 0.9722222222222222,
+      "guitar": 0.972972972972973,
+      "horse": 0.875,
+      "house": 1.0,
+      "person": 1.0
+    }
+  },
+  "art_painting": {
+    "accuracy": 0.9097560975609756,
+    "macro_f1": 0.9105336987673406,
+    "prediction_counts": {
+      "dog": 81,
+      "elephant": 50,
+      "giraffe": 52,
+      "guitar": 38,
+      "horse": 31,
+      "house": 59,
+      "person": 99
+    },
+    "per_class_accuracy": {
+      "dog": 0.9210526315789473,
+      "elephant": 0.9019607843137255,
+      "giraffe": 0.8771929824561403,
+      "guitar": 0.972972972972973,
+      "horse": 0.75,
+      "house": 0.9491525423728814,
+      "person": 0.9444444444444444
+    }
+  },
+  "cartoon": {
+    "accuracy": 0.9424307036247335,
+    "macro_f1": 0.9475555113060642,
+    "prediction_counts": {
+      "dog": 76,
+      "elephant": 84,
+      "giraffe": 66,
+      "guitar": 28,
+      "horse": 68,
+      "house": 58,
+      "person": 89
+    },
+    "per_class_accuracy": {
+      "dog": 0.8846153846153846,
+      "elephant": 0.9120879120879121,
+      "giraffe": 0.9420289855072463,
+      "guitar": 1.0,
+      "horse": 0.9230769230769231,
+      "house": 1.0,
+      "person": 0.9876543209876543
+    }
+  },
+  "pooled_prediction_counts": {
+    "dog": 198,
+    "elephant": 172,
+    "giraffe": 153,
+    "guitar": 102,
+    "horse": 135,
+    "house": 175,
+    "person": 278
+  },
+  "mean_source_macro_f1": 0.9408741433215398,
+  "target_labels_accessed": false
+}

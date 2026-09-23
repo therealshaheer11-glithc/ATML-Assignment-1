@@ -149,9 +149,10 @@ def main():
                 for path in sorted((source / subdir).rglob('*')):
                     if path.is_file() and path.suffix in {'.json', '.md', '.txt', '.csv'}:
                         copy(path, Path('task2/provenance/versions') / version / path.relative_to(source))
+            pilot_root = source / "runs" if version == "v1" else source
             for name in pilot_runs[version]:
                 for filename in ('history.csv', 'run.json', 'best_source_validation.json'):
-                    path = source / name / filename
+                    path = pilot_root / name / filename
                     if path.is_file():
                         copy(path, Path('task2/provenance/pilots') / version / name / filename)
                     else:

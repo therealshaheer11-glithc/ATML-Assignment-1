@@ -1,0 +1,975 @@
+{
+  "status": "SOURCE_CHECKPOINT_AUDIT_PASS",
+  "runs": {
+    "source_only": {
+      "protocol_version": "v3",
+      "run_directory": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/source_only",
+      "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/source_only/best.pt",
+      "checkpoint_sha256": "3d28a223e4b97b323cb3a20dcb5b7577af96631f2e6ef1f2bc99d53d85761327",
+      "selected_epoch": 4,
+      "epochs_completed": 9,
+      "mean_source_validation_macro_f1": 0.9426262342459099,
+      "source_domains": {
+        "photo": {
+          "accuracy": 0.9730538922155688,
+          "macro_f1": 0.9681339341150288,
+          "prediction_counts": {
+            "dog": 41,
+            "elephant": 41,
+            "giraffe": 35,
+            "guitar": 38,
+            "horse": 35,
+            "house": 57,
+            "person": 87
+          },
+          "per_class_accuracy": {
+            "dog": 0.9736842105263158,
+            "elephant": 0.975609756097561,
+            "giraffe": 0.9722222222222222,
+            "guitar": 1.0,
+            "horse": 0.85,
+            "house": 1.0,
+            "person": 1.0
+          }
+        },
+        "art_painting": {
+          "accuracy": 0.9097560975609756,
+          "macro_f1": 0.9119171075935996,
+          "prediction_counts": {
+            "dog": 84,
+            "elephant": 59,
+            "giraffe": 55,
+            "guitar": 39,
+            "horse": 37,
+            "house": 60,
+            "person": 76
+          },
+          "per_class_accuracy": {
+            "dog": 0.9078947368421053,
+            "elephant": 0.9803921568627451,
+            "giraffe": 0.9122807017543859,
+            "guitar": 1.0,
+            "horse": 0.8,
+            "house": 0.9830508474576272,
+            "person": 0.8333333333333334
+          }
+        },
+        "cartoon": {
+          "accuracy": 0.9402985074626866,
+          "macro_f1": 0.947827661029101,
+          "prediction_counts": {
+            "dog": 80,
+            "elephant": 93,
+            "giraffe": 68,
+            "guitar": 27,
+            "horse": 69,
+            "house": 58,
+            "person": 74
+          },
+          "per_class_accuracy": {
+            "dog": 0.9102564102564102,
+            "elephant": 0.9560439560439561,
+            "giraffe": 0.9420289855072463,
+            "guitar": 1.0,
+            "horse": 0.9538461538461539,
+            "house": 1.0,
+            "person": 0.8765432098765432
+          }
+        }
+      },
+      "pooled_source_prediction_counts": {
+        "dog": 205,
+        "elephant": 193,
+        "giraffe": 158,
+        "guitar": 104,
+        "horse": 141,
+        "house": 175,
+        "person": 237
+      },
+      "identity": {
+        "config": {
+          "seed": 6304,
+          "weights": "ResNet18_Weights.IMAGENET1K_V1",
+          "num_classes": 7,
+          "feature_width": 512,
+          "epochs": 30,
+          "patience": 5,
+          "source_batch_per_domain": 8,
+          "target_batch": 24,
+          "optimizer": "AdamW",
+          "learning_rate": 0.0001,
+          "weight_decay": 0.0001,
+          "adam_betas": [
+            0.9,
+            0.999
+          ],
+          "adam_epsilon": 1e-08,
+          "amsgrad": false,
+          "adam_foreach": false,
+          "adam_fused": false,
+          "class_loss_reduction": "mean",
+          "domain_loss_reduction": "mean",
+          "label_smoothing": 0.0,
+          "class_weights": null,
+          "scheduler": null,
+          "precision": "float32",
+          "gradient_clipping": 20.0,
+          "gradient_clipping_norm_type": 2.0,
+          "gradient_clipping_foreach": false,
+          "selection_metric": "unweighted_mean_source_validation_macro_f1",
+          "tie_policy": "strict_improvement_earliest_tie",
+          "domain_loss_weight": 1.0,
+          "grl_progress_denominator": "planned_30_epoch_update_budget",
+          "mmd_kernel_factors": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "mmd_estimator": "literal_empirical_mean_embedding_v_statistic",
+          "mmd_bandwidth_pairs": "unique_upper_triangle_keep_off_diagonal_zeros",
+          "mmd_kernel": "exp(-squared_distance/(2*bandwidth))",
+          "mmd_bandwidth_gradient": "detached",
+          "mmd_invalid_bandwidth": "stop",
+          "mmd_feature_normalization": "l2_per_sample",
+          "validation_batch_size": 64,
+          "num_workers": 2,
+          "run_id": "source_only",
+          "method": "source_only",
+          "mmd_lambda": null
+        },
+        "protocol_sha256": "e0f075e1e4f2c43c7db2423bb9b31f901d4e1157e72c2097b3e156501ce2dc74",
+        "initialization_sha256": "4d53e76c2d8f557b050a1913257c980846bebf6d5b4a28ff4d7cfa12c1d2eef3",
+        "code_sha256": "c9587ffbf5617f213d0e21a41ad182abe78250853cbac78faab6b5a726c09d8a",
+        "environment": {
+          "python": "3.13.15",
+          "torch": "2.11.0+cu128",
+          "torchvision": "0.26.0+cu128",
+          "numpy": "2.1.3",
+          "sklearn": "1.6.1",
+          "cuda": "12.8",
+          "cudnn": 91900,
+          "device_type": "cuda",
+          "gpu": "Tesla T4"
+        },
+        "dataset_file_list_sha256": "559ac63b8df8e07330b97112e5ec4c414b3957585b28d21b4cfecd2181f538e0",
+        "preregistration_sha256": "7cb1a3988b92c5986d850e65d3dc1a928af9d673d19b53b97dd1d90b78a31fb7",
+        "num_workers": 2
+      },
+      "batchnorm_buffers_unchanged": true,
+      "checkpoint_selection_reconstructed": true,
+      "target_labels_accessed": false
+    },
+    "dan_0p1": {
+      "protocol_version": "v3",
+      "run_directory": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/dan_0p1",
+      "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/dan_0p1/best.pt",
+      "checkpoint_sha256": "4d0d7132d25404bfab98446ad49e116695d90cc1f2d6a7750514de4da14d4499",
+      "selected_epoch": 2,
+      "epochs_completed": 7,
+      "mean_source_validation_macro_f1": 0.9320428032141853,
+      "source_domains": {
+        "photo": {
+          "accuracy": 0.9610778443113772,
+          "macro_f1": 0.9565848443489662,
+          "prediction_counts": {
+            "dog": 41,
+            "elephant": 40,
+            "giraffe": 34,
+            "guitar": 38,
+            "horse": 34,
+            "house": 56,
+            "person": 91
+          },
+          "per_class_accuracy": {
+            "dog": 0.9473684210526315,
+            "elephant": 0.9512195121951219,
+            "giraffe": 0.9444444444444444,
+            "guitar": 1.0,
+            "horse": 0.825,
+            "house": 1.0,
+            "person": 1.0
+          }
+        },
+        "art_painting": {
+          "accuracy": 0.9,
+          "macro_f1": 0.9055645409454102,
+          "prediction_counts": {
+            "dog": 76,
+            "elephant": 48,
+            "giraffe": 53,
+            "guitar": 37,
+            "horse": 33,
+            "house": 59,
+            "person": 104
+          },
+          "per_class_accuracy": {
+            "dog": 0.868421052631579,
+            "elephant": 0.8627450980392157,
+            "giraffe": 0.8947368421052632,
+            "guitar": 0.972972972972973,
+            "horse": 0.775,
+            "house": 0.9661016949152542,
+            "person": 0.9333333333333333
+          }
+        },
+        "cartoon": {
+          "accuracy": 0.929637526652452,
+          "macro_f1": 0.9339790243481795,
+          "prediction_counts": {
+            "dog": 72,
+            "elephant": 84,
+            "giraffe": 69,
+            "guitar": 26,
+            "horse": 56,
+            "house": 59,
+            "person": 103
+          },
+          "per_class_accuracy": {
+            "dog": 0.8589743589743589,
+            "elephant": 0.9230769230769231,
+            "giraffe": 0.9710144927536232,
+            "guitar": 0.9259259259259259,
+            "horse": 0.8461538461538461,
+            "house": 1.0,
+            "person": 0.9876543209876543
+          }
+        }
+      },
+      "pooled_source_prediction_counts": {
+        "dog": 189,
+        "elephant": 172,
+        "giraffe": 156,
+        "guitar": 101,
+        "horse": 123,
+        "house": 174,
+        "person": 298
+      },
+      "identity": {
+        "config": {
+          "seed": 6304,
+          "weights": "ResNet18_Weights.IMAGENET1K_V1",
+          "num_classes": 7,
+          "feature_width": 512,
+          "epochs": 30,
+          "patience": 5,
+          "source_batch_per_domain": 8,
+          "target_batch": 24,
+          "optimizer": "AdamW",
+          "learning_rate": 0.0001,
+          "weight_decay": 0.0001,
+          "adam_betas": [
+            0.9,
+            0.999
+          ],
+          "adam_epsilon": 1e-08,
+          "amsgrad": false,
+          "adam_foreach": false,
+          "adam_fused": false,
+          "class_loss_reduction": "mean",
+          "domain_loss_reduction": "mean",
+          "label_smoothing": 0.0,
+          "class_weights": null,
+          "scheduler": null,
+          "precision": "float32",
+          "gradient_clipping": 20.0,
+          "gradient_clipping_norm_type": 2.0,
+          "gradient_clipping_foreach": false,
+          "selection_metric": "unweighted_mean_source_validation_macro_f1",
+          "tie_policy": "strict_improvement_earliest_tie",
+          "domain_loss_weight": 1.0,
+          "grl_progress_denominator": "planned_30_epoch_update_budget",
+          "mmd_kernel_factors": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "mmd_estimator": "literal_empirical_mean_embedding_v_statistic",
+          "mmd_bandwidth_pairs": "unique_upper_triangle_keep_off_diagonal_zeros",
+          "mmd_kernel": "exp(-squared_distance/(2*bandwidth))",
+          "mmd_bandwidth_gradient": "detached",
+          "mmd_invalid_bandwidth": "stop",
+          "mmd_feature_normalization": "l2_per_sample",
+          "validation_batch_size": 64,
+          "num_workers": 2,
+          "run_id": "dan_0p1",
+          "method": "dan",
+          "mmd_lambda": 0.1
+        },
+        "protocol_sha256": "e0f075e1e4f2c43c7db2423bb9b31f901d4e1157e72c2097b3e156501ce2dc74",
+        "initialization_sha256": "4d53e76c2d8f557b050a1913257c980846bebf6d5b4a28ff4d7cfa12c1d2eef3",
+        "code_sha256": "c9587ffbf5617f213d0e21a41ad182abe78250853cbac78faab6b5a726c09d8a",
+        "environment": {
+          "python": "3.13.15",
+          "torch": "2.11.0+cu128",
+          "torchvision": "0.26.0+cu128",
+          "numpy": "2.1.3",
+          "sklearn": "1.6.1",
+          "cuda": "12.8",
+          "cudnn": 91900,
+          "device_type": "cuda",
+          "gpu": "Tesla T4"
+        },
+        "dataset_file_list_sha256": "559ac63b8df8e07330b97112e5ec4c414b3957585b28d21b4cfecd2181f538e0",
+        "preregistration_sha256": "7cb1a3988b92c5986d850e65d3dc1a928af9d673d19b53b97dd1d90b78a31fb7",
+        "num_workers": 2
+      },
+      "batchnorm_buffers_unchanged": true,
+      "checkpoint_selection_reconstructed": true,
+      "target_labels_accessed": false
+    },
+    "dan_1": {
+      "protocol_version": "v3",
+      "run_directory": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/dan_1",
+      "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/dan_1/best.pt",
+      "checkpoint_sha256": "a3274833ee4cf143a1e8a25eb340da431422d1d264e52a3c82f75d55a45e9563",
+      "selected_epoch": 10,
+      "epochs_completed": 15,
+      "mean_source_validation_macro_f1": 0.9351645184948074,
+      "source_domains": {
+        "photo": {
+          "accuracy": 0.9670658682634731,
+          "macro_f1": 0.9604634885520617,
+          "prediction_counts": {
+            "dog": 42,
+            "elephant": 43,
+            "giraffe": 34,
+            "guitar": 37,
+            "horse": 33,
+            "house": 59,
+            "person": 86
+          },
+          "per_class_accuracy": {
+            "dog": 0.9736842105263158,
+            "elephant": 1.0,
+            "giraffe": 0.9444444444444444,
+            "guitar": 1.0,
+            "horse": 0.8,
+            "house": 1.0,
+            "person": 1.0
+          }
+        },
+        "art_painting": {
+          "accuracy": 0.9024390243902439,
+          "macro_f1": 0.9017287297739242,
+          "prediction_counts": {
+            "dog": 80,
+            "elephant": 65,
+            "giraffe": 62,
+            "guitar": 39,
+            "horse": 28,
+            "house": 62,
+            "person": 74
+          },
+          "per_class_accuracy": {
+            "dog": 0.8947368421052632,
+            "elephant": 1.0,
+            "giraffe": 0.9824561403508771,
+            "guitar": 0.972972972972973,
+            "horse": 0.7,
+            "house": 0.9830508474576272,
+            "person": 0.8111111111111111
+          }
+        },
+        "cartoon": {
+          "accuracy": 0.9402985074626866,
+          "macro_f1": 0.9433013371584363,
+          "prediction_counts": {
+            "dog": 84,
+            "elephant": 96,
+            "giraffe": 75,
+            "guitar": 28,
+            "horse": 51,
+            "house": 59,
+            "person": 76
+          },
+          "per_class_accuracy": {
+            "dog": 0.9487179487179487,
+            "elephant": 0.989010989010989,
+            "giraffe": 0.9855072463768116,
+            "guitar": 1.0,
+            "horse": 0.7846153846153846,
+            "house": 1.0,
+            "person": 0.9012345679012346
+          }
+        }
+      },
+      "pooled_source_prediction_counts": {
+        "dog": 206,
+        "elephant": 204,
+        "giraffe": 171,
+        "guitar": 104,
+        "horse": 112,
+        "house": 180,
+        "person": 236
+      },
+      "identity": {
+        "config": {
+          "seed": 6304,
+          "weights": "ResNet18_Weights.IMAGENET1K_V1",
+          "num_classes": 7,
+          "feature_width": 512,
+          "epochs": 30,
+          "patience": 5,
+          "source_batch_per_domain": 8,
+          "target_batch": 24,
+          "optimizer": "AdamW",
+          "learning_rate": 0.0001,
+          "weight_decay": 0.0001,
+          "adam_betas": [
+            0.9,
+            0.999
+          ],
+          "adam_epsilon": 1e-08,
+          "amsgrad": false,
+          "adam_foreach": false,
+          "adam_fused": false,
+          "class_loss_reduction": "mean",
+          "domain_loss_reduction": "mean",
+          "label_smoothing": 0.0,
+          "class_weights": null,
+          "scheduler": null,
+          "precision": "float32",
+          "gradient_clipping": 20.0,
+          "gradient_clipping_norm_type": 2.0,
+          "gradient_clipping_foreach": false,
+          "selection_metric": "unweighted_mean_source_validation_macro_f1",
+          "tie_policy": "strict_improvement_earliest_tie",
+          "domain_loss_weight": 1.0,
+          "grl_progress_denominator": "planned_30_epoch_update_budget",
+          "mmd_kernel_factors": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "mmd_estimator": "literal_empirical_mean_embedding_v_statistic",
+          "mmd_bandwidth_pairs": "unique_upper_triangle_keep_off_diagonal_zeros",
+          "mmd_kernel": "exp(-squared_distance/(2*bandwidth))",
+          "mmd_bandwidth_gradient": "detached",
+          "mmd_invalid_bandwidth": "stop",
+          "mmd_feature_normalization": "l2_per_sample",
+          "validation_batch_size": 64,
+          "num_workers": 2,
+          "run_id": "dan_1",
+          "method": "dan",
+          "mmd_lambda": 1.0
+        },
+        "protocol_sha256": "e0f075e1e4f2c43c7db2423bb9b31f901d4e1157e72c2097b3e156501ce2dc74",
+        "initialization_sha256": "4d53e76c2d8f557b050a1913257c980846bebf6d5b4a28ff4d7cfa12c1d2eef3",
+        "code_sha256": "c9587ffbf5617f213d0e21a41ad182abe78250853cbac78faab6b5a726c09d8a",
+        "environment": {
+          "python": "3.13.15",
+          "torch": "2.11.0+cu128",
+          "torchvision": "0.26.0+cu128",
+          "numpy": "2.1.3",
+          "sklearn": "1.6.1",
+          "cuda": "12.8",
+          "cudnn": 91900,
+          "device_type": "cuda",
+          "gpu": "Tesla T4"
+        },
+        "dataset_file_list_sha256": "559ac63b8df8e07330b97112e5ec4c414b3957585b28d21b4cfecd2181f538e0",
+        "preregistration_sha256": "7cb1a3988b92c5986d850e65d3dc1a928af9d673d19b53b97dd1d90b78a31fb7",
+        "num_workers": 2
+      },
+      "batchnorm_buffers_unchanged": true,
+      "checkpoint_selection_reconstructed": true,
+      "target_labels_accessed": false
+    },
+    "dan_10": {
+      "protocol_version": "v3",
+      "run_directory": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/dan_10",
+      "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/dan_10/best.pt",
+      "checkpoint_sha256": "487dc643227bae3f9057ccb7f05a282a252cadbd9471d38dbb78fbb6d30ea5aa",
+      "selected_epoch": 1,
+      "epochs_completed": 6,
+      "mean_source_validation_macro_f1": 0.05066996495567924,
+      "source_domains": {
+        "photo": {
+          "accuracy": 0.25748502994011974,
+          "macro_f1": 0.058503401360544216,
+          "prediction_counts": {
+            "dog": 0,
+            "elephant": 0,
+            "giraffe": 0,
+            "guitar": 0,
+            "horse": 0,
+            "house": 0,
+            "person": 334
+          },
+          "per_class_accuracy": {
+            "dog": 0.0,
+            "elephant": 0.0,
+            "giraffe": 0.0,
+            "guitar": 0.0,
+            "horse": 0.0,
+            "house": 0.0,
+            "person": 1.0
+          }
+        },
+        "art_painting": {
+          "accuracy": 0.21951219512195122,
+          "macro_f1": 0.05142857142857143,
+          "prediction_counts": {
+            "dog": 0,
+            "elephant": 0,
+            "giraffe": 0,
+            "guitar": 0,
+            "horse": 0,
+            "house": 0,
+            "person": 410
+          },
+          "per_class_accuracy": {
+            "dog": 0.0,
+            "elephant": 0.0,
+            "giraffe": 0.0,
+            "guitar": 0.0,
+            "horse": 0.0,
+            "house": 0.0,
+            "person": 1.0
+          }
+        },
+        "cartoon": {
+          "accuracy": 0.17270788912579957,
+          "macro_f1": 0.04207792207792208,
+          "prediction_counts": {
+            "dog": 0,
+            "elephant": 0,
+            "giraffe": 0,
+            "guitar": 0,
+            "horse": 0,
+            "house": 0,
+            "person": 469
+          },
+          "per_class_accuracy": {
+            "dog": 0.0,
+            "elephant": 0.0,
+            "giraffe": 0.0,
+            "guitar": 0.0,
+            "horse": 0.0,
+            "house": 0.0,
+            "person": 1.0
+          }
+        }
+      },
+      "pooled_source_prediction_counts": {
+        "dog": 0,
+        "elephant": 0,
+        "giraffe": 0,
+        "guitar": 0,
+        "horse": 0,
+        "house": 0,
+        "person": 1213
+      },
+      "identity": {
+        "config": {
+          "seed": 6304,
+          "weights": "ResNet18_Weights.IMAGENET1K_V1",
+          "num_classes": 7,
+          "feature_width": 512,
+          "epochs": 30,
+          "patience": 5,
+          "source_batch_per_domain": 8,
+          "target_batch": 24,
+          "optimizer": "AdamW",
+          "learning_rate": 0.0001,
+          "weight_decay": 0.0001,
+          "adam_betas": [
+            0.9,
+            0.999
+          ],
+          "adam_epsilon": 1e-08,
+          "amsgrad": false,
+          "adam_foreach": false,
+          "adam_fused": false,
+          "class_loss_reduction": "mean",
+          "domain_loss_reduction": "mean",
+          "label_smoothing": 0.0,
+          "class_weights": null,
+          "scheduler": null,
+          "precision": "float32",
+          "gradient_clipping": 20.0,
+          "gradient_clipping_norm_type": 2.0,
+          "gradient_clipping_foreach": false,
+          "selection_metric": "unweighted_mean_source_validation_macro_f1",
+          "tie_policy": "strict_improvement_earliest_tie",
+          "domain_loss_weight": 1.0,
+          "grl_progress_denominator": "planned_30_epoch_update_budget",
+          "mmd_kernel_factors": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "mmd_estimator": "literal_empirical_mean_embedding_v_statistic",
+          "mmd_bandwidth_pairs": "unique_upper_triangle_keep_off_diagonal_zeros",
+          "mmd_kernel": "exp(-squared_distance/(2*bandwidth))",
+          "mmd_bandwidth_gradient": "detached",
+          "mmd_invalid_bandwidth": "stop",
+          "mmd_feature_normalization": "l2_per_sample",
+          "validation_batch_size": 64,
+          "num_workers": 2,
+          "run_id": "dan_10",
+          "method": "dan",
+          "mmd_lambda": 10.0
+        },
+        "protocol_sha256": "e0f075e1e4f2c43c7db2423bb9b31f901d4e1157e72c2097b3e156501ce2dc74",
+        "initialization_sha256": "4d53e76c2d8f557b050a1913257c980846bebf6d5b4a28ff4d7cfa12c1d2eef3",
+        "code_sha256": "c9587ffbf5617f213d0e21a41ad182abe78250853cbac78faab6b5a726c09d8a",
+        "environment": {
+          "python": "3.13.15",
+          "torch": "2.11.0+cu128",
+          "torchvision": "0.26.0+cu128",
+          "numpy": "2.1.3",
+          "sklearn": "1.6.1",
+          "cuda": "12.8",
+          "cudnn": 91900,
+          "device_type": "cuda",
+          "gpu": "Tesla T4"
+        },
+        "dataset_file_list_sha256": "559ac63b8df8e07330b97112e5ec4c414b3957585b28d21b4cfecd2181f538e0",
+        "preregistration_sha256": "7cb1a3988b92c5986d850e65d3dc1a928af9d673d19b53b97dd1d90b78a31fb7",
+        "num_workers": 2
+      },
+      "batchnorm_buffers_unchanged": true,
+      "checkpoint_selection_reconstructed": true,
+      "target_labels_accessed": false
+    },
+    "dann": {
+      "protocol_version": "v4",
+      "run_directory": "/content/drive/MyDrive/ATML-PA1/task2_adversarial_normalized_v4_20260923/dann",
+      "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task2_adversarial_normalized_v4_20260923/dann/best.pt",
+      "checkpoint_sha256": "1154ba6ef175f7ba728f16697f199db65a574c7a4e4e7e3613db22e4880443ee",
+      "selected_epoch": 9,
+      "epochs_completed": 14,
+      "mean_source_validation_macro_f1": 0.9408741433215398,
+      "source_domains": {
+        "photo": {
+          "accuracy": 0.9670658682634731,
+          "macro_f1": 0.9645332198912147,
+          "prediction_counts": {
+            "dog": 41,
+            "elephant": 38,
+            "giraffe": 35,
+            "guitar": 36,
+            "horse": 36,
+            "house": 58,
+            "person": 90
+          },
+          "per_class_accuracy": {
+            "dog": 0.9736842105263158,
+            "elephant": 0.926829268292683,
+            "giraffe": 0.9722222222222222,
+            "guitar": 0.972972972972973,
+            "horse": 0.875,
+            "house": 1.0,
+            "person": 1.0
+          }
+        },
+        "art_painting": {
+          "accuracy": 0.9097560975609756,
+          "macro_f1": 0.9105336987673406,
+          "prediction_counts": {
+            "dog": 81,
+            "elephant": 50,
+            "giraffe": 52,
+            "guitar": 38,
+            "horse": 31,
+            "house": 59,
+            "person": 99
+          },
+          "per_class_accuracy": {
+            "dog": 0.9210526315789473,
+            "elephant": 0.9019607843137255,
+            "giraffe": 0.8771929824561403,
+            "guitar": 0.972972972972973,
+            "horse": 0.75,
+            "house": 0.9491525423728814,
+            "person": 0.9444444444444444
+          }
+        },
+        "cartoon": {
+          "accuracy": 0.9424307036247335,
+          "macro_f1": 0.9475555113060642,
+          "prediction_counts": {
+            "dog": 76,
+            "elephant": 84,
+            "giraffe": 66,
+            "guitar": 28,
+            "horse": 68,
+            "house": 58,
+            "person": 89
+          },
+          "per_class_accuracy": {
+            "dog": 0.8846153846153846,
+            "elephant": 0.9120879120879121,
+            "giraffe": 0.9420289855072463,
+            "guitar": 1.0,
+            "horse": 0.9230769230769231,
+            "house": 1.0,
+            "person": 0.9876543209876543
+          }
+        }
+      },
+      "pooled_source_prediction_counts": {
+        "dog": 198,
+        "elephant": 172,
+        "giraffe": 153,
+        "guitar": 102,
+        "horse": 135,
+        "house": 175,
+        "person": 278
+      },
+      "identity": {
+        "config": {
+          "seed": 6304,
+          "weights": "ResNet18_Weights.IMAGENET1K_V1",
+          "num_classes": 7,
+          "feature_width": 512,
+          "epochs": 30,
+          "patience": 5,
+          "source_batch_per_domain": 8,
+          "target_batch": 24,
+          "optimizer": "AdamW",
+          "learning_rate": 0.0001,
+          "weight_decay": 0.0001,
+          "adam_betas": [
+            0.9,
+            0.999
+          ],
+          "adam_epsilon": 1e-08,
+          "amsgrad": false,
+          "adam_foreach": false,
+          "adam_fused": false,
+          "class_loss_reduction": "mean",
+          "domain_loss_reduction": "mean",
+          "label_smoothing": 0.0,
+          "class_weights": null,
+          "scheduler": null,
+          "precision": "float32",
+          "gradient_clipping": 20.0,
+          "gradient_clipping_norm_type": 2.0,
+          "gradient_clipping_foreach": false,
+          "selection_metric": "unweighted_mean_source_validation_macro_f1",
+          "tie_policy": "strict_improvement_earliest_tie",
+          "domain_loss_weight": 1.0,
+          "grl_progress_denominator": "planned_30_epoch_update_budget",
+          "mmd_kernel_factors": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "mmd_estimator": "literal_empirical_mean_embedding_v_statistic",
+          "mmd_bandwidth_pairs": "unique_upper_triangle_keep_off_diagonal_zeros",
+          "mmd_kernel": "exp(-squared_distance/(2*bandwidth))",
+          "mmd_bandwidth_gradient": "detached",
+          "mmd_invalid_bandwidth": "stop",
+          "mmd_feature_normalization": "l2_per_sample",
+          "adversarial_feature_normalization": "l2_per_sample",
+          "validation_batch_size": 64,
+          "num_workers": 2,
+          "run_id": "dann",
+          "method": "dann",
+          "mmd_lambda": null
+        },
+        "protocol_sha256": "e0f075e1e4f2c43c7db2423bb9b31f901d4e1157e72c2097b3e156501ce2dc74",
+        "initialization_sha256": "4d53e76c2d8f557b050a1913257c980846bebf6d5b4a28ff4d7cfa12c1d2eef3",
+        "code_sha256": "6021addfedbe0da6e858bc954892863b15193a0c27339bdcb3749c62e475303f",
+        "environment": {
+          "python": "3.13.15",
+          "torch": "2.11.0+cu128",
+          "torchvision": "0.26.0+cu128",
+          "numpy": "2.1.3",
+          "sklearn": "1.6.1",
+          "cuda": "12.8",
+          "cudnn": 91900,
+          "device_type": "cuda",
+          "gpu": "Tesla T4"
+        },
+        "dataset_file_list_sha256": "559ac63b8df8e07330b97112e5ec4c414b3957585b28d21b4cfecd2181f538e0",
+        "preregistration_sha256": "7cb1a3988b92c5986d850e65d3dc1a928af9d673d19b53b97dd1d90b78a31fb7",
+        "num_workers": 2
+      },
+      "batchnorm_buffers_unchanged": true,
+      "checkpoint_selection_reconstructed": true,
+      "target_labels_accessed": false
+    },
+    "cdan": {
+      "protocol_version": "v4",
+      "run_directory": "/content/drive/MyDrive/ATML-PA1/task2_adversarial_normalized_v4_20260923/cdan",
+      "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task2_adversarial_normalized_v4_20260923/cdan/best.pt",
+      "checkpoint_sha256": "93364e2cd39a4865277c60165c4d7a77b946525936d4b1c796ad2bdcd0bd14c4",
+      "selected_epoch": 6,
+      "epochs_completed": 11,
+      "mean_source_validation_macro_f1": 0.9440964260445351,
+      "source_domains": {
+        "photo": {
+          "accuracy": 0.9580838323353293,
+          "macro_f1": 0.9491753155618702,
+          "prediction_counts": {
+            "dog": 47,
+            "elephant": 37,
+            "giraffe": 34,
+            "guitar": 37,
+            "horse": 37,
+            "house": 56,
+            "person": 86
+          },
+          "per_class_accuracy": {
+            "dog": 0.9736842105263158,
+            "elephant": 0.9024390243902439,
+            "giraffe": 0.9166666666666666,
+            "guitar": 0.972972972972973,
+            "horse": 0.875,
+            "house": 1.0,
+            "person": 1.0
+          }
+        },
+        "art_painting": {
+          "accuracy": 0.9121951219512195,
+          "macro_f1": 0.9173720174449693,
+          "prediction_counts": {
+            "dog": 101,
+            "elephant": 47,
+            "giraffe": 56,
+            "guitar": 36,
+            "horse": 33,
+            "house": 57,
+            "person": 80
+          },
+          "per_class_accuracy": {
+            "dog": 0.9868421052631579,
+            "elephant": 0.9019607843137255,
+            "giraffe": 0.9473684210526315,
+            "guitar": 0.972972972972973,
+            "horse": 0.75,
+            "house": 0.9491525423728814,
+            "person": 0.8555555555555555
+          }
+        },
+        "cartoon": {
+          "accuracy": 0.9616204690831557,
+          "macro_f1": 0.9657419451267655,
+          "prediction_counts": {
+            "dog": 81,
+            "elephant": 88,
+            "giraffe": 71,
+            "guitar": 27,
+            "horse": 62,
+            "house": 58,
+            "person": 82
+          },
+          "per_class_accuracy": {
+            "dog": 0.9358974358974359,
+            "elephant": 0.9560439560439561,
+            "giraffe": 0.9855072463768116,
+            "guitar": 1.0,
+            "horse": 0.9076923076923077,
+            "house": 1.0,
+            "person": 0.9753086419753086
+          }
+        }
+      },
+      "pooled_source_prediction_counts": {
+        "dog": 229,
+        "elephant": 172,
+        "giraffe": 161,
+        "guitar": 100,
+        "horse": 132,
+        "house": 171,
+        "person": 248
+      },
+      "identity": {
+        "config": {
+          "seed": 6304,
+          "weights": "ResNet18_Weights.IMAGENET1K_V1",
+          "num_classes": 7,
+          "feature_width": 512,
+          "epochs": 30,
+          "patience": 5,
+          "source_batch_per_domain": 8,
+          "target_batch": 24,
+          "optimizer": "AdamW",
+          "learning_rate": 0.0001,
+          "weight_decay": 0.0001,
+          "adam_betas": [
+            0.9,
+            0.999
+          ],
+          "adam_epsilon": 1e-08,
+          "amsgrad": false,
+          "adam_foreach": false,
+          "adam_fused": false,
+          "class_loss_reduction": "mean",
+          "domain_loss_reduction": "mean",
+          "label_smoothing": 0.0,
+          "class_weights": null,
+          "scheduler": null,
+          "precision": "float32",
+          "gradient_clipping": 20.0,
+          "gradient_clipping_norm_type": 2.0,
+          "gradient_clipping_foreach": false,
+          "selection_metric": "unweighted_mean_source_validation_macro_f1",
+          "tie_policy": "strict_improvement_earliest_tie",
+          "domain_loss_weight": 1.0,
+          "grl_progress_denominator": "planned_30_epoch_update_budget",
+          "mmd_kernel_factors": [
+            0.5,
+            1.0,
+            2.0
+          ],
+          "mmd_estimator": "literal_empirical_mean_embedding_v_statistic",
+          "mmd_bandwidth_pairs": "unique_upper_triangle_keep_off_diagonal_zeros",
+          "mmd_kernel": "exp(-squared_distance/(2*bandwidth))",
+          "mmd_bandwidth_gradient": "detached",
+          "mmd_invalid_bandwidth": "stop",
+          "mmd_feature_normalization": "l2_per_sample",
+          "adversarial_feature_normalization": "l2_per_sample",
+          "validation_batch_size": 64,
+          "num_workers": 2,
+          "run_id": "cdan",
+          "method": "cdan",
+          "mmd_lambda": null
+        },
+        "protocol_sha256": "e0f075e1e4f2c43c7db2423bb9b31f901d4e1157e72c2097b3e156501ce2dc74",
+        "initialization_sha256": "4d53e76c2d8f557b050a1913257c980846bebf6d5b4a28ff4d7cfa12c1d2eef3",
+        "code_sha256": "6021addfedbe0da6e858bc954892863b15193a0c27339bdcb3749c62e475303f",
+        "environment": {
+          "python": "3.13.15",
+          "torch": "2.11.0+cu128",
+          "torchvision": "0.26.0+cu128",
+          "numpy": "2.1.3",
+          "sklearn": "1.6.1",
+          "cuda": "12.8",
+          "cudnn": 91900,
+          "device_type": "cuda",
+          "gpu": "Tesla T4"
+        },
+        "dataset_file_list_sha256": "559ac63b8df8e07330b97112e5ec4c414b3957585b28d21b4cfecd2181f538e0",
+        "preregistration_sha256": "7cb1a3988b92c5986d850e65d3dc1a928af9d673d19b53b97dd1d90b78a31fb7",
+        "num_workers": 2
+      },
+      "batchnorm_buffers_unchanged": true,
+      "checkpoint_selection_reconstructed": true,
+      "target_labels_accessed": false
+    }
+  },
+  "common_identity": {
+    "protocol_sha256": "e0f075e1e4f2c43c7db2423bb9b31f901d4e1157e72c2097b3e156501ce2dc74",
+    "initialization_sha256": "4d53e76c2d8f557b050a1913257c980846bebf6d5b4a28ff4d7cfa12c1d2eef3",
+    "environment": {
+      "python": "3.13.15",
+      "torch": "2.11.0+cu128",
+      "torchvision": "0.26.0+cu128",
+      "numpy": "2.1.3",
+      "sklearn": "1.6.1",
+      "cuda": "12.8",
+      "cudnn": 91900,
+      "device_type": "cuda",
+      "gpu": "Tesla T4"
+    },
+    "dataset_file_list_sha256": "559ac63b8df8e07330b97112e5ec4c414b3957585b28d21b4cfecd2181f538e0",
+    "preregistration_sha256": "7cb1a3988b92c5986d850e65d3dc1a928af9d673d19b53b97dd1d90b78a31fb7",
+    "num_workers": 2
+  },
+  "model_and_data_code_equal_between_v3_v4": true,
+  "target_labels_accessed": false
+}

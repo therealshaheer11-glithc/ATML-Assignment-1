@@ -1,0 +1,840 @@
+{
+  "assignment_main_comparison": [
+    "source_only",
+    "dan_1",
+    "dann",
+    "cdan"
+  ],
+  "controlled_study": [
+    "source_only",
+    "dan_0p1",
+    "dan_1",
+    "dan_10"
+  ],
+  "runs": {
+    "source_only": {
+      "run_id": "source_only",
+      "method": "Source-only",
+      "protocol_version": "v3",
+      "selected_epoch": 4,
+      "checkpoint_sha256": "3d28a223e4b97b323cb3a20dcb5b7577af96631f2e6ef1f2bc99d53d85761327",
+      "source_validation": {
+        "photo": {
+          "accuracy": 0.9730538922155688,
+          "macro_f1": 0.9681339341150288,
+          "prediction_counts": {
+            "dog": 41,
+            "elephant": 41,
+            "giraffe": 35,
+            "guitar": 38,
+            "horse": 35,
+            "house": 57,
+            "person": 87
+          },
+          "per_class_accuracy": {
+            "dog": 0.9736842105263158,
+            "elephant": 0.975609756097561,
+            "giraffe": 0.9722222222222222,
+            "guitar": 1.0,
+            "horse": 0.85,
+            "house": 1.0,
+            "person": 1.0
+          }
+        },
+        "art_painting": {
+          "accuracy": 0.9097560975609756,
+          "macro_f1": 0.9119171075935996,
+          "prediction_counts": {
+            "dog": 84,
+            "elephant": 59,
+            "giraffe": 55,
+            "guitar": 39,
+            "horse": 37,
+            "house": 60,
+            "person": 76
+          },
+          "per_class_accuracy": {
+            "dog": 0.9078947368421053,
+            "elephant": 0.9803921568627451,
+            "giraffe": 0.9122807017543859,
+            "guitar": 1.0,
+            "horse": 0.8,
+            "house": 0.9830508474576272,
+            "person": 0.8333333333333334
+          }
+        },
+        "cartoon": {
+          "accuracy": 0.9402985074626866,
+          "macro_f1": 0.947827661029101,
+          "prediction_counts": {
+            "dog": 80,
+            "elephant": 93,
+            "giraffe": 68,
+            "guitar": 27,
+            "horse": 69,
+            "house": 58,
+            "person": 74
+          },
+          "per_class_accuracy": {
+            "dog": 0.9102564102564102,
+            "elephant": 0.9560439560439561,
+            "giraffe": 0.9420289855072463,
+            "guitar": 1.0,
+            "horse": 0.9538461538461539,
+            "house": 1.0,
+            "person": 0.8765432098765432
+          }
+        }
+      },
+      "mean_source_validation_macro_f1": 0.9426262342459099,
+      "target": {
+        "accuracy": 0.6200050903537796,
+        "macro_f1": 0.6573709658779567,
+        "count": 3929,
+        "per_class": {
+          "dog": {
+            "support": 772,
+            "accuracy": 0.7448186528497409
+          },
+          "elephant": {
+            "support": 740,
+            "accuracy": 0.38513513513513514
+          },
+          "giraffe": {
+            "support": 753,
+            "accuracy": 0.3200531208499336
+          },
+          "guitar": {
+            "support": 608,
+            "accuracy": 0.8865131578947368
+          },
+          "horse": {
+            "support": 816,
+            "accuracy": 0.8026960784313726
+          },
+          "house": {
+            "support": 80,
+            "accuracy": 0.9
+          },
+          "person": {
+            "support": 160,
+            "accuracy": 0.43125
+          }
+        }
+      },
+      "domain_probe": {
+        "accuracy": 0.9958791208791209,
+        "chance_accuracy": 0.5,
+        "source_count": 1213,
+        "target_count": 1213,
+        "train_count": 1698,
+        "test_count": 728,
+        "scaler_fit_on_probe_train_only": true,
+        "logistic_regression": {
+          "C": 1.0,
+          "class_weight": "balanced",
+          "solver": "lbfgs",
+          "max_iter": 2000,
+          "random_state": 6304
+        },
+        "confusion_matrix_source0_target1": [
+          [
+            361,
+            3
+          ],
+          [
+            0,
+            364
+          ]
+        ]
+      }
+    },
+    "dan_0p1": {
+      "run_id": "dan_0p1",
+      "method": "DAN lambda=0.1",
+      "protocol_version": "v3",
+      "selected_epoch": 2,
+      "checkpoint_sha256": "4d0d7132d25404bfab98446ad49e116695d90cc1f2d6a7750514de4da14d4499",
+      "source_validation": {
+        "photo": {
+          "accuracy": 0.9610778443113772,
+          "macro_f1": 0.9565848443489662,
+          "prediction_counts": {
+            "dog": 41,
+            "elephant": 40,
+            "giraffe": 34,
+            "guitar": 38,
+            "horse": 34,
+            "house": 56,
+            "person": 91
+          },
+          "per_class_accuracy": {
+            "dog": 0.9473684210526315,
+            "elephant": 0.9512195121951219,
+            "giraffe": 0.9444444444444444,
+            "guitar": 1.0,
+            "horse": 0.825,
+            "house": 1.0,
+            "person": 1.0
+          }
+        },
+        "art_painting": {
+          "accuracy": 0.9,
+          "macro_f1": 0.9055645409454102,
+          "prediction_counts": {
+            "dog": 76,
+            "elephant": 48,
+            "giraffe": 53,
+            "guitar": 37,
+            "horse": 33,
+            "house": 59,
+            "person": 104
+          },
+          "per_class_accuracy": {
+            "dog": 0.868421052631579,
+            "elephant": 0.8627450980392157,
+            "giraffe": 0.8947368421052632,
+            "guitar": 0.972972972972973,
+            "horse": 0.775,
+            "house": 0.9661016949152542,
+            "person": 0.9333333333333333
+          }
+        },
+        "cartoon": {
+          "accuracy": 0.929637526652452,
+          "macro_f1": 0.9339790243481795,
+          "prediction_counts": {
+            "dog": 72,
+            "elephant": 84,
+            "giraffe": 69,
+            "guitar": 26,
+            "horse": 56,
+            "house": 59,
+            "person": 103
+          },
+          "per_class_accuracy": {
+            "dog": 0.8589743589743589,
+            "elephant": 0.9230769230769231,
+            "giraffe": 0.9710144927536232,
+            "guitar": 0.9259259259259259,
+            "horse": 0.8461538461538461,
+            "house": 1.0,
+            "person": 0.9876543209876543
+          }
+        }
+      },
+      "mean_source_validation_macro_f1": 0.9320428032141853,
+      "target": {
+        "accuracy": 0.6146602188852125,
+        "macro_f1": 0.6408942441811237,
+        "count": 3929,
+        "per_class": {
+          "dog": {
+            "support": 772,
+            "accuracy": 0.3873056994818653
+          },
+          "elephant": {
+            "support": 740,
+            "accuracy": 0.5472972972972973
+          },
+          "giraffe": {
+            "support": 753,
+            "accuracy": 0.4648074369189907
+          },
+          "guitar": {
+            "support": 608,
+            "accuracy": 0.8881578947368421
+          },
+          "horse": {
+            "support": 816,
+            "accuracy": 0.7132352941176471
+          },
+          "house": {
+            "support": 80,
+            "accuracy": 0.9875
+          },
+          "person": {
+            "support": 160,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "domain_probe": {
+        "accuracy": 0.9848901098901099,
+        "chance_accuracy": 0.5,
+        "source_count": 1213,
+        "target_count": 1213,
+        "train_count": 1698,
+        "test_count": 728,
+        "scaler_fit_on_probe_train_only": true,
+        "logistic_regression": {
+          "C": 1.0,
+          "class_weight": "balanced",
+          "solver": "lbfgs",
+          "max_iter": 2000,
+          "random_state": 6304
+        },
+        "confusion_matrix_source0_target1": [
+          [
+            357,
+            7
+          ],
+          [
+            4,
+            360
+          ]
+        ]
+      }
+    },
+    "dan_1": {
+      "run_id": "dan_1",
+      "method": "DAN lambda=1",
+      "protocol_version": "v3",
+      "selected_epoch": 10,
+      "checkpoint_sha256": "a3274833ee4cf143a1e8a25eb340da431422d1d264e52a3c82f75d55a45e9563",
+      "source_validation": {
+        "photo": {
+          "accuracy": 0.9670658682634731,
+          "macro_f1": 0.9604634885520617,
+          "prediction_counts": {
+            "dog": 42,
+            "elephant": 43,
+            "giraffe": 34,
+            "guitar": 37,
+            "horse": 33,
+            "house": 59,
+            "person": 86
+          },
+          "per_class_accuracy": {
+            "dog": 0.9736842105263158,
+            "elephant": 1.0,
+            "giraffe": 0.9444444444444444,
+            "guitar": 1.0,
+            "horse": 0.8,
+            "house": 1.0,
+            "person": 1.0
+          }
+        },
+        "art_painting": {
+          "accuracy": 0.9024390243902439,
+          "macro_f1": 0.9017287297739242,
+          "prediction_counts": {
+            "dog": 80,
+            "elephant": 65,
+            "giraffe": 62,
+            "guitar": 39,
+            "horse": 28,
+            "house": 62,
+            "person": 74
+          },
+          "per_class_accuracy": {
+            "dog": 0.8947368421052632,
+            "elephant": 1.0,
+            "giraffe": 0.9824561403508771,
+            "guitar": 0.972972972972973,
+            "horse": 0.7,
+            "house": 0.9830508474576272,
+            "person": 0.8111111111111111
+          }
+        },
+        "cartoon": {
+          "accuracy": 0.9402985074626866,
+          "macro_f1": 0.9433013371584363,
+          "prediction_counts": {
+            "dog": 84,
+            "elephant": 96,
+            "giraffe": 75,
+            "guitar": 28,
+            "horse": 51,
+            "house": 59,
+            "person": 76
+          },
+          "per_class_accuracy": {
+            "dog": 0.9487179487179487,
+            "elephant": 0.989010989010989,
+            "giraffe": 0.9855072463768116,
+            "guitar": 1.0,
+            "horse": 0.7846153846153846,
+            "house": 1.0,
+            "person": 0.9012345679012346
+          }
+        }
+      },
+      "mean_source_validation_macro_f1": 0.9351645184948074,
+      "target": {
+        "accuracy": 0.7582081954695852,
+        "macro_f1": 0.7076016045384376,
+        "count": 3929,
+        "per_class": {
+          "dog": {
+            "support": 772,
+            "accuracy": 0.5867875647668394
+          },
+          "elephant": {
+            "support": 740,
+            "accuracy": 0.9175675675675675
+          },
+          "giraffe": {
+            "support": 753,
+            "accuracy": 0.7397078353253652
+          },
+          "guitar": {
+            "support": 608,
+            "accuracy": 0.9358552631578947
+          },
+          "horse": {
+            "support": 816,
+            "accuracy": 0.6151960784313726
+          },
+          "house": {
+            "support": 80,
+            "accuracy": 1.0
+          },
+          "person": {
+            "support": 160,
+            "accuracy": 0.86875
+          }
+        }
+      },
+      "domain_probe": {
+        "accuracy": 0.9010989010989011,
+        "chance_accuracy": 0.5,
+        "source_count": 1213,
+        "target_count": 1213,
+        "train_count": 1698,
+        "test_count": 728,
+        "scaler_fit_on_probe_train_only": true,
+        "logistic_regression": {
+          "C": 1.0,
+          "class_weight": "balanced",
+          "solver": "lbfgs",
+          "max_iter": 2000,
+          "random_state": 6304
+        },
+        "confusion_matrix_source0_target1": [
+          [
+            331,
+            33
+          ],
+          [
+            39,
+            325
+          ]
+        ]
+      }
+    },
+    "dan_10": {
+      "run_id": "dan_10",
+      "method": "DAN lambda=10",
+      "protocol_version": "v3",
+      "selected_epoch": 1,
+      "checkpoint_sha256": "487dc643227bae3f9057ccb7f05a282a252cadbd9471d38dbb78fbb6d30ea5aa",
+      "source_validation": {
+        "photo": {
+          "accuracy": 0.25748502994011974,
+          "macro_f1": 0.058503401360544216,
+          "prediction_counts": {
+            "dog": 0,
+            "elephant": 0,
+            "giraffe": 0,
+            "guitar": 0,
+            "horse": 0,
+            "house": 0,
+            "person": 334
+          },
+          "per_class_accuracy": {
+            "dog": 0.0,
+            "elephant": 0.0,
+            "giraffe": 0.0,
+            "guitar": 0.0,
+            "horse": 0.0,
+            "house": 0.0,
+            "person": 1.0
+          }
+        },
+        "art_painting": {
+          "accuracy": 0.21951219512195122,
+          "macro_f1": 0.05142857142857143,
+          "prediction_counts": {
+            "dog": 0,
+            "elephant": 0,
+            "giraffe": 0,
+            "guitar": 0,
+            "horse": 0,
+            "house": 0,
+            "person": 410
+          },
+          "per_class_accuracy": {
+            "dog": 0.0,
+            "elephant": 0.0,
+            "giraffe": 0.0,
+            "guitar": 0.0,
+            "horse": 0.0,
+            "house": 0.0,
+            "person": 1.0
+          }
+        },
+        "cartoon": {
+          "accuracy": 0.17270788912579957,
+          "macro_f1": 0.04207792207792208,
+          "prediction_counts": {
+            "dog": 0,
+            "elephant": 0,
+            "giraffe": 0,
+            "guitar": 0,
+            "horse": 0,
+            "house": 0,
+            "person": 469
+          },
+          "per_class_accuracy": {
+            "dog": 0.0,
+            "elephant": 0.0,
+            "giraffe": 0.0,
+            "guitar": 0.0,
+            "horse": 0.0,
+            "house": 0.0,
+            "person": 1.0
+          }
+        }
+      },
+      "mean_source_validation_macro_f1": 0.05066996495567924,
+      "target": {
+        "accuracy": 0.04072283023670145,
+        "macro_f1": 0.011179820424134438,
+        "count": 3929,
+        "per_class": {
+          "dog": {
+            "support": 772,
+            "accuracy": 0.0
+          },
+          "elephant": {
+            "support": 740,
+            "accuracy": 0.0
+          },
+          "giraffe": {
+            "support": 753,
+            "accuracy": 0.0
+          },
+          "guitar": {
+            "support": 608,
+            "accuracy": 0.0
+          },
+          "horse": {
+            "support": 816,
+            "accuracy": 0.0
+          },
+          "house": {
+            "support": 80,
+            "accuracy": 0.0
+          },
+          "person": {
+            "support": 160,
+            "accuracy": 1.0
+          }
+        }
+      },
+      "domain_probe": {
+        "accuracy": 0.8997252747252747,
+        "chance_accuracy": 0.5,
+        "source_count": 1213,
+        "target_count": 1213,
+        "train_count": 1698,
+        "test_count": 728,
+        "scaler_fit_on_probe_train_only": true,
+        "logistic_regression": {
+          "C": 1.0,
+          "class_weight": "balanced",
+          "solver": "lbfgs",
+          "max_iter": 2000,
+          "random_state": 6304
+        },
+        "confusion_matrix_source0_target1": [
+          [
+            314,
+            50
+          ],
+          [
+            23,
+            341
+          ]
+        ]
+      }
+    },
+    "dann": {
+      "run_id": "dann",
+      "method": "DANN",
+      "protocol_version": "v4",
+      "selected_epoch": 9,
+      "checkpoint_sha256": "1154ba6ef175f7ba728f16697f199db65a574c7a4e4e7e3613db22e4880443ee",
+      "source_validation": {
+        "photo": {
+          "accuracy": 0.9670658682634731,
+          "macro_f1": 0.9645332198912147,
+          "prediction_counts": {
+            "dog": 41,
+            "elephant": 38,
+            "giraffe": 35,
+            "guitar": 36,
+            "horse": 36,
+            "house": 58,
+            "person": 90
+          },
+          "per_class_accuracy": {
+            "dog": 0.9736842105263158,
+            "elephant": 0.926829268292683,
+            "giraffe": 0.9722222222222222,
+            "guitar": 0.972972972972973,
+            "horse": 0.875,
+            "house": 1.0,
+            "person": 1.0
+          }
+        },
+        "art_painting": {
+          "accuracy": 0.9097560975609756,
+          "macro_f1": 0.9105336987673406,
+          "prediction_counts": {
+            "dog": 81,
+            "elephant": 50,
+            "giraffe": 52,
+            "guitar": 38,
+            "horse": 31,
+            "house": 59,
+            "person": 99
+          },
+          "per_class_accuracy": {
+            "dog": 0.9210526315789473,
+            "elephant": 0.9019607843137255,
+            "giraffe": 0.8771929824561403,
+            "guitar": 0.972972972972973,
+            "horse": 0.75,
+            "house": 0.9491525423728814,
+            "person": 0.9444444444444444
+          }
+        },
+        "cartoon": {
+          "accuracy": 0.9424307036247335,
+          "macro_f1": 0.9475555113060642,
+          "prediction_counts": {
+            "dog": 76,
+            "elephant": 84,
+            "giraffe": 66,
+            "guitar": 28,
+            "horse": 68,
+            "house": 58,
+            "person": 89
+          },
+          "per_class_accuracy": {
+            "dog": 0.8846153846153846,
+            "elephant": 0.9120879120879121,
+            "giraffe": 0.9420289855072463,
+            "guitar": 1.0,
+            "horse": 0.9230769230769231,
+            "house": 1.0,
+            "person": 0.9876543209876543
+          }
+        }
+      },
+      "mean_source_validation_macro_f1": 0.9408741433215398,
+      "target": {
+        "accuracy": 0.6907610078900484,
+        "macro_f1": 0.7115469154002205,
+        "count": 3929,
+        "per_class": {
+          "dog": {
+            "support": 772,
+            "accuracy": 0.6191709844559585
+          },
+          "elephant": {
+            "support": 740,
+            "accuracy": 0.7662162162162162
+          },
+          "giraffe": {
+            "support": 753,
+            "accuracy": 0.3612217795484728
+          },
+          "guitar": {
+            "support": 608,
+            "accuracy": 0.9161184210526315
+          },
+          "horse": {
+            "support": 816,
+            "accuracy": 0.7622549019607843
+          },
+          "house": {
+            "support": 80,
+            "accuracy": 0.8625
+          },
+          "person": {
+            "support": 160,
+            "accuracy": 0.93125
+          }
+        }
+      },
+      "domain_probe": {
+        "accuracy": 0.9917582417582418,
+        "chance_accuracy": 0.5,
+        "source_count": 1213,
+        "target_count": 1213,
+        "train_count": 1698,
+        "test_count": 728,
+        "scaler_fit_on_probe_train_only": true,
+        "logistic_regression": {
+          "C": 1.0,
+          "class_weight": "balanced",
+          "solver": "lbfgs",
+          "max_iter": 2000,
+          "random_state": 6304
+        },
+        "confusion_matrix_source0_target1": [
+          [
+            361,
+            3
+          ],
+          [
+            3,
+            361
+          ]
+        ]
+      }
+    },
+    "cdan": {
+      "run_id": "cdan",
+      "method": "CDAN",
+      "protocol_version": "v4",
+      "selected_epoch": 6,
+      "checkpoint_sha256": "93364e2cd39a4865277c60165c4d7a77b946525936d4b1c796ad2bdcd0bd14c4",
+      "source_validation": {
+        "photo": {
+          "accuracy": 0.9580838323353293,
+          "macro_f1": 0.9491753155618702,
+          "prediction_counts": {
+            "dog": 47,
+            "elephant": 37,
+            "giraffe": 34,
+            "guitar": 37,
+            "horse": 37,
+            "house": 56,
+            "person": 86
+          },
+          "per_class_accuracy": {
+            "dog": 0.9736842105263158,
+            "elephant": 0.9024390243902439,
+            "giraffe": 0.9166666666666666,
+            "guitar": 0.972972972972973,
+            "horse": 0.875,
+            "house": 1.0,
+            "person": 1.0
+          }
+        },
+        "art_painting": {
+          "accuracy": 0.9121951219512195,
+          "macro_f1": 0.9173720174449693,
+          "prediction_counts": {
+            "dog": 101,
+            "elephant": 47,
+            "giraffe": 56,
+            "guitar": 36,
+            "horse": 33,
+            "house": 57,
+            "person": 80
+          },
+          "per_class_accuracy": {
+            "dog": 0.9868421052631579,
+            "elephant": 0.9019607843137255,
+            "giraffe": 0.9473684210526315,
+            "guitar": 0.972972972972973,
+            "horse": 0.75,
+            "house": 0.9491525423728814,
+            "person": 0.8555555555555555
+          }
+        },
+        "cartoon": {
+          "accuracy": 0.9616204690831557,
+          "macro_f1": 0.9657419451267655,
+          "prediction_counts": {
+            "dog": 81,
+            "elephant": 88,
+            "giraffe": 71,
+            "guitar": 27,
+            "horse": 62,
+            "house": 58,
+            "person": 82
+          },
+          "per_class_accuracy": {
+            "dog": 0.9358974358974359,
+            "elephant": 0.9560439560439561,
+            "giraffe": 0.9855072463768116,
+            "guitar": 1.0,
+            "horse": 0.9076923076923077,
+            "house": 1.0,
+            "person": 0.9753086419753086
+          }
+        }
+      },
+      "mean_source_validation_macro_f1": 0.9440964260445351,
+      "target": {
+        "accuracy": 0.7202850598116569,
+        "macro_f1": 0.746394153116263,
+        "count": 3929,
+        "per_class": {
+          "dog": {
+            "support": 772,
+            "accuracy": 0.4430051813471503
+          },
+          "elephant": {
+            "support": 740,
+            "accuracy": 0.9027027027027027
+          },
+          "giraffe": {
+            "support": 753,
+            "accuracy": 0.9309428950863213
+          },
+          "guitar": {
+            "support": 608,
+            "accuracy": 0.8075657894736842
+          },
+          "horse": {
+            "support": 816,
+            "accuracy": 0.5784313725490197
+          },
+          "house": {
+            "support": 80,
+            "accuracy": 0.9875
+          },
+          "person": {
+            "support": 160,
+            "accuracy": 0.48125
+          }
+        }
+      },
+      "domain_probe": {
+        "accuracy": 0.9931318681318682,
+        "chance_accuracy": 0.5,
+        "source_count": 1213,
+        "target_count": 1213,
+        "train_count": 1698,
+        "test_count": 728,
+        "scaler_fit_on_probe_train_only": true,
+        "logistic_regression": {
+          "C": 1.0,
+          "class_weight": "balanced",
+          "solver": "lbfgs",
+          "max_iter": 2000,
+          "random_state": 6304
+        },
+        "confusion_matrix_source0_target1": [
+          [
+            360,
+            4
+          ],
+          [
+            1,
+            363
+          ]
+        ]
+      }
+    }
+  },
+  "target_labels_first_accessed_after_freeze_validation": true,
+  "target_labels_used_for_training_or_selection": false
+}

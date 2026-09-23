@@ -149,7 +149,96 @@ def task2_packages():
             assert len(data) == item['bytes']
         print(f'PASS: {name}, {len(m["files"])} files at pinned commit {commit[:12]}.')
     assert sha(ROOT / 'shared/splits/pacs_sketch_seed6304.json') == 'e0f075e1e4f2c43c7db2423bb9b31f901d4e1157e72c2097b3e156501ce2dc74'
-    print('PENDING: Task 2 actual Drive evidence export and final artifact verification; no neural checkpoint inference performed here.')
+    print('PASS: fixed Task 2 source split digest.')
+
+
+def task2_evidence():
+    export = read(ROOT / 'task2/provenance/FINAL-EVIDENCE-EXPORT.json')
+    assert export['training_performed'] is False
+    assert export['checkpoint_files_modified'] is False
+    assert export['missing_optional_evidence'] == []
+    copied = {item['path']: item for item in export['copied_files']}
+    assert len(copied) == len(export['copied_files']) == 79
+    for relative, item in copied.items():
+        path = (ROOT / relative).resolve()
+        assert path.is_relative_to(ROOT) and path.is_file(), relative
+        assert path.stat().st_size == item['bytes'] and sha(path) == item['sha256'], relative
+
+    final = ROOT / 'task2/results/final'
+    manifest = read(final / 'EVALUATION-MANIFEST.json')
+    assert manifest['status'] == 'COMPLETE' and len(manifest['files']) == 25
+    for item in manifest['files']:
+        path = final / item['path']
+        assert path.stat().st_size == item['bytes'] and sha(path) == item['sha256'], item['path']
+
+    freeze_path = ROOT / 'task2/provenance/freeze/task2_checkpoint_freeze.json'
+    audit_path = ROOT / 'task2/provenance/freeze/source_checkpoint_audit.json'
+    freeze, audit = read(freeze_path), read(audit_path)
+    assert sha(freeze_path) == export['freeze_sha256']
+    assert sha(audit_path) == freeze['source_audit_sha256']
+    assert freeze['status'] == 'FROZEN_BEFORE_TARGET_LABEL_ACCESS'
+    assert freeze['target_labels_accessed'] is False
+    assert audit['status'] == 'SOURCE_CHECKPOINT_AUDIT_PASS'
+    assert audit['target_labels_accessed'] is False
+
+    classes = ('dog', 'elephant', 'giraffe', 'guitar', 'horse', 'house', 'person')
+    expected_runs = ('source_only', 'dan_0p1', 'dan_1', 'dan_10', 'dann', 'cdan')
+    assert tuple(freeze['official_runs']) == expected_runs
+    results = read(final / 'final_results.json')
+    assert results['target_labels_used_for_training_or_selection'] is False
+    predictions = rows(final / 'target_predictions.csv')
+    assert len(predictions) == 3929 and len({row['id'] for row in predictions}) == 3929
+
+    for run_id, frozen in freeze['official_runs'].items():
+        run_root = ROOT / 'task2/results/training' / run_id
+        history = rows(run_root / 'history.csv')
+        run = read(run_root / 'run.json')
+        assert [int(row['epoch']) for row in history] == list(range(1, len(history) + 1))
+        best = max(history, key=lambda row: float(row['mean_source_macro_f1']))
+        assert len(history) == run['epochs_completed']
+        assert int(best['epoch']) == run['best_epoch'] == frozen['selected_epoch']
+        assert run['best_checkpoint_sha256'] == frozen['checkpoint_sha256']
+        assert run['target_labels_used'] is False
+        close(best['mean_source_macro_f1'], run['best_mean_source_macro_f1'], run_id)
+        close(run['best_mean_source_macro_f1'], results['runs'][run_id]['mean_source_validation_macro_f1'], run_id)
+
+        correct = sum(row['true_class'] == row[f'{run_id}_prediction'] for row in predictions)
+        scores = []
+        for label in classes:
+            tp = sum(row['true_class'] == label == row[f'{run_id}_prediction'] for row in predictions)
+            count = (
+                sum(row['true_class'] == label for row in predictions)
+                + sum(row[f'{run_id}_prediction'] == label for row in predictions)
+            )
+            scores.append(2 * tp / count if count else 0)
+        close(correct / len(predictions), results['runs'][run_id]['target']['accuracy'], run_id)
+        close(statistics.mean(scores), results['runs'][run_id]['target']['macro_f1'], run_id)
+
+    partition = read(final / 'domain_probe_partition.json')
+    labels = partition['domain_labels']
+    assert len(partition['selected_target_indices']) == 1213
+    assert len(set(partition['selected_target_indices'])) == 1213
+    assert Counter(labels) == {0: 1213, 1: 1213}
+    train, test = set(partition['train_indices']), set(partition['test_indices'])
+    assert not train & test and train | test == set(range(2426))
+    probe_rows = rows(final / 'domain_probe_test_predictions.csv')
+    for run_id in expected_runs:
+        current = [row for row in probe_rows if row['run_id'] == run_id]
+        expected_accuracy = results['runs'][run_id]['domain_probe']['accuracy']
+        actual_accuracy = statistics.mean(
+            int(row['true_domain_label'] == row['predicted_domain_label'])
+            for row in current
+        )
+        assert len(current) == len(test)
+        close(actual_accuracy, expected_accuracy, run_id)
+
+    adoption = read(ROOT / 'task2/provenance/versions/v4/V4_ADOPTION_DECISION.json')
+    assert adoption['decision'] == 'adopt_v4_adversarial_feature_normalization_for_dann_and_cdan'
+    assert adoption['basis'] == 'source_information_only'
+    assert adoption['target_labels_accessed'] is False
+    assert not list((ROOT / 'task2').rglob('*.pt'))
+    assert not list((ROOT / 'task2').rglob('*.pth'))
+    print('PASS: Task 2 export, freeze, six histories/selections, 3,929 target predictions, macro-F1, probe predictions, plots and adoption record.')
 
 
 def links():
@@ -165,4 +254,5 @@ def links():
 if __name__ == '__main__':
     task1()
     task2_packages()
+    task2_evidence()
     links()
