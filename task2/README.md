@@ -1,66 +1,85 @@
-# Task 2 v4 adversarial-normalization pilot
+# Task 2 — PACS domain adaptation
 
-This package implements a contained stability pilot for DANN and, only if separately
-approved after the DANN source-only diagnostic, CDAN. It deliberately contains no
-target-label evaluation command.
+Photo, Art Painting, and Cartoon are labeled sources; Sketch is the unlabeled adaptation
+target. Checkpoints are selected using source validation and frozen before Sketch-label
+evaluation.
 
-V4 retains every v3 setting. Its only training change is to L2-normalize each
-512-dimensional feature at the DANN/CDAN discriminator input. Classification still uses
-the original feature. CDAN uses normalized features with probabilities from the original
-logits and does not detach either term. The rationale, authorization, source-only
-evidence, and adoption rule are recorded in `docs/DECISIONS.md` and
-`docs/PROTOCOL-REVISION-20260923-V4.md`.
+**Status:** the student has reported completion of all six official runs and the final
+Colab evaluation. The final prediction tables, plots, histories, freeze, and adoption
+record still need to be exported from Drive and published. This repository currently
+contains the implementation and protocols, not those final result files.
 
-Existing v3 Source-only and DAN runs stay fixed. V3 DANN also remains untouched while the
-v4 DANN pilot is written to a new output root. The student will choose between v3 and v4
-using source information only. If v4 is rejected, CDAN must be run with the unchanged v3
-package. If v4 is adopted, CDAN must use this same v4 adversarial-input rule.
+## Start here
 
-Read these files before execution:
+| Question | Record |
+| --- | --- |
+| What does the assignment require? | [Assignment protocol](docs/ASSIGNMENT-PROTOCOL.md) |
+| Which choices did we approve? | [D1–D17 decisions](docs/DECISIONS.md) |
+| What changed, and why? | [Chronological run history and clarifications](docs/RUN-HISTORY.md) |
+| Which code produced the experiments? | [Pinned reproduction instructions](docs/REPRODUCTION.md) |
+| How were target labels and the domain probe handled? | [Final evaluation protocol](docs/FINAL-EVALUATION-PROTOCOL.md) |
+| What is verified and still missing? | [Repository audit and handoff](docs/REPOSITORY-AUDIT.md) |
 
-1. `docs/ASSIGNMENT-PROTOCOL.md` - requirements taken from `ATML-PA1.pdf`.
-2. `docs/DECISIONS.md` - D1-D17 approved choices and revisions.
-3. `docs/PROTOCOL-REVISION-20260923-V4.md` - exact pilot rule and source-only rationale.
-4. `task2/preregistration/DAN_STRENGTH_EXPECTATION.txt` - the student's locked
-   expectation and disclosure, written before the official clipped runs. The training
-   command refuses to run if a `PENDING` placeholder is present.
+## Official run set
 
-## What this phase can access
+The following values are transcribed from the student's Colab completion messages.
+They are a navigation summary; the pending export will supply the authoritative files.
+Source F1 is the unweighted mean of seven-class macro-F1 across the three source domains.
 
-- Source train records contain paths and class IDs.
-- Source validation records contain paths and class IDs.
-- Target adaptation records contain only paths and opaque IDs. The target dataset
-  class is label-blind and returns no class label.
-- Checkpoint selection uses only the unweighted mean macro-F1 over the three source
-  validation domains.
+| Run | Training version | Selected epoch | Source F1 | Sketch accuracy | Sketch F1 |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Source-only | V3 | 4 | 0.9426 | 0.6200 | 0.6574 |
+| DAN λ=0.1 | V3 | 2 | 0.9320 | 0.6147 | 0.6409 |
+| DAN λ=1 | V3 | 10 | 0.9352 | 0.7582 | 0.7076 |
+| DAN λ=10 | V3 | 1 | 0.0507 | 0.0407 | 0.0112 |
+| DANN | V4 | 9 | 0.9409 | 0.6908 | 0.7115 |
+| CDAN | V4 | 6 | 0.9441 | 0.7203 | 0.7464 |
 
-## Order of operations in a fresh Colab runtime
+The main four-method table uses Source-only, DAN λ=1, DANN, and CDAN. The controlled
+study uses Source-only and all three DAN strengths. The failed λ=10 run remains included.
+V5 names the final evaluator; it is not another training version.
 
-1. Record and approve the runtime preflight.
-2. Upload and extract this exact code archive.
-3. Download and verify the PACS archive, then extract it.
-4. Verify the locked preregistration file and its recorded hash.
-5. Run `task2.preflight`; this checks data, split, configurations, and environment but
-   does not train and does not access target labels.
-6. Create the one common ImageNet-V1 plus seven-class-head initialization.
-7. Run only `dann` in the new v4 pilot output root.
-8. Compare v3 and v4 DANN using source information only and record the student's choice.
-9. Run `cdan` under the approved version. Do not evaluate target labels yet.
+## Common protocol
 
-The v4 DANN run creates `experiment_lock.json`. Every later v4 run must match its code,
-split, initialization, preregistration, dataset snapshot, runtime, GPU, and worker
-count. A completed run stores `best.pt`, `last.pt`, `history.csv`,
-`best_source_validation.json`, and `run.json`.
+- ResNet-18 ImageNet V1, a seven-class head, full fine-tuning, fixed common initialization.
+- Fixed [seed-6304 source split](../shared/splits/pacs_sketch_seed6304.json):
+  Photo 1,336/334, Art Painting 1,638/410, Cartoon 1,875/469 train/validation images.
+- Eight images per source domain per update; adaptation adds 24 unlabeled Sketch images.
+  One epoch is 235 updates. Source-only does not train on target images.
+- AdamW, learning rate and weight decay both `1e-4`; at most 30 epochs;
+  patience five on mean source-validation macro-F1, earliest checkpoint on exact ties.
+- ImageNet BatchNorm running statistics remain frozen; affine parameters are trainable.
+- Global L2 gradient clipping at 20 for every official method. DAN uses per-example
+  feature normalization before MMD; V4 DANN/CDAN normalize the feature branch entering
+  the discriminator. Classification uses the original feature throughout.
+- TA-approved bandwidth handling excludes self-distances and retains off-diagonal zeros.
+  The approved estimator, kernel convention, and all further details are in D2–D5.
 
-## Resume rule
+## Artifacts and storage
 
-Use `--resume` only in the same run directory and only after an epoch-complete
-`last.pt` exists. The command rejects any identity mismatch. An interruption during an
-epoch replays that epoch from the last complete checkpoint.
+Persistent directories under `/content/drive/MyDrive/ATML-PA1/`:
 
-## Authorship note
+| Directory | Role |
+| --- | --- |
+| `task2_corrected_20260923` | Corrected, unclipped diagnostic runs |
+| `task2_corrected_clipped_v2_20260923` | Clipped diagnostic pilot |
+| `task2_corrected_normalized_v3_20260923` | Official Source-only/DAN; superseded DANN pilot |
+| `task2_adversarial_normalized_v4_20260923` | Adopted DANN/CDAN and adoption record |
+| `task2_official_freeze_20260923` | Six-run freeze and independent source checkpoint audit |
+| `task2_final_evaluation_20260923` | Final tables, predictions, probe evidence, and plots |
 
-This implementation was developed with OpenAI Codex as coding assistance. It uses
-PyTorch, torchvision, NumPy, Pillow, and scikit-learn APIs; it does not copy a public
-DAN/DANN/CDAN implementation. The student must inspect and understand every submitted
-line. Codex output must not be used as report prose, interpretation, or analysis.
+Keep these directories and the common initialization. The exporter in
+[tools/export_task2_evidence.py](../tools/export_task2_evidence.py) copies small evidence
+without modifying runs or exporting checkpoints. Upload its ZIP for review before importing
+it into `task2/results/` and `task2/provenance/`.
+
+## Reproduction and attribution
+
+Use [REPRODUCTION.md](docs/REPRODUCTION.md). Resume requires the exact recorded snapshot
+and runtime; do not use this reorganized checkout to resume an old run.
+Historical [manifests](provenance/README.md) retain their original bytes and commit context.
+
+Implementation uses PyTorch, torchvision, NumPy, Pillow, scikit-learn, and Matplotlib.
+The model uses torchvision's ImageNet-V1 ResNet-18 weights. No public DAN/DANN/CDAN
+implementation was copied. Codex assisted with implementation and technical documentation;
+the student must independently write the report's prose and interpretation.
