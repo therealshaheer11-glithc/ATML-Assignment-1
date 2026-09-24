@@ -98,6 +98,29 @@ Each run writes:
   and
 - `run.json`, written after early stopping or the 30-epoch budget.
 
+## Source-only diagnostics after training
+
+After all four training configurations have completed and their checkpoints have been
+reviewed, run the deterministic source diagnostics before creating the final experiment
+lock. The diagnostic code never accepts a Sketch path.
+
+```bash
+python -m task3.evaluation.run_source_diagnostics \
+  --code-root /content/atml_pa1_task3_source \
+  --pacs-source-root /content/task3_pacs_sources_v1 \
+  --protocol /content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/source_protocol/pacs_sources_seed6304.json \
+  --erm-checkpoint /content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/source_only/best.pt \
+  --training-root /content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/training \
+  --output /content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/source_diagnostics/source_diagnostics.json
+```
+
+The command saves the exact 1,002-image source-domain probe design, its shared
+domain-stratified 70/30 partition, the fixed 96-image sharpness batch, reproduced
+source-validation metrics, source-domain separability, and the common radius-0.05
+sharpness proxy for ERM, prescribed DAN-DG lambda 1, and SAM. It uses raw 512-D
+features for the probe, fits `StandardScaler` only on the probe-training partition,
+and never loads Sketch.
+
 ## Failure policy
 
 Any non-finite value, zero SAM gradient, invalid MMD bandwidth, changed artifact hash,
