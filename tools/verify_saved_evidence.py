@@ -6,6 +6,7 @@ import math
 import re
 import statistics
 import subprocess
+import zipfile
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -141,6 +142,18 @@ def task1():
 
 
 def task2_packages():
+    v1_path = ROOT / 'task2/provenance/source-packages/ATML-PA1-Task2-corrected-code-v1.zip'
+    assert sha(v1_path) == 'f85cee7f58ccad18d9820bd11b685c1463a29ad0130042c35adc3d73c98a0a6e'
+    with zipfile.ZipFile(v1_path) as archive:
+        prefix = 'task2-corrected-code/'
+        manifest = json.loads(archive.read(prefix + 'PACKAGE-MANIFEST.json'))
+        assert manifest['version'] == '1' and len(manifest['files']) == 25
+        for item in manifest['files']:
+            data = archive.read(prefix + item['path'])
+            assert len(data) == item['bytes']
+            assert hashlib.sha256(data).hexdigest() == item['sha256'], item['path']
+    print('PASS: corrected V1 source ZIP, 25 manifested files.')
+
     for name, commit in [('PACKAGE-MANIFEST.json', 'd26997b22d3b7722e2ecc828dde1445244afc04b'), ('FINAL-EVALUATION-MANIFEST.json', 'edecd5b9429799cc51c9e96625191beaf45562af')]:
         m = read(ROOT / 'task2' / name)
         for item in m['files']:

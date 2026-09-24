@@ -1,5 +1,11 @@
 # Task 2 provenance
 
+Start with the [complete source lineage](SOURCE-LINEAGE.md). It maps the archived first
+attempt, corrected V1, V2, V3, V4, the freeze, and V5 to their exact source and evidence.
+The corrected V1 package is retained under [`source-packages/`](source-packages/README.md)
+because it was executed from an uploaded Colab ZIP before V2 became the first corrected
+version committed to GitHub.
+
 The package manifests remain at their original paths, preserved byte-for-byte during cleanup.
 They describe the files at their pinned commits, not the current documentation tree.
 Their `training_started: false` fields describe packaging time, not present run status.

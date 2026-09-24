@@ -1,8 +1,9 @@
 # Task 2 run history and report evidence map
 
-Updated 23 September 2026 from the published code, dated decision records, and the
-student's Colab outputs in the working conversation. Final Drive files are still pending
-export. Numbers transcribed below are not substitutes for those files.
+Updated 24 September 2026 from the published code, dated decision records, Colab
+notebook, and verified final evidence export. The complete small-file evidence is now
+published under `task2/provenance/` and `task2/results/`; large checkpoints remain in
+Drive as documented.
 
 ## Chronology
 
@@ -10,13 +11,13 @@ export. Numbers transcribed below are not substitutes for those files.
 | --- | --- | --- |
 | Original attempt | Six methods/strengths evaluated; DAN λ=10 collapsed, DANN/CDAN had instability. Bandwidth calculation removed zero distances. | Preserved on `archive/task2-attempt-1-20260923`; excluded from the corrected comparison. Its target results were already known. |
 | Exploratory Kaggle run | A different λ=10 implementation behaved better. An attempted matched rerun stopped at the runtime/version gate before training. | Neither result replaces the official λ=10 run or isolates a cause of failure. |
-| Corrected V1 | D1–D15 agreed, same source split reused, TA zero-distance rule adopted. Source-only and DAN λ=0.1 trained successfully; DAN λ=1 collapsed on source validation. | Diagnostic runs retained in Drive, excluded from official tables. |
+| Corrected V1 | D1–D15 agreed, same source split reused, TA zero-distance rule adopted. Source-only and DAN λ=0.1 trained successfully; DAN λ=1 collapsed on source validation. | Diagnostic runs are published under `provenance/pilots/v1`; the exact source package is under `provenance/source-packages`; excluded from official tables. |
 | Clipped V2 | TA permitted documented stabilization; global L2 clipping at 20 approved for all six configurations. DAN λ=1 still failed (best source F1 0.1161). | Diagnostic pilot retained; clipping retained in later versions. |
 | Normalized-MMD V3 | Approved per-example L2 normalization before MMD, with raw features retained for classification. Source-only and all DAN strengths rerun under the common clipped protocol. DAN λ=1 completed after resuming from epoch 2. | Official Source-only and DAN checkpoints. λ=10 still failed and remains in the study. |
 | V3 DANN | Best source F1 0.6049; extreme epoch-average gradient norms and frequent clipping. | Superseded stability pilot, retained separately. |
 | Adversarial-normalized V4 | Approved normalized feature input to DANN/CDAN's discriminator branch. DANN reached source F1 0.9409 and predicted all seven source classes. Adoption for DANN/CDAN was recorded using source information; CDAN reached 0.9441. | Official DANN and CDAN. V3 Source-only/DAN stayed fixed. |
 | Freeze | All six selections independently checked on source validation and checkpoint identities locked. | Freeze SHA below; no target-based replacement permitted. |
-| Final evaluation V5 | All six frozen checkpoints evaluated on 3,929 Sketch images, plus the fixed binary-domain probe. | Completed according to Colab output; actual small results pending publication. |
+| Final evaluation V5 | All six frozen checkpoints evaluated on 3,929 Sketch images, plus the fixed binary-domain probe. | Completed and published under `results/final`; the 25 manifested artifacts and all 3,929 predictions verify. |
 
 Earlier source-only baselines did not all collapse. The recorded corrected V1 baseline
 reached source F1 0.9374 and the official V3 baseline reached 0.9426. Do not describe the

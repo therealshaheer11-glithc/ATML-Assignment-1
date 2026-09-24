@@ -17,6 +17,7 @@ remain outside Git.
 | Which choices did we approve? | [D1–D17 decisions](docs/DECISIONS.md) |
 | What changed, and why? | [Chronological run history and clarifications](docs/RUN-HISTORY.md) |
 | Which code produced the experiments? | [Pinned reproduction instructions](docs/REPRODUCTION.md) |
+| Where is every attempt/version mapped? | [Complete source lineage](provenance/SOURCE-LINEAGE.md) |
 | How were target labels and the domain probe handled? | [Final evaluation protocol](docs/FINAL-EVALUATION-PROTOCOL.md) |
 | Where are the published result files? | [Saved-results index](results/README.md) |
 | What has been verified? | [Repository audit and handoff](docs/REPOSITORY-AUDIT.md) |

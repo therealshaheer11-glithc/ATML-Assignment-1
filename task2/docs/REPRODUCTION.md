@@ -6,13 +6,20 @@ Training identities include documentation and package files. Never resume a save
 from an updated `main`, mix imported modules from different extracted directories, or
 silently relax identity checks. Use a fresh Python process in the matching snapshot.
 
-| Snapshot | Commit | Official purpose |
+| Snapshot | Exact source location | Purpose |
 | --- | --- | --- |
-| V3 | `b96f184184b39a3c9c47ee55d3294311a0e737e8` | Source-only and all three DAN strengths |
-| V4 | `d26997b22d3b7722e2ecc828dde1445244afc04b` | Adopted DANN/CDAN |
-| V5 | `edecd5b9429799cc51c9e96625191beaf45562af` | Final evaluator, no retraining |
+| Original attempt | branch `archive/task2-attempt-1-20260923` at `e7b72cd0ae05aeca301b877c041c3c3730335ee0` | Excluded historical attempt |
+| Corrected V1 | [`ATML-PA1-Task2-corrected-code-v1.zip`](../provenance/source-packages/ATML-PA1-Task2-corrected-code-v1.zip), SHA-256 `f85cee7f58ccad18d9820bd11b685c1463a29ad0130042c35adc3d73c98a0a6e` | Unclipped diagnostic pilots |
+| Clipped V2 | commit `6e0aa49d7a678091840527a5d5a2f304296860ba` | Clipped DAN λ=1 diagnostic pilot |
+| Normalized-MMD V3 | commit `b96f184184b39a3c9c47ee55d3294311a0e737e8` | Official Source-only and all three DAN strengths; superseded DANN pilot |
+| Adversarial-normalized V4 | commit `d26997b22d3b7722e2ecc828dde1445244afc04b` | Official adopted DANN/CDAN |
+| Final evaluator V5 | commit `edecd5b9429799cc51c9e96625191beaf45562af` | Frozen-checkpoint evaluation, no retraining |
 
 Commits are persistent provenance; the archive branch preserves the original attempt.
+V1 ran from an uploaded Colab ZIP before its source was committed, so its immutable ZIP
+is retained explicitly. The ZIP contains the packaging-time expectation placeholder;
+the completed locked expectation actually used by the runs is separately preserved at
+`task2/provenance/versions/v1/preregistration/DAN_STRENGTH_EXPECTATION.txt`.
 The [historical manifests](../provenance/README.md) verify against their
 respective commits. The current README describes the completed workflow, not the old
 packaging-time status.
