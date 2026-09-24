@@ -385,6 +385,24 @@ For each model:
 This value is a standardized local proxy only. It must not be described as proof that
 an entire loss landscape is globally flatter.
 
+### 12.1 Approved deterministic subset implementation
+
+The student explicitly approved the following implementation details before the source
+diagnostics were committed or run:
+
+- use one NumPy `default_rng(6304)` PCG64 stream for source-domain-probe subset
+  selection;
+- use a separate NumPy `default_rng(6304)` PCG64 stream for sharpness-batch subset
+  selection, so changes to one diagnostic cannot silently change the other's sample;
+- process domains in the fixed order Photo, Art Painting, Cartoon because seeded random
+  draws are order-dependent; and
+- sort the selected original validation indices within each domain before extraction.
+
+Sorting does not change which examples were randomly selected. It only fixes their
+loading order so saved identifiers, labels, and feature rows remain aligned and every
+model receives the same examples in the same order. The full selected identifiers and
+the probe partition are persisted before model feature extraction.
+
 ## 13. Approved checkpoint and metric conventions
 
 - Validate after every complete epoch.
@@ -519,6 +537,66 @@ must be implemented in new files and must import or copy only verified shared be
 
 ## 18.1 Execution status
 
+### Post-lambda-1 source-only review and authorization
+
+After the prescribed DAN-DG lambda 1 run and its source-only instability diagnosis,
+the student explicitly approved the following change-control decisions:
+
+1. DAN-DG lambda 0.1 is the next run, with every other setting unchanged.
+2. The global gradient clipping max-norm remains 20 for all three lambda runs.
+3. DAN-DG lambda 10 may run only after lambda 0.1 has completed and been reviewed.
+4. DAN-DG lambda 1 is immutable as the assignment-prescribed main result and will not
+   be modified, overwritten, rerun, or replaced by a study value.
+5. Any modified-bandwidth exploratory experiment is postponed until all required
+   DAN-DG and SAM runs are complete and would require a new, explicitly labeled
+   protocol rather than replacing an official result.
+
+This authorization responds only to source-side evidence. No Sketch image, label,
+metric, example, or Task 2 Sketch result informed it. The controlled-study run is an
+approved measurement of alignment strength, not a revised main configuration.
+
+### Lambda 0.1 review outcome
+
+DAN-DG lambda 0.1 completed in ten epochs and selected epoch 5 with mean source
+macro-F1 `0.9462297763360951` and worst-source macro-F1 `0.9230060448010302`.
+Across all 2,350 updates, only 70 were clipped. The run preserved the exact frozen
+implementation and reported zero Sketch access. The result passed its artifact audit
+and did not exhibit the gradient escalation seen at lambda 1.
+
+This review satisfies the student's condition that lambda 0.1 be completed and
+reviewed before lambda 10. The next authorized run is therefore DAN-DG lambda 10 under
+the same frozen implementation. Lambda 10 remains an intentionally strong controlled-
+study condition; a weak or collapsed source result will be preserved as evidence and
+will not be silently stabilized, replaced, or rerun.
+
+### Lambda 10 review outcome
+
+DAN-DG lambda 10 completed in 12 epochs and selected epoch 7 with mean source
+macro-F1 `0.05066996495567924` and worst-source macro-F1
+`0.04207792207792208`. Every one of its 2,820 updates was clipped, and its mean
+pre-clipping gradient norm ranged from `1860.699607` to `5171.256474`. The run
+remained finite, passed its artifact audit, and reported zero Sketch access.
+
+The finite result is preserved as severe source-collapse evidence for excessive
+alignment. It is not rerun with different clipping, bandwidth, normalization,
+optimization, or sampling. The complete preregistered DAN-DG strength study is now
+finished. The next required training condition is standard non-adaptive SAM at
+`rho=0.05`, using only the ERM classification objective and the frozen common Task 3
+settings.
+
+### SAM review outcome
+
+Standard non-adaptive SAM at `rho=0.05` completed in ten epochs and selected epoch 5
+with mean source macro-F1 `0.9540473940355131` and worst-source macro-F1
+`0.9236855934108259`. Its ascent perturbation norm was exactly `0.05`, only 5 of
+2,350 second-pass update gradients were clipped, all values remained finite, and the
+artifact audit reported zero Sketch access.
+
+All required source-only training is now complete. No training checkpoint will be
+rerun, replaced, or selected again. The next phase is restricted to the approved
+source-domain-separability and common-sharpness diagnostics. These diagnostics must be
+completed and frozen before any Sketch record is made accessible.
+
 Blocks 01 through 03 completed successfully on 24 September 2026.
 
 - Block 01 locked the runtime: Python 3.13.15, PyTorch 2.11.0+cu128, torchvision
@@ -533,6 +611,11 @@ Blocks 01 through 03 completed successfully on 24 September 2026.
 - The extracted source snapshot SHA-256 is
   `8ded350769ee15739f8420e755e50ff4377068a4f54ab1c0ba39d5b125e658d2`.
 - Every completed block reported zero Sketch images opened or extracted.
+- Block 04 subsequently passed all 14 target-free unit tests and the complete code
+  preflight at repository commit
+  `19208b4c62acb980fb3246f30e062784b90d8dfc`. It locked executable code-tree SHA-256
+  `4ee16e4b2b66fa051e6571a666a935e6721681e9ac8c1325d5a494ffda528e44`,
+  reported that training had not started, and again recorded zero Sketch access.
 
 The implementation now provides four locked training configurations, source-only data
 validation, DAN-DG pairwise MMD, standard non-adaptive SAM, deterministic training and
