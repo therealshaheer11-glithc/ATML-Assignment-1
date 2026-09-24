@@ -1,0 +1,7 @@
+{
+  "run_id": "sam",
+  "method": "sam",
+  "mmd_lambda": null,
+  "sam_rho": 0.05
+}
+
