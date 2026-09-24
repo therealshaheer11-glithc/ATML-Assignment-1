@@ -60,7 +60,11 @@ def atomic_write_json(payload: dict, path: Path) -> None:
     os.replace(temporary, path)
 
 
-def load_passing_record(path: Path, expected_status: str) -> dict:
+def load_passing_record(
+    path: Path,
+    expected_status: str,
+    sketch_count_field: str,
+) -> dict:
     if not path.is_file():
         raise FileNotFoundError(f"Required prior record is missing: {path}")
     record = json.loads(path.read_text())
@@ -70,13 +74,23 @@ def load_passing_record(path: Path, expected_status: str) -> dict:
         raise RuntimeError(f"Prior record uses a different protocol: {path}")
     if record.get("source_only_phase") is not True:
         raise RuntimeError(f"Prior record does not preserve source-only status: {path}")
-    if record.get("sketch_images_accessed") != 0:
-        raise RuntimeError(f"Prior record reports Sketch access: {path}")
+    if record.get(sketch_count_field) != 0:
+        raise RuntimeError(
+            f"Prior record reports Sketch access in {sketch_count_field!r}: {path}"
+        )
     return record
 
 
-load_passing_record(BLOCK02_RECORD, "TASK3_BLOCK_02_PASS")
-load_passing_record(BLOCK03_RECORD, "TASK3_BLOCK_03_PASS")
+load_passing_record(
+    BLOCK02_RECORD,
+    "TASK3_BLOCK_02_PASS",
+    "sketch_images_accessed",
+)
+load_passing_record(
+    BLOCK03_RECORD,
+    "TASK3_BLOCK_03_PASS",
+    "sketch_images_opened_or_extracted",
+)
 
 if not (CODE_ROOT / ".git").is_dir():
     raise FileNotFoundError(f"Block 03 repository checkout is missing: {CODE_ROOT}")
