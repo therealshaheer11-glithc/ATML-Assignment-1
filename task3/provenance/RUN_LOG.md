@@ -154,3 +154,23 @@ provenance/source_data_preparation.json
 Conclusion: source-only data preparation is complete. The next block may install and
 test the approved Task 3 implementation against this exact snapshot. Training must not
 start until the code preflight and unit tests pass, and Sketch remains embargoed.
+
+## 24 September 2026 - Block 04 attempt 1: stopped on provenance-field mismatch
+
+Status: stopped before implementation tests or training
+
+The first Block 04 attempt rejected the passing Block 03 record because Block 04
+looked for the Block 02 field name `sketch_images_accessed`. Block 03 intentionally
+uses the more specific field name `sketch_images_opened_or_extracted`, whose recorded
+value is zero. The stop therefore indicates a validation-schema mismatch in Block 04,
+not evidence that Sketch was accessed.
+
+The correction makes the prior-record validator specify the expected zero-count field
+for each block:
+
+- Block 02: `sketch_images_accessed`;
+- Block 03: `sketch_images_opened_or_extracted`.
+
+The failed attempt occurred before unit tests, code preflight, model construction, or
+training. It did not open any dataset image and did not access Sketch. Rerunning the
+corrected Block 04 is required before training may begin.
