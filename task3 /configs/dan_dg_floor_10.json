@@ -1,0 +1,22 @@
+{
+  "run_id": "dan_dg_floor_10",
+  "method": "dan_dg_bandwidth_floor",
+  "mmd_lambda": 10.0,
+  "sam_rho": null,
+  "research_variant": true,
+  "variant_id": "dan_dg_initial_bandwidth_floor_v1",
+  "variant_protocol_version": "task3-research-bandwidth-floor-2026-09-25-v1",
+  "primary_protocol_replacement": false,
+  "bandwidth_policy": "max_current_batch_median_and_pair_initialization_floor",
+  "floor_scope": "one_frozen_value_per_unordered_source_pair",
+  "floor_calibration_model": "common_initialization_before_any_training_update",
+  "floor_calibration_data": "source_training_records_only",
+  "floor_calibration_labels_used": false,
+  "floor_calibration_transform": "locked_deterministic_validation_center_crop",
+  "floor_calibration_steps": 235,
+  "floor_calibration_batch_per_domain": 8,
+  "floor_reduction": "median_of_235_current_batch_pair_medians",
+  "floor_multiplier": 1.0,
+  "floor_reused_across_lambdas": true,
+  "target_domain_used": false
+}

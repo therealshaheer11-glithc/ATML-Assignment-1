@@ -27,6 +27,21 @@ authorized target access.
 
 The Task 2 ERM checkpoint is reused without retraining.
 
+## Supplementary bandwidth-floor research study
+
+After every prescribed run and the locked source-only diagnostics were complete, a
+separate research study was approved to test whether initialization-anchored bandwidth
+floors stabilize DAN-DG. This study is not a replacement for the PDF-prescribed
+adaptive-bandwidth runs. Its exact motivation, single controlled change, invariants,
+calibration, comparison plan, and interpretation boundary are recorded in
+`docs/DAN_DG_BANDWIDTH_FLOOR_RESEARCH_VARIANT.md` and
+`preregistration/DAN_DG_BANDWIDTH_FLOOR_STUDY.md`.
+
+The study uses run IDs `dan_dg_floor_0p1`, `dan_dg_floor_1`, and
+`dan_dg_floor_10`. All three reuse one source-only calibration file and are written to
+a distinct research-variant output directory. They must never overwrite or be
+presented as the original `dan_dg_0p1`, `dan_dg_1`, or `dan_dg_10` runs.
+
 ## Important implementation identities
 
 - Task 2 source protocol SHA-256:
