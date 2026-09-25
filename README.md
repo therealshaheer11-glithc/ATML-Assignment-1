@@ -64,12 +64,13 @@ python -m unittest discover -s task3/tests -v
   analysis, and artifact identities are indexed in the
   [Task 4 results guide](task4/results/README.md).
 
-## Authorship and attribution
+## Attribution
 
-ChatGPT/Codex was used for implementation support, debugging, verification, and
-technical-documentation organization. The student reviewed the implementation,
-conducted the experiments, and is responsible for the final report, analysis, and
-interpretation.
+ChatGPT/Codex was used as a coding assistant for implementation support, debugging,
+testing, verification, and repository documentation. The student reviewed and is
+responsible for every submitted line of code and for the execution of all experiments.
 
-External code, pretrained weights, research papers, and reference implementations are
-credited in the relevant task guides and protocol documents.
+Materially reused external code, pretrained models, research papers, and reference
+implementations are identified in the relevant task guides and protocol documents.
+The PDF report is written independently by the student without generative AI, as
+required by the assignment.
