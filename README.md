@@ -1,41 +1,45 @@
 # ATML Programming Assignment 1
 
-Code, experiment protocols, and saved evidence. Start with the task guides below.
+Code, experiment protocols, results, and reproducibility evidence for all four tasks.
 
 | Task | Guide | Current status |
 | --- | --- | --- |
 | 1 — STL-10 inductive biases | [Task 1](task1/README.md) | Code, split manifests, predictions, metrics, and figures published |
-| 2 — PACS domain adaptation | [Task 2](task2/README.md) | Code, official histories, frozen results, plots, and provenance published |
+| 2 — PACS domain adaptation | [Task 2](task2/README.md) | Official histories, frozen results, plots, and provenance published |
 | 3 — PACS domain generalization | [Task 3](task3/README.md) | Training, diagnostics, final experiment lock, and one-time Sketch evaluation completed |
-| 4 — Open-set recognition | [Task 4](task4/README.md) | Training, target-free lock, and one-time CIFAR-100 evaluation completed |
+| 4 — Open-set recognition | [Task 4](task4/README.md) | Training, target-free evaluation lock, and one-time CIFAR-100 evaluation completed |
 
 ## Repository layout
 
 ```text
-task1/       STL-10 code, configuration, reproduction guide, and results
-task2/       PACS UDA code, configurations, decision history, and provenance
-task3/       PACS DG code, frozen protocols, execution log, and evaluation tooling
-task4/       CIFAR open-set code, locked configurations, tests, and execution guide
-shared/      PACS data loading, fixed split, and MMD implementation
-tests/       Checks for locked Task 2 choices and final evaluation
-tools/       Saved-evidence verification and Colab evidence export
+task1/       STL-10 implementation, configurations, results, and reproduction guide
+task2/       PACS domain-adaptation code, decisions, results, and provenance
+task3/       PACS domain-generalization code, locked protocols, results, and provenance
+task4/       CIFAR open-set code, locked configurations, tests, results, and provenance
+shared/      Shared PACS data loading, fixed split, and MMD implementation
+tests/       Repository-level locked-choice and saved-evidence checks
+tools/       Saved-evidence verification and Colab export utilities
 ```
 
-[Task 1 environment](colab-environment.json) and [Colab add-on dependencies](requirements-colab.txt)
-apply to Task 1. Task 2 uses the environment recorded in its own run records.
-Datasets, checkpoints, and feature caches remain outside Git; each task guide identifies
-their storage locations and the limits of reproducing from a fresh clone.
+The [Task 1 environment](colab-environment.json) and
+[Colab add-on dependencies](requirements-colab.txt) apply to Task 1. Later tasks use
+the environments recorded in their respective run and provenance files.
+
+Datasets, model checkpoints, and large feature caches remain outside Git. Each task
+guide documents its storage locations and the requirements for reproduction from a
+fresh checkout.
 
 ## Repository verification
 
-Install the lightweight test dependency, then run the repository checks from the root:
+Install the lightweight testing dependency and run all repository checks from the
+repository root:
 
 ```bash
 python -m pip install -r requirements-dev.txt
-python -m pytest -q tests task3/tests
+python -m pytest -q tests task3/tests task4/tests
 ```
 
-The Task 3 suite can also be run without pytest:
+The Task 3 tests can also be run without pytest:
 
 ```bash
 python -m unittest discover -s task3/tests -v
@@ -45,17 +49,27 @@ python -m unittest discover -s task3/tests -v
 
 - The first Task 2 attempt is preserved on
   [archive/task2-attempt-1-20260923](https://github.com/therealshaheer11-glithc/ATML-Assignment-1/tree/archive/task2-attempt-1-20260923).
-- The official Task 2 comparison combines **V3 Source-only/DAN** and **V4 DANN/CDAN**.
-  [Run history](task2/docs/RUN-HISTORY.md) explains the corrections, stability pilots,
-  adoption decision, and checkpoint freeze.
-- Use the [pinned reproduction instructions](task2/docs/REPRODUCTION.md) for Task 2;
-  the latest documentation checkout has a different code-tree identity from the training snapshots.
-- [Repository audit](task2/docs/REPOSITORY-AUDIT.md) lists completed checks and the remaining
-  evidence needed before declaring Task 2 publication complete.
+- The official Task 2 comparison combines **V3 Source-only/DAN** and
+  **V4 DANN/CDAN**. The [run history](task2/docs/RUN-HISTORY.md) documents the
+  corrections, stability pilots, adoption decision, and checkpoint freeze.
+- Task 2 reproduction must use the
+  [pinned reproduction instructions](task2/docs/REPRODUCTION.md), because the
+  organized documentation checkout has a different code-tree identity from the
+  historical training snapshots.
+- The [Task 2 repository audit](task2/docs/REPOSITORY-AUDIT.md) records the completed
+  checks and remaining report work.
+- Task 3’s final lock, one-time Sketch evaluation, and artifact identities are recorded
+  in its [run log](task3/provenance/RUN_LOG.md).
+- Task 4’s selected checkpoints, frozen evaluation protocol, final tables, failure
+  analysis, and artifact identities are indexed in the
+  [Task 4 results guide](task4/results/README.md).
 
-## Authorship
+## Authorship and attribution
 
-ChatGPT/Codex assisted with implementation, debugging, verification, and technical
-documentation. External code and pretrained models are attributed in each task guide.
-The student must understand the submitted code and write the report's prose,
-interpretation, and analysis independently, as required by the assignment.
+ChatGPT/Codex was used for implementation support, debugging, verification, and
+technical-documentation organization. The student reviewed the implementation,
+conducted the experiments, and is responsible for the final report, analysis, and
+interpretation.
+
+External code, pretrained weights, research papers, and reference implementations are
+credited in the relevant task guides and protocol documents.
