@@ -588,3 +588,40 @@ the exact saved Block 09 probe and sharpness designs on those five pending model
 combines them with the authenticated Block 09 result into one eight-model evidence
 file. It does not redraw examples, rerun completed diagnostics unnecessarily, access
 Sketch, or create the final experiment lock.
+
+## 25 September 2026 - Block 14 complete and final evaluation approved
+
+Status: complete source-only diagnostic coverage; final lock approved but not yet run
+
+Block 14 passed 29 of 29 target-free tests at diagnostic commit
+`136e28b556d38c99e486e2d53ddff33d921fbfc6`, with code-tree SHA-256
+`2bf8c537ed21fe2eb64f5ec122ba94dbc37aef615395f988a1c4d44c680bdc39`.
+It reused the exact Block 09 probe and sharpness designs and completed coverage for all
+eight frozen checkpoints. The unified result SHA-256 is
+`578253da8a890d9675996ed0f9f45a8f5744836e7c64aa43e1cb690ff64530dc`.
+
+The source-only diagnostics reinforced the reason for preserving both the original
+and stabilized protocols. Original lambda 1 had source-domain separability
+`0.7142857142857143` but extreme local sharpness `94.29026794433594`; original lambda
+10 had separability `0.5780730897009967` and sharpness `357.8193359375`. The stabilized
+lambda 1 reduced sharpness to `6.699406147003174` while reaching source macro-F1
+`0.9495999654855433`; stabilized lambda 10 reduced sharpness to `24.753530502319336`
+while reaching source macro-F1 `0.9211242673662049`. SAM remained the strongest and
+flattest source-selected main method, with source macro-F1 `0.9540473940355131` and
+sharpness `0.09692519903182983`.
+
+After reviewing this complete source-only evidence, the student approved the final
+protocol: freeze all eight checkpoints without further tuning; retain ERM, original
+DAN-DG lambda 1, and SAM as the official main comparison; report the three original
+DAN-DG strengths as the prescribed controlled study; report the three bandwidth-floor
+runs separately as a supplementary study; evaluate all eight once on the complete
+locked Sketch set with the deterministic validation transform; and report accuracy,
+macro-F1, per-class accuracy, confusion matrices, accuracy change from ERM, and
+deterministically selected class-change examples. Exact ties use the fixed PACS class
+order, and examples use path order. Corresponding Task 2 source-only and target-aware
+DAN lambda-1 evidence is included only after the Task 3 lock is authenticated.
+
+Block 15 implements the approved target-free lock only. Block 16 is a separate,
+explicitly authorized one-time target evaluation. No target result may be used to
+retrain, reselect, replace, or reorder a checkpoint. Sketch images accessed before the
+lock: zero.
