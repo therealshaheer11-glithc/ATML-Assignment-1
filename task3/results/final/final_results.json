@@ -1,0 +1,1631 @@
+{
+  "class_change_summary": {
+    "dan_dg_0p1": {
+      "largest_degradation_class": "dog",
+      "largest_degradation_delta_accuracy": -0.2914507772020725,
+      "largest_improvement_class": "elephant",
+      "largest_improvement_delta_accuracy": 0.4459459459459459,
+      "tie_policy": "first_in_fixed_class_order"
+    },
+    "dan_dg_1": {
+      "largest_degradation_class": "dog",
+      "largest_degradation_delta_accuracy": -0.4909326424870466,
+      "largest_improvement_class": "elephant",
+      "largest_improvement_delta_accuracy": 0.5878378378378379,
+      "tie_policy": "first_in_fixed_class_order"
+    },
+    "dan_dg_10": {
+      "largest_degradation_class": "house",
+      "largest_degradation_delta_accuracy": -0.9,
+      "largest_improvement_class": "person",
+      "largest_improvement_delta_accuracy": 0.56875,
+      "tie_policy": "first_in_fixed_class_order"
+    },
+    "dan_dg_floor_0p1": {
+      "largest_degradation_class": "dog",
+      "largest_degradation_delta_accuracy": -0.21632124352331605,
+      "largest_improvement_class": "elephant",
+      "largest_improvement_delta_accuracy": 0.5486486486486486,
+      "tie_policy": "first_in_fixed_class_order"
+    },
+    "dan_dg_floor_1": {
+      "largest_degradation_class": "dog",
+      "largest_degradation_delta_accuracy": -0.15025906735751293,
+      "largest_improvement_class": "elephant",
+      "largest_improvement_delta_accuracy": 0.4297297297297297,
+      "tie_policy": "first_in_fixed_class_order"
+    },
+    "dan_dg_floor_10": {
+      "largest_degradation_class": "dog",
+      "largest_degradation_delta_accuracy": -0.41450777202072536,
+      "largest_improvement_class": "giraffe",
+      "largest_improvement_delta_accuracy": 0.3864541832669323,
+      "tie_policy": "first_in_fixed_class_order"
+    },
+    "sam": {
+      "largest_degradation_class": "dog",
+      "largest_degradation_delta_accuracy": -0.19948186528497402,
+      "largest_improvement_class": "elephant",
+      "largest_improvement_delta_accuracy": 0.5554054054054054,
+      "tie_policy": "first_in_fixed_class_order"
+    }
+  },
+  "experiment_lock_sha256": "35d2a2df7e2b64ac14eb05c260b8b24410b5485aafa489d9427368b3caa52348",
+  "main_comparison": [
+    "erm",
+    "dan_dg_1",
+    "sam"
+  ],
+  "model_order": [
+    "erm",
+    "dan_dg_1",
+    "sam",
+    "dan_dg_0p1",
+    "dan_dg_10",
+    "dan_dg_floor_0p1",
+    "dan_dg_floor_1",
+    "dan_dg_floor_10"
+  ],
+  "original_strength_study": [
+    "erm",
+    "dan_dg_0p1",
+    "dan_dg_1",
+    "dan_dg_10"
+  ],
+  "protocol_version": "task3-approved-2026-09-24-v1",
+  "results": {
+    "dan_dg_0p1": {
+      "identity": {
+        "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/training/dan_dg_0p1/best.pt",
+        "checkpoint_sha256": "dc6036a28e3af8c281b143adb6f47b4d03676fa44c117e912ef9bcd959d8ca27",
+        "selected_epoch": 5,
+        "state_dict_sha256": "205024cbea8543a2c1d5b1051177e620b8621d747240df63c73ecbff3e814b1e"
+      },
+      "source_diagnostics": {
+        "common_sharpness_proxy": {
+          "actual_perturbation_norm": 0.05000000014135274,
+          "base_cross_entropy": 0.09695366770029068,
+          "delta_sharp": 0.27284857630729675,
+          "gradient_norm": 3.8740613856727655,
+          "perturbed_cross_entropy": 0.36980223655700684,
+          "radius": 0.05
+        },
+        "source_domain_separability": {
+          "accuracy": 0.8604651162790697,
+          "chance_accuracy": 0.3333333333333333,
+          "confusion_matrix": [
+            [
+              87,
+              11,
+              2
+            ],
+            [
+              12,
+              83,
+              5
+            ],
+            [
+              7,
+              5,
+              89
+            ]
+          ],
+          "logistic_regression": {
+            "C": 1.0,
+            "iterations": [
+              101
+            ],
+            "max_iter": 2000,
+            "multi_class": "multinomial_automatic_for_three_classes_with_lbfgs",
+            "random_state": 6304,
+            "solver": "lbfgs"
+          },
+          "standard_scaler_fit_scope": "probe_training_features_only",
+          "test_count": 301,
+          "train_count": 701
+        }
+      },
+      "source_validation": {
+        "art_painting_accuracy": 0.926829268292683,
+        "art_painting_macro_f1": 0.9230060448010302,
+        "cartoon_accuracy": 0.9466950959488273,
+        "cartoon_macro_f1": 0.9503774930172837,
+        "mean_source_accuracy": 0.9478614148270105,
+        "mean_source_macro_f1": 0.9462297763360951,
+        "photo_accuracy": 0.9700598802395209,
+        "photo_macro_f1": 0.9653057911899712,
+        "worst_source_accuracy": 0.926829268292683,
+        "worst_source_macro_f1": 0.9230060448010302
+      },
+      "target": {
+        "accuracy": 0.732247391193688,
+        "confusion_matrix": [
+          [
+            350,
+            139,
+            47,
+            2,
+            163,
+            1,
+            70
+          ],
+          [
+            54,
+            615,
+            12,
+            3,
+            42,
+            0,
+            14
+          ],
+          [
+            56,
+            31,
+            484,
+            17,
+            155,
+            0,
+            10
+          ],
+          [
+            3,
+            8,
+            1,
+            592,
+            4,
+            0,
+            0
+          ],
+          [
+            71,
+            31,
+            28,
+            4,
+            679,
+            1,
+            2
+          ],
+          [
+            0,
+            7,
+            0,
+            0,
+            2,
+            70,
+            1
+          ],
+          [
+            14,
+            22,
+            19,
+            8,
+            10,
+            0,
+            87
+          ]
+        ],
+        "count": 3929,
+        "delta_accuracy_vs_erm": 0.11224230083990838,
+        "macro_f1": 0.7335474577788977,
+        "per_class": {
+          "dog": {
+            "accuracy": 0.4533678756476684,
+            "correct": 350,
+            "support": 772
+          },
+          "elephant": {
+            "accuracy": 0.831081081081081,
+            "correct": 615,
+            "support": 740
+          },
+          "giraffe": {
+            "accuracy": 0.6427622841965471,
+            "correct": 484,
+            "support": 753
+          },
+          "guitar": {
+            "accuracy": 0.9736842105263158,
+            "correct": 592,
+            "support": 608
+          },
+          "horse": {
+            "accuracy": 0.8321078431372549,
+            "correct": 679,
+            "support": 816
+          },
+          "house": {
+            "accuracy": 0.875,
+            "correct": 70,
+            "support": 80
+          },
+          "person": {
+            "accuracy": 0.54375,
+            "correct": 87,
+            "support": 160
+          }
+        }
+      }
+    },
+    "dan_dg_1": {
+      "identity": {
+        "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/training/dan_dg_1/best.pt",
+        "checkpoint_sha256": "a44bff8e519134459c2d6bf056785801f9944945d160e516b4da7f5e2752992b",
+        "selected_epoch": 3,
+        "state_dict_sha256": "e632ce2cb76dd3004c295b089c718eee3c80c79d66d17f61b228f3fa72ee4a35"
+      },
+      "source_diagnostics": {
+        "common_sharpness_proxy": {
+          "actual_perturbation_norm": 0.04999999989160926,
+          "base_cross_entropy": 0.42955514788627625,
+          "delta_sharp": 94.29026794433594,
+          "gradient_norm": 350.30227587487633,
+          "perturbed_cross_entropy": 94.7198257446289,
+          "radius": 0.05
+        },
+        "source_domain_separability": {
+          "accuracy": 0.7142857142857143,
+          "chance_accuracy": 0.3333333333333333,
+          "confusion_matrix": [
+            [
+              74,
+              18,
+              8
+            ],
+            [
+              22,
+              67,
+              11
+            ],
+            [
+              14,
+              13,
+              74
+            ]
+          ],
+          "logistic_regression": {
+            "C": 1.0,
+            "iterations": [
+              232
+            ],
+            "max_iter": 2000,
+            "multi_class": "multinomial_automatic_for_three_classes_with_lbfgs",
+            "random_state": 6304,
+            "solver": "lbfgs"
+          },
+          "standard_scaler_fit_scope": "probe_training_features_only",
+          "test_count": 301,
+          "train_count": 701
+        }
+      },
+      "source_validation": {
+        "art_painting_accuracy": 0.8048780487804879,
+        "art_painting_macro_f1": 0.8051965091232748,
+        "cartoon_accuracy": 0.8699360341151386,
+        "cartoon_macro_f1": 0.8685100408435343,
+        "mean_source_accuracy": 0.8736406224422547,
+        "mean_source_macro_f1": 0.8693286334613551,
+        "photo_accuracy": 0.9461077844311377,
+        "photo_macro_f1": 0.9342793504172562,
+        "worst_source_accuracy": 0.8048780487804879,
+        "worst_source_macro_f1": 0.8051965091232748
+      },
+      "target": {
+        "accuracy": 0.6551285314329346,
+        "confusion_matrix": [
+          [
+            196,
+            337,
+            59,
+            33,
+            137,
+            9,
+            1
+          ],
+          [
+            7,
+            720,
+            2,
+            6,
+            5,
+            0,
+            0
+          ],
+          [
+            12,
+            117,
+            471,
+            72,
+            79,
+            2,
+            0
+          ],
+          [
+            0,
+            12,
+            1,
+            595,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            183,
+            57,
+            54,
+            502,
+            8,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            2,
+            0,
+            76,
+            0
+          ],
+          [
+            1,
+            60,
+            25,
+            48,
+            1,
+            11,
+            14
+          ]
+        ],
+        "count": 3929,
+        "delta_accuracy_vs_erm": 0.03512344107915499,
+        "macro_f1": 0.6017496866286957,
+        "per_class": {
+          "dog": {
+            "accuracy": 0.2538860103626943,
+            "correct": 196,
+            "support": 772
+          },
+          "elephant": {
+            "accuracy": 0.972972972972973,
+            "correct": 720,
+            "support": 740
+          },
+          "giraffe": {
+            "accuracy": 0.6254980079681275,
+            "correct": 471,
+            "support": 753
+          },
+          "guitar": {
+            "accuracy": 0.9786184210526315,
+            "correct": 595,
+            "support": 608
+          },
+          "horse": {
+            "accuracy": 0.6151960784313726,
+            "correct": 502,
+            "support": 816
+          },
+          "house": {
+            "accuracy": 0.95,
+            "correct": 76,
+            "support": 80
+          },
+          "person": {
+            "accuracy": 0.0875,
+            "correct": 14,
+            "support": 160
+          }
+        }
+      }
+    },
+    "dan_dg_10": {
+      "identity": {
+        "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/training/dan_dg_10/best.pt",
+        "checkpoint_sha256": "f8cc723dc16b5e17a48f8454541beb473b70e6c38d45895f170c09f59821b2c8",
+        "selected_epoch": 7,
+        "state_dict_sha256": "90f8ff552cfaa41e963824c6d3dd193f4d83b3999b608307b9de3ae353a9f359"
+      },
+      "source_diagnostics": {
+        "common_sharpness_proxy": {
+          "actual_perturbation_norm": 0.0499999998515154,
+          "base_cross_entropy": 3.9194698333740234,
+          "delta_sharp": 357.8193359375,
+          "gradient_norm": 5610.105191527356,
+          "perturbed_cross_entropy": 361.7388000488281,
+          "radius": 0.05
+        },
+        "source_domain_separability": {
+          "accuracy": 0.5780730897009967,
+          "chance_accuracy": 0.3333333333333333,
+          "confusion_matrix": [
+            [
+              71,
+              23,
+              6
+            ],
+            [
+              37,
+              38,
+              25
+            ],
+            [
+              16,
+              20,
+              65
+            ]
+          ],
+          "logistic_regression": {
+            "C": 1.0,
+            "iterations": [
+              359
+            ],
+            "max_iter": 2000,
+            "multi_class": "multinomial_automatic_for_three_classes_with_lbfgs",
+            "random_state": 6304,
+            "solver": "lbfgs"
+          },
+          "standard_scaler_fit_scope": "probe_training_features_only",
+          "test_count": 301,
+          "train_count": 701
+        }
+      },
+      "source_validation": {
+        "art_painting_accuracy": 0.21951219512195122,
+        "art_painting_macro_f1": 0.05142857142857143,
+        "cartoon_accuracy": 0.17270788912579957,
+        "cartoon_macro_f1": 0.04207792207792208,
+        "mean_source_accuracy": 0.21656837139595686,
+        "mean_source_macro_f1": 0.05066996495567924,
+        "photo_accuracy": 0.25748502994011974,
+        "photo_macro_f1": 0.058503401360544216,
+        "worst_source_accuracy": 0.17270788912579957,
+        "worst_source_macro_f1": 0.04207792207792208
+      },
+      "target": {
+        "accuracy": 0.04072283023670145,
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            772
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            740
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            753
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            608
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            816
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            80
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            160
+          ]
+        ],
+        "count": 3929,
+        "delta_accuracy_vs_erm": -0.5792822601170782,
+        "macro_f1": 0.011179820424134438,
+        "per_class": {
+          "dog": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "support": 772
+          },
+          "elephant": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "support": 740
+          },
+          "giraffe": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "support": 753
+          },
+          "guitar": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "support": 608
+          },
+          "horse": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "support": 816
+          },
+          "house": {
+            "accuracy": 0.0,
+            "correct": 0,
+            "support": 80
+          },
+          "person": {
+            "accuracy": 1.0,
+            "correct": 160,
+            "support": 160
+          }
+        }
+      }
+    },
+    "dan_dg_floor_0p1": {
+      "identity": {
+        "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/research_variants/dan_dg_initial_bandwidth_floor_v1/training/dan_dg_floor_0p1/best.pt",
+        "checkpoint_sha256": "46e770107eb563517239d524622bc7cb121d9e166de398b692350fc80c0a453c",
+        "selected_epoch": 25,
+        "state_dict_sha256": "637887983bc85d65087a717ee53bc2e97b19623913f7e4100571c6f59076f0bf"
+      },
+      "source_diagnostics": {
+        "common_sharpness_proxy": {
+          "actual_perturbation_norm": 0.0500000007421617,
+          "base_cross_entropy": 0.053371455520391464,
+          "delta_sharp": 0.6331654191017151,
+          "gradient_norm": 4.7493502224878394,
+          "perturbed_cross_entropy": 0.6865368485450745,
+          "radius": 0.05
+        },
+        "source_domain_separability": {
+          "accuracy": 0.8039867109634552,
+          "chance_accuracy": 0.3333333333333333,
+          "confusion_matrix": [
+            [
+              78,
+              15,
+              7
+            ],
+            [
+              15,
+              75,
+              10
+            ],
+            [
+              9,
+              3,
+              89
+            ]
+          ],
+          "logistic_regression": {
+            "C": 1.0,
+            "iterations": [
+              138
+            ],
+            "max_iter": 2000,
+            "multi_class": "multinomial_automatic_for_three_classes_with_lbfgs",
+            "random_state": 6304,
+            "solver": "lbfgs"
+          },
+          "standard_scaler_fit_scope": "probe_training_features_only",
+          "test_count": 301,
+          "train_count": 701
+        }
+      },
+      "source_validation": {
+        "art_painting_accuracy": 0.9,
+        "art_painting_macro_f1": 0.905926086081068,
+        "cartoon_accuracy": 0.9680170575692963,
+        "cartoon_macro_f1": 0.9728535317013297,
+        "mean_source_accuracy": 0.9440296379522405,
+        "mean_source_macro_f1": 0.9452069885556792,
+        "photo_accuracy": 0.9640718562874252,
+        "photo_macro_f1": 0.9568413478846398,
+        "worst_source_accuracy": 0.9,
+        "worst_source_macro_f1": 0.905926086081068
+      },
+      "target": {
+        "accuracy": 0.7538813947569356,
+        "confusion_matrix": [
+          [
+            408,
+            204,
+            15,
+            1,
+            133,
+            1,
+            10
+          ],
+          [
+            33,
+            691,
+            4,
+            0,
+            9,
+            0,
+            3
+          ],
+          [
+            52,
+            58,
+            493,
+            13,
+            126,
+            0,
+            11
+          ],
+          [
+            0,
+            39,
+            16,
+            551,
+            0,
+            0,
+            2
+          ],
+          [
+            51,
+            105,
+            27,
+            2,
+            626,
+            1,
+            4
+          ],
+          [
+            0,
+            2,
+            0,
+            1,
+            0,
+            75,
+            2
+          ],
+          [
+            16,
+            15,
+            10,
+            0,
+            1,
+            0,
+            118
+          ]
+        ],
+        "count": 3929,
+        "delta_accuracy_vs_erm": 0.133876304403156,
+        "macro_f1": 0.7845208728204464,
+        "per_class": {
+          "dog": {
+            "accuracy": 0.5284974093264249,
+            "correct": 408,
+            "support": 772
+          },
+          "elephant": {
+            "accuracy": 0.9337837837837838,
+            "correct": 691,
+            "support": 740
+          },
+          "giraffe": {
+            "accuracy": 0.6547144754316069,
+            "correct": 493,
+            "support": 753
+          },
+          "guitar": {
+            "accuracy": 0.90625,
+            "correct": 551,
+            "support": 608
+          },
+          "horse": {
+            "accuracy": 0.7671568627450981,
+            "correct": 626,
+            "support": 816
+          },
+          "house": {
+            "accuracy": 0.9375,
+            "correct": 75,
+            "support": 80
+          },
+          "person": {
+            "accuracy": 0.7375,
+            "correct": 118,
+            "support": 160
+          }
+        }
+      }
+    },
+    "dan_dg_floor_1": {
+      "identity": {
+        "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/research_variants/dan_dg_initial_bandwidth_floor_v1/training/dan_dg_floor_1/best.pt",
+        "checkpoint_sha256": "6b8c8ac0f373882b468e2fbf98bfeb4f97e1a799bf073cc6a7f3667d9747418a",
+        "selected_epoch": 7,
+        "state_dict_sha256": "8b8d8b2b7c9b4a95f12e6cfb77d933fac7fee156cd69946a610e776ca9625319"
+      },
+      "source_diagnostics": {
+        "common_sharpness_proxy": {
+          "actual_perturbation_norm": 0.049999999442737704,
+          "base_cross_entropy": 0.08110812306404114,
+          "delta_sharp": 6.699406147003174,
+          "gradient_norm": 12.6593804953945,
+          "perturbed_cross_entropy": 6.780514240264893,
+          "radius": 0.05
+        },
+        "source_domain_separability": {
+          "accuracy": 0.8039867109634552,
+          "chance_accuracy": 0.3333333333333333,
+          "confusion_matrix": [
+            [
+              84,
+              13,
+              3
+            ],
+            [
+              14,
+              77,
+              9
+            ],
+            [
+              12,
+              8,
+              81
+            ]
+          ],
+          "logistic_regression": {
+            "C": 1.0,
+            "iterations": [
+              123
+            ],
+            "max_iter": 2000,
+            "multi_class": "multinomial_automatic_for_three_classes_with_lbfgs",
+            "random_state": 6304,
+            "solver": "lbfgs"
+          },
+          "standard_scaler_fit_scope": "probe_training_features_only",
+          "test_count": 301,
+          "train_count": 701
+        }
+      },
+      "source_validation": {
+        "art_painting_accuracy": 0.9243902439024391,
+        "art_painting_macro_f1": 0.92597515211018,
+        "cartoon_accuracy": 0.9530916844349681,
+        "cartoon_macro_f1": 0.9578542361003685,
+        "mean_source_accuracy": 0.9491806028589761,
+        "mean_source_macro_f1": 0.9495999654855433,
+        "photo_accuracy": 0.9700598802395209,
+        "photo_macro_f1": 0.9649705082460817,
+        "worst_source_accuracy": 0.9243902439024391,
+        "worst_source_macro_f1": 0.92597515211018
+      },
+      "target": {
+        "accuracy": 0.7332654619496055,
+        "confusion_matrix": [
+          [
+            459,
+            146,
+            37,
+            0,
+            102,
+            2,
+            26
+          ],
+          [
+            100,
+            603,
+            8,
+            0,
+            11,
+            0,
+            18
+          ],
+          [
+            75,
+            52,
+            539,
+            4,
+            73,
+            0,
+            10
+          ],
+          [
+            2,
+            31,
+            14,
+            561,
+            0,
+            0,
+            0
+          ],
+          [
+            95,
+            62,
+            78,
+            11,
+            560,
+            6,
+            4
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            79,
+            0
+          ],
+          [
+            3,
+            45,
+            27,
+            3,
+            0,
+            2,
+            80
+          ]
+        ],
+        "count": 3929,
+        "delta_accuracy_vs_erm": 0.11326037159582591,
+        "macro_f1": 0.7431281508614604,
+        "per_class": {
+          "dog": {
+            "accuracy": 0.594559585492228,
+            "correct": 459,
+            "support": 772
+          },
+          "elephant": {
+            "accuracy": 0.8148648648648649,
+            "correct": 603,
+            "support": 740
+          },
+          "giraffe": {
+            "accuracy": 0.7158034528552457,
+            "correct": 539,
+            "support": 753
+          },
+          "guitar": {
+            "accuracy": 0.9226973684210527,
+            "correct": 561,
+            "support": 608
+          },
+          "horse": {
+            "accuracy": 0.6862745098039216,
+            "correct": 560,
+            "support": 816
+          },
+          "house": {
+            "accuracy": 0.9875,
+            "correct": 79,
+            "support": 80
+          },
+          "person": {
+            "accuracy": 0.5,
+            "correct": 80,
+            "support": 160
+          }
+        }
+      }
+    },
+    "dan_dg_floor_10": {
+      "identity": {
+        "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/research_variants/dan_dg_initial_bandwidth_floor_v1/training/dan_dg_floor_10/best.pt",
+        "checkpoint_sha256": "030adaa198612ccda2914aa283c83c12554f16a210e82ba5f4e3fcd93c4d5483",
+        "selected_epoch": 17,
+        "state_dict_sha256": "1392f2884e16db495ed29ff60668a84b081cca919f57393ea8218086093b43e3"
+      },
+      "source_diagnostics": {
+        "common_sharpness_proxy": {
+          "actual_perturbation_norm": 0.05000000084166914,
+          "base_cross_entropy": 0.20307929813861847,
+          "delta_sharp": 24.753530502319336,
+          "gradient_norm": 37.12353272731354,
+          "perturbed_cross_entropy": 24.95660972595215,
+          "radius": 0.05
+        },
+        "source_domain_separability": {
+          "accuracy": 0.7574750830564784,
+          "chance_accuracy": 0.3333333333333333,
+          "confusion_matrix": [
+            [
+              77,
+              14,
+              9
+            ],
+            [
+              15,
+              72,
+              13
+            ],
+            [
+              10,
+              12,
+              79
+            ]
+          ],
+          "logistic_regression": {
+            "C": 1.0,
+            "iterations": [
+              278
+            ],
+            "max_iter": 2000,
+            "multi_class": "multinomial_automatic_for_three_classes_with_lbfgs",
+            "random_state": 6304,
+            "solver": "lbfgs"
+          },
+          "standard_scaler_fit_scope": "probe_training_features_only",
+          "test_count": 301,
+          "train_count": 701
+        }
+      },
+      "source_validation": {
+        "art_painting_accuracy": 0.875609756097561,
+        "art_painting_macro_f1": 0.8746958622159983,
+        "cartoon_accuracy": 0.9381663113006397,
+        "cartoon_macro_f1": 0.9408272365518939,
+        "mean_source_accuracy": 0.9229552959191607,
+        "mean_source_macro_f1": 0.9211242673662049,
+        "photo_accuracy": 0.9550898203592815,
+        "photo_macro_f1": 0.9478497033307226,
+        "worst_source_accuracy": 0.875609756097561,
+        "worst_source_macro_f1": 0.8746958622159983
+      },
+      "target": {
+        "accuracy": 0.7121404937643167,
+        "confusion_matrix": [
+          [
+            255,
+            123,
+            91,
+            1,
+            268,
+            1,
+            33
+          ],
+          [
+            32,
+            527,
+            39,
+            1,
+            129,
+            0,
+            12
+          ],
+          [
+            33,
+            19,
+            532,
+            7,
+            159,
+            1,
+            2
+          ],
+          [
+            4,
+            16,
+            22,
+            565,
+            1,
+            0,
+            0
+          ],
+          [
+            27,
+            8,
+            43,
+            2,
+            732,
+            1,
+            3
+          ],
+          [
+            0,
+            3,
+            1,
+            6,
+            1,
+            69,
+            0
+          ],
+          [
+            3,
+            13,
+            13,
+            2,
+            10,
+            1,
+            118
+          ]
+        ],
+        "count": 3929,
+        "delta_accuracy_vs_erm": 0.09213540341053705,
+        "macro_f1": 0.7362631439533907,
+        "per_class": {
+          "dog": {
+            "accuracy": 0.33031088082901555,
+            "correct": 255,
+            "support": 772
+          },
+          "elephant": {
+            "accuracy": 0.7121621621621622,
+            "correct": 527,
+            "support": 740
+          },
+          "giraffe": {
+            "accuracy": 0.7065073041168659,
+            "correct": 532,
+            "support": 753
+          },
+          "guitar": {
+            "accuracy": 0.9292763157894737,
+            "correct": 565,
+            "support": 608
+          },
+          "horse": {
+            "accuracy": 0.8970588235294118,
+            "correct": 732,
+            "support": 816
+          },
+          "house": {
+            "accuracy": 0.8625,
+            "correct": 69,
+            "support": 80
+          },
+          "person": {
+            "accuracy": 0.7375,
+            "correct": 118,
+            "support": 160
+          }
+        }
+      }
+    },
+    "erm": {
+      "identity": {
+        "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/source_only/best.pt",
+        "checkpoint_sha256": "3d28a223e4b97b323cb3a20dcb5b7577af96631f2e6ef1f2bc99d53d85761327",
+        "selected_epoch": 4,
+        "state_dict_sha256": "45de50ed1fbddd89396ac9dab2fbc69ce8f80e0e3437b196f05a646431ee58a9"
+      },
+      "source_diagnostics": {
+        "common_sharpness_proxy": {
+          "actual_perturbation_norm": 0.04999999950660854,
+          "base_cross_entropy": 0.0986553207039833,
+          "delta_sharp": 0.24889972805976868,
+          "gradient_norm": 3.5718691952142927,
+          "perturbed_cross_entropy": 0.3475550413131714,
+          "radius": 0.05
+        },
+        "source_domain_separability": {
+          "accuracy": 0.8770764119601329,
+          "chance_accuracy": 0.3333333333333333,
+          "confusion_matrix": [
+            [
+              89,
+              11,
+              0
+            ],
+            [
+              14,
+              83,
+              3
+            ],
+            [
+              6,
+              3,
+              92
+            ]
+          ],
+          "logistic_regression": {
+            "C": 1.0,
+            "iterations": [
+              86
+            ],
+            "max_iter": 2000,
+            "multi_class": "multinomial_automatic_for_three_classes_with_lbfgs",
+            "random_state": 6304,
+            "solver": "lbfgs"
+          },
+          "standard_scaler_fit_scope": "probe_training_features_only",
+          "test_count": 301,
+          "train_count": 701
+        }
+      },
+      "source_validation": {
+        "art_painting_accuracy": 0.9097560975609756,
+        "art_painting_macro_f1": 0.9119171075935996,
+        "cartoon_accuracy": 0.9402985074626866,
+        "cartoon_macro_f1": 0.947827661029101,
+        "mean_source_accuracy": 0.9410361657464104,
+        "mean_source_macro_f1": 0.9426262342459099,
+        "photo_accuracy": 0.9730538922155688,
+        "photo_macro_f1": 0.9681339341150288,
+        "worst_source_accuracy": 0.9097560975609756,
+        "worst_source_macro_f1": 0.9119171075935996
+      },
+      "target": {
+        "accuracy": 0.6200050903537796,
+        "confusion_matrix": [
+          [
+            575,
+            51,
+            2,
+            0,
+            138,
+            0,
+            6
+          ],
+          [
+            380,
+            285,
+            0,
+            0,
+            75,
+            0,
+            0
+          ],
+          [
+            211,
+            20,
+            241,
+            5,
+            263,
+            0,
+            13
+          ],
+          [
+            54,
+            9,
+            0,
+            539,
+            5,
+            1,
+            0
+          ],
+          [
+            149,
+            10,
+            1,
+            0,
+            655,
+            0,
+            1
+          ],
+          [
+            1,
+            6,
+            0,
+            1,
+            0,
+            72,
+            0
+          ],
+          [
+            56,
+            27,
+            2,
+            0,
+            6,
+            0,
+            69
+          ]
+        ],
+        "count": 3929,
+        "delta_accuracy_vs_erm": 0.0,
+        "macro_f1": 0.6573709658779567,
+        "per_class": {
+          "dog": {
+            "accuracy": 0.7448186528497409,
+            "correct": 575,
+            "support": 772
+          },
+          "elephant": {
+            "accuracy": 0.38513513513513514,
+            "correct": 285,
+            "support": 740
+          },
+          "giraffe": {
+            "accuracy": 0.3200531208499336,
+            "correct": 241,
+            "support": 753
+          },
+          "guitar": {
+            "accuracy": 0.8865131578947368,
+            "correct": 539,
+            "support": 608
+          },
+          "horse": {
+            "accuracy": 0.8026960784313726,
+            "correct": 655,
+            "support": 816
+          },
+          "house": {
+            "accuracy": 0.9,
+            "correct": 72,
+            "support": 80
+          },
+          "person": {
+            "accuracy": 0.43125,
+            "correct": 69,
+            "support": 160
+          }
+        }
+      }
+    },
+    "sam": {
+      "identity": {
+        "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/training/sam/best.pt",
+        "checkpoint_sha256": "040a80ce15974d71f3a90b5aab5050965d27212822079e5a075c742052c0827d",
+        "selected_epoch": 5,
+        "state_dict_sha256": "944afdb73bf7d3816c3406073c0313cb1a62bc7e12a04ff4bf6ca81726a0633e"
+      },
+      "source_diagnostics": {
+        "common_sharpness_proxy": {
+          "actual_perturbation_norm": 0.050000000945398776,
+          "base_cross_entropy": 0.08115758001804352,
+          "delta_sharp": 0.09692519903182983,
+          "gradient_norm": 1.5105704076905548,
+          "perturbed_cross_entropy": 0.17808277904987335,
+          "radius": 0.05
+        },
+        "source_domain_separability": {
+          "accuracy": 0.867109634551495,
+          "chance_accuracy": 0.3333333333333333,
+          "confusion_matrix": [
+            [
+              85,
+              14,
+              1
+            ],
+            [
+              12,
+              86,
+              2
+            ],
+            [
+              9,
+              2,
+              90
+            ]
+          ],
+          "logistic_regression": {
+            "C": 1.0,
+            "iterations": [
+              100
+            ],
+            "max_iter": 2000,
+            "multi_class": "multinomial_automatic_for_three_classes_with_lbfgs",
+            "random_state": 6304,
+            "solver": "lbfgs"
+          },
+          "standard_scaler_fit_scope": "probe_training_features_only",
+          "test_count": 301,
+          "train_count": 701
+        }
+      },
+      "source_validation": {
+        "art_painting_accuracy": 0.9243902439024391,
+        "art_painting_macro_f1": 0.9236855934108259,
+        "cartoon_accuracy": 0.9573560767590619,
+        "cartoon_macro_f1": 0.9626644675708457,
+        "mean_source_accuracy": 0.9535960789430552,
+        "mean_source_macro_f1": 0.9540473940355131,
+        "photo_accuracy": 0.9790419161676647,
+        "photo_macro_f1": 0.9757921211248675,
+        "worst_source_accuracy": 0.9243902439024391,
+        "worst_source_macro_f1": 0.9236855934108259
+      },
+      "target": {
+        "accuracy": 0.7258844489692033,
+        "confusion_matrix": [
+          [
+            421,
+            208,
+            3,
+            0,
+            123,
+            1,
+            16
+          ],
+          [
+            35,
+            696,
+            1,
+            0,
+            6,
+            0,
+            2
+          ],
+          [
+            145,
+            57,
+            401,
+            10,
+            123,
+            0,
+            17
+          ],
+          [
+            4,
+            32,
+            2,
+            569,
+            0,
+            0,
+            1
+          ],
+          [
+            91,
+            118,
+            5,
+            2,
+            596,
+            2,
+            2
+          ],
+          [
+            0,
+            11,
+            0,
+            0,
+            0,
+            68,
+            1
+          ],
+          [
+            13,
+            40,
+            4,
+            1,
+            1,
+            0,
+            101
+          ]
+        ],
+        "count": 3929,
+        "delta_accuracy_vs_erm": 0.10587935861542375,
+        "macro_f1": 0.7475237789949265,
+        "per_class": {
+          "dog": {
+            "accuracy": 0.5453367875647669,
+            "correct": 421,
+            "support": 772
+          },
+          "elephant": {
+            "accuracy": 0.9405405405405406,
+            "correct": 696,
+            "support": 740
+          },
+          "giraffe": {
+            "accuracy": 0.5325365205843293,
+            "correct": 401,
+            "support": 753
+          },
+          "guitar": {
+            "accuracy": 0.9358552631578947,
+            "correct": 569,
+            "support": 608
+          },
+          "horse": {
+            "accuracy": 0.7303921568627451,
+            "correct": 596,
+            "support": 816
+          },
+          "house": {
+            "accuracy": 0.85,
+            "correct": 68,
+            "support": 80
+          },
+          "person": {
+            "accuracy": 0.63125,
+            "correct": 101,
+            "support": 160
+          }
+        }
+      }
+    }
+  },
+  "runtime": {
+    "cuda": "12.8",
+    "cudnn": 91900,
+    "device_type": "cuda",
+    "gpu": "Tesla T4",
+    "numpy": "2.1.3",
+    "python": "3.13.15",
+    "sklearn": "1.6.1",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128"
+  },
+  "status": "TASK3_FINAL_SKETCH_EVALUATION_PASS",
+  "supplementary_floor_study": [
+    "erm",
+    "dan_dg_floor_0p1",
+    "dan_dg_floor_1",
+    "dan_dg_floor_10"
+  ],
+  "target_count": 3929,
+  "target_evaluation_once": true,
+  "target_labels_used_for_training_or_selection": false,
+  "task2_comparison": {
+    "accuracy_difference_task3_minus_task2": -0.10307966403665059,
+    "macro_f1_difference_task3_minus_task2": -0.10585191790974191,
+    "predictions_evidence": {
+      "path": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/target_predictions.csv",
+      "sha256": "35c6fb24a9f7fb2b576bfd9dbae84eb2c0ab2bbbf4e71e370f8d512a9c913bb3"
+    },
+    "results_evidence": {
+      "path": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/final_results.json",
+      "sha256": "aa3685b1d5370e20d76798fb2ebbc7cb2286e7466c2dfdd8a4414799aad65883"
+    },
+    "target_aware_dan_task2": {
+      "accuracy": 0.7582081954695852,
+      "count": 3929,
+      "macro_f1": 0.7076016045384376,
+      "per_class": {
+        "dog": {
+          "accuracy": 0.5867875647668394,
+          "support": 772
+        },
+        "elephant": {
+          "accuracy": 0.9175675675675675,
+          "support": 740
+        },
+        "giraffe": {
+          "accuracy": 0.7397078353253652,
+          "support": 753
+        },
+        "guitar": {
+          "accuracy": 0.9358552631578947,
+          "support": 608
+        },
+        "horse": {
+          "accuracy": 0.6151960784313726,
+          "support": 816
+        },
+        "house": {
+          "accuracy": 1.0,
+          "support": 80
+        },
+        "person": {
+          "accuracy": 0.86875,
+          "support": 160
+        }
+      }
+    },
+    "target_free_dan_dg_task3": {
+      "accuracy": 0.6551285314329346,
+      "confusion_matrix": [
+        [
+          196,
+          337,
+          59,
+          33,
+          137,
+          9,
+          1
+        ],
+        [
+          7,
+          720,
+          2,
+          6,
+          5,
+          0,
+          0
+        ],
+        [
+          12,
+          117,
+          471,
+          72,
+          79,
+          2,
+          0
+        ],
+        [
+          0,
+          12,
+          1,
+          595,
+          0,
+          0,
+          0
+        ],
+        [
+          12,
+          183,
+          57,
+          54,
+          502,
+          8,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          2,
+          0,
+          76,
+          0
+        ],
+        [
+          1,
+          60,
+          25,
+          48,
+          1,
+          11,
+          14
+        ]
+      ],
+      "count": 3929,
+      "delta_accuracy_vs_erm": 0.03512344107915499,
+      "macro_f1": 0.6017496866286957,
+      "per_class": {
+        "dog": {
+          "accuracy": 0.2538860103626943,
+          "correct": 196,
+          "support": 772
+        },
+        "elephant": {
+          "accuracy": 0.972972972972973,
+          "correct": 720,
+          "support": 740
+        },
+        "giraffe": {
+          "accuracy": 0.6254980079681275,
+          "correct": 471,
+          "support": 753
+        },
+        "guitar": {
+          "accuracy": 0.9786184210526315,
+          "correct": 595,
+          "support": 608
+        },
+        "horse": {
+          "accuracy": 0.6151960784313726,
+          "correct": 502,
+          "support": 816
+        },
+        "house": {
+          "accuracy": 0.95,
+          "correct": 76,
+          "support": 80
+        },
+        "person": {
+          "accuracy": 0.0875,
+          "correct": 14,
+          "support": 160
+        }
+      }
+    }
+  },
+  "transform": "resize_256_center_crop_224_imagenet_normalization"
+}
