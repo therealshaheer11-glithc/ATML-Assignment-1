@@ -3,7 +3,7 @@
 Code, experiment protocols, results, and reproducibility evidence for all four tasks.
 
 | Task | Guide | Current status |
-| --- | --- | --- |
+|---|---|---|
 | 1 — STL-10 inductive biases | [Task 1](task1/README.md) | Code, split manifests, predictions, metrics, and figures published |
 | 2 — PACS domain adaptation | [Task 2](task2/README.md) | Official histories, frozen results, plots, and provenance published |
 | 3 — PACS domain generalization | [Task 3](task3/README.md) | Training, diagnostics, final experiment lock, and one-time Sketch evaluation completed |
@@ -21,29 +21,65 @@ tests/       Repository-level locked-choice and saved-evidence checks
 tools/       Saved-evidence verification and Colab export utilities
 ```
 
-The [Task 1 environment](colab-environment.json) and
-[Colab add-on dependencies](requirements-colab.txt) apply to Task 1. Later tasks use
-the environments recorded in their respective run and provenance files.
+Datasets, large model checkpoints, environments, and large feature or score caches
+remain outside Git. Small machine-readable results, split manifests, training
+histories, predictions, figures, locks, and provenance records are published in their
+corresponding task directories.
 
-Datasets, model checkpoints, and large feature caches remain outside Git. Each task
-guide documents its storage locations and the requirements for reproduction from a
-fresh checkout.
+## Environment scope
+
+The repository contains several related environment records rather than one universal
+environment file because the four tasks were executed at different stages.
+
+- The [Task 1 environment](colab-environment.json) and
+  [Task 1 Colab add-on dependencies](requirements-colab.txt) apply to Task 1.
+- Task 2’s exact environments are recorded in its run and provenance files, with
+  reproduction instructions in
+  [`task2/docs/REPRODUCTION.md`](task2/docs/REPRODUCTION.md).
+- Task 3’s exact runtime and historical repository snapshots are documented in
+  [`task3/docs/REPRODUCTION.md`](task3/docs/REPRODUCTION.md).
+- Task 4’s general dependencies are listed in
+  [`task4/requirements.txt`](task4/requirements.txt), while its exact completed runtime
+  is recorded in
+  [`task4/provenance/runtime_preflight.json`](task4/provenance/runtime_preflight.json).
+
+Exact experiment reproduction should use the task-specific recorded environment and
+pinned repository snapshot. Installing only pytest is sufficient only when the
+scientific and machine-learning dependencies are already available.
 
 ## Repository verification
 
-Install the lightweight testing dependency and run all repository checks from the
-repository root:
+From a fresh Python environment, install the general scientific dependencies used by
+the repository checks and the lightweight test dependency:
 
 ```bash
+python -m pip install -r task4/requirements.txt
 python -m pip install -r requirements-dev.txt
+```
+
+Then run all repository tests from the repository root:
+
+```bash
 python -m pytest -q tests task3/tests task4/tests
 ```
 
-The Task 3 tests can also be run without pytest:
+The Task 3 suite can also be run without pytest:
 
 ```bash
 python -m unittest discover -s task3/tests -v
 ```
+
+To verify the published Task 1 and Task 2 evidence, historical package manifests,
+saved metrics, predictions, plots, and local documentation links, run:
+
+```bash
+python tools/verify_saved_evidence.py
+```
+
+The saved-evidence verifier expects a normal Git clone containing the repository
+history because it authenticates files against pinned historical commits. These
+verification commands inspect published evidence; they do not rerun model training or
+the completed one-time target evaluations.
 
 ## Provenance and experiment status
 
@@ -56,13 +92,17 @@ python -m unittest discover -s task3/tests -v
   [pinned reproduction instructions](task2/docs/REPRODUCTION.md), because the
   organized documentation checkout has a different code-tree identity from the
   historical training snapshots.
-- The [Task 2 repository audit](task2/docs/REPOSITORY-AUDIT.md) records the completed
+- The [Task 2 repository audit](task2/docs/REPOSITORY-AUDIT.md) records its completed
   checks.
-- Task 3’s final lock, one-time Sketch evaluation, and artifact identities are recorded
-  in its [run log](task3/provenance/RUN_LOG.md).
-- Task 4’s selected checkpoints, frozen evaluation protocol, final tables, failure
-  analysis, and artifact identities are indexed in the
-  [Task 4 results guide](task4/results/README.md).
+- Task 3’s pinned snapshots and verification instructions are documented in its
+  [reproduction guide](task3/docs/REPRODUCTION.md). Its published final results and
+  training histories are indexed in the
+  [Task 3 results guide](task3/results/README.md).
+- Task 4’s selected-checkpoint records, frozen evaluation protocol, final tables,
+  failure analysis, and artifact identities are indexed in the
+  [Task 4 results guide](task4/results/README.md). The historical scope of its
+  publication manifest is documented in the
+  [Task 4 provenance guide](task4/provenance/README.md).
 
 ## Attribution
 
