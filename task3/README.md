@@ -2,7 +2,12 @@
 
 This directory implements the approved source-only training stage for Task 3 of
 ATML Programming Assignment 1. The authoritative choices and their rationale are in
-`docs/TASK3_PROTOCOL_AND_DECISIONS.md`; this README is only the execution guide.
+[`docs/TASK3_PROTOCOL_AND_DECISIONS.md`](docs/TASK3_PROTOCOL_AND_DECISIONS.md).
+This README provides the experiment overview and historical execution commands.
+
+For verification of the published evidence and reproduction of historical stages, use
+the [pinned reproduction guide](docs/REPRODUCTION.md). Published final results and
+training histories are indexed in the [Task 3 results guide](results/README.md).
 
 ## Safety boundary
 
@@ -36,8 +41,12 @@ on all 3,929 locked Sketch images. No target label was used for training or mode
 selection, and no checkpoint was changed after the evaluation.
 
 The exact completion records, aggregate results, and artifact hashes are documented in
-`provenance/RUN_LOG.md`. The executed notebook is preserved unchanged at
-`provenance/notebooks/ATML_PA_TASK3.ipynb`.
+the [Task 3 execution log](provenance/RUN_LOG.md). The executed notebook is preserved
+unchanged at
+[`provenance/notebooks/ATML_PA_TASK3.ipynb`](provenance/notebooks/ATML_PA_TASK3.ipynb).
+
+The published final results, per-example predictions, selected failure examples, and
+training histories are indexed in the [Task 3 results guide](results/README.md).
 
 ## Supplementary bandwidth-floor research study
 
@@ -46,8 +55,9 @@ separate research study was approved to test whether initialization-anchored ban
 floors stabilize DAN-DG. This study is not a replacement for the PDF-prescribed
 adaptive-bandwidth runs. Its exact motivation, single controlled change, invariants,
 calibration, comparison plan, and interpretation boundary are recorded in
-`docs/DAN_DG_BANDWIDTH_FLOOR_RESEARCH_VARIANT.md` and
-`preregistration/DAN_DG_BANDWIDTH_FLOOR_STUDY.md`.
+[`docs/DAN_DG_BANDWIDTH_FLOOR_RESEARCH_VARIANT.md`](docs/DAN_DG_BANDWIDTH_FLOOR_RESEARCH_VARIANT.md)
+and
+[`preregistration/DAN_DG_BANDWIDTH_FLOOR_STUDY.md`](preregistration/DAN_DG_BANDWIDTH_FLOOR_STUDY.md).
 
 The study uses run IDs `dan_dg_floor_0p1`, `dan_dg_floor_1`, and
 `dan_dg_floor_10`. All three reuse one source-only calibration file and are written to
@@ -71,7 +81,19 @@ presented as the original `dan_dg_0p1`, `dan_dg_1`, or `dan_dg_10` runs.
 - DAN-DG study preregistration SHA-256:
   `e8377b762cc1872b6e814e565869414320cff94bbacd69fe097d70b29d4146fb`
 
-## Verification before training
+## Historical verification before prescribed training
+
+The commands in this section describe the original prescribed training stage. First
+check out commit:
+
+```text
+19208b4c62acb980fb3246f30e062784b90d8dfc
+```
+
+The complete snapshot sequence is documented in the
+[pinned reproduction guide](docs/REPRODUCTION.md). The preserved notebook blocks use
+snapshot-specific test counts and code hashes and must not be combined with the latest
+`main` checkout.
 
 Run the target-free unit tests from the repository root:
 
@@ -94,7 +116,7 @@ python -m task3.preflight \
 
 Training must not begin unless both checks pass.
 
-## Training commands
+## Historical prescribed training commands
 
 Run exactly one configuration at a time. The output root is shared so that every run
 must agree on the source protocol, source snapshot, code, initialization,
@@ -125,11 +147,25 @@ Each run writes:
   and
 - `run.json`, written after early stopping or the 30-epoch budget.
 
-## Source-only diagnostics after training
+The original published histories are available under
+[`results/training/prescribed/`](results/training/prescribed/).
 
-After all four training configurations have completed and their checkpoints have been
-reviewed, run the deterministic source diagnostics before creating the final experiment
-lock. The diagnostic code never accepts a Sketch path.
+## Historical source-only diagnostics
+
+After the prescribed training configurations completed and their checkpoints were
+reviewed, deterministic source-only diagnostics were run before the final experiment
+lock. The diagnostic code never accepted a Sketch path.
+
+The exact diagnostic snapshots, including the later complete eight-model diagnostic
+stage, are identified in the
+[pinned reproduction guide](docs/REPRODUCTION.md). The complete diagnostic stage used
+commit:
+
+```text
+136e28b556d38c99e486e2d53ddff33d921fbfc6
+```
+
+The original diagnostic command was:
 
 ```bash
 python -m task3.evaluation.run_source_diagnostics \
@@ -141,12 +177,25 @@ python -m task3.evaluation.run_source_diagnostics \
   --output /content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/source_diagnostics/source_diagnostics.json
 ```
 
-The command saves the exact 1,002-image source-domain probe design, its shared
+The diagnostics saved the exact 1,002-image source-domain probe design, its shared
 domain-stratified 70/30 partition, the fixed 96-image sharpness batch, reproduced
 source-validation metrics, source-domain separability, and the common radius-0.05
-sharpness proxy for ERM, prescribed DAN-DG lambda 1, and SAM. It uses raw 512-D
-features for the probe, fits `StandardScaler` only on the probe-training partition,
-and never loads Sketch.
+sharpness proxy. The probe used raw 512-D features and fitted `StandardScaler` only on
+the probe-training partition. No diagnostic stage loaded Sketch.
+
+## Completed one-time target evaluation
+
+The final experiment lock and one-time Sketch evaluation were completed at repository
+commit:
+
+```text
+31618caebaf42acb18dd657407d22f03b4a2464f
+```
+
+This evaluation is a completed historical action and should not be rerun merely to
+verify the repository. Use the published lock, completion records, predictions, and
+machine-readable results for verification. No target result may be used to retrain,
+reselect, replace, or reorder a checkpoint.
 
 ## Failure policy
 
