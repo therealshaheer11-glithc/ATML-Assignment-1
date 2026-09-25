@@ -4,6 +4,24 @@ This log records execution evidence reported from the student's Colab notebook. 
 original machine-readable artifacts produced by Colab remain authoritative and will be
 copied into the persistent Task 3 provenance directory.
 
+## 25 September 2026 - approved supplementary bandwidth-floor study
+
+Status: protocol approved; implementation prepared; execution evidence pending
+
+After all prescribed training and locked source-only diagnostics were complete, the
+student approved a separate source-only research study motivated by the recorded
+lambda-1 bandwidth contraction, gradient escalation, near-universal clipping, weak
+source checkpoint, and extreme common sharpness value. The original runs remain
+immutable and primary.
+
+The single study change is an initialization-anchored pair-specific lower bound on the
+otherwise unchanged current-batch median bandwidth. The three floors will be calibrated
+once from 235 deterministic center-crop source-training batches at the untouched common
+initialization, using no labels in the computation and no Sketch data. The median of
+the 235 batch medians becomes that pair's floor with multiplier 1.0. The same floors
+will be reused for lambda 0.1, 1, and 10; every other primary training setting remains
+fixed. Full calibration and run evidence will be appended only after Colab reports it.
+
 ## 24 September 2026 - Block 01: environment preflight
 
 Status: `TASK3_BLOCK_01_PASS`
