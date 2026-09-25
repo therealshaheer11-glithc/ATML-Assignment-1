@@ -11,10 +11,10 @@ may access only Photo, Art Painting, and Cartoon. It must not traverse, load, in
 or extract Sketch. `data.py` accepts only the mechanically derived source-only
 protocol and verifies its SHA-256 identity before constructing any dataset.
 
-Do not add Sketch paths or a target loader to `train.py`. Final Sketch evaluation will
-be implemented as a separate component only after every configuration and checkpoint
-has been frozen in the final experiment-lock manifest and the student has explicitly
-authorized target access.
+Do not add Sketch paths or a target loader to `train.py`. The completed final Sketch
+evaluation is isolated in `evaluation/final_sketch.py`; it ran only after every
+configuration and checkpoint had been frozen in the final experiment-lock manifest
+and the student had explicitly authorized target access.
 
 ## Implemented runs
 
@@ -26,6 +26,18 @@ authorized target access.
 | `sam` | standard non-adaptive SAM, rho 0.05 | main comparison |
 
 The Task 2 ERM checkpoint is reused without retraining.
+
+## Final evaluation status
+
+Blocks 15 and 16 completed successfully at repository commit
+`31618caebaf42acb18dd657407d22f03b4a2464f`. Block 15 froze all eight selected
+checkpoints without accessing Sketch. Block 16 then evaluated those checkpoints once
+on all 3,929 locked Sketch images. No target label was used for training or model
+selection, and no checkpoint was changed after the evaluation.
+
+The exact completion records, aggregate results, and artifact hashes are documented in
+`provenance/RUN_LOG.md`. The executed notebook is preserved unchanged at
+`provenance/notebooks/ATML_PA_TASK3.ipynb`.
 
 ## Supplementary bandwidth-floor research study
 

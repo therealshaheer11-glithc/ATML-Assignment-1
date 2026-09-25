@@ -625,3 +625,52 @@ Block 15 implements the approved target-free lock only. Block 16 is a separate,
 explicitly authorized one-time target evaluation. No target result may be used to
 retrain, reselect, replace, or reorder a checkpoint. Sketch images accessed before the
 lock: zero.
+
+## 25 September 2026 - Block 15: final experiment lock
+
+Status: `TASK3_BLOCK_15_FINAL_EXPERIMENT_LOCK_PASS`
+
+Block 15 ran at repository commit
+`31618caebaf42acb18dd657407d22f03b4a2464f`, with code-tree SHA-256
+`e5d2bf6341c341d532aeccbae89a34dca01ff3b7dc2e8dfddc782d04b58f5b05`.
+All target-free gates passed and all eight selected checkpoints became immutable.
+No Sketch record, image, label, or Task 2 target-result file was accessed.
+
+Final experiment lock SHA-256:
+`35d2a2df7e2b64ac14eb05c260b8b24410b5485aafa489d9427368b3caa52348`
+
+## 25 September 2026 - Block 16: one-time final Sketch evaluation
+
+Status: `TASK3_BLOCK_16_FINAL_SKETCH_EVALUATION_PASS`
+
+The approved lock above authorized one evaluation of all eight frozen checkpoints on
+all 3,929 Sketch images. All post-lock gates passed. Target labels were not used for
+training or selection, and no checkpoint was changed after seeing the results.
+
+| Model | Accuracy | Macro-F1 | Accuracy change from ERM |
+| --- | ---: | ---: | ---: |
+| ERM | 0.6200050904 | 0.6573709659 | 0.0000000000 |
+| Original DAN-DG, lambda 1 | 0.6551285314 | 0.6017496866 | +0.0351234411 |
+| SAM | 0.7258844490 | 0.7475237790 | +0.1058793586 |
+| Original DAN-DG, lambda 0.1 | 0.7322473912 | 0.7335474578 | +0.1122423008 |
+| Original DAN-DG, lambda 10 | 0.0407228302 | 0.0111798204 | -0.5792822601 |
+| Floor DAN-DG, lambda 0.1 | 0.7538813948 | 0.7845208728 | +0.1338763044 |
+| Floor DAN-DG, lambda 1 | 0.7332654619 | 0.7431281509 | +0.1132603716 |
+| Floor DAN-DG, lambda 10 | 0.7121404938 | 0.7362631440 | +0.0921354034 |
+
+Final artifact SHA-256 identities:
+
+- `final_results.json`:
+  `0ffc9c6411f80e19a32e5094f4becb72303f359e77b342f1a17018e800c5bf98`;
+- `selected_change_examples.csv`:
+  `683fee229d085985bb89d376289df76582ab503ddc82ad9c66fd339a13f4035f`;
+- `target_predictions.csv`:
+  `84bb83e58f7c050256fceeea4e7a3ce7ad8f783ee1cd7bcffef7b0f373d67aa9`; and
+- target workspace snapshot:
+  `e604741543b025d6d197437f5f476135bc87787b268d1d7b0d0836d812d0d8cd`.
+
+The executed notebook is preserved unchanged at
+`task3/provenance/notebooks/ATML_PA_TASK3.ipynb`, with file SHA-256
+`c390d45edae55db367ab9e7eab601f40d05856046281110a57ed71962245f605`.
+It retains three earlier stopped setup attempts as part of the execution history. The
+final Block 15 and Block 16 cells completed successfully at execution counts 11 and 12.

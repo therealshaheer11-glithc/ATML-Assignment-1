@@ -1,0 +1,2 @@
+# Local repository verification
+pytest>=8,<9

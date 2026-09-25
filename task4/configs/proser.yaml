@@ -1,0 +1,30 @@
+{
+  "run_id": "proser",
+  "method": "proser",
+  "seed": 6304,
+  "model": {"architecture": "resnet18_cifar", "num_known_classes": 10},
+  "data": {
+    "validation_fraction": 0.1,
+    "normalization_mean": [0.4914, 0.4822, 0.4465],
+    "normalization_std": [0.2470, 0.2435, 0.2616]
+  },
+  "training": {
+    "epochs": 50,
+    "batch_size": 128,
+    "learning_rate": 0.001,
+    "momentum": 0.9,
+    "weight_decay": 0.0005,
+    "schedule": "cosine"
+  },
+  "proser": {
+    "dummy_classifiers": 5,
+    "beta": 1.0,
+    "gamma": 0.1,
+    "mixup_alpha": 2.0,
+    "mixup_beta": 2.0,
+    "mix_after": "layer2",
+    "batch_halves": ["classifier_placeholder", "data_placeholder"]
+  },
+  "selection": {"metric": "validation_accuracy", "mode": "max"}
+}
+

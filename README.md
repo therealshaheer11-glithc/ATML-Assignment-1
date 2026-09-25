@@ -6,13 +6,16 @@ Code, experiment protocols, and saved evidence. Start with the task guides below
 | --- | --- | --- |
 | 1 — STL-10 inductive biases | [Task 1](task1/README.md) | Code, split manifests, predictions, metrics, and figures published |
 | 2 — PACS domain adaptation | [Task 2](task2/README.md) | Code, official histories, frozen results, plots, and provenance published |
-| 3 — PACS domain generalization | Not started | Reuse the approved PACS split and required shared settings; agree on remaining choices before implementation |
+| 3 — PACS domain generalization | [Task 3](task3/README.md) | Training, diagnostics, final experiment lock, and one-time Sketch evaluation completed |
+| 4 — Open-set recognition | [Task 4](task4/README.md) | Implementation prepared; training and final evaluation pending |
 
 ## Repository layout
 
 ```text
 task1/       STL-10 code, configuration, reproduction guide, and results
 task2/       PACS UDA code, configurations, decision history, and provenance
+task3/       PACS DG code, frozen protocols, execution log, and evaluation tooling
+task4/       CIFAR open-set code, locked configurations, tests, and execution guide
 shared/      PACS data loading, fixed split, and MMD implementation
 tests/       Checks for locked Task 2 choices and final evaluation
 tools/       Saved-evidence verification and Colab evidence export
@@ -22,6 +25,21 @@ tools/       Saved-evidence verification and Colab evidence export
 apply to Task 1. Task 2 uses the environment recorded in its own run records.
 Datasets, checkpoints, and feature caches remain outside Git; each task guide identifies
 their storage locations and the limits of reproducing from a fresh clone.
+
+## Repository verification
+
+Install the lightweight test dependency, then run the repository checks from the root:
+
+```bash
+python -m pip install -r requirements-dev.txt
+python -m pytest -q tests task3/tests
+```
+
+The Task 3 suite can also be run without pytest:
+
+```bash
+python -m unittest discover -s task3/tests -v
+```
 
 ## Provenance and experiment status
 

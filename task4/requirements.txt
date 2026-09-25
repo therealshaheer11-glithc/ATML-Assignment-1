@@ -1,0 +1,7 @@
+# Task 4 uses these packages from the standard Colab runtime.
+torch
+torchvision
+numpy
+scikit-learn
+matplotlib
+
