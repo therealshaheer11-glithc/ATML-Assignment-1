@@ -1,0 +1,15 @@
+{
+  "code_tree_sha256": "e5d2bf6341c341d532aeccbae89a34dca01ff3b7dc2e8dfddc782d04b58f5b05",
+  "final_evaluation_started": false,
+  "final_lock": {
+    "path": "/content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/provenance/final_experiment_lock.json",
+    "sha256": "35d2a2df7e2b64ac14eb05c260b8b24410b5485aafa489d9427368b3caa52348"
+  },
+  "repository_commit": "31618caebaf42acb18dd657407d22f03b4a2464f",
+  "review_required_before_block_16": true,
+  "sketch_images_accessed": 0,
+  "status": "TASK3_BLOCK_15_FINAL_EXPERIMENT_LOCK_PASS",
+  "target_free_lock_creation": true,
+  "target_free_tests_passed": true,
+  "target_labels_accessed": false
+}

@@ -1,0 +1,8 @@
+{
+  "code_tree_sha256": "e5d2bf6341c341d532aeccbae89a34dca01ff3b7dc2e8dfddc782d04b58f5b05",
+  "post_target_training_or_selection": false,
+  "repository_commit": "31618caebaf42acb18dd657407d22f03b4a2464f",
+  "reviewed_final_lock_sha256": "35d2a2df7e2b64ac14eb05c260b8b24410b5485aafa489d9427368b3caa52348",
+  "single_complete_target_evaluation": true,
+  "status": "TASK3_FINAL_SKETCH_EVALUATION_AUTHORIZED"
+}

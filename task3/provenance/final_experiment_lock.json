@@ -1,0 +1,589 @@
+{
+  "approved_after_complete_source_diagnostics": true,
+  "checkpoint_replacement_permitted": false,
+  "checkpoints": {
+    "dan_dg_0p1": {
+      "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/training/dan_dg_0p1/best.pt",
+      "checkpoint_sha256": "dc6036a28e3af8c281b143adb6f47b4d03676fa44c117e912ef9bcd959d8ca27",
+      "research_variant": false,
+      "selected_epoch": 5,
+      "source_diagnostics": {
+        "common_sharpness_proxy": {
+          "actual_perturbation_norm": 0.05000000014135274,
+          "base_cross_entropy": 0.09695366770029068,
+          "delta_sharp": 0.27284857630729675,
+          "gradient_norm": 3.8740613856727655,
+          "perturbed_cross_entropy": 0.36980223655700684,
+          "radius": 0.05
+        },
+        "source_domain_separability": {
+          "accuracy": 0.8604651162790697,
+          "chance_accuracy": 0.3333333333333333,
+          "confusion_matrix": [
+            [
+              87,
+              11,
+              2
+            ],
+            [
+              12,
+              83,
+              5
+            ],
+            [
+              7,
+              5,
+              89
+            ]
+          ],
+          "logistic_regression": {
+            "C": 1.0,
+            "iterations": [
+              101
+            ],
+            "max_iter": 2000,
+            "multi_class": "multinomial_automatic_for_three_classes_with_lbfgs",
+            "random_state": 6304,
+            "solver": "lbfgs"
+          },
+          "standard_scaler_fit_scope": "probe_training_features_only",
+          "test_count": 301,
+          "train_count": 701
+        }
+      },
+      "source_validation": {
+        "art_painting_accuracy": 0.926829268292683,
+        "art_painting_macro_f1": 0.9230060448010302,
+        "cartoon_accuracy": 0.9466950959488273,
+        "cartoon_macro_f1": 0.9503774930172837,
+        "mean_source_accuracy": 0.9478614148270105,
+        "mean_source_macro_f1": 0.9462297763360951,
+        "photo_accuracy": 0.9700598802395209,
+        "photo_macro_f1": 0.9653057911899712,
+        "worst_source_accuracy": 0.926829268292683,
+        "worst_source_macro_f1": 0.9230060448010302
+      }
+    },
+    "dan_dg_1": {
+      "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/training/dan_dg_1/best.pt",
+      "checkpoint_sha256": "a44bff8e519134459c2d6bf056785801f9944945d160e516b4da7f5e2752992b",
+      "research_variant": false,
+      "selected_epoch": 3,
+      "source_diagnostics": {
+        "common_sharpness_proxy": {
+          "actual_perturbation_norm": 0.04999999989160926,
+          "base_cross_entropy": 0.42955514788627625,
+          "delta_sharp": 94.29026794433594,
+          "gradient_norm": 350.30227587487633,
+          "perturbed_cross_entropy": 94.7198257446289,
+          "radius": 0.05
+        },
+        "source_domain_separability": {
+          "accuracy": 0.7142857142857143,
+          "chance_accuracy": 0.3333333333333333,
+          "confusion_matrix": [
+            [
+              74,
+              18,
+              8
+            ],
+            [
+              22,
+              67,
+              11
+            ],
+            [
+              14,
+              13,
+              74
+            ]
+          ],
+          "logistic_regression": {
+            "C": 1.0,
+            "iterations": [
+              232
+            ],
+            "max_iter": 2000,
+            "multi_class": "multinomial_automatic_for_three_classes_with_lbfgs",
+            "random_state": 6304,
+            "solver": "lbfgs"
+          },
+          "standard_scaler_fit_scope": "probe_training_features_only",
+          "test_count": 301,
+          "train_count": 701
+        }
+      },
+      "source_validation": {
+        "art_painting_accuracy": 0.8048780487804879,
+        "art_painting_macro_f1": 0.8051965091232748,
+        "cartoon_accuracy": 0.8699360341151386,
+        "cartoon_macro_f1": 0.8685100408435343,
+        "mean_source_accuracy": 0.8736406224422547,
+        "mean_source_macro_f1": 0.8693286334613551,
+        "photo_accuracy": 0.9461077844311377,
+        "photo_macro_f1": 0.9342793504172562,
+        "worst_source_accuracy": 0.8048780487804879,
+        "worst_source_macro_f1": 0.8051965091232748
+      }
+    },
+    "dan_dg_10": {
+      "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/training/dan_dg_10/best.pt",
+      "checkpoint_sha256": "f8cc723dc16b5e17a48f8454541beb473b70e6c38d45895f170c09f59821b2c8",
+      "research_variant": false,
+      "selected_epoch": 7,
+      "source_diagnostics": {
+        "common_sharpness_proxy": {
+          "actual_perturbation_norm": 0.0499999998515154,
+          "base_cross_entropy": 3.9194698333740234,
+          "delta_sharp": 357.8193359375,
+          "gradient_norm": 5610.105191527356,
+          "perturbed_cross_entropy": 361.7388000488281,
+          "radius": 0.05
+        },
+        "source_domain_separability": {
+          "accuracy": 0.5780730897009967,
+          "chance_accuracy": 0.3333333333333333,
+          "confusion_matrix": [
+            [
+              71,
+              23,
+              6
+            ],
+            [
+              37,
+              38,
+              25
+            ],
+            [
+              16,
+              20,
+              65
+            ]
+          ],
+          "logistic_regression": {
+            "C": 1.0,
+            "iterations": [
+              359
+            ],
+            "max_iter": 2000,
+            "multi_class": "multinomial_automatic_for_three_classes_with_lbfgs",
+            "random_state": 6304,
+            "solver": "lbfgs"
+          },
+          "standard_scaler_fit_scope": "probe_training_features_only",
+          "test_count": 301,
+          "train_count": 701
+        }
+      },
+      "source_validation": {
+        "art_painting_accuracy": 0.21951219512195122,
+        "art_painting_macro_f1": 0.05142857142857143,
+        "cartoon_accuracy": 0.17270788912579957,
+        "cartoon_macro_f1": 0.04207792207792208,
+        "mean_source_accuracy": 0.21656837139595686,
+        "mean_source_macro_f1": 0.05066996495567924,
+        "photo_accuracy": 0.25748502994011974,
+        "photo_macro_f1": 0.058503401360544216,
+        "worst_source_accuracy": 0.17270788912579957,
+        "worst_source_macro_f1": 0.04207792207792208
+      }
+    },
+    "dan_dg_floor_0p1": {
+      "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/research_variants/dan_dg_initial_bandwidth_floor_v1/training/dan_dg_floor_0p1/best.pt",
+      "checkpoint_sha256": "46e770107eb563517239d524622bc7cb121d9e166de398b692350fc80c0a453c",
+      "research_variant": true,
+      "selected_epoch": 25,
+      "source_diagnostics": {
+        "common_sharpness_proxy": {
+          "actual_perturbation_norm": 0.0500000007421617,
+          "base_cross_entropy": 0.053371455520391464,
+          "delta_sharp": 0.6331654191017151,
+          "gradient_norm": 4.7493502224878394,
+          "perturbed_cross_entropy": 0.6865368485450745,
+          "radius": 0.05
+        },
+        "source_domain_separability": {
+          "accuracy": 0.8039867109634552,
+          "chance_accuracy": 0.3333333333333333,
+          "confusion_matrix": [
+            [
+              78,
+              15,
+              7
+            ],
+            [
+              15,
+              75,
+              10
+            ],
+            [
+              9,
+              3,
+              89
+            ]
+          ],
+          "logistic_regression": {
+            "C": 1.0,
+            "iterations": [
+              138
+            ],
+            "max_iter": 2000,
+            "multi_class": "multinomial_automatic_for_three_classes_with_lbfgs",
+            "random_state": 6304,
+            "solver": "lbfgs"
+          },
+          "standard_scaler_fit_scope": "probe_training_features_only",
+          "test_count": 301,
+          "train_count": 701
+        }
+      },
+      "source_validation": {
+        "art_painting_accuracy": 0.9,
+        "art_painting_macro_f1": 0.905926086081068,
+        "cartoon_accuracy": 0.9680170575692963,
+        "cartoon_macro_f1": 0.9728535317013297,
+        "mean_source_accuracy": 0.9440296379522405,
+        "mean_source_macro_f1": 0.9452069885556792,
+        "photo_accuracy": 0.9640718562874252,
+        "photo_macro_f1": 0.9568413478846398,
+        "worst_source_accuracy": 0.9,
+        "worst_source_macro_f1": 0.905926086081068
+      }
+    },
+    "dan_dg_floor_1": {
+      "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/research_variants/dan_dg_initial_bandwidth_floor_v1/training/dan_dg_floor_1/best.pt",
+      "checkpoint_sha256": "6b8c8ac0f373882b468e2fbf98bfeb4f97e1a799bf073cc6a7f3667d9747418a",
+      "research_variant": true,
+      "selected_epoch": 7,
+      "source_diagnostics": {
+        "common_sharpness_proxy": {
+          "actual_perturbation_norm": 0.049999999442737704,
+          "base_cross_entropy": 0.08110812306404114,
+          "delta_sharp": 6.699406147003174,
+          "gradient_norm": 12.6593804953945,
+          "perturbed_cross_entropy": 6.780514240264893,
+          "radius": 0.05
+        },
+        "source_domain_separability": {
+          "accuracy": 0.8039867109634552,
+          "chance_accuracy": 0.3333333333333333,
+          "confusion_matrix": [
+            [
+              84,
+              13,
+              3
+            ],
+            [
+              14,
+              77,
+              9
+            ],
+            [
+              12,
+              8,
+              81
+            ]
+          ],
+          "logistic_regression": {
+            "C": 1.0,
+            "iterations": [
+              123
+            ],
+            "max_iter": 2000,
+            "multi_class": "multinomial_automatic_for_three_classes_with_lbfgs",
+            "random_state": 6304,
+            "solver": "lbfgs"
+          },
+          "standard_scaler_fit_scope": "probe_training_features_only",
+          "test_count": 301,
+          "train_count": 701
+        }
+      },
+      "source_validation": {
+        "art_painting_accuracy": 0.9243902439024391,
+        "art_painting_macro_f1": 0.92597515211018,
+        "cartoon_accuracy": 0.9530916844349681,
+        "cartoon_macro_f1": 0.9578542361003685,
+        "mean_source_accuracy": 0.9491806028589761,
+        "mean_source_macro_f1": 0.9495999654855433,
+        "photo_accuracy": 0.9700598802395209,
+        "photo_macro_f1": 0.9649705082460817,
+        "worst_source_accuracy": 0.9243902439024391,
+        "worst_source_macro_f1": 0.92597515211018
+      }
+    },
+    "dan_dg_floor_10": {
+      "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/research_variants/dan_dg_initial_bandwidth_floor_v1/training/dan_dg_floor_10/best.pt",
+      "checkpoint_sha256": "030adaa198612ccda2914aa283c83c12554f16a210e82ba5f4e3fcd93c4d5483",
+      "research_variant": true,
+      "selected_epoch": 17,
+      "source_diagnostics": {
+        "common_sharpness_proxy": {
+          "actual_perturbation_norm": 0.05000000084166914,
+          "base_cross_entropy": 0.20307929813861847,
+          "delta_sharp": 24.753530502319336,
+          "gradient_norm": 37.12353272731354,
+          "perturbed_cross_entropy": 24.95660972595215,
+          "radius": 0.05
+        },
+        "source_domain_separability": {
+          "accuracy": 0.7574750830564784,
+          "chance_accuracy": 0.3333333333333333,
+          "confusion_matrix": [
+            [
+              77,
+              14,
+              9
+            ],
+            [
+              15,
+              72,
+              13
+            ],
+            [
+              10,
+              12,
+              79
+            ]
+          ],
+          "logistic_regression": {
+            "C": 1.0,
+            "iterations": [
+              278
+            ],
+            "max_iter": 2000,
+            "multi_class": "multinomial_automatic_for_three_classes_with_lbfgs",
+            "random_state": 6304,
+            "solver": "lbfgs"
+          },
+          "standard_scaler_fit_scope": "probe_training_features_only",
+          "test_count": 301,
+          "train_count": 701
+        }
+      },
+      "source_validation": {
+        "art_painting_accuracy": 0.875609756097561,
+        "art_painting_macro_f1": 0.8746958622159983,
+        "cartoon_accuracy": 0.9381663113006397,
+        "cartoon_macro_f1": 0.9408272365518939,
+        "mean_source_accuracy": 0.9229552959191607,
+        "mean_source_macro_f1": 0.9211242673662049,
+        "photo_accuracy": 0.9550898203592815,
+        "photo_macro_f1": 0.9478497033307226,
+        "worst_source_accuracy": 0.875609756097561,
+        "worst_source_macro_f1": 0.8746958622159983
+      }
+    },
+    "erm": {
+      "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task2_corrected_normalized_v3_20260923/source_only/best.pt",
+      "checkpoint_sha256": "3d28a223e4b97b323cb3a20dcb5b7577af96631f2e6ef1f2bc99d53d85761327",
+      "research_variant": false,
+      "selected_epoch": 4,
+      "source_diagnostics": {
+        "common_sharpness_proxy": {
+          "actual_perturbation_norm": 0.04999999950660854,
+          "base_cross_entropy": 0.0986553207039833,
+          "delta_sharp": 0.24889972805976868,
+          "gradient_norm": 3.5718691952142927,
+          "perturbed_cross_entropy": 0.3475550413131714,
+          "radius": 0.05
+        },
+        "source_domain_separability": {
+          "accuracy": 0.8770764119601329,
+          "chance_accuracy": 0.3333333333333333,
+          "confusion_matrix": [
+            [
+              89,
+              11,
+              0
+            ],
+            [
+              14,
+              83,
+              3
+            ],
+            [
+              6,
+              3,
+              92
+            ]
+          ],
+          "logistic_regression": {
+            "C": 1.0,
+            "iterations": [
+              86
+            ],
+            "max_iter": 2000,
+            "multi_class": "multinomial_automatic_for_three_classes_with_lbfgs",
+            "random_state": 6304,
+            "solver": "lbfgs"
+          },
+          "standard_scaler_fit_scope": "probe_training_features_only",
+          "test_count": 301,
+          "train_count": 701
+        }
+      },
+      "source_validation": {
+        "art_painting_accuracy": 0.9097560975609756,
+        "art_painting_macro_f1": 0.9119171075935996,
+        "cartoon_accuracy": 0.9402985074626866,
+        "cartoon_macro_f1": 0.947827661029101,
+        "mean_source_accuracy": 0.9410361657464104,
+        "mean_source_macro_f1": 0.9426262342459099,
+        "photo_accuracy": 0.9730538922155688,
+        "photo_macro_f1": 0.9681339341150288,
+        "worst_source_accuracy": 0.9097560975609756,
+        "worst_source_macro_f1": 0.9119171075935996
+      }
+    },
+    "sam": {
+      "checkpoint_path": "/content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/training/sam/best.pt",
+      "checkpoint_sha256": "040a80ce15974d71f3a90b5aab5050965d27212822079e5a075c742052c0827d",
+      "research_variant": false,
+      "selected_epoch": 5,
+      "source_diagnostics": {
+        "common_sharpness_proxy": {
+          "actual_perturbation_norm": 0.050000000945398776,
+          "base_cross_entropy": 0.08115758001804352,
+          "delta_sharp": 0.09692519903182983,
+          "gradient_norm": 1.5105704076905548,
+          "perturbed_cross_entropy": 0.17808277904987335,
+          "radius": 0.05
+        },
+        "source_domain_separability": {
+          "accuracy": 0.867109634551495,
+          "chance_accuracy": 0.3333333333333333,
+          "confusion_matrix": [
+            [
+              85,
+              14,
+              1
+            ],
+            [
+              12,
+              86,
+              2
+            ],
+            [
+              9,
+              2,
+              90
+            ]
+          ],
+          "logistic_regression": {
+            "C": 1.0,
+            "iterations": [
+              100
+            ],
+            "max_iter": 2000,
+            "multi_class": "multinomial_automatic_for_three_classes_with_lbfgs",
+            "random_state": 6304,
+            "solver": "lbfgs"
+          },
+          "standard_scaler_fit_scope": "probe_training_features_only",
+          "test_count": 301,
+          "train_count": 701
+        }
+      },
+      "source_validation": {
+        "art_painting_accuracy": 0.9243902439024391,
+        "art_painting_macro_f1": 0.9236855934108259,
+        "cartoon_accuracy": 0.9573560767590619,
+        "cartoon_macro_f1": 0.9626644675708457,
+        "mean_source_accuracy": 0.9535960789430552,
+        "mean_source_macro_f1": 0.9540473940355131,
+        "photo_accuracy": 0.9790419161676647,
+        "photo_macro_f1": 0.9757921211248675,
+        "worst_source_accuracy": 0.9243902439024391,
+        "worst_source_macro_f1": 0.9236855934108259
+      }
+    }
+  },
+  "code_tree_sha256": "e5d2bf6341c341d532aeccbae89a34dca01ff3b7dc2e8dfddc782d04b58f5b05",
+  "final_evaluation_rules": {
+    "batch_size": 64,
+    "class_change_reference": "erm",
+    "class_tie_policy": "first_in_fixed_pacs_class_order",
+    "example_order": "lexicographic_image_path",
+    "examples_per_direction_per_model": 3,
+    "metrics": [
+      "accuracy",
+      "macro_f1_all_7_classes",
+      "per_class_accuracy",
+      "confusion_matrix",
+      "delta_accuracy_vs_erm"
+    ],
+    "post_target_training_or_selection": false,
+    "runtime": {
+      "cuda": "12.8",
+      "cudnn": 91900,
+      "device_type": "cuda",
+      "gpu": "Tesla T4",
+      "numpy": "2.1.3",
+      "python": "3.13.15",
+      "sklearn": "1.6.1",
+      "torch": "2.11.0+cu128",
+      "torchvision": "0.26.0+cu128"
+    },
+    "shuffle": false,
+    "single_complete_target_evaluation": true,
+    "target_count": 3929,
+    "transform": "resize_256_center_crop_224_imagenet_normalization"
+  },
+  "final_evaluation_started": false,
+  "further_tuning_permitted": false,
+  "lock_version": "task3-final-lock-2026-09-25-v1",
+  "main_comparison": [
+    "erm",
+    "dan_dg_1",
+    "sam"
+  ],
+  "model_order": [
+    "erm",
+    "dan_dg_1",
+    "sam",
+    "dan_dg_0p1",
+    "dan_dg_10",
+    "dan_dg_floor_0p1",
+    "dan_dg_floor_1",
+    "dan_dg_floor_10"
+  ],
+  "original_strength_study": [
+    "erm",
+    "dan_dg_0p1",
+    "dan_dg_1",
+    "dan_dg_10"
+  ],
+  "pacs_archive": {
+    "members_not_listed_by_this_block": true,
+    "path": "/content/drive/MyDrive/ATML-PA1/datasets/PACS_dassl.zip",
+    "sha256": "0dc9d0176fa27c9b4504e7c2e962aebe6a79ed0c1819b84148786e590f87e102"
+  },
+  "parent_protocol": {
+    "path": "/content/atml_pa1_task3_source/shared/splits/pacs_sketch_seed6304.json",
+    "sha256": "e0f075e1e4f2c43c7db2423bb9b31f901d4e1157e72c2097b3e156501ce2dc74",
+    "target_record_count_after_lock": 3929
+  },
+  "protocol_version": "task3-approved-2026-09-24-v1",
+  "repository_commit": "31618caebaf42acb18dd657407d22f03b4a2464f",
+  "sketch_images_accessed": 0,
+  "source_diagnostics": {
+    "path": "/content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/research_variants/dan_dg_initial_bandwidth_floor_v1/source_diagnostics/all_models_source_diagnostics.json",
+    "sha256": "578253da8a890d9675996ed0f9f45a8f5744836e7c64aa43e1cb690ff64530dc"
+  },
+  "status": "TASK3_FINAL_EXPERIMENT_LOCKED_BEFORE_TARGET_ACCESS",
+  "supplementary_floor_study": [
+    "erm",
+    "dan_dg_floor_0p1",
+    "dan_dg_floor_1",
+    "dan_dg_floor_10"
+  ],
+  "target_labels_accessed": false,
+  "task2_comparison_evidence_deferred_until_after_lock": {
+    "files_read_by_this_block": false,
+    "final_results_path": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/final_results.json",
+    "final_results_sha256": "aa3685b1d5370e20d76798fb2ebbc7cb2286e7466c2dfdd8a4414799aad65883",
+    "target_predictions_path": "/content/drive/MyDrive/ATML-PA1/task2_final_evaluation_20260923/target_predictions.csv",
+    "target_predictions_sha256": "35c6fb24a9f7fb2b576bfd9dbae84eb2c0ab2bbbf4e71e370f8d512a9c913bb3"
+  }
+}

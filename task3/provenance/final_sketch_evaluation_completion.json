@@ -1,0 +1,90 @@
+{
+  "all_eight_checkpoints_evaluated": true,
+  "artifacts": [
+    {
+      "bytes": 40711,
+      "path": "/content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/final_evaluation/final_results.json",
+      "sha256": "0ffc9c6411f80e19a32e5094f4becb72303f359e77b342f1a17018e800c5bf98"
+    },
+    {
+      "bytes": 6412,
+      "path": "/content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/final_evaluation/selected_change_examples.csv",
+      "sha256": "683fee229d085985bb89d376289df76582ab503ddc82ad9c66fd339a13f4035f"
+    },
+    {
+      "bytes": 1210871,
+      "path": "/content/drive/MyDrive/ATML-PA1/task3_domain_generalization_20260924/final_evaluation/target_predictions.csv",
+      "sha256": "84bb83e58f7c050256fceeea4e7a3ce7ad8f783ee1cd7bcffef7b0f373d67aa9"
+    }
+  ],
+  "code_tree_sha256": "e5d2bf6341c341d532aeccbae89a34dca01ff3b7dc2e8dfddc782d04b58f5b05",
+  "experiment_lock_sha256": "35d2a2df7e2b64ac14eb05c260b8b24410b5485aafa489d9427368b3caa52348",
+  "main_comparison": [
+    "erm",
+    "dan_dg_1",
+    "sam"
+  ],
+  "repository_commit": "31618caebaf42acb18dd657407d22f03b4a2464f",
+  "runtime": {
+    "cuda": "12.8",
+    "cudnn": 91900,
+    "device_type": "cuda",
+    "gpu": "Tesla T4",
+    "numpy": "2.1.3",
+    "python": "3.13.15",
+    "sklearn": "1.6.1",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128"
+  },
+  "sketch_images_accessed": 3929,
+  "status": "TASK3_BLOCK_16_FINAL_SKETCH_EVALUATION_PASS",
+  "summary": {
+    "dan_dg_0p1": {
+      "accuracy": 0.732247391193688,
+      "delta_accuracy_vs_erm": 0.11224230083990838,
+      "macro_f1": 0.7335474577788977
+    },
+    "dan_dg_1": {
+      "accuracy": 0.6551285314329346,
+      "delta_accuracy_vs_erm": 0.03512344107915499,
+      "macro_f1": 0.6017496866286957
+    },
+    "dan_dg_10": {
+      "accuracy": 0.04072283023670145,
+      "delta_accuracy_vs_erm": -0.5792822601170782,
+      "macro_f1": 0.011179820424134438
+    },
+    "dan_dg_floor_0p1": {
+      "accuracy": 0.7538813947569356,
+      "delta_accuracy_vs_erm": 0.133876304403156,
+      "macro_f1": 0.7845208728204464
+    },
+    "dan_dg_floor_1": {
+      "accuracy": 0.7332654619496055,
+      "delta_accuracy_vs_erm": 0.11326037159582591,
+      "macro_f1": 0.7431281508614604
+    },
+    "dan_dg_floor_10": {
+      "accuracy": 0.7121404937643167,
+      "delta_accuracy_vs_erm": 0.09213540341053705,
+      "macro_f1": 0.7362631439533907
+    },
+    "erm": {
+      "accuracy": 0.6200050903537796,
+      "delta_accuracy_vs_erm": 0.0,
+      "macro_f1": 0.6573709658779567
+    },
+    "sam": {
+      "accuracy": 0.7258844489692033,
+      "delta_accuracy_vs_erm": 0.10587935861542375,
+      "macro_f1": 0.7475237789949265
+    }
+  },
+  "target_count": 3929,
+  "target_labels_used_for_training_or_selection": false,
+  "target_workspace": {
+    "path": "/content/task3_pacs_sketch_final_v1",
+    "reused": false,
+    "snapshot_sha256": "e604741543b025d6d197437f5f476135bc87787b268d1d7b0d0836d812d0d8cd"
+  }
+}
