@@ -516,3 +516,75 @@ These rules do not add class rebalancing and do not change the approved sample c
 The probe still uses 334 validation examples per source domain, and the sharpness batch
 still uses 32 per source domain. Both selections remain source-only, are saved before
 feature extraction, and report zero Sketch access.
+
+## 25 September 2026 - Blocks 10--13: supplementary bandwidth-floor study
+
+Status: all calibration and training blocks passed; source-only diagnostics pending
+
+The approved post-diagnostic research variant preserved all primary results and added
+one controlled change: each source pair used the larger of its current-batch median
+squared distance and its frozen initialization-derived floor. Block 10 authenticated
+the complete primary evidence, passed 25 target-free tests, and calibrated the floors
+without using class labels in the calculation:
+
+- Photo--Art Painting: `0.8772861361503601`;
+- Photo--Cartoon: `0.8917758464813232`; and
+- Art Painting--Cartoon: `0.8030382394790649`.
+
+The calibration SHA-256 is
+`cd1c03415465c7cd332870b6d4aa7df8785a5e7bcb4b5d53ca6c389781358c66`.
+The research training commit was
+`dc3acfdf547e7bc29bd381b3fe05e271879f18d0`, and its code-tree SHA-256 was
+`34d2778e76a5a7522a9c2eac2682eb4d2a09ee9de0e88b6d04d7d0a68e26ce13`.
+
+Block 11, stabilized lambda 1, completed 12 epochs and selected epoch 7:
+
+- mean source macro-F1: `0.9495999654855433`;
+- worst-source macro-F1: `0.92597515211018`;
+- maximum epoch-average pre-clipping gradient norm: `24.192759534181928`;
+- mean clipped-update fraction: `0.30921985815602837`;
+- mean floor-activation fraction: `0.9998817966903073`;
+- checkpoint SHA-256:
+  `6b8c8ac0f373882b468e2fbf98bfeb4f97e1a799bf073cc6a7f3667d9747418a`; and
+- history SHA-256:
+  `321e441f428198a3479c3a375532ae87ccd8aeabc4c0584330b6bd8cc7af98cf`.
+
+Block 12, stabilized lambda 0.1, completed 30 epochs and selected epoch 25:
+
+- mean source macro-F1: `0.9452069885556792`;
+- worst-source macro-F1: `0.905926086081068`;
+- maximum epoch-average pre-clipping gradient norm: `11.73070278942324`;
+- mean clipped-update fraction: `0.01829787234042553`;
+- mean floor-activation fraction: `0.9996690307328605`;
+- checkpoint SHA-256:
+  `46e770107eb563517239d524622bc7cb121d9e166de398b692350fc80c0a453c`; and
+- history SHA-256:
+  `50246e91eeb0d53eabb1cd8fc0901af6b5c00b23918b2aaaf8a44b333ac0617f`.
+
+Block 13, stabilized lambda 10, completed 22 epochs and selected epoch 17:
+
+- mean source macro-F1: `0.9211242673662049`;
+- worst-source macro-F1: `0.8746958622159983`;
+- maximum epoch-average pre-clipping gradient norm: `61.084234304599335`;
+- mean clipped-update fraction: `0.6071566731141199`;
+- mean floor-activation fraction: `0.9999355254674405`;
+- checkpoint SHA-256:
+  `030adaa198612ccda2914aa283c83c12554f16a210e82ba5f4e3fcd93c4d5483`; and
+- history SHA-256:
+  `1597de06e3976f9f80eac598f0f8c9e08b5d165d4be3f6cad26121c18866dbf6`.
+
+Relative to the same-lambda primary runs, the floor changed mean source macro-F1 by
+`-0.0010227877804159`, `+0.0802713320241882`, and `+0.8704543024105257` for lambda
+0.1, 1, and 10 respectively. The evidence supports the bandwidth-contraction
+stabilization hypothesis while also showing that lambda 10 remains less stable and
+less accurate than stabilized lambda 1. These are supplementary source-only results,
+not replacements for the assignment-prescribed primary runs. Sketch images accessed:
+zero.
+
+Block 09 already produced authenticated diagnostics for ERM, prescribed DAN-DG lambda
+1, and SAM. The remaining diagnostic coverage is original DAN-DG lambda 0.1, original
+DAN-DG lambda 10, and all three selected bandwidth-floor checkpoints. Block 14 runs
+the exact saved Block 09 probe and sharpness designs on those five pending models, then
+combines them with the authenticated Block 09 result into one eight-model evidence
+file. It does not redraw examples, rerun completed diagnostics unnecessarily, access
+Sketch, or create the final experiment lock.
