@@ -1,0 +1,61 @@
+{
+  "checkpoint_sha256": {
+    "gcsc": "f3790fcb0cb70481c7cb653bb17e05179f1d8f2429d18059f55d28dde3f65cd8",
+    "proser": "1133f956a3b3bb3e4c52c04bc1013d3a8e77013931d2513b978b6ed7173e3e52",
+    "vanilla": "b67914fba5a36f96c5462c1771f16cca40e804a6353014a751f148f2ba7840f2"
+  },
+  "cifar100_images_accessed": 0,
+  "config_sha256": {
+    "gcsc": "2fa6f651117b650ada06084ceec88a5d16da3c385b7c0a94f4aa3810b0344cee",
+    "proser": "ae7d9f76dcc5862abe6d03ec5c43cf7e4aae4f79c4cf4fe52c8019ae41e8b47f",
+    "vanilla": "f421e383f217d09db933aab67073b483acf8c31d459631906bbf5b979560a7f4"
+  },
+  "known_dataset": "CIFAR-10",
+  "mahalanobis_stats_sha256": "d774785b91c0596bfdbce6a8f691e313ae7c7b449a65d23fc638801dd1c0da09",
+  "proser_dummy_bias": -0.274896502494812,
+  "proser_temperature": 1024.0,
+  "rpl_included": false,
+  "score_definitions": {
+    "energy": "negative logsumexp over ten known logits",
+    "mahalanobis": "minimum shared-diagonal class distance; variance epsilon 1e-6",
+    "mls": "negative maximum of ten known logits",
+    "msp": "1 - max softmax probability over ten known logits",
+    "proser_placeholder": "reference delta probability: strongest calibrated dummy minus strongest known; temperature 1024"
+  },
+  "seed": 6304,
+  "split_manifest_sha256": "b6d5d8f624ff23b9859c378faf6488668f0c090318f924304df3cce5f1acd349",
+  "status": "TASK4_EVALUATION_LOCKED",
+  "threshold_rule": "95th percentile of CIFAR-10 validation unknownness; NumPy linear quantile",
+  "thresholds": {
+    "gcsc:mls": -5.891990852355955,
+    "proser:mls": -4.099396753311157,
+    "proser:placeholder": 3.725290301728073e-10,
+    "vanilla:energy": -5.89966218471527,
+    "vanilla:mahalanobis": 3117.1111328125,
+    "vanilla:mls": -5.629891157150268,
+    "vanilla:msp": 0.19658819735050206
+  },
+  "unknown_dataset": "CIFAR-100 test only",
+  "unknown_groups": {
+    "far": [
+      "bottle",
+      "bowl",
+      "chair",
+      "clock",
+      "keyboard",
+      "mushroom",
+      "sunflower",
+      "wardrobe"
+    ],
+    "near": [
+      "bus",
+      "pickup_truck",
+      "motorcycle",
+      "tractor",
+      "wolf",
+      "fox",
+      "leopard",
+      "camel"
+    ]
+  }
+}

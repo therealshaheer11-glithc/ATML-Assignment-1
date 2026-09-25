@@ -1,0 +1,13 @@
+{
+  "best_checkpoint_sha256": "b67914fba5a36f96c5462c1771f16cca40e804a6353014a751f148f2ba7840f2",
+  "best_epoch": 97,
+  "best_validation_accuracy": 0.951,
+  "cifar100_images_accessed": 0,
+  "config_sha256": "f421e383f217d09db933aab67073b483acf8c31d459631906bbf5b979560a7f4",
+  "elapsed_seconds": 4510.961807250977,
+  "method": "vanilla",
+  "seed": 6304,
+  "split_manifest_sha256": "b6d5d8f624ff23b9859c378faf6488668f0c090318f924304df3cce5f1acd349",
+  "status": "TASK4_TRAINING_COMPLETE",
+  "vanilla_checkpoint_sha256": null
+}

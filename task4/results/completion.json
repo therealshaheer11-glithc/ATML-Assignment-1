@@ -1,0 +1,9 @@
+{
+  "failure_analysis_sha256": "06211380c1cbbf04153d505866b55753becf41fab6bc942b1e72f964a3bea430",
+  "final_results_sha256": "0980310c570233f1d8ae37d1c2eaa7e445ebe112e2e79553a930c3fc0a0fe8f5",
+  "score_figure_sha256": "5227bca2f78730b4f22761f8ec9db15105a99c9c009604577be955b3f8651a17",
+  "status": "TASK4_FINAL_EVALUATION_COMPLETE",
+  "trained_model_table_sha256": "55a1b45e4b42cd8b31424c501c5380fdc0cd91826a91c5a5ac2f8b1a1f2d3124",
+  "unknown_images_accessed": 1600,
+  "vanilla_table_sha256": "abc8103695fc93f52c7410ffc3907c37d5f85f7d15605bb69cd90dbc00726bd6"
+}

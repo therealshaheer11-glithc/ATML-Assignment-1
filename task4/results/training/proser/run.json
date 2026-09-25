@@ -1,0 +1,13 @@
+{
+  "best_checkpoint_sha256": "1133f956a3b3bb3e4c52c04bc1013d3a8e77013931d2513b978b6ed7173e3e52",
+  "best_epoch": 1,
+  "best_validation_accuracy": 0.9496,
+  "cifar100_images_accessed": 0,
+  "config_sha256": "ae7d9f76dcc5862abe6d03ec5c43cf7e4aae4f79c4cf4fe52c8019ae41e8b47f",
+  "elapsed_seconds": 2287.0699791908264,
+  "method": "proser",
+  "seed": 6304,
+  "split_manifest_sha256": "b6d5d8f624ff23b9859c378faf6488668f0c090318f924304df3cce5f1acd349",
+  "status": "TASK4_TRAINING_COMPLETE",
+  "vanilla_checkpoint_sha256": "b67914fba5a36f96c5462c1771f16cca40e804a6353014a751f148f2ba7840f2"
+}

@@ -4,6 +4,19 @@ This directory implements the PA-required CIFAR-10 open-set study with Vanilla,
 GCSC, and PROSER. The exact locked settings and implementation choices are recorded
 in `docs/PROTOCOL_AND_DECISIONS.md`.
 
+
+## Completed experiment
+
+The seed-6304 experiment is complete. The selected checkpoints,
+training histories, frozen evaluation lock, final tables, figure,
+and failure analysis are published under `results/` and
+`provenance/`.
+
+The final evaluation used 10,000 CIFAR-10 test images, 800 fixed
+near CIFAR-100 test unknowns, and 800 fixed far CIFAR-100 test
+unknowns. No post-evaluation model selection or tuning was
+performed. The optional RPL extension was not included.
+
 ## Safety boundary
 
 Training, checkpoint selection, score design, Mahalanobis fitting, and threshold

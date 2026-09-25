@@ -1,0 +1,250 @@
+{
+  "evaluation_lock_sha256": "d71fee7c64e8efc1f9622bffd08b7bae85fa2227c9a49c1ba4d7af759669f6ac",
+  "failure_examples": [
+    {
+      "cifar100_test_index": 7133,
+      "group": "near",
+      "mls_unknownness": -11.851240158081055,
+      "predicted_known_class": "truck",
+      "threshold": -5.629891157150268,
+      "unknown_class": "bus"
+    },
+    {
+      "cifar100_test_index": 4173,
+      "group": "near",
+      "mls_unknownness": -11.490687370300293,
+      "predicted_known_class": "truck",
+      "threshold": -5.629891157150268,
+      "unknown_class": "bus"
+    },
+    {
+      "cifar100_test_index": 8966,
+      "group": "near",
+      "mls_unknownness": -11.464712142944336,
+      "predicted_known_class": "automobile",
+      "threshold": -5.629891157150268,
+      "unknown_class": "pickup_truck"
+    },
+    {
+      "cifar100_test_index": 3247,
+      "group": "far",
+      "mls_unknownness": -11.282491683959961,
+      "predicted_known_class": "truck",
+      "threshold": -5.629891157150268,
+      "unknown_class": "keyboard"
+    },
+    {
+      "cifar100_test_index": 788,
+      "group": "far",
+      "mls_unknownness": -11.083345413208008,
+      "predicted_known_class": "bird",
+      "threshold": -5.629891157150268,
+      "unknown_class": "sunflower"
+    },
+    {
+      "cifar100_test_index": 1781,
+      "group": "far",
+      "mls_unknownness": -10.897493362426758,
+      "predicted_known_class": "airplane",
+      "threshold": -5.629891157150268,
+      "unknown_class": "sunflower"
+    }
+  ],
+  "far_unknown_count": 800,
+  "known_test_count": 10000,
+  "near_unknown_count": 800,
+  "rpl_included": false,
+  "status": "TASK4_FINAL_EVALUATION_COMPLETE",
+  "table_1_vanilla_scores": {
+    "energy": {
+      "all": {
+        "auroc": 0.8456789062500001,
+        "fpr_at_95_tpr": 0.579375,
+        "known_acceptance_rate": 0.953,
+        "threshold": -5.89966218471527,
+        "unknown_rejection_rate": 0.420625
+      },
+      "far": {
+        "auroc": 0.8994385,
+        "fpr_at_95_tpr": 0.455,
+        "known_acceptance_rate": 0.953,
+        "threshold": -5.89966218471527,
+        "unknown_rejection_rate": 0.545
+      },
+      "near": {
+        "auroc": 0.7919193125,
+        "fpr_at_95_tpr": 0.70375,
+        "known_acceptance_rate": 0.953,
+        "threshold": -5.89966218471527,
+        "unknown_rejection_rate": 0.29625
+      }
+    },
+    "mahalanobis": {
+      "all": {
+        "auroc": 0.8551918437499999,
+        "fpr_at_95_tpr": 0.626875,
+        "known_acceptance_rate": 0.9506,
+        "threshold": 3117.1111328125,
+        "unknown_rejection_rate": 0.373125
+      },
+      "far": {
+        "auroc": 0.913884875,
+        "fpr_at_95_tpr": 0.5075,
+        "known_acceptance_rate": 0.9506,
+        "threshold": 3117.1111328125,
+        "unknown_rejection_rate": 0.4925
+      },
+      "near": {
+        "auroc": 0.7964988125,
+        "fpr_at_95_tpr": 0.74625,
+        "known_acceptance_rate": 0.9506,
+        "threshold": 3117.1111328125,
+        "unknown_rejection_rate": 0.25375
+      }
+    },
+    "mls": {
+      "all": {
+        "auroc": 0.844948875,
+        "fpr_at_95_tpr": 0.5975,
+        "known_acceptance_rate": 0.9544,
+        "threshold": -5.629891157150268,
+        "unknown_rejection_rate": 0.4025
+      },
+      "far": {
+        "auroc": 0.898250375,
+        "fpr_at_95_tpr": 0.48,
+        "known_acceptance_rate": 0.9544,
+        "threshold": -5.629891157150268,
+        "unknown_rejection_rate": 0.52
+      },
+      "near": {
+        "auroc": 0.791647375,
+        "fpr_at_95_tpr": 0.715,
+        "known_acceptance_rate": 0.9544,
+        "threshold": -5.629891157150268,
+        "unknown_rejection_rate": 0.285
+      }
+    },
+    "msp": {
+      "all": {
+        "auroc": 0.85326428125,
+        "fpr_at_95_tpr": 0.671875,
+        "known_acceptance_rate": 0.952,
+        "threshold": 0.19658819735050206,
+        "unknown_rejection_rate": 0.328125
+      },
+      "far": {
+        "auroc": 0.8962043125000001,
+        "fpr_at_95_tpr": 0.595,
+        "known_acceptance_rate": 0.952,
+        "threshold": 0.19658819735050206,
+        "unknown_rejection_rate": 0.405
+      },
+      "near": {
+        "auroc": 0.8103242499999999,
+        "fpr_at_95_tpr": 0.74875,
+        "known_acceptance_rate": 0.952,
+        "threshold": 0.19658819735050206,
+        "unknown_rejection_rate": 0.25125
+      }
+    }
+  },
+  "table_2_trained_models": {
+    "gcsc:mls": {
+      "all": {
+        "auroc": 0.8537023437499999,
+        "fpr_at_95_tpr": 0.556875,
+        "known_acceptance_rate": 0.9534,
+        "threshold": -5.891990852355955,
+        "unknown_rejection_rate": 0.443125
+      },
+      "closed_set_accuracy": 0.9494,
+      "far": {
+        "auroc": 0.9084715625000002,
+        "fpr_at_95_tpr": 0.435,
+        "known_acceptance_rate": 0.9534,
+        "threshold": -5.891990852355955,
+        "unknown_rejection_rate": 0.565
+      },
+      "near": {
+        "auroc": 0.7989331249999999,
+        "fpr_at_95_tpr": 0.67875,
+        "known_acceptance_rate": 0.9534,
+        "threshold": -5.891990852355955,
+        "unknown_rejection_rate": 0.32125
+      }
+    },
+    "proser:mls": {
+      "all": {
+        "auroc": 0.8463473125000001,
+        "fpr_at_95_tpr": 0.623125,
+        "known_acceptance_rate": 0.9528,
+        "threshold": -4.099396753311157,
+        "unknown_rejection_rate": 0.376875
+      },
+      "closed_set_accuracy": 0.9414,
+      "far": {
+        "auroc": 0.894266875,
+        "fpr_at_95_tpr": 0.5175,
+        "known_acceptance_rate": 0.9528,
+        "threshold": -4.099396753311157,
+        "unknown_rejection_rate": 0.4825
+      },
+      "near": {
+        "auroc": 0.7984277500000001,
+        "fpr_at_95_tpr": 0.72875,
+        "known_acceptance_rate": 0.9528,
+        "threshold": -4.099396753311157,
+        "unknown_rejection_rate": 0.27125
+      }
+    },
+    "proser:placeholder": {
+      "all": {
+        "auroc": 0.84442509375,
+        "fpr_at_95_tpr": 0.626875,
+        "known_acceptance_rate": 0.9521,
+        "threshold": 3.725290301728073e-10,
+        "unknown_rejection_rate": 0.373125
+      },
+      "closed_set_accuracy": 0.9414,
+      "far": {
+        "auroc": 0.8973114375,
+        "fpr_at_95_tpr": 0.525,
+        "known_acceptance_rate": 0.9521,
+        "threshold": 3.725290301728073e-10,
+        "unknown_rejection_rate": 0.475
+      },
+      "near": {
+        "auroc": 0.79153875,
+        "fpr_at_95_tpr": 0.72875,
+        "known_acceptance_rate": 0.9521,
+        "threshold": 3.725290301728073e-10,
+        "unknown_rejection_rate": 0.27125
+      }
+    },
+    "vanilla:mls": {
+      "all": {
+        "auroc": 0.844948875,
+        "fpr_at_95_tpr": 0.5975,
+        "known_acceptance_rate": 0.9544,
+        "threshold": -5.629891157150268,
+        "unknown_rejection_rate": 0.4025
+      },
+      "closed_set_accuracy": 0.9454,
+      "far": {
+        "auroc": 0.898250375,
+        "fpr_at_95_tpr": 0.48,
+        "known_acceptance_rate": 0.9544,
+        "threshold": -5.629891157150268,
+        "unknown_rejection_rate": 0.52
+      },
+      "near": {
+        "auroc": 0.791647375,
+        "fpr_at_95_tpr": 0.715,
+        "known_acceptance_rate": 0.9544,
+        "threshold": -5.629891157150268,
+        "unknown_rejection_rate": 0.285
+      }
+    }
+  }
+}

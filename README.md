@@ -7,7 +7,7 @@ Code, experiment protocols, and saved evidence. Start with the task guides below
 | 1 — STL-10 inductive biases | [Task 1](task1/README.md) | Code, split manifests, predictions, metrics, and figures published |
 | 2 — PACS domain adaptation | [Task 2](task2/README.md) | Code, official histories, frozen results, plots, and provenance published |
 | 3 — PACS domain generalization | [Task 3](task3/README.md) | Training, diagnostics, final experiment lock, and one-time Sketch evaluation completed |
-| 4 — Open-set recognition | [Task 4](task4/README.md) | Implementation prepared; training and final evaluation pending |
+| 4 — Open-set recognition | [Task 4](task4/README.md) | Training, target-free lock, and one-time CIFAR-100 evaluation completed |
 
 ## Repository layout
 

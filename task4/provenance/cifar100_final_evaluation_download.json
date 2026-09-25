@@ -1,0 +1,13 @@
+{
+  "status": "CIFAR100_ACQUIRED_AFTER_EVALUATION_LOCK",
+  "dataset": "CIFAR-100 Python archive",
+  "upstream_source": "https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz",
+  "download_source": "https://data.brainchip.com/dataset-mirror/cifar100/cifar-100-python.tar.gz",
+  "archive_bytes": 169001437,
+  "archive_md5": "eb9058c3a382ffc7106e4002c42a8d85",
+  "evaluation_lock_sha256": "d71fee7c64e8efc1f9622bffd08b7bae85fa2227c9a49c1ba4d7af759669f6ac",
+  "downloaded_after_lock": true,
+  "training_partition_used": false,
+  "evaluation_partition": "test only",
+  "recorded_at_utc": "2026-09-25T17:07:55.909029+00:00"
+}
