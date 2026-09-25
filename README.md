@@ -57,7 +57,7 @@ python -m unittest discover -s task3/tests -v
   organized documentation checkout has a different code-tree identity from the
   historical training snapshots.
 - The [Task 2 repository audit](task2/docs/REPOSITORY-AUDIT.md) records the completed
-  checks and remaining report work.
+  checks.
 - Task 3’s final lock, one-time Sketch evaluation, and artifact identities are recorded
   in its [run log](task3/provenance/RUN_LOG.md).
 - Task 4’s selected checkpoints, frozen evaluation protocol, final tables, failure
