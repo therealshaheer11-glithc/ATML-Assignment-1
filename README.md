@@ -112,5 +112,4 @@ responsible for every submitted line of code and for the execution of all experi
 
 Materially reused external code, pretrained models, research papers, and reference
 implementations are identified in the relevant task guides and protocol documents.
-The PDF report is written independently by the student without generative AI, as
-required by the assignment.
+
