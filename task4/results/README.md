@@ -49,6 +49,7 @@ was changed after unknown-data access.
 - Fixed-threshold failure analysis
 - Score-distribution figure
 - Training histories and completion summaries
+- Post-evaluation per-class analysis ([`extra_analysis.json`](extra_analysis.json), produced by [`../analysis/task4_extra_analysis.py`](../analysis/task4_extra_analysis.py) from the saved outputs)
 - Fixed CIFAR-10 split manifest
 - Evaluation lock and Mahalanobis statistics
 - Runtime and dataset provenance

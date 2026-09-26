@@ -8,6 +8,7 @@ Code, experiment protocols, results, and reproducibility evidence for all four t
 | 2 — PACS domain adaptation | [Task 2](task2/README.md) | Official histories, frozen results, plots, and provenance published |
 | 3 — PACS domain generalization | [Task 3](task3/README.md) | Training, diagnostics, final experiment lock, and one-time Sketch evaluation completed |
 | 4 — Open-set recognition | [Task 4](task4/README.md) | Training, target-free evaluation lock, and one-time CIFAR-100 evaluation completed |
+| Report | [Report evidence](report/README.md) | Report figures, derived-number checks, and the Task 4 per-class analysis |
 
 ## Repository layout
 
@@ -17,6 +18,7 @@ task2/       PACS domain-adaptation code, decisions, results, and provenance
 task3/       PACS domain-generalization code, locked protocols, results, and provenance
 task4/       CIFAR open-set code, locked configurations, tests, results, and provenance
 shared/      Shared PACS data loading, fixed split, and MMD implementation
+report/      Report figure scripts, figures, and derived-number checks
 tests/       Repository-level locked-choice and saved-evidence checks
 tools/       Saved-evidence verification and Colab export utilities
 ```

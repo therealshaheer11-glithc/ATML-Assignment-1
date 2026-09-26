@@ -1,0 +1,567 @@
+{
+ "check": {
+  "vanilla:msp:near_auroc": 0.810324,
+  "vanilla:mls:near_auroc": 0.791647,
+  "vanilla:energy:near_auroc": 0.791919,
+  "vanilla:mahalanobis:near_auroc": 0.796499,
+  "vanilla:csa": 0.9454,
+  "gcsc:csa": 0.9494,
+  "proser:csa": 0.9414
+ },
+ "per_unknown_class": {
+  "bus": {
+   "group": "near",
+   "n": 100,
+   "vanilla_mls_accepted": 85,
+   "vanilla_mls_auroc": 0.6416,
+   "gcsc_mls_accepted": 91,
+   "gcsc_mls_auroc": 0.5616,
+   "proser_mls_accepted": 86,
+   "proser_mls_auroc": 0.6261,
+   "vanilla_msp_accepted": 88,
+   "vanilla_energy_accepted": 84,
+   "vanilla_mahalanobis_accepted": 85,
+   "vanilla_mls_absorbed_by": {
+    "truck": 66,
+    "automobile": 16,
+    "airplane": 2
+   },
+   "vanilla_all_predicted_as": {
+    "truck": 76,
+    "automobile": 16
+   }
+  },
+  "camel": {
+   "group": "near",
+   "n": 100,
+   "vanilla_mls_accepted": 63,
+   "vanilla_mls_auroc": 0.8406,
+   "gcsc_mls_accepted": 55,
+   "gcsc_mls_auroc": 0.8869,
+   "proser_mls_accepted": 58,
+   "proser_mls_auroc": 0.8558,
+   "vanilla_msp_accepted": 71,
+   "vanilla_energy_accepted": 62,
+   "vanilla_mahalanobis_accepted": 70,
+   "vanilla_mls_absorbed_by": {
+    "dog": 20,
+    "deer": 14,
+    "horse": 14
+   },
+   "vanilla_all_predicted_as": {
+    "dog": 28,
+    "horse": 26
+   }
+  },
+  "fox": {
+   "group": "near",
+   "n": 100,
+   "vanilla_mls_accepted": 73,
+   "vanilla_mls_auroc": 0.8327,
+   "gcsc_mls_accepted": 69,
+   "gcsc_mls_auroc": 0.8491,
+   "proser_mls_accepted": 67,
+   "proser_mls_auroc": 0.8356,
+   "vanilla_msp_accepted": 74,
+   "vanilla_energy_accepted": 72,
+   "vanilla_mahalanobis_accepted": 78,
+   "vanilla_mls_absorbed_by": {
+    "cat": 32,
+    "deer": 23,
+    "dog": 12
+   },
+   "vanilla_all_predicted_as": {
+    "cat": 40,
+    "deer": 31
+   }
+  },
+  "leopard": {
+   "group": "near",
+   "n": 100,
+   "vanilla_mls_accepted": 69,
+   "vanilla_mls_auroc": 0.8499,
+   "gcsc_mls_accepted": 61,
+   "gcsc_mls_auroc": 0.881,
+   "proser_mls_accepted": 80,
+   "proser_mls_auroc": 0.8516,
+   "vanilla_msp_accepted": 71,
+   "vanilla_energy_accepted": 66,
+   "vanilla_mahalanobis_accepted": 72,
+   "vanilla_mls_absorbed_by": {
+    "cat": 29,
+    "frog": 28,
+    "deer": 6
+   },
+   "vanilla_all_predicted_as": {
+    "cat": 37,
+    "frog": 37
+   }
+  },
+  "motorcycle": {
+   "group": "near",
+   "n": 100,
+   "vanilla_mls_accepted": 37,
+   "vanilla_mls_auroc": 0.937,
+   "gcsc_mls_accepted": 37,
+   "gcsc_mls_auroc": 0.9378,
+   "proser_mls_accepted": 46,
+   "proser_mls_auroc": 0.9144,
+   "vanilla_msp_accepted": 53,
+   "vanilla_energy_accepted": 34,
+   "vanilla_mahalanobis_accepted": 48,
+   "vanilla_mls_absorbed_by": {
+    "automobile": 20,
+    "airplane": 6,
+    "truck": 6
+   },
+   "vanilla_all_predicted_as": {
+    "automobile": 46,
+    "truck": 16
+   }
+  },
+  "pickup_truck": {
+   "group": "near",
+   "n": 100,
+   "vanilla_mls_accepted": 91,
+   "vanilla_mls_auroc": 0.6048,
+   "gcsc_mls_accepted": 96,
+   "gcsc_mls_auroc": 0.616,
+   "proser_mls_accepted": 94,
+   "proser_mls_auroc": 0.6425,
+   "vanilla_msp_accepted": 86,
+   "vanilla_energy_accepted": 92,
+   "vanilla_mahalanobis_accepted": 86,
+   "vanilla_mls_absorbed_by": {
+    "automobile": 62,
+    "truck": 29
+   },
+   "vanilla_all_predicted_as": {
+    "automobile": 67,
+    "truck": 31
+   }
+  },
+  "tractor": {
+   "group": "near",
+   "n": 100,
+   "vanilla_mls_accepted": 63,
+   "vanilla_mls_auroc": 0.8802,
+   "gcsc_mls_accepted": 58,
+   "gcsc_mls_auroc": 0.8204,
+   "proser_mls_accepted": 69,
+   "proser_mls_auroc": 0.859,
+   "vanilla_msp_accepted": 71,
+   "vanilla_energy_accepted": 63,
+   "vanilla_mahalanobis_accepted": 69,
+   "vanilla_mls_absorbed_by": {
+    "truck": 51,
+    "ship": 6,
+    "automobile": 3
+   },
+   "vanilla_all_predicted_as": {
+    "truck": 70,
+    "ship": 11
+   }
+  },
+  "wolf": {
+   "group": "near",
+   "n": 100,
+   "vanilla_mls_accepted": 91,
+   "vanilla_mls_auroc": 0.7463,
+   "gcsc_mls_accepted": 76,
+   "gcsc_mls_auroc": 0.8385,
+   "proser_mls_accepted": 83,
+   "proser_mls_auroc": 0.8026,
+   "vanilla_msp_accepted": 85,
+   "vanilla_energy_accepted": 90,
+   "vanilla_mahalanobis_accepted": 89,
+   "vanilla_mls_absorbed_by": {
+    "dog": 45,
+    "cat": 42,
+    "deer": 2
+   },
+   "vanilla_all_predicted_as": {
+    "dog": 47,
+    "cat": 46
+   }
+  },
+  "bottle": {
+   "group": "far",
+   "n": 100,
+   "vanilla_mls_accepted": 37,
+   "vanilla_mls_auroc": 0.9252,
+   "gcsc_mls_accepted": 32,
+   "gcsc_mls_auroc": 0.9468,
+   "proser_mls_accepted": 44,
+   "proser_mls_auroc": 0.9175,
+   "vanilla_msp_accepted": 57,
+   "vanilla_energy_accepted": 35,
+   "vanilla_mahalanobis_accepted": 45,
+   "vanilla_mls_absorbed_by": {
+    "truck": 11,
+    "cat": 9,
+    "ship": 9
+   },
+   "vanilla_all_predicted_as": {
+    "ship": 25,
+    "truck": 22
+   }
+  },
+  "bowl": {
+   "group": "far",
+   "n": 100,
+   "vanilla_mls_accepted": 52,
+   "vanilla_mls_auroc": 0.889,
+   "gcsc_mls_accepted": 46,
+   "gcsc_mls_auroc": 0.8975,
+   "proser_mls_accepted": 61,
+   "proser_mls_auroc": 0.8778,
+   "vanilla_msp_accepted": 63,
+   "vanilla_energy_accepted": 49,
+   "vanilla_mahalanobis_accepted": 52,
+   "vanilla_mls_absorbed_by": {
+    "cat": 18,
+    "automobile": 9,
+    "ship": 9
+   },
+   "vanilla_all_predicted_as": {
+    "cat": 29,
+    "automobile": 19
+   }
+  },
+  "chair": {
+   "group": "far",
+   "n": 100,
+   "vanilla_mls_accepted": 45,
+   "vanilla_mls_auroc": 0.9064,
+   "gcsc_mls_accepted": 47,
+   "gcsc_mls_auroc": 0.9128,
+   "proser_mls_accepted": 46,
+   "proser_mls_auroc": 0.887,
+   "vanilla_msp_accepted": 57,
+   "vanilla_energy_accepted": 42,
+   "vanilla_mahalanobis_accepted": 50,
+   "vanilla_mls_absorbed_by": {
+    "airplane": 25,
+    "bird": 7,
+    "cat": 6
+   },
+   "vanilla_all_predicted_as": {
+    "airplane": 43,
+    "bird": 16
+   }
+  },
+  "clock": {
+   "group": "far",
+   "n": 100,
+   "vanilla_mls_accepted": 48,
+   "vanilla_mls_auroc": 0.902,
+   "gcsc_mls_accepted": 41,
+   "gcsc_mls_auroc": 0.9153,
+   "proser_mls_accepted": 47,
+   "proser_mls_auroc": 0.91,
+   "vanilla_msp_accepted": 60,
+   "vanilla_energy_accepted": 46,
+   "vanilla_mahalanobis_accepted": 50,
+   "vanilla_mls_absorbed_by": {
+    "cat": 15,
+    "automobile": 8,
+    "ship": 8
+   },
+   "vanilla_all_predicted_as": {
+    "automobile": 22,
+    "cat": 19
+   }
+  },
+  "keyboard": {
+   "group": "far",
+   "n": 100,
+   "vanilla_mls_accepted": 40,
+   "vanilla_mls_auroc": 0.9322,
+   "gcsc_mls_accepted": 47,
+   "gcsc_mls_auroc": 0.8915,
+   "proser_mls_accepted": 45,
+   "proser_mls_auroc": 0.9093,
+   "vanilla_msp_accepted": 52,
+   "vanilla_energy_accepted": 36,
+   "vanilla_mahalanobis_accepted": 42,
+   "vanilla_mls_absorbed_by": {
+    "truck": 13,
+    "airplane": 8,
+    "cat": 7
+   },
+   "vanilla_all_predicted_as": {
+    "truck": 19,
+    "bird": 17
+   }
+  },
+  "mushroom": {
+   "group": "far",
+   "n": 100,
+   "vanilla_mls_accepted": 55,
+   "vanilla_mls_auroc": 0.8455,
+   "gcsc_mls_accepted": 50,
+   "gcsc_mls_auroc": 0.8809,
+   "proser_mls_accepted": 61,
+   "proser_mls_auroc": 0.8568,
+   "vanilla_msp_accepted": 63,
+   "vanilla_energy_accepted": 50,
+   "vanilla_mahalanobis_accepted": 62,
+   "vanilla_mls_absorbed_by": {
+    "bird": 27,
+    "frog": 12,
+    "cat": 8
+   },
+   "vanilla_all_predicted_as": {
+    "bird": 40,
+    "cat": 19
+   }
+  },
+  "sunflower": {
+   "group": "far",
+   "n": 100,
+   "vanilla_mls_accepted": 49,
+   "vanilla_mls_auroc": 0.8797,
+   "gcsc_mls_accepted": 30,
+   "gcsc_mls_auroc": 0.9536,
+   "proser_mls_accepted": 50,
+   "proser_mls_auroc": 0.8929,
+   "vanilla_msp_accepted": 57,
+   "vanilla_energy_accepted": 48,
+   "vanilla_mahalanobis_accepted": 52,
+   "vanilla_mls_absorbed_by": {
+    "bird": 28,
+    "frog": 9,
+    "dog": 5
+   },
+   "vanilla_all_predicted_as": {
+    "bird": 42,
+    "frog": 22
+   }
+  },
+  "wardrobe": {
+   "group": "far",
+   "n": 100,
+   "vanilla_mls_accepted": 58,
+   "vanilla_mls_auroc": 0.9059,
+   "gcsc_mls_accepted": 55,
+   "gcsc_mls_auroc": 0.8694,
+   "proser_mls_accepted": 60,
+   "proser_mls_auroc": 0.903,
+   "vanilla_msp_accepted": 67,
+   "vanilla_energy_accepted": 58,
+   "vanilla_mahalanobis_accepted": 53,
+   "vanilla_mls_absorbed_by": {
+    "truck": 40,
+    "cat": 16,
+    "ship": 1
+   },
+   "vanilla_all_predicted_as": {
+    "truck": 62,
+    "cat": 30
+   }
+  }
+ },
+ "near_accepted_absorbed_by_vanilla_mls": {
+  "truck": 152,
+  "cat": 106,
+  "automobile": 101,
+  "dog": 80,
+  "deer": 45,
+  "frog": 31,
+  "horse": 20,
+  "bird": 17,
+  "airplane": 13,
+  "ship": 7
+ },
+ "far_accepted_absorbed_by_vanilla_mls": {
+  "cat": 82,
+  "bird": 78,
+  "truck": 77,
+  "airplane": 40,
+  "frog": 35,
+  "ship": 31,
+  "automobile": 21,
+  "dog": 15,
+  "deer": 3,
+  "horse": 2
+ },
+ "vanilla_score_agreement": {
+  "spearman_all": {
+   "msp-mls": 0.959,
+   "msp-energy": 0.958,
+   "msp-mahalanobis": 0.708,
+   "mls-energy": 1.0,
+   "mls-mahalanobis": 0.598,
+   "energy-mahalanobis": 0.596
+  },
+  "spearman_unknown_only": {
+   "msp-mls": 0.937,
+   "msp-energy": 0.91,
+   "msp-mahalanobis": 0.93,
+   "mls-energy": 0.997,
+   "mls-mahalanobis": 0.865,
+   "energy-mahalanobis": 0.842
+  },
+  "near_msp_vs_mls": {
+   "both_accept": 539,
+   "msp_only_accepts": 60,
+   "mls_only_accepts": 33,
+   "both_reject": 168
+  },
+  "near_mls_vs_mahalanobis": {
+   "both_accept": 534,
+   "mls_only_accepts": 38,
+   "mahalanobis_only_accepts": 63,
+   "both_reject": 165
+  },
+  "near_mls_vs_energy": {
+   "both_accept": 554,
+   "mls_only_accepts": 18,
+   "energy_only_accepts": 9,
+   "both_reject": 219
+  },
+  "near_msp_vs_mahalanobis": {
+   "both_accept": 570,
+   "msp_only_accepts": 29,
+   "mahalanobis_only_accepts": 27,
+   "both_reject": 174
+  },
+  "far_msp_vs_mls": {
+   "both_accept": 364,
+   "msp_only_accepts": 112,
+   "mls_only_accepts": 20,
+   "both_reject": 304
+  },
+  "far_mls_vs_mahalanobis": {
+   "both_accept": 314,
+   "mls_only_accepts": 70,
+   "mahalanobis_only_accepts": 92,
+   "both_reject": 324
+  },
+  "far_mls_vs_energy": {
+   "both_accept": 357,
+   "mls_only_accepts": 27,
+   "energy_only_accepts": 7,
+   "both_reject": 409
+  },
+  "far_msp_vs_mahalanobis": {
+   "both_accept": 386,
+   "msp_only_accepts": 90,
+   "mahalanobis_only_accepts": 20,
+   "both_reject": 304
+  },
+  "known_accept_counts": {
+   "msp": 9520,
+   "mls": 9544,
+   "energy": 9530,
+   "mahalanobis": 9506
+  }
+ },
+ "confidence": {
+  "vanilla_known": {
+   "mean_max_logit": 9.009,
+   "mean_msp": 0.9753
+  },
+  "vanilla_near": {
+   "mean_max_logit": 6.925,
+   "mean_msp": 0.875
+  },
+  "vanilla_far": {
+   "mean_max_logit": 5.745,
+   "mean_msp": 0.8053
+  },
+  "gcsc_known": {
+   "mean_max_logit": 9.368,
+   "mean_msp": 0.9731
+  },
+  "gcsc_near": {
+   "mean_max_logit": 7.034,
+   "mean_msp": 0.8549
+  },
+  "gcsc_far": {
+   "mean_max_logit": 5.775,
+   "mean_msp": 0.7738
+  },
+  "proser_known": {
+   "mean_max_logit": 7.211,
+   "mean_msp": 0.971
+  },
+  "proser_near": {
+   "mean_max_logit": 5.321,
+   "mean_msp": 0.8656
+  },
+  "proser_far": {
+   "mean_max_logit": 4.337,
+   "mean_msp": 0.7813
+  }
+ },
+ "per_class_csa": {
+  "vanilla": {
+   "airplane": 0.948,
+   "automobile": 0.974,
+   "bird": 0.932,
+   "cat": 0.899,
+   "deer": 0.951,
+   "dog": 0.907,
+   "frog": 0.965,
+   "horse": 0.957,
+   "ship": 0.962,
+   "truck": 0.959
+  },
+  "gcsc": {
+   "airplane": 0.955,
+   "automobile": 0.981,
+   "bird": 0.933,
+   "cat": 0.883,
+   "deer": 0.952,
+   "dog": 0.922,
+   "frog": 0.973,
+   "horse": 0.967,
+   "ship": 0.963,
+   "truck": 0.965
+  },
+  "proser": {
+   "airplane": 0.945,
+   "automobile": 0.969,
+   "bird": 0.928,
+   "cat": 0.893,
+   "deer": 0.94,
+   "dog": 0.904,
+   "frog": 0.96,
+   "horse": 0.953,
+   "ship": 0.96,
+   "truck": 0.962
+  }
+ },
+ "proser_dummy": {
+  "known": {
+   "dummy_wins_fraction": 0.0479,
+   "mean_max_dummy_plus_bias": 4.541,
+   "mean_max_known": 7.211
+  },
+  "near": {
+   "dummy_wins_fraction": 0.2712,
+   "mean_max_dummy_plus_bias": 4.238,
+   "mean_max_known": 5.321
+  },
+  "far": {
+   "dummy_wins_fraction": 0.475,
+   "mean_max_dummy_plus_bias": 4.134,
+   "mean_max_known": 4.337
+  }
+ },
+ "accepted_counts_mls": {
+  "vanilla": {
+   "near": 572,
+   "far": 384
+  },
+  "gcsc": {
+   "near": 543,
+   "far": 348
+  },
+  "proser": {
+   "near": 583,
+   "far": 414
+  }
+ }
+}
